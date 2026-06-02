@@ -4,7 +4,7 @@ Generate .vitepress/config.mjs from the converted Markdown tree.
 
 Each top-level subfolder of vitepress/ becomes a sidebar group;
 the page order is alphabetical (VitePress will sort by file name).
-The top-level index.md, python-new-py3.md become nav entries.
+Top-level .md files (except index.md) become nav entries.
 """
 from __future__ import annotations
 import sys
@@ -16,7 +16,7 @@ CONFIG = ROOT / ".vitepress" / "config.mjs"
 
 CATEGORIES = sorted(
     p.name for p in ROOT.iterdir()
-    if p.is_dir() and not p.name.startswith('.') and not p.name.startswith('node_modules')
+    if p.is_dir() and not p.name.startswith('.') and p.name != 'node_modules'
 )
 
 
@@ -30,6 +30,8 @@ def sidebar_for(category: str) -> list[dict]:
     files = sorted(catdir.glob('*.md'))
     items: list[dict] = []
     for f in files:
+        if f.name == 'index.md':
+            continue
         title = f.stem.replace('-', ' ').replace('_', ' ').title()
         items.append({'text': title, 'link': page_link(f, ROOT)})
     return items

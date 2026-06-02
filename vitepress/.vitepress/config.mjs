@@ -74,10 +74,6 @@ export default {
         "link": "/appendix/disaggregated-prefill-decode"
       },
       {
-        "text": "Index",
-        "link": "/appendix/index"
-      },
-      {
         "text": "Megatron Efa Monitoring",
         "link": "/appendix/megatron-efa-monitoring"
       },
@@ -104,10 +100,6 @@ export default {
         "link": "/asyncio/"
       },
       {
-        "text": "Index",
-        "link": "/asyncio/index"
-      },
-      {
         "text": "Python Asyncio Advanced",
         "link": "/asyncio/python-asyncio-advanced"
       },
@@ -128,10 +120,6 @@ export default {
       {
         "text": "Overview",
         "link": "/basic/"
-      },
-      {
-        "text": "Index",
-        "link": "/basic/index"
       },
       {
         "text": "Python Basic",
@@ -188,10 +176,6 @@ export default {
         "link": "/concurrency/"
       },
       {
-        "text": "Index",
-        "link": "/concurrency/index"
-      },
-      {
         "text": "Python Futures",
         "link": "/concurrency/python-futures"
       },
@@ -208,10 +192,6 @@ export default {
       {
         "text": "Overview",
         "link": "/database/"
-      },
-      {
-        "text": "Index",
-        "link": "/database/index"
       },
       {
         "text": "Python Sqlalchemy Orm",
@@ -236,10 +216,6 @@ export default {
         "link": "/extension/cpp-from-python"
       },
       {
-        "text": "Index",
-        "link": "/extension/index"
-      },
-      {
         "text": "Python Capi",
         "link": "/extension/python-capi"
       },
@@ -258,10 +234,6 @@ export default {
         "link": "/hpc/"
       },
       {
-        "text": "Index",
-        "link": "/hpc/index"
-      },
-      {
         "text": "Ray",
         "link": "/hpc/ray"
       },
@@ -274,20 +246,12 @@ export default {
       {
         "text": "Overview",
         "link": "/interview/"
-      },
-      {
-        "text": "Index",
-        "link": "/interview/index"
       }
     ],
     "/llm/": [
       {
         "text": "Overview",
         "link": "/llm/"
-      },
-      {
-        "text": "Index",
-        "link": "/llm/index"
       },
       {
         "text": "Llm Bench",
@@ -310,10 +274,6 @@ export default {
       {
         "text": "Overview",
         "link": "/network/"
-      },
-      {
-        "text": "Index",
-        "link": "/network/index"
       },
       {
         "text": "Python Socket Async",
@@ -346,10 +306,6 @@ export default {
         "link": "/os/"
       },
       {
-        "text": "Index",
-        "link": "/os/index"
-      },
-      {
         "text": "Python Date",
         "link": "/os/python-date"
       },
@@ -366,10 +322,6 @@ export default {
       {
         "text": "Overview",
         "link": "/security/"
-      },
-      {
-        "text": "Index",
-        "link": "/security/index"
       },
       {
         "text": "Python Crypto",
