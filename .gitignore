@@ -102,6 +102,9 @@ venv.bak/
 # mkdocs documentation
 /site
 
+# Worktrees
+.worktrees/
+
 # mypy
 .mypy_cache/
 
