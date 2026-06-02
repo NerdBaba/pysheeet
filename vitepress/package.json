@@ -1,0 +1,14 @@
+{
+  "name": "pysheeet-vitepress",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pysheeet cheat sheets as a VitePress site",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.5.0"
+  }
+}
