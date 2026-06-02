@@ -1,3 +1,7 @@
+---
+title: Pysheeet (VitePress)
+---
+
 # Pysheeet (VitePress)
 
 Personal-use VitePress build of the pysheeet Python cheat sheets.
