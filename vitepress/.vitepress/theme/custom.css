@@ -1,0 +1,7 @@
+/* Subtle visual distinction for Python REPL prompt lines in code blocks.
+   The pattern `>>> ...` inside ```python blocks is common in this codebase. */
+.vp-doc div[class*="language-"] code .prompt,
+.vp-doc div[class*="language-python"] code .tok-prefix {
+    user-select: none;
+    opacity: 0.55;
+}
