@@ -8,4 +8,3 @@ Python provides multiple approaches for concurrent execution to handle CPU-bound
 
 Understanding when to use each approach is crucial: threads excel at I/O-bound tasks (network requests, file operations) where the GIL is released during waiting, while processes are better for CPU-bound tasks (computation, data processing) where true parallel execution is needed.
 
-python-threading python-multiprocessing python-futures

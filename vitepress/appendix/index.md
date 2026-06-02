@@ -10,4 +10,3 @@ This section explores advanced programming topics to help users build a deeper u
 
 More advanced topics and examples can be found in the following link.
 
-nvshmem-multi-nic disaggregated-prefill-decode megatron-efa-monitoring nccl-gin python-walrus python-gdb

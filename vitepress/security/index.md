@@ -8,4 +8,3 @@ Security is essential for protecting data in transit and at rest. This section c
 
 Understanding vulnerabilities is equally important—knowing why legacy patterns like AES-CBC without authentication or PKCS#1 v1.5 padding are dangerous helps you recognize and fix insecure code in existing systems.
 
-python-crypto python-tls python-vulnerability

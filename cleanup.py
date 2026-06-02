@@ -9,6 +9,7 @@ Fixes:
   - Drops .. meta:: blocks
   - Adds frontmatter with a title derived from the first H1
   - Strips .. raw:: html blocks (their content was for the README, not the docs)
+  - Strips toctree artifacts (space-separated filenames from pandoc-rendered .. toctree::)
 """
 from __future__ import annotations
 import re
@@ -69,6 +70,20 @@ def strip_raw_html(text: str) -> str:
     return RAW_HTML_DIRECTIVE.sub('', text)
 
 
+def strip_toctree_artifacts(text: str) -> str:
+    """Remove pandoc-rendered toctree artifacts from the end of files.
+    These appear as a line of space-separated filenames, e.g.
+    'python-basic python-future python-func'.
+    """
+    lines = text.splitlines(keepends=True)
+    while lines and re.match(
+        r'^[a-z][a-z0-9-]+(?: [a-z][a-z0-9-]+)+\n?$',
+        lines[-1],
+    ):
+        lines.pop()
+    return ''.join(lines)
+
+
 def process(path: Path) -> bool:
     text = path.read_text(encoding='utf-8')
     original = text
@@ -76,6 +91,7 @@ def process(path: Path) -> bool:
     text = strip_raw_html(text)
     text = fix_rst_links(text)
     text = fix_code_fences(text)
+    text = strip_toctree_artifacts(text)
     text = add_frontmatter(text, derive_title(text))
     if text != original:
         path.write_text(text, encoding='utf-8')

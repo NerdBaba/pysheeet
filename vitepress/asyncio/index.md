@@ -8,4 +8,3 @@ Python's `asyncio` module provides infrastructure for writing single-threaded co
 
 This section covers asyncio from basic concepts to advanced patterns, including the event loop, coroutines, tasks, synchronization primitives, and real-world examples like TCP/UDP servers, HTTP clients, and connection pools.
 
-python-asyncio-guide python-asyncio-basic python-asyncio-server python-asyncio-advanced
