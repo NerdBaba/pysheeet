@@ -4,8 +4,8 @@ Post-pandoc cleanup for the VitePress conversion.
 
 Fixes:
   - Internal .rst -> .md links
-  - Code-fence language hints (default to 'python' when missing and content looks like Python)
-  - ~~ strikethrough conflicts (escape when inside code context)
+  - Code-fence language hints (default to 'python' when missing and content looks like Python or REPL)
+  - Normalizes uncommon language names ('python3' -> 'python', 'cython' -> 'python')
   - Drops .. meta:: blocks
   - Adds frontmatter with a title derived from the first H1
   - Strips .. raw:: html blocks (their content was for the README, not the docs)
@@ -25,7 +25,8 @@ RAW_HTML_DIRECTIVE = re.compile(
 )
 H1 = re.compile(r'^# (.+)$', re.MULTILINE)
 RST_LINK = re.compile(r'\(([\w./-]+)\.rst(#[^)]*)?\)')
-FENCE = re.compile(r'^```(\w*)\n(.*?)^```', re.MULTILINE | re.DOTALL)
+FENCE = re.compile(r'^```[ \t]*(\w*)\n(.*?)^```', re.MULTILINE | re.DOTALL)
+LANGUAGE_MAP = {'python3': 'python', 'cython': 'python'}
 PY_HINT_NEEDED = re.compile(r'```\n((?:>>> |\$ |\.\.\. ).+)', re.MULTILINE)
 
 
@@ -47,11 +48,13 @@ def fix_rst_links(text: str) -> str:
 
 
 def fix_code_fences(text: str) -> str:
-    """Default untagged fences to 'python' when they look like Python/REPL."""
+    """Default untagged fences to 'python' when they look like Python/REPL.
+    Normalizes uncommon language names via LANGUAGE_MAP."""
     def repl(m: re.Match) -> str:
         lang, body = m.group(1), m.group(2)
         if lang:
-            return m.group(0)
+            lang = LANGUAGE_MAP.get(lang, lang)
+            return f'```{lang}\n{body}```'
         if PY_HINT_NEEDED.match(m.group(0)):
             return f'```python\n{body}```'
         return m.group(0)
