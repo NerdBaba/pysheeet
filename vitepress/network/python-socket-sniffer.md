@@ -16,6 +16,10 @@ Raw socket operations typically require root/administrator privileges on most op
 
 ## Sniffer IP Packets
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sniffer ip packets](https://realpython.com/search?q=sniffer+ip+packets).
+:::
+
 Capturing IP packets requires creating a raw socket with `SOCK_RAW` and specifying the protocol to capture (e.g., `IPPROTO_ICMP` for ICMP packets). The IP header is a 20-byte structure (without options) containing version, header length, type of service, total length, identification, flags, fragment offset, TTL, protocol, checksum, and source/destination addresses. Using `ctypes.Structure`, we can define a Python class that maps directly to this binary layout for easy field access.
 
 ```python
@@ -84,6 +88,10 @@ ICMP: 127.0.0.1 -> 127.0.0.1
 ```
 
 ## Sniffer TCP Packets
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sniffer tcp packets](https://realpython.com/search?q=sniffer+tcp+packets).
+:::
 
 Parse TCP headers to extract port numbers, sequence numbers, and flags.
 
@@ -155,6 +163,10 @@ except KeyboardInterrupt:
 
 ## Sniffer ARP Packets
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sniffer arp packets](https://realpython.com/search?q=sniffer+arp+packets).
+:::
+
 Capture ARP (Address Resolution Protocol) packets to see MAC-to-IP mappings.
 
 ```python
@@ -198,6 +210,10 @@ while True:
 ```
 
 ## Parse Packet with struct
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on parse packet with struct](https://realpython.com/search?q=parse+packet+with+struct).
+:::
 
 Using `struct` module for flexible packet parsing.
 
@@ -245,6 +261,10 @@ def parse_udp_header(data):
 
 ## Linux Kernel Crypto API (AF_ALG)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on linux kernel crypto api af_alg](https://realpython.com/search?q=linux+kernel+crypto+api+af_alg).
+:::
+
 Use Linux kernel's cryptographic API through sockets for hardware-accelerated encryption. Requires Linux 2.6.38+ and Python 3.6+.
 
 ```python
@@ -277,6 +297,10 @@ with create_alg('hash', 'sha256') as algo:
 ```
 
 ## AES-CBC Encryption via AF_ALG
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on aes-cbc encryption via af_alg](https://realpython.com/search?q=aes-cbc+encryption+via+af_alg).
+:::
 
 ```python
 import socket
@@ -322,6 +346,10 @@ print(f"Decrypted: {decrypted}")
 ```
 
 ## Useful Tools for Packet Analysis
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on useful tools for packet analysis](https://realpython.com/search?q=useful+tools+for+packet+analysis).
+:::
 
 While raw sockets are educational, consider these tools for production use:
 

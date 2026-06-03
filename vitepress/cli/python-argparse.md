@@ -13,6 +13,10 @@ Python's `argparse` module parses command-line arguments and options with automa
 
 ## Basic ArgumentParser
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic argumentparser](https://realpython.com/search?q=basic+argumentparser).
+:::
+
 Create a parser, add arguments, and parse. The `--help` flag is generated automatically.
 
 ```python
@@ -37,6 +41,10 @@ print(args.output)     # 'out.txt' by default
 
 ## Positional Arguments
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on positional arguments](https://realpython.com/search?q=positional+arguments).
+:::
+
 Positional arguments are required by default and don't use `--` prefixes. They're accessed by the name you give them (dest).
 
 ```python
@@ -52,6 +60,10 @@ print(args.input, args.output, args.mode)
 ```
 
 ## Optional Arguments
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on optional arguments](https://realpython.com/search?q=optional+arguments).
+:::
 
 Optional arguments start with `--` or `-`. They can be flags (no value) or accept values.
 
@@ -72,6 +84,10 @@ args = parser.parse_args()
 ```
 
 ## Type Conversion
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on type conversion](https://realpython.com/search?q=type+conversion).
+:::
 
 Use `type` to automatically convert string arguments to the desired type. The parser validates and converts before returning.
 
@@ -98,6 +114,10 @@ args = parser.parse_args()
 
 ## Choices
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on choices](https://realpython.com/search?q=choices).
+:::
+
 Restrict an argument's value to a fixed set of options. Argparse generates an error message listing valid choices.
 
 ```python
@@ -114,6 +134,10 @@ args = parser.parse_args()
 ```
 
 ## nargs — Multiple Values
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on nargs multiple values](https://realpython.com/search?q=nargs+multiple+values).
+:::
 
 Control how many values an argument consumes. `nargs` takes an integer, `'?'`, `'*'`, `'+'`, or `argparse.REMAINDER`.
 
@@ -142,6 +166,10 @@ args = parser.parse_args()
 
 ## action='store_true' / 'store_false'
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on action store_true store_false](https://realpython.com/search?q=action+store_true+store_false).
+:::
+
 Convenience flags that set a boolean. `store_true` sets the attribute to `True` when the flag is present, `store_false` sets it to `False`. Both default to the opposite value when absent.
 
 ```python
@@ -159,6 +187,10 @@ args = parser.parse_args()
 ```
 
 ## Default Values
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on default values](https://realpython.com/search?q=default+values).
+:::
 
 Every argument can have a default value. Argparse supports two special constants: `SUPPRESS` omits the attribute entirely if not provided, and `PARSER` is used internally for subparsers.
 
@@ -184,6 +216,10 @@ print(getattr(args, "optional", "not provided"))
 
 ## Mutually Exclusive Groups
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on mutually exclusive groups](https://realpython.com/search?q=mutually+exclusive+groups).
+:::
+
 Define options that cannot be used together. Argparse generates an automatic error message if the user provides conflicting flags.
 
 ```python
@@ -205,6 +241,10 @@ args = parser.parse_args()
 ```
 
 ## Argument Groups
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on argument groups](https://realpython.com/search?q=argument+groups).
+:::
 
 Organize help output into logical sections for better user experience.
 
@@ -231,6 +271,10 @@ args = parser.parse_args()
 ```
 
 ## Subparsers — Subcommands
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on subparsers subcommands](https://realpython.com/search?q=subparsers+subcommands).
+:::
 
 Create nested commands like `git commit`, `git push`. Each subcommand gets its own set of arguments.
 
@@ -266,6 +310,10 @@ elif args.command == "commit":
 
 ## parse_known_args
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on parse_known_args](https://realpython.com/search?q=parse_known_args).
+:::
+
 Parse only recognized arguments and return the rest in a list. Useful for wrapping other commands or skipping arguments for another parser.
 
 ```python
@@ -287,6 +335,10 @@ subprocess.run(["docker"] + unknown)
 ```
 
 ## Error Handling
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on error handling](https://realpython.com/search?q=error+handling).
+:::
 
 Override default error behavior to suppress exit on errors, especially useful in test environments or interactive shells.
 

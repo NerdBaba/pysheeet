@@ -20,6 +20,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## Simple Timing with `time.perf_counter`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple timing with time perf_counter](https://realpython.com/search?q=simple+timing+with+time+perf_counter).
+:::
+
+
 For quick, ad-hoc timing of code blocks, `perf_counter` provides the highest available resolution clock.
 
 ```python
@@ -39,6 +44,11 @@ Took 0.184 seconds
 ```
 
 ## Micro-Benchmarks with `timeit`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on micro-benchmarks with timeit](https://realpython.com/search?q=micro-benchmarks+with+timeit).
+:::
+
 
 The `timeit` module measures execution time of small code snippets, running them many times for statistical accuracy. It disables the garbage collector during runs.
 
@@ -64,6 +74,11 @@ The `timeit` module measures execution time of small code snippets, running them
 ```
 
 ## Function-Level Profiling with `cProfile` and `pstats`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on function-level profiling with cprofile and pstats](https://realpython.com/search?q=function-level+profiling+with+cprofile+and+pstats).
+:::
+
 
 `cProfile` records every function call and returns detailed statistics. `pstats` sorts and filters the results.
 
@@ -96,6 +111,11 @@ Common sort keys: `"cumtime"` (cumulative time), `"time"` (internal time), `"cal
 
 ## Visualizing Profiles with `snakeviz`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on visualizing profiles with snakeviz](https://realpython.com/search?q=visualizing+profiles+with+snakeviz).
+:::
+
+
 `snakeviz` provides an interactive flame chart visualization of `cProfile` output.
 
 ```bash
@@ -108,6 +128,11 @@ $ snakeviz output.prof
 ```
 
 ## Memory Profiling with `memory_profiler`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on memory profiling with memory_profiler](https://realpython.com/search?q=memory+profiling+with+memory_profiler).
+:::
+
 
 `memory_profiler` measures memory usage line-by-line or over time. Use the `@profile` decorator to annotate functions of interest.
 
@@ -138,6 +163,11 @@ $ python -m memory_profiler script.py
 
 ## Line-Level Profiling with `line_profiler`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on line-level profiling with line_profiler](https://realpython.com/search?q=line-level+profiling+with+line_profiler).
+:::
+
+
 `line_profiler` measures time per line of code, which is invaluable for pinpointing bottlenecks inside functions.
 
 ```bash
@@ -166,6 +196,11 @@ $ kernprof -l -v script.py
 
 ## Sampling Profiler with `py-spy`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sampling profiler with py-spy](https://realpython.com/search?q=sampling+profiler+with+py-spy).
+:::
+
+
 `py-spy` is a statistical (sampling) profiler that runs without modifying your code. It works on running processes and can profile production applications safely.
 
 ```bash
@@ -182,6 +217,11 @@ $ py-spy top --pid 12345
 ```
 
 ## Common Optimization Patterns
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on common optimization patterns](https://realpython.com/search?q=common+optimization+patterns).
+:::
+
 
 ### List vs Generator
 

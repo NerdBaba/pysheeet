@@ -9,13 +9,25 @@ Date
 
 ## Abstract
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/).
+:::
+
 GPU-Initiated Networking (GIN) has attracted significant attention as a key enabler for kernel fusion in large language model (LLM) training and inference. Mixture-of-Experts (MoE) architectures, such as DeepSeek-V3 and Qwen3-30B, require efficient token dispatching and combining across MoE layers. Conventionally, inter-GPU communication is initiated by the CPU through collective libraries such as NCCL or Gloo, necessitating explicit GPU synchronization barriers and additional `cudaLaunchKernel` calls that introduce non-trivial overhead. GPU-Initiated Networking eliminates this CPU-mediated round-trip by allowing data exchange to occur directly within CUDA kernels, thereby enabling kernel fusion and efficient CUDA Graph capture for accelerating end-to-end LLM layer computation. This article demonstrates how to enable NCCL GIN with DeepEP on AWS HyperPod Slurm using the AWS Elastic Fabric Adapter (EFA).
 
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/).
+:::
+
 Prior to 2026, adopting DeepEP as a Mixture-of-Experts dispatch and combine backend on AWS presented a significant challenge. The DeepEP kernel was originally built on top of InfiniBand with a customized NVSHMEM implementation, a transport layer unavailable on AWS infrastructure. This incompatibility effectively prevented users from leveraging DeepEP on instances equipped with the Elastic Fabric Adapter (EFA). Recent collaborative efforts by NVIDIA and Amazon Annapurna Labs have addressed this gap by introducing GPU-Initiated Networking support in NCCL and the EFA provider, enabling DeepEP to operate over EFA without relying on InfiniBand (see [DeepEP PR \#521](https://github.com/deepseek-ai/DeepEP/pull/521) and [aws-ofi-nccl PR \#1069](https://github.com/aws/aws-ofi-nccl/pull/1069)). The following experiment builds upon these contributions to illustrate how to deploy DeepEP with NCCL GIN on AWS using EFA.
 
 ## Build DeepEP
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/).
+:::
 
 Before deploying DeepEP on AWS HyperPod Slurm, several components must be built from source. First, NCCL \>= v2.29.3-1 is required, as this is the minimum version that exposes the Device API needed for GPU-Initiated Networking. The build targets `sm_90` (NVIDIA H100) and `sm_100` (NVIDIA B200) compute capabilities to ensure compatibility with current-generation GPU instances.
 
@@ -31,6 +43,11 @@ Optionally, the NCCL Device API examples can be built to verify that GPU-initiat
 
 ```bash
 ## Build NCCL Device API examples
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/).
+:::
+
 cd /opt/nccl/examples/06_device_api \
     && make -j $(nproc) NCCL_HOME=/opt/nccl/build CUDA_HOME=/usr/local/cuda MPI=1 MPI_HOME=/opt/amazon/openmpi
 
@@ -49,6 +66,11 @@ To test DeepEP on HyperPod Slurm, both DeepEP and aws-ofi-nccl must be pinned to
 
 ```bash
 ## Install DeepEP with NCCL GIN backend (PR #521)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/).
+:::
+
 unset NVSHMEM_DIR NVSHMEM_HOME \
     && export ENABLE_NCCL=1 \
     && export NCCL_DIR=/opt/nccl/build \
@@ -76,6 +98,10 @@ git clone https://github.com/aws/aws-ofi-nccl.git /tmp/aws-ofi-nccl \
 For a complete build with all necessary dependencies, refer to the [Dockerfile](https://github.com/crazyguitar/pysheeet/blob/master/src/gin/Dockerfile) provided in this repository.
 
 ## Test NCCL GIN
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/).
+:::
 
 With the Docker image (or Enroot squash file) prepared in the previous section, NCCL GIN functionality can be validated on a Slurm cluster. The following examples demonstrate how to launch the NCCL Device API samples and nccl-tests benchmarks. The corresponding Slurm wrapper scripts are available under the [gin](https://github.com/crazyguitar/pysheeet/blob/master/src/gin/) directory in this repository.
 
@@ -128,6 +154,10 @@ salloc -N 2 ./run.enroot /opt/nccl-tests/build/alltoall_perf \
 ```
 
 ## Serving MoE Models with vLLM and DeepEP over NCCL GIN
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/).
+:::
 
 With NCCL GIN and EFA validated on AWS HyperPod Slurm, this section demonstrates an end-to-end inference deployment using vLLM with DeepEP as the MoE all-to-all communication backend. DeepEP's low-latency dispatch and combine kernels, now operating over NCCL GIN rather than NVSHMEM, enable efficient expert-parallel inference for large MoE models such as DeepSeek-V3.
 
@@ -199,6 +229,10 @@ curl -sf -X POST http://<VLLM_HOST>:8000/v1/completions \
 ```
 
 ## Conclusion
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nccl/user-guide/).
+:::
 
 This article has demonstrated how to deploy vLLM with DeepEP and NCCL GIN on AWS HyperPod Slurm using the Elastic Fabric Adapter. As this integration is still under active development, certain limitations remain at the time of writing. For instance, although DeepEP's low-latency mode supports CUDA Graph capture, enabling it by removing `--enforce-eager` currently results in a startup failure in vLLM. Additionally, performance over EFA may not yet match that of InfiniBand-based deployments, as further optimizations are ongoing.
 

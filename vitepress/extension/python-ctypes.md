@@ -12,6 +12,10 @@ ctypes is Python's built-in foreign function interface (FFI) library that allows
 
 ## Loading Shared Libraries
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on loading shared libraries](https://realpython.com/search?q=loading+shared+libraries).
+:::
+
 ctypes provides platform-specific loaders for shared libraries. Use `CDLL` for standard C calling convention or `WinDLL` on Windows for stdcall convention. The library search follows system conventions: `LD_LIBRARY_PATH` on Linux, `DYLD_LIBRARY_PATH` on macOS, and `PATH` on Windows.
 
 ```python
@@ -33,6 +37,10 @@ libc.printf(b"Hello from C: %d\n", 42)
 
 ## Loading Custom Libraries
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on loading custom libraries](https://realpython.com/search?q=loading+custom+libraries).
+:::
+
 For your own compiled C libraries, provide the full path or ensure the library is in the system's library search path. The `use_errno=True` parameter enables proper errno handling for error detection.
 
 ```python
@@ -51,6 +59,10 @@ if libm_path:
 ```
 
 ## Basic Type Mapping
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic type mapping](https://realpython.com/search?q=basic+type+mapping).
+:::
 
 ctypes provides Python equivalents for C types. Always declare argument types (`argtypes`) and return types (`restype`) explicitly to avoid crashes and ensure correct data conversion. Without these declarations, ctypes assumes all arguments and return values are C `int`.
 
@@ -81,6 +93,10 @@ print(result)  # 3.14159
 
 ## Calling strlen and abs
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on calling strlen and abs](https://realpython.com/search?q=calling+strlen+and+abs).
+:::
+
 Simple examples calling standard C library functions with proper type declarations.
 
 ```python
@@ -103,6 +119,10 @@ assert libc.abs(-42) == 42
 
 ## Calling sqrt from libm
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on calling sqrt from libm](https://realpython.com/search?q=calling+sqrt+from+libm).
+:::
+
 ```python
 import platform
 from ctypes import CDLL, c_double
@@ -120,6 +140,10 @@ assert abs(result - 4.0) < 1e-10
 ```
 
 ## Calling C Functions
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on calling c functions](https://realpython.com/search?q=calling+c+functions).
+:::
 
 This example shows a complete workflow: compile a C library, load it with ctypes, and call functions with proper type declarations. The Fibonacci function demonstrates the performance benefit of C code called from Python.
 
@@ -172,6 +196,10 @@ print(lib.fib(35))  # 9227465
 
 ## Pointers and byref
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pointers and byref](https://realpython.com/search?q=pointers+and+byref).
+:::
+
 Use `byref()` to pass arguments by reference (like `&var` in C) and `POINTER()` to create pointer types. `byref()` is more efficient than `pointer()` when you only need to pass a reference to a function.
 
 ```python
@@ -195,6 +223,10 @@ arr = (c_int * 3)(1, 2, 3)
 ```
 
 ## Structures
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on structures](https://realpython.com/search?q=structures).
+:::
 
 Define C structures by subclassing `Structure` and specifying `_fields_`. Field order must match the C struct exactly. Use `_pack_` to control alignment if needed (e.g., `_pack_ = 1` for packed structs).
 
@@ -220,6 +252,10 @@ assert abs(distance - 5.0) < 1e-10
 
 ## Nested Structures
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on nested structures](https://realpython.com/search?q=nested+structures).
+:::
+
 ```python
 import ctypes
 
@@ -242,6 +278,10 @@ assert rect.bottom_right.x == 10
 ```
 
 ## Arrays
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on arrays](https://realpython.com/search?q=arrays).
+:::
 
 Create C arrays using the multiplication syntax `type * size`. Arrays can be initialized with values and accessed like Python lists. They automatically convert to pointers when passed to C functions.
 
@@ -270,6 +310,10 @@ assert abs(sum(data) - 6.6) < 1e-10
 
 ## Array in Structure
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on array in structure](https://realpython.com/search?q=array+in+structure).
+:::
+
 Structures can contain fixed-size arrays as members.
 
 ```python
@@ -291,6 +335,10 @@ assert d.count == 5
 ```
 
 ## Using cffi
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using cffi](https://realpython.com/search?q=using+cffi).
+:::
 
 cffi is a cleaner alternative to ctypes with better PyPy compatibility. It uses C-like declarations instead of Python type objects.
 
@@ -319,6 +367,10 @@ assert abs(libm.sqrt(16.0) - 4.0) < 1e-10
 
 ## Error Handling
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on error handling](https://realpython.com/search?q=error+handling).
+:::
+
 When calling C functions that set errno on failure, use `use_errno=True` when loading the library and `get_errno()` to retrieve the error code. This is essential for proper error handling with system calls.
 
 ```python
@@ -340,6 +392,10 @@ if fd == -1:
 ```
 
 ## Callbacks
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on callbacks](https://realpython.com/search?q=callbacks).
+:::
 
 ctypes can create C-callable function pointers from Python functions using `CFUNCTYPE`. This is useful for C libraries that accept callback functions, such as `qsort()` or event handlers.
 
@@ -371,6 +427,10 @@ print(list(arr))  # [1, 2, 5, 8, 9]
 ```
 
 ## String Handling
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on string handling](https://realpython.com/search?q=string+handling).
+:::
 
 C strings require careful handling in ctypes. Use `c_char_p` for immutable strings and `create_string_buffer()` for mutable buffers. Always use bytes (`b"string"`) not str when passing to C functions.
 

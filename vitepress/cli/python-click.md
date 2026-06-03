@@ -13,6 +13,10 @@ Click is a Python package for creating command-line interfaces with minimal boil
 
 ## Basic Command
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic command](https://realpython.com/search?q=basic+command).
+:::
+
 Decorators turn functions into CLI commands. The `@click.command()` decorator registers the function, and `@click.option()` adds command-line flags.
 
 ```python
@@ -35,6 +39,10 @@ if __name__ == "__main__":
 Run with: `python hello.py --name Alice --count 3`
 
 ## Options
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on options](https://realpython.com/search?q=options).
+:::
 
 Options use `--` prefixes and support short forms, types, defaults, and help text.
 
@@ -59,6 +67,10 @@ if __name__ == "__main__":
 
 ## Arguments
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on arguments](https://realpython.com/search?q=arguments).
+:::
+
 Arguments are positional and required unless marked optional. They use `@click.argument()`.
 
 ```python
@@ -82,6 +94,10 @@ Run with: `python convert.py data.csv output.json json`
 
 ## Types
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on types](https://realpython.com/search?q=types).
+:::
+
 Click provides built-in types beyond basic Python types.
 
 ```python
@@ -104,6 +120,10 @@ def process(path, count, ratio, choice, email, password, uuid):
 
 ## Prompts and Hidden Input
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on prompts and hidden input](https://realpython.com/search?q=prompts+and+hidden+input).
+:::
+
 Prompt the user interactively for values. `hide_input` masks typed input, `confirmation_prompt` asks twice.
 
 ```python
@@ -125,6 +145,10 @@ if __name__ == "__main__":
 ```
 
 ## Multiple Values and Counts
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on multiple values and counts](https://realpython.com/search?q=multiple+values+and+counts).
+:::
 
 Use `multiple=True` to accept a flag multiple times, and `count=True` to count occurrences of a flag.
 
@@ -151,6 +175,10 @@ if __name__ == "__main__":
 Run with: `python app.py -vv --name Alice --name Bob`
 
 ## Value Validation with Callbacks
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on value validation with callbacks](https://realpython.com/search?q=value+validation+with+callbacks).
+:::
 
 Callbacks validate or transform option values before they reach the function.
 
@@ -186,6 +214,10 @@ if __name__ == "__main__":
 ```
 
 ## Subcommands with Groups
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on subcommands with groups](https://realpython.com/search?q=subcommands+with+groups).
+:::
 
 Use `@click.group()` to create nested command structures like `git commit` or `docker run`.
 
@@ -234,6 +266,10 @@ if __name__ == "__main__":
 
 ## Context Passing (pass_context)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on context passing pass_context](https://realpython.com/search?q=context+passing+pass_context).
+:::
+
 Share state between commands using the Click context. `@click.pass_context` passes the context as the first argument.
 
 ```python
@@ -277,6 +313,10 @@ if __name__ == "__main__":
 
 ## echo and Styling
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on echo and styling](https://realpython.com/search?q=echo+and+styling).
+:::
+
 Click's `echo()` replaces `print()` with cross-platform Unicode and ANSI color support. Use `secho()` for styled output.
 
 ```python
@@ -309,6 +349,10 @@ if __name__ == "__main__":
 ```
 
 ## Click vs Argparse
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on click vs argparse](https://realpython.com/search?q=click+vs+argparse).
+:::
 
 | Feature | Click | Argparse |
 |---|---|---|

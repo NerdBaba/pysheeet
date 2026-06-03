@@ -10,9 +10,17 @@ Source
 [[toc]]
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
+
 Python provides comprehensive support for file operations and filesystem manipulation through several built-in modules. The `open()` function is the foundation for reading and writing files, supporting text and binary modes with configurable encoding. The `pathlib` module (Python 3.4+) offers a modern, object-oriented interface for path manipulation that works consistently across operating systems. For high-level operations like copying directory trees or moving files across filesystems, the `shutil` module provides convenient functions. The `tempfile` module handles creation of temporary files and directories with automatic cleanup, essential for secure handling of intermediate data. Together, these modules cover virtually all file I/O needs from simple text processing to complex filesystem operations.
 
 ## Reading Files
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reading files](https://realpython.com/search?q=reading+files).
+:::
 
 The `open()` function returns a file object that supports multiple read methods. Always use the `with` statement (context manager) to ensure files are properly closed even if an exception occurs. The `read()` method loads the entire file into memory, while iterating over the file object processes one line at a time, which is more memory-efficient for large files. Always specify `encoding="utf-8"` explicitly to avoid platform-dependent behavior.
 
@@ -41,6 +49,10 @@ with open("example.txt", encoding="utf-8") as f:
 
 ## Writing Files
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on writing files](https://realpython.com/search?q=writing+files).
+:::
+
 Python offers several modes for writing files. Mode `"w"` creates a new file or truncates an existing one, `"a"` appends to the end without truncating, and `"x"` creates exclusively (raising `FileExistsError` if the file already exists). The `write()` method writes a single string, while `writelines()` writes an iterable of strings. Note that neither method adds newlines automatically—you must include `\n` in your strings. You can also redirect `print()` output to a file using the `file` parameter.
 
 ```python
@@ -68,6 +80,10 @@ with open("output.txt", "w", encoding="utf-8") as f:
 
 ## Binary Files
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on binary files](https://realpython.com/search?q=binary+files).
+:::
+
 Binary mode (`"rb"`, `"wb"`) reads and writes raw bytes without any encoding or newline translation. This is essential for non-text files like images, PDFs, executables, or any file where byte-level accuracy matters. Binary data is represented as `bytes` objects in Python. When processing large binary files, read in chunks to avoid loading the entire file into memory at once.
 
 ```python
@@ -89,6 +105,10 @@ with open("large_file.bin", "rb") as f:
 
 ## File Modes
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on file modes](https://realpython.com/search?q=file+modes).
+:::
+
 The `open()` function accepts a mode string that controls how the file is opened. The mode combines access type (read, write, append) with content type (text or binary). Text mode performs encoding/decoding and newline translation, while binary mode works with raw bytes. The `+` modifier enables both reading and writing on the same file handle.
 
 Common file modes:
@@ -103,6 +123,10 @@ Common file modes:
 - `"w+"` - Write and read (truncates)
 
 ## Reading File in Chunks
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reading file in chunks](https://realpython.com/search?q=reading+file+in+chunks).
+:::
 
 When processing files larger than available memory, reading in chunks prevents memory exhaustion. A generator function that yields chunks is memory-efficient and works well with streaming processing. The walrus operator (`:=`) provides a clean way to read until the file is exhausted. The `iter()` function with a sentinel value offers an alternative pattern for chunk-based reading.
 
@@ -125,6 +149,10 @@ with open("file.txt", encoding="utf-8") as f:
 
 ## pathlib Basics
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pathlib basics](https://realpython.com/search?q=pathlib+basics).
+:::
+
 The `pathlib` module, introduced in Python 3.4, provides an object-oriented approach to filesystem paths. Unlike string-based path manipulation, `Path` objects handle platform differences automatically (forward slashes on Unix, backslashes on Windows). The `/` operator joins path components intuitively, and methods like `resolve()` convert relative paths to absolute. `Path` objects are the recommended way to work with filesystem paths in modern Python.
 
 ```python
@@ -143,6 +171,10 @@ abs_path = Path("file.txt").resolve()
 ```
 
 ## Path Properties
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on path properties](https://realpython.com/search?q=path+properties).
+:::
 
 `Path` objects expose various properties to extract components of a path. The `name` property returns the final component, `stem` returns the name without the suffix, and `suffix` returns the file extension including the dot. The `parent` property returns the directory containing the path, and `parts` returns a tuple of all path components. Methods like `with_suffix()` and `with_name()` create new paths with modified components without affecting the original.
 
@@ -173,6 +205,10 @@ print(p4)  # /home/user/documents/summary.pdf
 
 ## Path Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on path operations](https://realpython.com/search?q=path+operations).
+:::
+
 `Path` objects provide methods to check file existence and type, retrieve file metadata, and perform read/write operations. The `exists()`, `is_file()`, and `is_dir()` methods test path status without raising exceptions. The `stat()` method returns detailed file information including size and modification time. For simple file operations, `read_text()`, `write_text()`, `read_bytes()`, and `write_bytes()` provide convenient one-liner alternatives to the `open()` context manager pattern.
 
 ```python
@@ -201,6 +237,10 @@ p.write_bytes(b"binary data")
 ```
 
 ## Listing Directories
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on listing directories](https://realpython.com/search?q=listing+directories).
+:::
 
 Python offers several ways to list directory contents, each with different trade-offs. The `pathlib` method `iterdir()` returns an iterator of `Path` objects, allowing you to check file types and access properties directly. The `os.scandir()` function is highly efficient because it retrieves file type information during directory iteration without additional system calls. The simpler `os.listdir()` returns just filenames as strings, requiring additional calls to get file information.
 
@@ -232,6 +272,10 @@ files = os.listdir(".")
 
 ## Glob Patterns
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on glob patterns](https://realpython.com/search?q=glob+patterns).
+:::
+
 Glob patterns provide a shell-like syntax for matching multiple files. The `*` wildcard matches any characters except path separators, `?` matches a single character, and `**` matches any number of directories recursively. The `pathlib` methods `glob()` and `rglob()` (recursive glob) return iterators of matching `Path` objects. Note that `pathlib` glob doesn't support brace expansion like `{py,txt}`—use multiple glob calls or the `glob` module for complex patterns.
 
 ```python
@@ -259,6 +303,10 @@ glob.glob("**/*.py", recursive=True)
 
 ## Creating Directories
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on creating directories](https://realpython.com/search?q=creating+directories).
+:::
+
 Creating directories is straightforward with both `pathlib` and `os`. The `mkdir()` method creates a single directory, raising `FileExistsError` if it already exists. The `parents=True` parameter creates all intermediate directories (like `mkdir -p` in Unix), and `exist_ok=True` suppresses the error if the directory already exists. These options together make directory creation idempotent and safe for concurrent execution.
 
 ```python
@@ -276,6 +324,10 @@ os.makedirs("path/to/dir", exist_ok=True)
 ```
 
 ## shutil - High-Level File Operations
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on shutil - high-level file operations](https://realpython.com/search?q=shutil+-+high-level+file+operations).
+:::
 
 The `shutil` module provides high-level operations for copying, moving, and removing files and directory trees.
 
@@ -429,6 +481,10 @@ print(shutil.get_unpack_formats())
 
 ## Temporary Files
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on temporary files](https://realpython.com/search?q=temporary+files).
+:::
+
 The `tempfile` module creates temporary files and directories with unique names in a secure manner. `NamedTemporaryFile` creates a file that is automatically deleted when closed (unless `delete=False`). The `suffix` parameter adds a file extension, useful when other programs need to identify the file type. `TemporaryDirectory` creates a directory that is recursively deleted when the context manager exits, perfect for test fixtures or intermediate processing. These functions use the system's temp directory by default, which you can query with `gettempdir()`.
 
 ```python
@@ -459,6 +515,10 @@ print(tempfile.gettempdir())  # /tmp
 
 ## Symbolic Links
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on symbolic links](https://realpython.com/search?q=symbolic+links).
+:::
+
 Symbolic links (symlinks) are special files that point to another file or directory. They're useful for creating shortcuts, managing multiple versions, or organizing files without duplication. The `symlink_to()` method creates a symlink pointing to the specified target. The `is_symlink()` method checks if a path is a symlink, and `readlink()` returns the target path. The `resolve()` method follows all symlinks to return the canonical absolute path.
 
 ```python
@@ -483,6 +543,10 @@ real_path = Path("link_name").resolve()
 ```
 
 ## File Permissions
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on file permissions](https://realpython.com/search?q=file+permissions).
+:::
 
 Unix-like systems use permission bits to control file access. The `stat()` method returns file metadata including the permission mode. The `chmod()` method modifies permissions using octal notation (e.g., `0o644` for owner read/write, group/other read-only) or by combining `stat` module constants. The `os.access()` function checks if the current process has specific permissions on a file, useful for pre-flight checks before attempting operations.
 
@@ -510,6 +574,10 @@ os.access("file.txt", os.X_OK)  # Executable
 ```
 
 ## Working with CSV Files
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on working with csv files](https://realpython.com/search?q=working+with+csv+files).
+:::
 
 CSV (Comma-Separated Values) is a common format for tabular data exchange. Python's `csv` module handles the complexities of CSV parsing, including quoted fields, different delimiters, and proper escaping. The `writer` object writes rows as lists, while `DictWriter` writes dictionaries using column headers as keys. Similarly, `reader` yields rows as lists, and `DictReader` yields dictionaries. Always open CSV files with `newline=""` to let the csv module handle line endings correctly across platforms.
 
@@ -539,6 +607,10 @@ with open("data.csv", newline="", encoding="utf-8") as f:
 
 ## Working with JSON Files
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on working with json files](https://realpython.com/search?q=working+with+json+files).
+:::
+
 JSON (JavaScript Object Notation) is the standard format for data interchange in web APIs and configuration files. Python's `json` module serializes Python objects (dicts, lists, strings, numbers, booleans, None) to JSON strings and deserializes JSON back to Python objects. The `dump()` and `load()` functions work directly with file objects, while `dumps()` and `loads()` work with strings. The `indent` parameter produces human-readable formatted output.
 
 ```python
@@ -561,6 +633,10 @@ loaded = json.loads(Path("data.json").read_text())
 ```
 
 ## Compressed Files
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on compressed files](https://realpython.com/search?q=compressed+files).
+:::
 
 Python supports several compression formats through dedicated modules. The `gzip` module handles gzip compression, commonly used for log files and web content. Use `"rt"` and `"wt"` modes for text, `"rb"` and `"wb"` for binary. The `zipfile` module creates and extracts ZIP archives, supporting multiple files in a single archive. The `writestr()` method adds content directly from strings without creating temporary files. Both modules integrate seamlessly with Python's file handling patterns.
 
@@ -596,6 +672,10 @@ with zipfile.ZipFile("archive.zip", "r") as zf:
 
 ## File Locking
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on file locking](https://realpython.com/search?q=file+locking).
+:::
+
 File locking prevents data corruption when multiple processes access the same file. On Unix systems, `fcntl.flock()` provides advisory locking—processes must cooperatively check locks. `LOCK_EX` requests an exclusive lock for writing, while `LOCK_SH` allows shared read access. The `LOCK_NB` flag makes the call non-blocking, raising `BlockingIOError` if the lock isn't immediately available. Always release locks in a `finally` block to prevent deadlocks. Note that Windows uses different locking mechanisms (`msvcrt`).
 
 ```python
@@ -621,6 +701,10 @@ with open("data.txt", "w") as f:
 ```
 
 ## Watching File Changes (inotify)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on watching file changes inotify](https://realpython.com/search?q=watching+file+changes+inotify).
+:::
 
 The Linux inotify API provides efficient filesystem event monitoring without polling. Applications can watch directories for file creation, deletion, modification, and other events. This is useful for auto-reloading configuration files, triggering builds on source changes, or synchronizing directories. The example below demonstrates direct inotify access via `ctypes`; for production use, consider the `watchdog` library which provides a cross-platform abstraction.
 

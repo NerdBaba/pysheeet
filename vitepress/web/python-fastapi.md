@@ -9,6 +9,10 @@ FastAPI is a modern, high-performance web framework for building APIs with Pytho
 
 ## Basic App
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic app](https://realpython.com/search?q=basic+app).
+:::
+
 ```python
 from fastapi import FastAPI
 
@@ -27,6 +31,10 @@ def health_check():
 Run with `uvicorn main:app --reload`. The interactive docs are at `/docs` and the alternative docs at `/redoc`.
 
 ## Route Decorators
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on route decorators](https://realpython.com/search?q=route+decorators).
+:::
 
 FastAPI maps HTTP methods to Python functions using decorators.
 
@@ -58,6 +66,10 @@ def patch_item(item_id: int):
 
 ## Path Parameters
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on path parameters](https://realpython.com/search?q=path+parameters).
+:::
+
 Path parameters are declared as function parameters in the path. Type hints automatically validate and convert values.
 
 ```python
@@ -80,6 +92,10 @@ def get_item(item_id: int, q: str | None = None):
 
 ## Query Parameters
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on query parameters](https://realpython.com/search?q=query+parameters).
+:::
+
 Any function parameter not declared in the path is automatically treated as a query parameter.
 
 ```python
@@ -99,6 +115,10 @@ def list_items(
 ```
 
 ## Request Body with Pydantic Models
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on request body with pydantic models](https://realpython.com/search?q=request+body+with+pydantic+models).
+:::
 
 Define request schemas using Pydantic models. FastAPI validates the request body, provides editor autocompletion, and generates JSON Schema for the docs.
 
@@ -131,6 +151,10 @@ def create_order(order: Order):
 
 ## Query and Path Validators
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on query and path validators](https://realpython.com/search?q=query+and+path+validators).
+:::
+
 Use `Query` and `Path` from FastAPI to add validation, metadata, and documentation to parameters.
 
 ```python
@@ -155,6 +179,10 @@ def search(
 ```
 
 ## Dependency Injection
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on dependency injection](https://realpython.com/search?q=dependency+injection).
+:::
 
 FastAPI's `Depends` allows you to extract common logic into reusable dependencies.
 
@@ -220,6 +248,10 @@ Dependencies that use `yield` (for cleanup) are only supported in async routes o
 
 ## Background Tasks
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on background tasks](https://realpython.com/search?q=background+tasks).
+:::
+
 Offload work that doesn't need to block the response.
 
 ```python
@@ -247,6 +279,10 @@ def create_user(
 ```
 
 ## CORS Middleware
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cors middleware](https://realpython.com/search?q=cors+middleware).
+:::
 
 Enable CORS so your frontend can call the API from a different origin.
 
@@ -276,6 +312,10 @@ app.add_middleware(
 ```
 
 ## Async Route Handlers
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async route handlers](https://realpython.com/search?q=async+route+handlers).
+:::
 
 Use `async def` for routes that perform I/O operations (database queries, HTTP requests, file reads).
 
@@ -307,6 +347,10 @@ Avoid mixing `async def` with blocking I/O calls (e.g., `time.sleep`, synchronou
 :::
 
 ## File Upload
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on file upload](https://realpython.com/search?q=file+upload).
+:::
 
 Handle file uploads with `UploadFile` and `File`.
 
@@ -346,6 +390,10 @@ async def upload_and_save(file: UploadFile = File(...)):
 ```
 
 ## Error Handling
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on error handling](https://realpython.com/search?q=error+handling).
+:::
 
 Raise `HTTPException` for expected errors or register custom exception handlers.
 
@@ -400,6 +448,10 @@ def insufficient_funds_handler(request, exc: InsufficientFunds):
 ```
 
 ## Automatic OpenAPI Docs
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on automatic openapi docs](https://realpython.com/search?q=automatic+openapi+docs).
+:::
 
 FastAPI generates OpenAPI (Swagger) documentation automatically at `/docs` and `/redoc`. Customize the metadata in the app constructor.
 

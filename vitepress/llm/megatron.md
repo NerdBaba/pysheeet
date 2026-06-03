@@ -11,6 +11,10 @@ In this note, we demonstrate how to use Megatron Bridge to load HuggingFace pret
 
 ## How to Use Megatron Bridge
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/nlp/megatron.html).
+:::
+
 The container image is built with Docker and exported as an [enroot](https://github.com/NVIDIA/enroot) squashfs (`.sqsh`) file. Enroot is a lightweight container runtime designed for HPC — it converts Docker images into unprivileged sandboxes that integrate with SLURM via the [pyxis](https://github.com/NVIDIA/pyxis) plugin. When `srun.sh` runs, it passes `--container-image` and `--container-mounts` to `srun`, and pyxis handles importing the `.sqsh` and launching each task inside the container.
 
 ```bash
@@ -78,6 +82,10 @@ The [entrypoint.py](https://github.com/crazyguitar/pysheeet/blob/master/src/mega
 
 ## How to Enable Nsys Profiling
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/nlp/megatron.html).
+:::
+
 Pass `--nsys` to `srun.sh` and set the profiling overrides in the recipe:
 
 ```bash
@@ -95,11 +103,19 @@ On AWS, if you want to monitor EFA network traffic in the Nsys timeline, add `--
 
 ## Why `python` Instead of `torchrun`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/nlp/megatron.html).
+:::
+
 The `srun.sh` script launches `python3 entrypoint.py` directly rather than using `torchrun`. This is intentional. `torchrun` spawns worker processes via `multiprocessing`, and the spawn boundary can interfere with Nsys profiling — the profiler sometimes fails to capture the `cudaProfilerStart` and `cudaProfilerStop` calls issued by the child process, resulting in empty or incomplete traces.
 
 By running `python` directly under `srun --ntasks-per-node=<GPUS>`, each GPU gets its own process managed by SLURM. The `RANK`, `LOCAL_RANK`, and `WORLD_SIZE` environment variables are derived from `SLURM_PROCID`, `SLURM_LOCALID`, and `SLURM_NTASKS` respectively. This avoids the spawn layer entirely, giving Nsys (and other profilers like VizTracer) a clean, single-process view of each rank.
 
 ## Custom Profilers (VizTracer)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/deeplearning/nemo/user-guide/docs/en/main/nlp/megatron.html).
+:::
 
 Megatron Bridge's profiling hooks can be extended to support custom profilers. The [viztracer_plugin.py](https://github.com/crazyguitar/pysheeet/blob/master/src/megatron/viztracer_plugin.py) shows how to do this by monkey-patching `megatron.bridge.training.profiling`:
 

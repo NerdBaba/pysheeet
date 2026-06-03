@@ -14,6 +14,10 @@ Cryptography is difficult to implement correctly. Prefer high-level APIs like Fe
 
 ## Algorithm Recommendations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on algorithm recommendations](https://realpython.com/search?q=algorithm+recommendations).
+:::
+
 Quick reference for choosing secure algorithms. When in doubt, use the recommended options—they represent current best practices as of 2024.
 
     ┌─────────────────────────────────────────────────────────────────────────┐
@@ -53,6 +57,10 @@ Quick reference for choosing secure algorithms. When in doubt, use the recommend
 
 ## Key Size Recommendations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on key size recommendations](https://realpython.com/search?q=key+size+recommendations).
+:::
+
 Minimum key sizes for security through 2030+. Larger keys provide more security margin but slower performance.
 
     ┌─────────────────────────────────────────────────────────────────────────┐
@@ -74,6 +82,10 @@ Minimum key sizes for security through 2030+. Larger keys provide more security 
     └────────────────────────┴────────────┴──────────────┴────────────────────┘
 
 ## Common Mistakes (Don't Do This)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on common mistakes don t do this](https://realpython.com/search?q=common+mistakes+don+t+do+this).
+:::
 
 Examples of insecure patterns to avoid. Each "BAD" example shows a common mistake; the "GOOD" example shows the secure alternative.
 
@@ -198,6 +210,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 ## Security Checklist
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on security checklist](https://realpython.com/search?q=security+checklist).
+:::
+
 Use this checklist when implementing cryptography in your application.
 
 **Before You Start:**
@@ -271,6 +287,10 @@ Use this checklist when implementing cryptography in your application.
 
 ## Secure Random Generation
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on secure random generation](https://realpython.com/search?q=secure+random+generation).
+:::
+
 Cryptographic operations require unpredictable random numbers. Python's `secrets` module (Python 3.6+) provides cryptographically secure random generation, suitable for tokens, passwords, and keys. Never use the `random` module for security-sensitive applications—it uses a predictable PRNG (Mersenne Twister) that can be reverse-engineered from observed outputs.
 
 ```python
@@ -298,6 +318,10 @@ key = os.urandom(32)
 ```
 
 ## Cryptographic Hashing
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cryptographic hashing](https://realpython.com/search?q=cryptographic+hashing).
+:::
 
 Hash functions produce fixed-size digests from arbitrary data. Use SHA-256 or SHA-3 for general hashing. For password storage, use dedicated password hashing functions (see Key Derivation section). Hash functions are one-way: you cannot recover the original data from a hash. They're used for data integrity verification, digital signatures, and as building blocks for other cryptographic operations.
 
@@ -332,6 +356,10 @@ print(f"File hash: {h.hexdigest()}")
 
 ## HMAC (Hash-based Message Authentication Code)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on hmac hash-based message authentication code](https://realpython.com/search?q=hmac+hash-based+message+authentication+code).
+:::
+
 HMAC provides message authentication—verifying both integrity and authenticity. Unlike plain hashes, HMAC requires a secret key, so only parties with the key can create or verify the MAC. Use HMAC when you need to ensure data hasn't been tampered with and came from someone who knows the secret. Always use constant-time comparison to prevent timing attacks when verifying MACs.
 
 ```python
@@ -357,6 +385,10 @@ mac_hex = hmac.new(key, message, hashlib.sha256).hexdigest()
 ```
 
 ## Key Derivation Functions
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on key derivation functions](https://realpython.com/search?q=key+derivation+functions).
+:::
 
 Key derivation functions (KDFs) derive cryptographic keys from passwords or other key material. For passwords, use slow KDFs (PBKDF2, Argon2, scrypt) that resist brute-force attacks. For deriving multiple keys from a master key, use HKDF. Never use plain hashes (SHA-256) for password storage—they're too fast, allowing billions of guesses per second.
 
@@ -409,6 +441,10 @@ derived_key = hkdf.derive(master_key)
 
 ## Symmetric Encryption: AES-GCM
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on symmetric encryption aes-gcm](https://realpython.com/search?q=symmetric+encryption+aes-gcm).
+:::
+
 AES-GCM (Galois/Counter Mode) is the recommended symmetric encryption mode. It provides authenticated encryption: both confidentiality (data is encrypted) and integrity (tampering is detected). The authentication tag ensures ciphertext hasn't been modified. Always use a unique nonce (number used once) for each encryption with the same key—reusing nonces completely breaks security.
 
     ┌─────────────────────────────────────────────────────────────────┐
@@ -460,6 +496,10 @@ except Exception as e:
 
 ## Symmetric Encryption: ChaCha20-Poly1305
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on symmetric encryption chacha20-poly1305](https://realpython.com/search?q=symmetric+encryption+chacha20-poly1305).
+:::
+
 ChaCha20-Poly1305 is an alternative to AES-GCM, offering similar security with better performance on systems without AES hardware acceleration (common on mobile devices and older CPUs). It's used by TLS 1.3, WireGuard, and many modern protocols. Like AES-GCM, it provides authenticated encryption with associated data (AEAD).
 
 ```python
@@ -485,6 +525,10 @@ assert decrypted == plaintext
 ```
 
 ## High-Level Encryption: Fernet
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on high-level encryption fernet](https://realpython.com/search?q=high-level+encryption+fernet).
+:::
 
 Fernet provides a high-level, easy-to-use symmetric encryption API. It uses AES-128-CBC with HMAC for authentication, handles IV generation, and includes timestamp for optional TTL-based expiration. Use Fernet when you need simple, secure encryption without worrying about low-level details. The downside is slightly larger ciphertext and no associated data support.
 
@@ -534,6 +578,10 @@ new_token = multi.rotate(old_token)
 ```
 
 ## RSA Key Generation
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on rsa key generation](https://realpython.com/search?q=rsa+key+generation).
+:::
 
 RSA is an asymmetric algorithm using public/private key pairs. The public key encrypts data or verifies signatures; the private key decrypts or signs. Modern recommendations: use at least 2048-bit keys (3072 or 4096 for long-term security), public exponent 65537, and OAEP padding for encryption or PSS for signatures. For new systems, consider Ed25519 (signatures) or X25519 (key exchange) instead.
 
@@ -587,6 +635,10 @@ with open("public_key.pem", "rb") as f:
 
 ## RSA Encryption (OAEP)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on rsa encryption oaep](https://realpython.com/search?q=rsa+encryption+oaep).
+:::
+
 RSA encryption should always use OAEP (Optimal Asymmetric Encryption Padding). Never use PKCS#1 v1.5 padding for new applications—it's vulnerable to padding oracle attacks. RSA can only encrypt small amounts of data (key_size/8 - padding overhead), so it's typically used to encrypt a symmetric key, which then encrypts the actual data (hybrid encryption).
 
     ┌─────────────────────────────────────────────────────────────────┐
@@ -639,6 +691,10 @@ assert decrypted == plaintext
 ```
 
 ## Hybrid Encryption
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on hybrid encryption](https://realpython.com/search?q=hybrid+encryption).
+:::
 
 RSA has size limits and is slow. Hybrid encryption combines RSA's key distribution benefits with symmetric encryption's speed: generate a random symmetric key, encrypt the data with AES-GCM, then encrypt the symmetric key with RSA. The recipient decrypts the symmetric key with their RSA private key, then decrypts the data.
 
@@ -698,6 +754,10 @@ assert decrypted == message
 
 ## Digital Signatures: RSA-PSS
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on digital signatures rsa-pss](https://realpython.com/search?q=digital+signatures+rsa-pss).
+:::
+
 Digital signatures prove authenticity and integrity. The signer uses their private key to create a signature; anyone with the public key can verify it. Use PSS (Probabilistic Signature Scheme) padding for RSA signatures—it's provably secure unlike PKCS#1 v1.5. For new applications, consider Ed25519 instead of RSA.
 
 ```python
@@ -737,6 +797,10 @@ except Exception:
 ```
 
 ## Digital Signatures: Ed25519
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on digital signatures ed25519](https://realpython.com/search?q=digital+signatures+ed25519).
+:::
 
 Ed25519 is a modern signature algorithm based on elliptic curves. It offers excellent security with small keys (32 bytes) and signatures (64 bytes), fast operations, and resistance to many implementation pitfalls. Prefer Ed25519 over RSA for new applications unless you need compatibility with legacy systems.
 
@@ -781,6 +845,10 @@ print(public_ssh.decode())  # ssh-ed25519 AAAA...
 
 ## Elliptic Curve Diffie-Hellman (ECDH)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on elliptic curve diffie-hellman ecdh](https://realpython.com/search?q=elliptic+curve+diffie-hellman+ecdh).
+:::
+
 ECDH allows two parties to establish a shared secret over an insecure channel. Each party generates a key pair, exchanges public keys, and derives the same shared secret. Use X25519 (Curve25519) for modern applications—it's fast, secure, and resistant to timing attacks. The shared secret should be passed through a KDF before use as an encryption key.
 
 ```python
@@ -821,6 +889,10 @@ mac_key = derive_key(alice_shared, b"authentication")
 ```
 
 ## Password Hashing with Argon2
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on password hashing with argon2](https://realpython.com/search?q=password+hashing+with+argon2).
+:::
 
 Argon2 is the winner of the Password Hashing Competition (2015) and the recommended algorithm for password storage. It's memory-hard, making GPU/ASIC attacks expensive. Use the `argon2-cffi` library for Python. Store the full hash string (includes salt and parameters) in your database.
 

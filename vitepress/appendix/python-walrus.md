@@ -9,9 +9,17 @@ Date
 
 ## Abstract
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on abstract](https://realpython.com/search?q=abstract).
+:::
+
 [PEP 572](https://www.python.org/dev/peps/pep-0572/) is one of the most contentious proposals in Python3 history because assigning a value within an expression seems unnecessary. Also, it is ambiguous for developers to distinguish the difference between **the walrus operator** (`:=`) and the equal operator (`=`). Even though sophisticated developers can use "`:=`" smoothly, they may concern the readability of their code. To better understand the usage of "`:=`," this article discusses its design philosophy and what kind of problems it tries to solve.
 
 ## Introduction
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
 
 For C/C++ developer, assigning a function return to a variable is common due to error code style handling. Managing function errors includes two steps; one is to check the return value; another is to check `errno`. For example,
 
@@ -52,6 +60,10 @@ No such file or directory
 
 ## Why `:=` ?
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on why](https://realpython.com/search?q=why).
+:::
+
 Developers may confuse the difference between "`:=`" and "`=`." In fact, they serve the same purpose, assigning somethings to variables. Why Python introduced "`:=`" instead of using "`=`"? What is the benefit of using "`:=`"? One reason is to reinforce the visual recognition due to a common mistake made by C/C++ developers. For instance,
 
 ```cpp
@@ -82,6 +94,10 @@ The walrus operator was not the first solution for PEP 572. The original proposa
 
 ## Scopes
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on scopes](https://realpython.com/search?q=scopes).
+:::
+
 Unlike other expressions, which a variable is bound to a scope, an assignment expression belongs to the current scope. The purpose of this design is to allow a compact way to write code.
 
 ```python
@@ -111,6 +127,10 @@ func main() {
 ```
 
 ## Pitfalls
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pitfalls](https://realpython.com/search?q=pitfalls).
+:::
 
 Although an assigning expression allows writing compact code, there are many pitfalls when a developer uses it in a list comprehension. A common `SyntaxError` is to rebind iteration variables.
 
@@ -149,6 +169,10 @@ NameError: name 'b' is not defined
 ```
 
 ## Conclusion
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on conclusion](https://realpython.com/search?q=conclusion).
+:::
 
 The reason why the walrus operator (`:=`) is so controversial is that code readability may decrease. In fact, in the discussion [mail thread](https://mail.python.org/pipermail/python-ideas/2018-March/049409.html), the author of PEP 572, Christoph Groth, had considered using "`=`" to implement inline assignment like C/C++. Without judging "`:=`" is ugly, many developers argue that distinguishing the functionality between "`:=`" and "`=`" is difficult because they serve the same purpose, but behaviors are not consistent. Also, writing compact code is not persuasive enough because smaller is not always better. However, in some cases, the walrus operator can enhance readability (if you understand how to use `:=`). For example,
 

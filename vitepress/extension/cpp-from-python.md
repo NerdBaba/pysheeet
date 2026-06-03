@@ -15,6 +15,10 @@ To learn more about C++ programming, refer to this [C++ cheatsheet](https://cppc
 
 ## Hello World
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on hello world](https://realpython.com/search?q=hello+world).
+:::
+
 The traditional first program in any language. Both Python and C++ can print text to the console, though C++ requires including the iostream library and a main function.
 
 **Python**
@@ -35,6 +39,10 @@ int main() {
 ```
 
 ## Variables
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on variables](https://realpython.com/search?q=variables).
+:::
 
 Modern C++ supports automatic type inference with the `auto` keyword, making variable declarations as concise as Python. The compiler deduces types from initialization values.
 
@@ -57,6 +65,10 @@ auto is_valid = true;
 ```
 
 ## Lists and Vectors
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on lists and vectors](https://realpython.com/search?q=lists+and+vectors).
+:::
 
 Python lists and C++ vectors are dynamic arrays that can grow and shrink. Both support indexing, appending elements, and querying size. C++ vectors require specifying the element type, but modern C++ can infer it from initialization.
 
@@ -81,6 +93,10 @@ std::cout << numbers.size() << std::endl;
 ```
 
 ## Array Slicing and Access
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on array slicing and access](https://realpython.com/search?q=array+slicing+and+access).
+:::
 
 Python supports powerful slicing syntax with negative indices and ranges. C++ doesn't have built-in slicing, but you can use iterators or create subvectors. Negative indexing requires manual calculation from the end.
 
@@ -123,6 +139,10 @@ std::vector<int> reversed(numbers.rbegin(), numbers.rend());
 
 ## Dictionaries and Maps
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on dictionaries and maps](https://realpython.com/search?q=dictionaries+and+maps).
+:::
+
 Dictionaries in Python and maps in C++ store key-value pairs. Both allow insertion, lookup, and modification using bracket notation. C++ maps keep keys sorted, while Python dicts maintain insertion order (Python 3.7+).
 
 **Python**
@@ -145,6 +165,10 @@ std::cout << ages["Alice"] << std::endl;
 ```
 
 ## For Loop
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on for loop](https://realpython.com/search?q=for+loop).
+:::
 
 Both languages support traditional counting loops and range-based iteration. C++ range-based for loops (C++11) provide syntax similar to Python's for-in loops, making iteration over containers more readable.
 
@@ -172,6 +196,10 @@ for (auto item : {1, 2, 3}) {
 
 ## While Loop
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on while loop](https://realpython.com/search?q=while+loop).
+:::
+
 While loops execute as long as a condition is true. The syntax is nearly identical between Python and C++, with C++ requiring parentheses around the condition and braces for the body.
 
 **Python**
@@ -194,6 +222,10 @@ while (i < 5) {
 ```
 
 ## If-Else
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on if-else](https://realpython.com/search?q=if-else).
+:::
 
 Conditional statements control program flow based on boolean expressions. C++ requires parentheses around conditions and uses braces for blocks, while Python uses indentation. Both support chained conditions with elif/else if.
 
@@ -224,6 +256,10 @@ if (x > 5) {
 
 ## Functions
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on functions](https://realpython.com/search?q=functions).
+:::
+
 Functions encapsulate reusable code. Modern C++ supports trailing return type syntax (-\> type) similar to Python's type hints. The auto keyword allows type inference for return types when the function body is simple.
 
 **Python**
@@ -246,6 +282,10 @@ auto result = add(3, 5);
 ```
 
 ## Lambda Functions
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on lambda functions](https://realpython.com/search?q=lambda+functions).
+:::
 
 Lambda functions are anonymous functions that can capture variables from their surrounding scope. Both Python and C++ support lambdas, making functional programming patterns possible. C++ lambdas can specify capture modes (by value, by reference) for more control over variable lifetime and performance.
 
@@ -287,6 +327,10 @@ std::cout << multiply(5) << std::endl;
 
 ## Lambda Capture Modes
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on lambda capture modes](https://realpython.com/search?q=lambda+capture+modes).
+:::
+
 C++ lambdas provide explicit control over how variables are captured from the enclosing scope. This is more explicit than Python's implicit closure behavior and allows optimization by choosing between copying values or using references.
 
 **Python**
@@ -322,6 +366,10 @@ auto add_all_ref = [&](int z) { return x + y + z; };
 
 ## List Comprehension
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on list comprehension](https://realpython.com/search?q=list+comprehension).
+:::
+
 Python's list comprehensions provide concise syntax for creating lists. C++ doesn't have direct syntax for this, but you can achieve similar results using loops or STL algorithms like std::transform and std::copy_if.
 
 **Python**
@@ -352,6 +400,10 @@ for (int x = 0; x < 10; x++) {
 
 ## String Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on string operations](https://realpython.com/search?q=string+operations).
+:::
+
 Both languages provide rich string manipulation capabilities. C++ strings are mutable like Python strings in terms of concatenation, but individual character access works similarly. C++ requires explicit conversion functions for case changes.
 
 **Python**
@@ -381,6 +433,10 @@ std::cout << upper << std::endl;
 ```
 
 ## Classes
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on classes](https://realpython.com/search?q=classes).
+:::
 
 Object-oriented programming works similarly in both languages. C++ requires explicit access specifiers (public, private) and constructor initialization lists. Both support member variables and methods, with C++ using :: for scope resolution.
 
@@ -422,6 +478,10 @@ std::cout << p.greet() << std::endl;
 
 ## Optional Values
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on optional values](https://realpython.com/search?q=optional+values).
+:::
+
 Python uses None to represent missing values, while C++ (C++17+) provides std::optional for type-safe optional values. This prevents null pointer errors and makes the absence of a value explicit in the type system.
 
 **Python**
@@ -459,6 +519,10 @@ if (result.has_value()) {
 
 ## Smart Pointers
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on smart pointers](https://realpython.com/search?q=smart+pointers).
+:::
+
 Python handles memory automatically with garbage collection. C++ smart pointers (C++11+) provide automatic memory management through RAII. unique_ptr ensures single ownership, while shared_ptr allows multiple owners with reference counting.
 
 **Python**
@@ -488,6 +552,10 @@ auto shared = std::make_shared<Resource>("data");
 
 ## File I/O
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on file i o](https://realpython.com/search?q=file+i+o).
+:::
+
 **Python**
 
 ```python
@@ -513,6 +581,10 @@ out << "Hello";
 ```
 
 ## Exception Handling
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on exception handling](https://realpython.com/search?q=exception+handling).
+:::
 
 Both languages support try-catch exception handling for error management. C++ uses typed exceptions and requires explicit exception types in catch blocks.
 
@@ -544,6 +616,10 @@ try {
 
 ## Tuples
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tuples](https://realpython.com/search?q=tuples).
+:::
+
 Tuples group multiple values together. C++17 introduces structured bindings that allow tuple unpacking similar to Python, making it easy to return and destructure multiple values.
 
 **Python**
@@ -565,6 +641,10 @@ std::cout << x << " " << y << std::endl;
 ```
 
 ## Enumerate
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on enumerate](https://realpython.com/search?q=enumerate).
+:::
 
 Python's enumerate provides index-value pairs during iteration. C++ doesn't have a direct equivalent, but you can achieve the same result with traditional indexed loops.
 
@@ -589,6 +669,10 @@ for (size_t i = 0; i < items.size(); i++) {
 ```
 
 ## Filter and Map
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on filter and map](https://realpython.com/search?q=filter+and+map).
+:::
 
 Python's filter and map functions apply transformations to sequences. C++ provides equivalent functionality through STL algorithms like `std::copy_if` and `std::transform`.
 
@@ -621,6 +705,10 @@ std::transform(numbers.begin(), numbers.end(),
 
 ## Any and All
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on any and all](https://realpython.com/search?q=any+and+all).
+:::
+
 Check if any or all elements in a sequence satisfy a condition. C++ provides `std::any_of` and `std::all_of` algorithms for these common operations.
 
 **Python**
@@ -648,6 +736,10 @@ bool all_positive = std::all_of(numbers.begin(), numbers.end(),
 
 ## Sorting
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sorting](https://realpython.com/search?q=sorting).
+:::
+
 Sort sequences in ascending or descending order. Both languages provide in-place sorting and the ability to create sorted copies with custom comparison functions.
 
 **Python**
@@ -674,6 +766,10 @@ std::sort(sorted_nums.begin(), sorted_nums.end(), std::greater<int>());
 
 ## Min and Max
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on min and max](https://realpython.com/search?q=min+and+max).
+:::
+
 Find the minimum and maximum values in a sequence. C++ uses iterator-based algorithms that return iterators, requiring dereferencing to get the actual values.
 
 **Python**
@@ -697,6 +793,10 @@ std::cout << *std::max_element(numbers.begin(), numbers.end()) << std::endl;
 
 ## Sum
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sum](https://realpython.com/search?q=sum).
+:::
+
 Calculate the sum of all elements in a sequence. C++ uses `std::accumulate` from the numeric library, which can also perform other reduction operations.
 
 **Python**
@@ -717,6 +817,10 @@ int total = std::accumulate(numbers.begin(), numbers.end(), 0);
 ```
 
 ## Zip
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on zip](https://realpython.com/search?q=zip).
+:::
 
 Iterate over multiple sequences in parallel. Python's zip is built-in, while C++ requires manual index-based iteration to achieve the same result.
 
@@ -744,6 +848,10 @@ for (size_t i = 0; i < std::min(names.size(), ages.size()); i++) {
 ```
 
 ## Default Arguments
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on default arguments](https://realpython.com/search?q=default+arguments).
+:::
 
 Functions can have default parameter values that are used when arguments aren't provided. Both languages support this feature with similar syntax.
 

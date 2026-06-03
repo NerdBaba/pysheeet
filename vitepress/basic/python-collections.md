@@ -17,6 +17,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## `namedtuple` — Lightweight Immutable Data Containers
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on namedtuple lightweight immutable data containers](https://realpython.com/search?q=namedtuple+lightweight+immutable+data+containers).
+:::
+
+
 `namedtuple` creates tuple-like classes with named fields, combining the immutability and memory efficiency of tuples with the readability of object attribute access.
 
 ```python
@@ -60,6 +65,11 @@ Point(x=5, y=4)
 
 ## `deque` — Double-Ended Queue
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on deque double-ended queue](https://realpython.com/search?q=deque+double-ended+queue).
+:::
+
+
 `deque` (pronounced "deck") is optimized for fast appends and pops from both ends with O(1) performance, contrasted with `list` which is O(n) for left-side operations.
 
 ```python
@@ -96,6 +106,11 @@ deque([5, 1, 2, 3, 4])
 ```
 
 ## `Counter` — Multiset / Bag
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on counter multiset bag](https://realpython.com/search?q=counter+multiset+bag).
+:::
+
 
 `Counter` is a dict subclass for counting hashable objects. It provides arithmetic operations and common counting idioms.
 
@@ -134,6 +149,11 @@ Counter({'a': 2, 'c': 2, 'b': 1})
 ```
 
 ## `defaultdict` — Dictionary with Default Factory
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on defaultdict dictionary with default factory](https://realpython.com/search?q=defaultdict+dictionary+with+default+factory).
+:::
+
 
 `defaultdict` calls a factory function to supply missing keys, eliminating the need for explicit checks.
 
@@ -182,6 +202,11 @@ Accessing a missing key with `defaultdict` creates the default value as a side e
 
 ## `OrderedDict` — Dictionary with Ordered Keys
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on ordereddict dictionary with ordered keys](https://realpython.com/search?q=ordereddict+dictionary+with+ordered+keys).
+:::
+
+
 `OrderedDict` remembers insertion order. Since Python 3.7, regular `dict` also preserves insertion order, but `OrderedDict` provides additional methods.
 
 ```python
@@ -217,6 +242,11 @@ True  # equal to regular dict ignores order
 
 ## `ChainMap` — Merging Multiple Dictionaries
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on chainmap merging multiple dictionaries](https://realpython.com/search?q=chainmap+merging+multiple+dictionaries).
+:::
+
+
 `ChainMap` groups multiple dicts (or other mappings) into a single view. Lookups search each mapping in order, while writes affect the first mapping.
 
 ```python
@@ -245,6 +275,11 @@ True  # equal to regular dict ignores order
 ```
 
 ## `UserDict`, `UserList`, `UserString` — Easy Subclassing
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on userdict userlist userstring easy subclassing](https://realpython.com/search?q=userdict+userlist+userstring+easy+subclassing).
+:::
+
 
 These classes wrap the built-in types and are designed for subclassing, providing a simpler alternative to inheriting from `dict`, `list`, or `str` directly.
 

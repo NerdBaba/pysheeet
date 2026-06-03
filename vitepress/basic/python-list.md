@@ -9,6 +9,11 @@ The list is a common data structure which we use to store objects. Most of the t
 
 ## Python List Basics and Common Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on python list basics and common operations](https://realpython.com/search?q=python+list+basics+and+common+operations).
+:::
+
+
 There are so many ways that we can manipulate lists in Python. Before we start to learn those versatile manipulations, the following snippet shows the most common operations of lists.
 
 ```python
@@ -60,6 +65,11 @@ True
 
 ## Initialize Lists with Multiplication Operator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on initialize lists with multiplication operator](https://realpython.com/search?q=initialize+lists+with+multiplication+operator).
+:::
+
+
 Generally speaking, we can create a list through `*` operator if the item in the list expression is an immutable object.
 
 ```python
@@ -85,6 +95,11 @@ However, if the item in the list expression is a mutable object, the `*` operato
 ```
 
 ## Copy Lists: Shallow vs Deep Copy
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on copy lists shallow vs deep copy](https://realpython.com/search?q=copy+lists+shallow+vs+deep+copy).
+:::
+
 
 Assigning a list to a variable is a common pitfall. This assignment does not copy the list to the variable. The variable only refers to the list and increase the reference count of the list.
 
@@ -134,6 +149,11 @@ There are two types of copy. The first one is called *shallow copy* (non-recursi
 
 ## Slice Lists with slice Objects
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on slice lists with slice objects](https://realpython.com/search?q=slice+lists+with+slice+objects).
+:::
+
+
 Sometimes, our data may concatenate as a large segment such as packets. In this case, we will represent the range of data by using `slice` objects as explaining variables instead of using *slicing expressions*.
 
 ```python
@@ -150,6 +170,11 @@ b'080062988e2100005bff49c20005767c'
 ```
 
 ## Create Lists with List Comprehensions
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create lists with list comprehensions](https://realpython.com/search?q=create+lists+with+list+comprehensions).
+:::
+
 
 [List comprehensions](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) which was proposed in PEP [202](https://www.python.org/dev/peps/pep-0202/) provides a graceful way to create a new list based on another list, sequence, or some object which is iterable. In addition, we can use this expression to substitute `map` and `filter` sometimes.
 
@@ -169,6 +194,11 @@ b'080062988e2100005bff49c20005767c'
 ```
 
 ## Unpack Lists into Variables
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on unpack lists into variables](https://realpython.com/search?q=unpack+lists+into+variables).
+:::
+
 
 Sometimes, we want to unpack our list to variables in order to make our code become more readable. In this case, we assign N elements to N variables as following example.
 
@@ -192,6 +222,11 @@ Based on PEP [3132](https://www.python.org/dev/peps/pep-3132), we can use a sing
 
 ## Iterate with Index Using enumerate()
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on iterate with index using enumerate](https://realpython.com/search?q=iterate+with+index+using+enumerate).
+:::
+
+
 `enumerate` is a built-in function. It helps us to acquire indexes (or a count) and elements at the same time without using `range(len(list))`. Further information can be found on [Looping Techniques](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques).
 
 ```python
@@ -211,6 +246,11 @@ Based on PEP [3132](https://www.python.org/dev/peps/pep-3132), we can use a sing
 
 ## Combine Lists with zip()
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on combine lists with zip](https://realpython.com/search?q=combine+lists+with+zip).
+:::
+
+
 [zip](https://docs.python.org/3/library/functions.html#zip) enables us to iterate over items contained in multiple lists at a time. Iteration stops whenever one of the lists is exhausted. As a result, the length of the iteration is the same as the shortest list. If this behavior is not desired, we can use `itertools.zip_longest` in **Python 3** or `itertools.izip_longest` in **Python 2**.
 
 ```python
@@ -228,6 +268,11 @@ Based on PEP [3132](https://www.python.org/dev/peps/pep-3132), we can use a sing
 
 ## Filter List Items
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on filter list items](https://realpython.com/search?q=filter+list+items).
+:::
+
+
 [filter](https://docs.python.org/3/library/functions.html#filter) is a built-in function to assist us to remove unnecessary items. In **Python 2**, `filter` returns a list. However, in **Python 3**, `filter` returns an *iterable object*. Note that *list comprehension* or *generator expression* provides a more concise way to remove items.
 
 ```python
@@ -244,6 +289,11 @@ Based on PEP [3132](https://www.python.org/dev/peps/pep-3132), we can use a sing
 ```
 
 ## Implement Stack with List
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on implement stack with list](https://realpython.com/search?q=implement+stack+with+list).
+:::
+
 
 There is no need for an additional data structure, stack, in Python because the `list` provides `append` and `pop` methods which enable us use a list as a stack.
 
@@ -263,6 +313,11 @@ There is no need for an additional data structure, stack, in Python because the 
 ```
 
 ## Check Membership with in Operator
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on check membership with in operator](https://realpython.com/search?q=check+membership+with+in+operator).
+:::
+
 
 We can implement the `__contains__` method to make a class do `in` operations. It is a common way for a programmer to emulate a membership test operations for custom classes.
 
@@ -296,6 +351,11 @@ False
 ```
 
 ## Access Items with \_\_getitem\_\_ and \_\_setitem\_\_
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on access items with _ _getitem _ _ and _ _setitem _ _](https://realpython.com/search?q=access+items+with+_+_getitem+_+_+and+_+_setitem+_+_).
+:::
+
 
 Making custom classes perform get and set operations like lists is simple. We can implement a `__getitem__` method and a `__setitem__` method to enable a class to retrieve and overwrite data by index. In addition, if we want to use the function, `len`, to calculate the number of elements, we can implement a `__len__` method.
 
@@ -345,6 +405,11 @@ num items: 2
 
 ## Delegate Iteration with \_\_iter\_\_
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on delegate iteration with _ _iter _ _](https://realpython.com/search?q=delegate+iteration+with+_+_iter+_+_).
+:::
+
+
 If a custom container class holds a list and we want iterations to work on the container, we can implement a `__iter__` method to delegate iterations to the list. Note that the method, `__iter__`, should return an *iterator object*, so we cannot return the list directly; otherwise, Python raises a `TypeError`.
 
 ```python
@@ -378,6 +443,11 @@ $ python stack.py
 ```
 
 ## Sort Lists with sort() and sorted()
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sort lists with sort and sorted](https://realpython.com/search?q=sort+lists+with+sort+and+sorted).
+:::
+
 
 Python list provides a built-in `list.sort` method which sorts a list [in-place](https://en.wikipedia.org/wiki/In-place_algorithm) without using extra memory. Moreover, the return value of `list.sort` is `None` in order to avoid confusion with `sorted` and the function can only be used for `list`.
 
@@ -517,6 +587,11 @@ Note that `sorted` or `list.sort` in Python3 does not support `cmp` parameter wh
 
 ## Maintain Sorted List with bisect
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on maintain sorted list with bisect](https://realpython.com/search?q=maintain+sorted+list+with+bisect).
+:::
+
+
 The [bisect](https://docs.python.org/3/library/bisect.html) module provides functions to maintain a list in sorted order without having to sort the list after each insertion. It uses a binary search algorithm, making insertions efficient for large lists.
 
 ```python
@@ -560,6 +635,11 @@ print(bar) # [Foo(0), Foo(1), Foo(2), Foo(3)]
 
 ## Create Nested Lists Correctly
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create nested lists correctly](https://realpython.com/search?q=create+nested+lists+correctly).
+:::
+
+
 When creating nested lists (2D lists or matrices), we should use list comprehension to ensure each inner list is a separate object. The following snippet shows the correct way to create a 2D list.
 
 ```python
@@ -587,6 +667,11 @@ Note that we should avoid creating a multi-dimension list via the following snip
 
 ## Implement Circular Buffer with deque
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on implement circular buffer with deque](https://realpython.com/search?q=implement+circular+buffer+with+deque).
+:::
+
+
 [collections.deque](https://docs.python.org/3/library/collections.html#collections.deque) is a double-ended queue that supports adding and removing elements from both ends efficiently. By setting `maxlen`, we can create a circular buffer that automatically discards old elements when new ones are added.
 
 ```python
@@ -612,6 +697,11 @@ The following example shows how to implement a `tail` function similar to the Un
 
 ## Split List into Chunks
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on split list into chunks](https://realpython.com/search?q=split+list+into+chunks).
+:::
+
+
 Sometimes, we need to split a list into smaller chunks of a specific size. The following generator function yields successive chunks from the list.
 
 ```python
@@ -625,6 +715,11 @@ Sometimes, we need to split a list into smaller chunks of a specific size. The f
 ```
 
 ## Group Consecutive Elements with itertools.groupby
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on group consecutive elements with itertools groupby](https://realpython.com/search?q=group+consecutive+elements+with+itertools+groupby).
+:::
+
 
 [itertools.groupby](https://docs.python.org/3/library/itertools.html#itertools.groupby) groups consecutive elements in an iterable that have the same key. It is useful for run-length encoding or grouping sorted data.
 
@@ -650,6 +745,11 @@ gp2 [('gp2', 'b'), ('gp2', 'c')]
 
 ## Binary Search in Sorted List
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on binary search in sorted list](https://realpython.com/search?q=binary+search+in+sorted+list).
+:::
+
+
 Binary search is an efficient algorithm for finding an item in a sorted list. The following snippet shows how to implement binary search using `bisect_left`.
 
 ```python
@@ -667,6 +767,11 @@ Binary search is an efficient algorithm for finding an item in a sorted list. Th
 
 ## Find Lower Bound with bisect_left
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on find lower bound with bisect_left](https://realpython.com/search?q=find+lower+bound+with+bisect_left).
+:::
+
+
 `bisect_left` returns the leftmost position where an element can be inserted to keep the list sorted. This is equivalent to finding the lower bound.
 
 ```python
@@ -679,6 +784,11 @@ Binary search is an efficient algorithm for finding an item in a sorted list. Th
 ```
 
 ## Find Upper Bound with bisect_right
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on find upper bound with bisect_right](https://realpython.com/search?q=find+upper+bound+with+bisect_right).
+:::
+
 
 `bisect_right` (or `bisect`) returns the rightmost position where an element can be inserted to keep the list sorted. This is equivalent to finding the upper bound.
 
@@ -693,6 +803,11 @@ Binary search is an efficient algorithm for finding an item in a sorted list. Th
 
 ## Sort Tuples Lexicographically
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sort tuples lexicographically](https://realpython.com/search?q=sort+tuples+lexicographically).
+:::
+
+
 Python compares tuples and lists lexicographically by default. This means it compares the first elements, and if they are equal, it compares the second elements, and so on.
 
 ```python
@@ -705,6 +820,11 @@ Python compares tuples and lists lexicographically by default. This means it com
 ```
 
 ## Implement Trie (Prefix Tree)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on implement trie prefix tree](https://realpython.com/search?q=implement+trie+prefix+tree).
+:::
+
 
 A [Trie](https://en.wikipedia.org/wiki/Trie) (prefix tree) is a tree data structure used for efficient retrieval of keys in a dataset of strings. The following snippet shows a compact implementation using `defaultdict`.
 

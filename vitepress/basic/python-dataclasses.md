@@ -17,6 +17,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## Basic Dataclass
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic dataclass](https://realpython.com/search?q=basic+dataclass).
+:::
+
+
 A minimal dataclass requires only the decorator and type annotations. `__init__`, `__repr__`, and `__eq__` are generated automatically.
 
 ```python
@@ -37,6 +42,11 @@ True
 ```
 
 ## Default Values and `field()`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on default values and field](https://realpython.com/search?q=default+values+and+field).
+:::
+
 
 Default values can be assigned directly in the annotation. Use `field()` for more control — default factory functions, exclude from repr, or mark a field as not comparable.
 
@@ -82,6 +92,11 @@ Never use mutable objects as direct default values — they are shared across al
 
 ## `frozen=True` — Immutable Dataclasses
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on frozen true immutable dataclasses](https://realpython.com/search?q=frozen+true+immutable+dataclasses).
+:::
+
+
 Setting `frozen=True` makes instances read-only. Trying to set an attribute raises `FrozenInstanceError`.
 
 ```python
@@ -99,6 +114,11 @@ dataclasses.FrozenInstanceError: cannot assign to field 'x'
 
 ## `order=True` — Comparison Methods
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on order true comparison methods](https://realpython.com/search?q=order+true+comparison+methods).
+:::
+
+
 Setting `order=True` generates `__lt__`, `__le__`, `__gt__`, `__ge__` based on field order.
 
 ```python
@@ -114,6 +134,11 @@ False
 ```
 
 ## `__post_init__` — Post-Initialization Hook
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on __post_init__ post-initialization hook](https://realpython.com/search?q=__post_init__+post-initialization+hook).
+:::
+
 
 `__post_init__` is called after `__init__` completes. Use it for validation, derived fields, or normalizing values.
 
@@ -137,6 +162,11 @@ False
 ```
 
 ## `InitVar` — Fields for Initialization Only
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on initvar fields for initialization only](https://realpython.com/search?q=initvar+fields+for+initialization+only).
+:::
+
 
 `InitVar` declares fields that are passed to `__init__` and `__post_init__` but are not stored as instance attributes.
 
@@ -162,6 +192,11 @@ Connecting with timeout=30.0s
 
 ## Inheritance with Dataclasses
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on inheritance with dataclasses](https://realpython.com/search?q=inheritance+with+dataclasses).
+:::
+
+
 Dataclasses support inheritance. Fields from parent classes appear first in the child's `__init__`.
 
 ```python
@@ -183,6 +218,11 @@ When using inheritance, fields in a child class with defaults must come after pa
 :::
 
 ## Conversion Functions: `asdict`, `astuple`, `replace`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on conversion functions asdict astuple replace](https://realpython.com/search?q=conversion+functions+asdict+astuple+replace).
+:::
+
 
 These utility functions convert dataclasses to dictionaries, tuples, or create modified copies.
 
@@ -213,6 +253,11 @@ Employee(name='Bob', address=Address(street='123 Main', city='NYC'))
 
 ## `slots=True` — Memory Optimization (Python 3.10+)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on slots true memory optimization python 3 10](https://realpython.com/search?q=slots+true+memory+optimization+python+3+10).
+:::
+
+
 Setting `slots=True` generates `__slots__` for the class, reducing memory overhead — especially valuable when creating many instances.
 
 ```python
@@ -229,6 +274,11 @@ AttributeError: 'LightweightPoint' object has no attribute 'z'
 ```
 
 ## Comparison: Dataclasses vs namedtuple vs TypedDict
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on comparison dataclasses vs namedtuple vs typeddict](https://realpython.com/search?q=comparison+dataclasses+vs+namedtuple+vs+typeddict).
+:::
+
 
 ```python
 >>> from dataclasses import dataclass

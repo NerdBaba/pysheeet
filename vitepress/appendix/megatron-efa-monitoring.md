@@ -9,9 +9,17 @@ Date
 
 ## Abstract
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
+
 Distributed training at scale requires deep visibility into network behavior to identify bottlenecks and optimize communication patterns. When training large language models with Megatron-LM on AWS infrastructure using the Elastic Fabric Adapter (EFA), understanding network performance becomes critical for achieving optimal throughput. This article demonstrates how to enable NCCL GPU-Initiated Networking (GIN) in Megatron-LM using Megatron Bridge and leverage Nsys with EFA metrics to monitor network behavior during distributed training workloads. The techniques presented here are based on best practices from AWS re:Invent 2024[^1].
 
 ## Introduction
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
 
 [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) is a widely adopted framework for training large transformer models using model parallelism, pipeline parallelism, and data parallelism. When deployed on AWS instances with EFA, the network fabric provides high-bandwidth, low-latency communication essential for scaling to hundreds or thousands of GPUs. However, achieving peak performance requires careful tuning and monitoring of the communication layer.
 
@@ -20,6 +28,10 @@ NCCL GPU-Initiated Networking allows GPUs to initiate network operations directl
 [Megatron Bridge](https://github.com/NVIDIA/Megatron-LM/tree/main/megatron/bridge) simplifies the configuration and deployment of Megatron-LM training jobs by providing a high-level recipe-based interface. This eliminates the need to manually construct complex command-line arguments and makes it easier to enable advanced features like NCCL GIN and DeepEP for MoE models. Therefore, the tutorial in this article will use Megatron Bridge.
 
 ## Prerequisites
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
 
 This guide assumes the following environment:
 
@@ -31,6 +43,10 @@ This guide assumes the following environment:
 We have demonstrated how to use vLLM with NCCL GIN and DeepEP in a previous article. If you are interested in building NCCL and aws-ofi-nccl from source, refer to the [NCCL GIN article](/appendix/nccl-gin) in this repository.
 
 ## Building the Megatron Container
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
 
 The Megatron training environment is packaged as a Docker container and converted to an Enroot squash file for deployment on Slurm clusters. The container includes NCCL with Device API support, aws-ofi-nccl with GIN support, and Megatron-LM with Megatron Bridge.
 
@@ -44,6 +60,10 @@ make build
 This will create a `megatron-lm+latest.sqsh` file that can be used with the Slurm launcher scripts. For details on the container build process, refer to the [Dockerfile](https://github.com/crazyguitar/pysheeet/blob/master/src/megatron/Dockerfile) and [enroot.sh](https://github.com/crazyguitar/pysheeet/blob/master/src/megatron/enroot.sh) scripts in the repository.
 
 ## Enabling NCCL GIN in Megatron Bridge
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
 
 Megatron Bridge recipes provide a declarative way to configure training jobs. To enable NCCL GIN for MoE models using DeepEP, the following environment variables are set automatically by the `srun.sh` launcher script:
 
@@ -68,6 +88,10 @@ export NCCL_P2P_NET_CHUNKSIZE=524288
 ```
 
 ## Launching Megatron Training with DeepEP and NCCL GIN
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
 
 The following example demonstrates how to launch a DeepSeek-V2-Lite pretraining job with DeepEP enabled for MoE token dispatching. The recipe configures the model to use expert parallelism across 64 ranks with NCCL GIN for low-latency all-to-all communication.
 
@@ -105,6 +129,10 @@ When the training job starts, verify that NCCL initializes with GIN enabled by c
 ```
 
 ## Monitoring EFA with Nsys and EFA Metrics
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
 
 Nsys (NVIDIA Nsight Systems) provides comprehensive profiling of GPU kernels, CUDA API calls, and network operations. The `--enable efa_metrics` flag instructs Nsys to collect EFA adapter statistics in real-time from the EFA device counters (e.g., rdmap113s0, rdmap114s0) at 10Hz sampling rate, including:
 
@@ -154,6 +182,10 @@ After profiling completes, the `.nsys-rep` files can be downloaded and opened in
 
 ## Profiling with Viztracer
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
+
 For Python-level profiling of the training loop, Megatron Bridge supports Viztracer, a low-overhead tracing tool that captures function calls and timing information. This is useful for identifying CPU bottlenecks in data loading, preprocessing, or scheduler logic that may indirectly impact network performance.
 
 ```bash
@@ -170,6 +202,10 @@ salloc -N 2
 The resulting `.json` trace files can be visualized in the Viztracer web UI or Chrome's `chrome://tracing` interface. By enabling `log_torch`, Viztracer can capture additional PyTorch-level details such as NCCL stream and CUDA stream operations, providing visibility into the execution flow of collective communications and GPU kernels. However, to observe detailed EFA adapter statistics (bandwidth, packet counts, error counters), Nsys with `--enable efa_metrics` remains the required tool.
 
 ## Conclusion
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.aws.amazon.com/eks/latest/best-practices/efa.html).
+:::
 
 Nsys profiling with `--enable efa_metrics` now provides the capability to monitor both EFA adapter behavior and NCCL operations simultaneously during distributed training. This visibility is essential for diagnosing whether long NCCL operation times are caused by actual EFA transmission delays or other issues such as CPU bottlenecks, memory contention, or suboptimal NCCL configuration. By examining the correlated timeline of GPU kernels, NCCL collectives, and EFA bandwidth utilization, practitioners can pinpoint the root cause of performance bottlenecks and validate that the network fabric is operating at expected capacity.
 

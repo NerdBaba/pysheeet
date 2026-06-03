@@ -11,6 +11,10 @@ This section covers building TCP and UDP servers in Python using the socket modu
 
 ## Simple TCP Echo Server
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple tcp echo server](https://realpython.com/search?q=simple+tcp+echo+server).
+:::
+
 A basic TCP echo server demonstrates the fundamental server pattern: create a socket, bind to an address, listen for connections, accept clients, and process data. This example uses Python's context manager protocol for proper resource cleanup, ensuring the socket is closed even if an exception occurs. The `SO_REUSEADDR` option allows the server to restart immediately without waiting for the TIME_WAIT state to expire.
 
 ```python
@@ -54,6 +58,10 @@ Hello World
 
 ## TCP Echo Server via IPv6
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tcp echo server via ipv6](https://realpython.com/search?q=tcp+echo+server+via+ipv6).
+:::
+
 IPv6 server using `AF_INET6` address family. Note the different address tuple format which includes flow info and scope ID.
 
 ```python
@@ -96,6 +104,10 @@ Hello IPv6
 ```
 
 ## Dual-Stack Server (IPv4 and IPv6)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on dual-stack server ipv4 and ipv6](https://realpython.com/search?q=dual-stack+server+ipv4+and+ipv6).
+:::
 
 A server that accepts both IPv4 and IPv6 connections by binding to `::` and disabling `IPV6_V6ONLY`. IPv4 clients appear as IPv4-mapped IPv6 addresses.
 
@@ -147,6 +159,10 @@ Hello IPv6
 
 ## TCP Server via SocketServer
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tcp server via socketserver](https://realpython.com/search?q=tcp+server+via+socketserver).
+:::
+
 The `socketserver` module provides a higher-level interface for building servers. It handles the socket setup and connection management automatically.
 
 ```python
@@ -164,6 +180,10 @@ if __name__ == '__main__':
 ```
 
 ## Simple UDP Echo Server
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple udp echo server](https://realpython.com/search?q=simple+udp+echo+server).
+:::
 
 UDP servers use `SOCK_DGRAM` and don't require connection handling. Each `recvfrom()` returns the data and sender address.
 
@@ -204,6 +224,10 @@ Hello World
 
 ## UDP Server via SocketServer
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on udp server via socketserver](https://realpython.com/search?q=udp+server+via+socketserver).
+:::
+
 ```python
 import socketserver
 
@@ -220,6 +244,10 @@ if __name__ == '__main__':
 
 ## UDP Client - Sender
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on udp client - sender](https://realpython.com/search?q=udp+client+-+sender).
+:::
+
 Simple UDP client that sends periodic messages.
 
 ```python
@@ -235,6 +263,10 @@ while True:
 ```
 
 ## Broadcast UDP Packets
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on broadcast udp packets](https://realpython.com/search?q=broadcast+udp+packets).
+:::
 
 Send UDP packets to all hosts on the local network using broadcast address.
 
@@ -260,6 +292,10 @@ $ nc -k -w 1 -ul 5566
 ```
 
 ## Unix Domain Socket
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on unix domain socket](https://realpython.com/search?q=unix+domain+socket).
+:::
 
 Unix domain sockets provide inter-process communication on the same machine, faster than TCP/IP loopback as they bypass the network stack.
 
@@ -301,6 +337,10 @@ Hello
 
 ## Socket Pair for IPC
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on socket pair for ipc](https://realpython.com/search?q=socket+pair+for+ipc).
+:::
+
 `socketpair()` creates a pair of connected sockets, useful for bidirectional communication between parent and child processes.
 
 ```python
@@ -339,6 +379,10 @@ Parent says: b'Hello Child!'
 
 ## Threaded TCP Server
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on threaded tcp server](https://realpython.com/search?q=threaded+tcp+server).
+:::
+
 Handle multiple clients concurrently using threads.
 
 ```python
@@ -366,6 +410,10 @@ while True:
 ```
 
 ## Using sendfile for Zero-Copy Transfer
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using sendfile for zero-copy transfer](https://realpython.com/search?q=using+sendfile+for+zero-copy+transfer).
+:::
 
 `os.sendfile()` efficiently transfers file data to a socket without copying through user space (zero-copy).
 

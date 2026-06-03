@@ -16,6 +16,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## Basic Heap Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic heap operations](https://realpython.com/search?q=basic+heap+operations).
+:::
+
+
 The `heapq` module provides functions to create and manipulate heaps. Use `heapify` to convert a list into a heap in-place in O(n) time. Use `heappush` and `heappop` to add and remove elements while maintaining the heap property.
 
 ```python
@@ -38,6 +43,11 @@ The `heapq` module provides functions to create and manipulate heaps. Use `heapi
 ```
 
 ## Implement Heap Sort with `heapq`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on implement heap sort with heapq](https://realpython.com/search?q=implement+heap+sort+with+heapq).
+:::
+
 
 Heap sort works by pushing all elements onto a heap and then popping them off one by one. Since the heap maintains the min-heap property, elements come out in sorted order. The time complexity is O(n log n).
 
@@ -67,6 +77,11 @@ A more efficient approach uses `heapify` to convert the list in-place:
 ```
 
 ## Implement Max Heap
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on implement max heap](https://realpython.com/search?q=implement+max+heap).
+:::
+
 
 Python's `heapq` only provides a min-heap. To implement a max-heap, negate the values when pushing and negate again when popping.
 
@@ -101,6 +116,11 @@ print(heapq.heappop(h).val)  # 5 (largest)
 ```
 
 ## Implement Priority Queue with `heapq`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on implement priority queue with heapq](https://realpython.com/search?q=implement+priority+queue+with+heapq).
+:::
+
 
 A priority queue processes elements based on their priority rather than insertion order. Use tuples `(priority, value)` where lower numbers indicate higher priority.
 
@@ -144,6 +164,11 @@ while h:
 
 ## Find K Largest or Smallest Elements
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on find k largest or smallest elements](https://realpython.com/search?q=find+k+largest+or+smallest+elements).
+:::
+
+
 The `nlargest` and `nsmallest` functions efficiently find the k largest or smallest elements. They are more efficient than sorting when k is small relative to the list size.
 
 ```python
@@ -170,6 +195,11 @@ Use the `key` parameter to extract comparison keys from complex objects:
 
 ## Merge Sorted Iterables
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on merge sorted iterables](https://realpython.com/search?q=merge+sorted+iterables).
+:::
+
+
 The `merge` function merges multiple sorted inputs into a single sorted output. It returns an iterator, making it memory-efficient for large datasets.
 
 ```python
@@ -194,6 +224,11 @@ Use `key` and `reverse` parameters for custom merging:
 
 ## Maintain a Fixed-Size Heap
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on maintain a fixed-size heap](https://realpython.com/search?q=maintain+a+fixed-size+heap).
+:::
+
+
 To maintain a heap of fixed size k (e.g., tracking top k elements), use `heappushpop` or check the size after each push.
 
 ```python
@@ -213,6 +248,11 @@ To maintain a heap of fixed size k (e.g., tracking top k elements), use `heappus
 ```
 
 ## Heap with Index Tracking
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on heap with index tracking](https://realpython.com/search?q=heap+with+index+tracking).
+:::
+
 
 When you need to update priorities in a heap, use a dictionary to track element positions or mark entries as invalid.
 

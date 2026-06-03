@@ -11,6 +11,10 @@ This section covers the evolution of I/O multiplexing in Python, from the classi
 
 ## Async TCP Server - select
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async tcp server - select](https://realpython.com/search?q=async+tcp+server+-+select).
+:::
+
 `select()` is the oldest and most portable I/O multiplexing mechanism, available on virtually all platforms including Windows, Linux, and macOS. It monitors file descriptors for three conditions: readability (data available to read), writability (buffer space available to write), and exceptional conditions (errors). While portable, `select()` has limitations: it typically supports only up to 1024 file descriptors and has O(n) performance as it must scan all monitored descriptors on each call.
 
 ```python
@@ -54,6 +58,10 @@ except KeyboardInterrupt:
 ```
 
 ## Async TCP Server - poll
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async tcp server - poll](https://realpython.com/search?q=async+tcp+server+-+poll).
+:::
 
 `poll()` is similar to `select()` but more efficient for large numbers of file descriptors. Available on Unix systems.
 
@@ -129,6 +137,10 @@ with create_server(host, port) as server:
 ```
 
 ## Async TCP Server - epoll
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async tcp server - epoll](https://realpython.com/search?q=async+tcp+server+-+epoll).
+:::
 
 `epoll` is Linux-specific and the most efficient for handling thousands of connections. It uses edge-triggered or level-triggered notifications.
 
@@ -206,6 +218,10 @@ with create_server(host, port) as server:
 ```
 
 ## Async TCP Server - kqueue
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async tcp server - kqueue](https://realpython.com/search?q=async+tcp+server+-+kqueue).
+:::
 
 `kqueue` is the BSD/macOS equivalent of epoll, providing efficient event notification for large numbers of file descriptors.
 
@@ -299,6 +315,10 @@ with create_server(host, port) as server:
 
 ## High-Level API - selectors
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on high-level api - selectors](https://realpython.com/search?q=high-level+api+-+selectors).
+:::
+
 The `selectors` module (Python 3.4+) provides a high-level, platform-independent interface that automatically uses the best available mechanism (epoll, kqueue, etc.).
 
 ```python
@@ -347,6 +367,10 @@ with create_server(host, port) as (sock, sel):
 ```
 
 ## Comparison of I/O Multiplexing Methods
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on comparison of i o multiplexing methods](https://realpython.com/search?q=comparison+of+i+o+multiplexing+methods).
+:::
 
 | Method    | Platform  | Scalability      | Notes                    |
 |-----------|-----------|------------------|--------------------------|

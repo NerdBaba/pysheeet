@@ -14,6 +14,10 @@ For most C++ projects, **pybind11** is the recommended choice. It's used by majo
 
 ## Comparison of Approaches
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on comparison of approaches](https://realpython.com/search?q=comparison+of+approaches).
+:::
+
     ┌─────────────────────────────────────────────────────────────────────────┐
     │                    C/C++ EXTENSION APPROACHES                           │
     ├─────────────────────────────────────────────────────────────────────────┤
@@ -49,6 +53,10 @@ For most C++ projects, **pybind11** is the recommended choice. It's used by majo
     - Quick prototype              → ctypes
 
 ## pybind11: Getting Started
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pybind11 getting started](https://realpython.com/search?q=pybind11+getting+started).
+:::
 
 Source  
 [src/cext/example.cpp](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/example.cpp)
@@ -111,6 +119,10 @@ $ python -c "import example; print(example.fib(35))"
 
 ## pybind11: Classes
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pybind11 classes](https://realpython.com/search?q=pybind11+classes).
+:::
+
 Source  
 [src/cext/vector.cpp](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/vector.cpp)
 
@@ -166,6 +178,10 @@ Vector2D(4.0, 6.0)
 ```
 
 ## pybind11: NumPy Integration
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pybind11 numpy integration](https://realpython.com/search?q=pybind11+numpy+integration).
+:::
 
 Source  
 [src/cext/numpy_example.cpp](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/numpy_example.cpp)
@@ -226,6 +242,10 @@ array([5., 7., 9.])
 
 ## pybind11: Releasing the GIL
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pybind11 releasing the gil](https://realpython.com/search?q=pybind11+releasing+the+gil).
+:::
+
 Source  
 [src/cext/gil_example.cpp](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/gil_example.cpp)
 
@@ -283,6 +303,10 @@ for t in threads: t.join()
 
 ## ctypes: Quick C Library Access
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on ctypes quick c library access](https://realpython.com/search?q=ctypes+quick+c+library+access).
+:::
+
 Source  
 [src/cext/fib.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/fib.c)
 
@@ -321,6 +345,10 @@ print(lib.add_doubles(1.5, 2.5))  # 4.0
 ```
 
 ## ctypes: Structures and Pointers
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on ctypes structures and pointers](https://realpython.com/search?q=ctypes+structures+and+pointers).
+:::
 
 Working with C structures and pointers in ctypes requires careful type declarations that mirror the C memory layout exactly. Define structures by subclassing `Structure` and specifying `_fields_` as a list of (name, type) tuples in the same order as the C struct. Use `POINTER(Type)` to create pointer types and `byref(obj)` to pass objects by reference (equivalent to `&obj` in C). This approach is more error-prone than pybind11 but works without any compilation step.
 
@@ -374,6 +402,10 @@ print(f"Scaled: ({p2.x}, {p2.y})")  # (6.0, 8.0)
 
 ## cffi: Cleaner Foreign Function Interface
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cffi cleaner foreign function interface](https://realpython.com/search?q=cffi+cleaner+foreign+function+interface).
+:::
+
 cffi (C Foreign Function Interface) provides a cleaner, more Pythonic API than ctypes for calling C code. Instead of Python type objects, you declare C function signatures using actual C syntax in `ffi.cdef()`, which can often be copied directly from header files. cffi handles type conversions automatically and provides better error messages. It's also the recommended FFI for PyPy, where it runs significantly faster than ctypes. Install with `pip install cffi`.
 
 ```python
@@ -420,6 +452,10 @@ print(lib.fib(35))
 
 ## Cython: Python-like Syntax
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cython python-like syntax](https://realpython.com/search?q=cython+python-like+syntax).
+:::
+
 Cython is a programming language that combines Python syntax with C data types, compiling to efficient C code. It's excellent for gradual optimization: start with pure Python code, then add type declarations to critical sections for dramatic speedups. Cython supports three levels of optimization: pure Python (`def`), typed Python (`def` with type hints), and pure C functions (`cdef`). The `cdef` functions run at C speed but can only be called from other Cython code, so you typically wrap them with a `def` function for Python access. Install with `pip install cython`.
 
 ```python
@@ -465,6 +501,10 @@ $ python -c "from fib import fib_c; print(fib_c(35))"
 
 ## Performance Comparison
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on performance comparison](https://realpython.com/search?q=performance+comparison).
+:::
+
 Understanding the performance characteristics of each approach helps you choose the right tool. This benchmark compares all approaches using recursive Fibonacci (n=35), a CPU-bound task that highlights the overhead of Python's interpreter. Native code achieves 50-100x speedups by eliminating Python object creation, method dispatch, and bytecode interpretation. The actual speedup varies by workload—numerical code with NumPy integration can see even larger gains, while I/O-bound code benefits less.
 
 ```python
@@ -497,6 +537,10 @@ def fib_python(n):
 ```
 
 ## Best Practices
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on best practices](https://realpython.com/search?q=best+practices).
+:::
 
 Following these guidelines will help you write efficient, maintainable, and safe native extensions. The most common mistakes are holding the GIL during long operations (blocking other threads), copying large arrays unnecessarily (killing performance), and ignoring error handling (causing crashes instead of Python exceptions).
 

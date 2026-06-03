@@ -9,6 +9,11 @@ Python is an object-oriented programming language. This cheat sheet covers class
 
 ## List Attributes with dir()
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on list attributes with dir](https://realpython.com/search?q=list+attributes+with+dir).
+:::
+
+
 The `dir()` function returns a list of all attributes and methods of an object. This is useful for introspection and discovering what operations are available.
 
 ```python
@@ -17,6 +22,11 @@ The `dir()` function returns a list of all attributes and methods of an object. 
 ```
 
 ## Check Type with isinstance()
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on check type with isinstance](https://realpython.com/search?q=check+type+with+isinstance).
+:::
+
 
 Use `isinstance()` to check if an object is an instance of a class or its subclasses. This is preferred over `type()` comparison because it supports inheritance.
 
@@ -29,6 +39,11 @@ True
 ```
 
 ## Check Inheritance with issubclass()
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on check inheritance with issubclass](https://realpython.com/search?q=check+inheritance+with+issubclass).
+:::
+
 
 Use `issubclass()` to check if a class is a subclass of another class.
 
@@ -43,6 +58,11 @@ True
 
 ## Get Class Name
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on get class name](https://realpython.com/search?q=get+class+name).
+:::
+
+
 Access the class name through the `__class__.__name__` attribute.
 
 ```python
@@ -55,6 +75,11 @@ Access the class name through the `__class__.__name__` attribute.
 ```
 
 ## Has / Get / Set Attributes
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on has get set attributes](https://realpython.com/search?q=has+get+set+attributes).
+:::
+
 
 Python provides built-in functions to dynamically access and modify object attributes at runtime.
 
@@ -76,6 +101,11 @@ True
 ```
 
 ## Declare Class with type()
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on declare class with type](https://realpython.com/search?q=declare+class+with+type).
+:::
+
 
 Classes can be created dynamically using `type()`. This is useful for metaprogramming and creating classes at runtime.
 
@@ -103,6 +133,11 @@ This is equivalent to:
 
 ## \_\_new\_\_ vs \_\_init\_\_
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on _ _new _ _ vs _ _init _ _](https://realpython.com/search?q=_+_new+_+_+vs+_+_init+_+_).
+:::
+
+
 `__new__` creates the instance, `__init__` initializes it. `__init__` is only called if `__new__` returns an instance of the class.
 
 ```python
@@ -119,6 +154,11 @@ __init__ Hello
 ```
 
 ## \_\_str\_\_ and \_\_repr\_\_
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on _ _str _ _ and _ _repr _ _](https://realpython.com/search?q=_+_str+_+_+and+_+_repr+_+_).
+:::
+
 
 `__str__` returns a human-readable string, `__repr__` returns an unambiguous representation for debugging. When `__str__` is not defined, `__repr__` is used.
 
@@ -142,6 +182,11 @@ __init__ Hello
 
 ## Comparison Magic Methods
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on comparison magic methods](https://realpython.com/search?q=comparison+magic+methods).
+:::
+
+
 Implement comparison operators by defining magic methods. Use `functools.total_ordering` to generate all comparisons from `__eq__` and one other.
 
 ```python
@@ -162,6 +207,11 @@ True
 ```
 
 ## Arithmetic Magic Methods
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on arithmetic magic methods](https://realpython.com/search?q=arithmetic+magic+methods).
+:::
+
 
 Implement arithmetic operators to make objects work with `+`, `-`, `*`, etc.
 
@@ -184,6 +234,11 @@ Vector(3, 6)
 
 ## Callable with \_\_call\_\_
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on callable with _ _call _ _](https://realpython.com/search?q=callable+with+_+_call+_+_).
+:::
+
+
 Implement `__call__` to make instances callable like functions. This is useful for creating function-like objects that maintain state.
 
 ```python
@@ -201,6 +256,11 @@ True
 ```
 
 ## @property Decorator
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on property decorator](https://realpython.com/search?q=property+decorator).
+:::
+
 
 Use `@property` to define getters, setters, and deleters for managed attributes. This allows attribute access syntax while running custom code.
 
@@ -230,6 +290,11 @@ Use `@property` to define getters, setters, and deleters for managed attributes.
 
 ## Descriptor Protocol
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on descriptor protocol](https://realpython.com/search?q=descriptor+protocol).
+:::
+
+
 Descriptors control attribute access at the class level. They implement `__get__`, `__set__`, and/or `__delete__` methods.
 
 ```python
@@ -255,6 +320,11 @@ Descriptors control attribute access at the class level. They implement `__get__
 
 ## Context Manager Protocol
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on context manager protocol](https://realpython.com/search?q=context+manager+protocol).
+:::
+
+
 Context managers implement `__enter__` and `__exit__` to manage resources with the `with` statement. This ensures proper cleanup even if exceptions occur.
 
 ```python
@@ -276,6 +346,11 @@ with ManagedFile('example.txt') as f:
 
 ## Using contextlib
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using contextlib](https://realpython.com/search?q=using+contextlib).
+:::
+
+
 The `contextlib` module provides utilities for creating context managers without writing a full class.
 
 ```python
@@ -294,6 +369,11 @@ with managed_file('example.txt') as f:
 ```
 
 ## @staticmethod and @classmethod
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on staticmethod and classmethod](https://realpython.com/search?q=staticmethod+and+classmethod).
+:::
+
 
 `@staticmethod` defines a method that doesn't access instance or class. `@classmethod` receives the class as the first argument, useful for alternative constructors.
 
@@ -322,6 +402,11 @@ False
 
 ## Abstract Base Classes with abc
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on abstract base classes with abc](https://realpython.com/search?q=abstract+base+classes+with+abc).
+:::
+
+
 Use `abc` module to define abstract base classes that cannot be instantiated and require subclasses to implement certain methods.
 
 ```python
@@ -344,6 +429,11 @@ Use `abc` module to define abstract base classes that cannot be instantiated and
 ```
 
 ## The Diamond Problem (MRO)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on the diamond problem mro](https://realpython.com/search?q=the+diamond+problem+mro).
+:::
+
 
 Python uses Method Resolution Order (MRO) to resolve the diamond problem in multiple inheritance. Use `ClassName.mro()` to see the resolution order.
 
@@ -371,6 +461,11 @@ Python uses Method Resolution Order (MRO) to resolve the diamond problem in mult
 
 ## Singleton Pattern
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on singleton pattern](https://realpython.com/search?q=singleton+pattern).
+:::
+
+
 Singleton ensures only one instance of a class exists. Implement using `__new__` or a decorator.
 
 ```python
@@ -389,6 +484,11 @@ print(a is b)  # True
 
 ## Using \_\_slots\_\_
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using _ _slots _ _](https://realpython.com/search?q=using+_+_slots+_+_).
+:::
+
+
 `__slots__` restricts instance attributes and reduces memory usage by avoiding `__dict__` per instance.
 
 ```python
@@ -404,6 +504,11 @@ print(a is b)  # True
 ```
 
 ## Common Magic Methods Reference
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on common magic methods reference](https://realpython.com/search?q=common+magic+methods+reference).
+:::
+
 
 ```python
 # Object Creation and Representation

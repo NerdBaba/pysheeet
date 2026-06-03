@@ -9,6 +9,11 @@ A function can help programmers to wrap their logic into a task for avoiding dup
 
 ## Document Functions
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on document functions](https://realpython.com/search?q=document+functions).
+:::
+
+
 Documentation provides programmers hints about how a function is supposed to be used. A docstring gives an expedient way to write a readable document of functions. The docstring should be placed as the first statement in the function body, enclosed in triple quotes. It can be accessed via the `__doc__` attribute or the built-in `help()` function. PEP [257](https://www.python.org/dev/peps/pep-0257) defines conventions for docstrings, and tools like `pydocstyle` can help enforce these conventions in your codebase.
 
 ```python
@@ -22,6 +27,11 @@ Documentation provides programmers hints about how a function is supposed to be 
 ```
 
 ## Default Arguments
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on default arguments](https://realpython.com/search?q=default+arguments).
+:::
+
 
 Defining a function where the arguments are optional and have a default value is quite simple in Python. We can just assign values in the definition and make sure the default arguments appear in the end. When calling the function, you can omit arguments that have defaults, pass them positionally, or use keyword syntax to specify them explicitly. This flexibility makes functions more versatile and easier to use in different contexts.
 
@@ -61,6 +71,11 @@ Avoid using mutable objects (like lists or dictionaries) as default arguments. D
 
 ## Variable Arguments `*args` and `**kwargs`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on variable arguments args and kwargs](https://realpython.com/search?q=variable+arguments+args+and+kwargs).
+:::
+
+
 Python provides a flexible way to handle functions that need to accept a variable number of arguments. Use `*args` to collect any number of positional arguments into a tuple, and `**kwargs` to collect any number of keyword arguments into a dictionary. These are commonly used when writing wrapper functions, decorators, or functions that need to pass arguments through to other functions. The names `args` and `kwargs` are conventions; you can use any valid identifier after the `*` or `**`.
 
 ```python
@@ -77,6 +92,11 @@ Python provides a flexible way to handle functions that need to accept a variabl
 
 ## Unpack Arguments
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on unpack arguments](https://realpython.com/search?q=unpack+arguments).
+:::
+
+
 When calling a function, you can use `*` to unpack a sequence (like a list or tuple) into separate positional arguments, and `**` to unpack a dictionary into keyword arguments. This is the inverse of `*args` and `**kwargs` in function definitions. Unpacking is particularly useful when you have data in a collection that you want to pass to a function that expects separate arguments.
 
 ```python
@@ -92,6 +112,11 @@ FOO BAR baz
 ```
 
 ## Keyword-Only Arguments
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on keyword-only arguments](https://realpython.com/search?q=keyword-only+arguments).
+:::
+
 
 Arguments that appear after `*` or `*args` in a function definition are keyword-only, meaning they must be passed by name and cannot be passed positionally. This feature, introduced in Python 3.0, helps prevent errors when functions have many parameters, as it forces callers to be explicit about which argument they're providing. Keyword-only arguments can have default values, making them optional.
 
@@ -116,6 +141,11 @@ TypeError: f() takes 2 positional arguments but 3 were given
 ```
 
 ## Positional-Only Arguments
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on positional-only arguments](https://realpython.com/search?q=positional-only+arguments).
+:::
+
 
 Arguments that appear before `/` in a function definition are positional-only, meaning they cannot be passed by keyword name. This feature, introduced in Python 3.8, is useful when parameter names are not meaningful to callers or when you want to reserve the flexibility to change parameter names without breaking existing code. Many built-in functions like `len()` and `pow()` use positional-only parameters. You can combine positional-only (`/`) and keyword-only (`*`) in the same function.
 
@@ -143,6 +173,11 @@ TypeError: f() got some positional-only arguments passed as keyword arguments
 
 ## Annotations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on annotations](https://realpython.com/search?q=annotations).
+:::
+
+
 Function annotations provide a way to attach metadata to function parameters and return values. While Python doesn't enforce these annotations at runtime, they serve as documentation and are used by static type checkers like `mypy` to catch type errors before code runs. Annotations are stored in the function's `__annotations__` attribute as a dictionary. The `typing` module (Python 3.5+) provides additional types like `List`, `Dict`, `Optional`, and `Union` for more expressive type hints.
 
 **New in Python 3.0**
@@ -161,6 +196,11 @@ Function annotations provide a way to attach metadata to function parameters and
 ```
 
 ## Lambda
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on lambda](https://realpython.com/search?q=lambda).
+:::
+
 
 Lambda expressions create small anonymous functions inline. They are syntactically restricted to a single expression, which is implicitly returned. Lambdas are useful for short, throwaway functions, especially as arguments to higher-order functions like `sorted()`, `map()`, `filter()`, and `reduce()`. While lambdas can make code more concise, complex logic should be written as regular named functions for better readability and debugging.
 
@@ -187,6 +227,11 @@ Lambda expressions create small anonymous functions inline. They are syntactical
 
 ## Callable
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on callable](https://realpython.com/search?q=callable).
+:::
+
+
 In Python, any object that implements the `__call__` method is callable, meaning it can be invoked like a function using parentheses. This includes functions, methods, lambdas, classes (calling a class creates an instance), and instances of classes that define `__call__`. The built-in `callable()` function returns `True` if an object appears callable, which is useful for checking before attempting to call an object to avoid `TypeError` exceptions.
 
 ```python
@@ -210,6 +255,11 @@ True
 
 ## Get Function Name
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on get function name](https://realpython.com/search?q=get+function+name).
+:::
+
+
 Functions in Python are first-class objects with various attributes that provide metadata about them. The `__name__` attribute contains the function's name as defined, `__doc__` contains the docstring, `__module__` indicates which module the function was defined in, and `__annotations__` holds type hints. These attributes are useful for debugging, logging, and introspection.
 
 ```python
@@ -226,6 +276,11 @@ Functions in Python are first-class objects with various attributes that provide
 ```
 
 ## Closure
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on closure](https://realpython.com/search?q=closure).
+:::
+
 
 A closure is a function that captures and remembers values from its enclosing lexical scope even after that scope has finished executing. This happens when a nested function references variables from its outer function. Closures are powerful for creating function factories (functions that return customized functions), implementing decorators, and maintaining state without using global variables or classes. Use the `nonlocal` keyword to modify captured variables from the enclosing scope.
 
@@ -260,6 +315,11 @@ A closure is a function that captures and remembers values from its enclosing le
 
 ## Generator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on generator](https://realpython.com/search?q=generator).
+:::
+
+
 Generator functions use the `yield` statement to produce a sequence of values lazily, one at a time, instead of computing all values upfront and storing them in memory. When called, a generator function returns a generator iterator that can be iterated over with `for` loops or `next()`. Generators are memory-efficient for large sequences and can represent infinite sequences. Generator expressions provide a concise syntax similar to list comprehensions but with lazy evaluation.
 
 ```python
@@ -279,6 +339,11 @@ Generator functions use the `yield` statement to produce a sequence of values la
 ```
 
 ## Decorator
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on decorator](https://realpython.com/search?q=decorator).
+:::
+
 
 Decorators are a powerful pattern for modifying or extending the behavior of functions without changing their source code. A decorator is a function that takes a function as input and returns a new function (usually a wrapper) that adds some functionality before or after calling the original. The `@decorator` syntax is syntactic sugar for `func = decorator(func)`. Always use `@wraps` from `functools` in your wrapper function to preserve the original function's metadata like `__name__`, `__doc__`, and `__annotations__`.
 
@@ -312,6 +377,11 @@ Always use `@wraps(func)` in decorators to preserve the original function's `__n
 
 ## Decorator with Arguments
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on decorator with arguments](https://realpython.com/search?q=decorator+with+arguments).
+:::
+
+
 To create a decorator that accepts arguments, you need an extra layer of nesting. The outermost function takes the decorator's arguments and returns the actual decorator. The middle function takes the function being decorated and returns the wrapper. The innermost function is the wrapper that executes when the decorated function is called. This pattern is commonly used for decorators like `@repeat(3)` or `@route('/path')`.
 
 ```python
@@ -341,6 +411,11 @@ Hello!
 
 ## Class Decorator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on class decorator](https://realpython.com/search?q=class+decorator).
+:::
+
+
 Decorators can also be implemented as classes instead of functions. A class-based decorator implements `__init__` to receive the decorated function and `__call__` to act as the wrapper. This approach is useful when the decorator needs to maintain state across multiple calls to the decorated function, such as counting calls, caching results, or tracking timing information.
 
 ```python
@@ -365,6 +440,11 @@ Decorators can also be implemented as classes instead of functions. A class-base
 ```
 
 ## Cache with `lru_cache`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cache with lru_cache](https://realpython.com/search?q=cache+with+lru_cache).
+:::
+
 
 The `lru_cache` decorator from `functools` automatically caches function results based on the arguments passed. When the function is called with the same arguments again, the cached result is returned instead of recomputing it. This is especially useful for expensive computations or recursive functions like Fibonacci. The `maxsize` parameter limits cache size (use `None` for unlimited). Use `cache_info()` to see hit/miss statistics and `cache_clear()` to reset the cache.
 
@@ -396,6 +476,11 @@ CacheInfo(hits=98, misses=101, maxsize=None, currsize=101)
 
 ## Partial Functions
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on partial functions](https://realpython.com/search?q=partial+functions).
+:::
+
+
 The `functools.partial` function creates a new callable with some arguments of the original function pre-filled. This is useful for adapting functions to interfaces that expect fewer arguments, creating specialized versions of general functions, or preparing callback functions. The resulting partial object can be called with the remaining arguments. You can pre-fill both positional and keyword arguments.
 
 ```python
@@ -421,6 +506,11 @@ The `functools.partial` function creates a new callable with some arguments of t
 ```
 
 ## `singledispatch` - Function Overloading
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on singledispatch - function overloading](https://realpython.com/search?q=singledispatch+-+function+overloading).
+:::
+
 
 The `singledispatch` decorator from `functools` enables function overloading based on the type of the first argument. You define a base function and then register specialized implementations for different types using the `@func.register` decorator. When the function is called, Python automatically dispatches to the appropriate implementation based on the argument's type. This is useful for writing generic functions that behave differently for different types.
 
@@ -450,6 +540,11 @@ The `singledispatch` decorator from `functools` enables function overloading bas
 
 ## `reduce` - Cumulative Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reduce - cumulative operations](https://realpython.com/search?q=reduce+-+cumulative+operations).
+:::
+
+
 The `reduce` function from `functools` applies a two-argument function cumulatively to the items of a sequence, from left to right, reducing the sequence to a single value. For example, `reduce(f, [a, b, c, d])` computes `f(f(f(a, b), c), d)`. An optional third argument provides an initial value. While `reduce` can be powerful, list comprehensions or explicit loops are often more readable for simple cases.
 
 ```python
@@ -468,6 +563,11 @@ The `reduce` function from `functools` applies a two-argument function cumulativ
 ```
 
 ## Higher-Order Functions
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on higher-order functions](https://realpython.com/search?q=higher-order+functions).
+:::
+
 
 Higher-order functions are functions that take other functions as arguments or return functions as results. Python provides several built-in higher-order functions that are commonly used for functional programming patterns. `map()` applies a function to every item in an iterable, `filter()` keeps items where the function returns `True`, and `sorted()`/`min()`/`max()` accept a `key` function to customize comparison. These functions return iterators (except `sorted`), so wrap them in `list()` if you need a list.
 

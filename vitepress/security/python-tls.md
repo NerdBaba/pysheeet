@@ -14,6 +14,10 @@ For production, always use certificates from a trusted Certificate Authority (CA
 
 ## Secure HTTPS Server
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on secure https server](https://realpython.com/search?q=secure+https+server).
+:::
+
 Create an HTTPS server using `SSLContext` with secure defaults. The context configures TLS version, cipher suites, and certificate verification. Always load both the certificate chain and private key. For production, use certificates from a real CA.
 
 ```python
@@ -49,6 +53,10 @@ httpd.serve_forever()
 ```
 
 ## Secure HTTPS Client
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on secure https client](https://realpython.com/search?q=secure+https+client).
+:::
 
 When making HTTPS requests, Python verifies certificates by default. For custom CA certificates or client authentication, configure an `SSLContext`. Never set `verify=False` or disable hostname checking in production.
 
@@ -89,6 +97,10 @@ response = requests.get(
 ```
 
 ## Generate Self-Signed Certificate
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on generate self-signed certificate](https://realpython.com/search?q=generate+self-signed+certificate).
+:::
 
 Self-signed certificates are useful for development and testing. The certificate is signed by its own private key rather than a CA. Browsers will show warnings for self-signed certificates. Use the `cryptography` library for certificate generation—it's more Pythonic than calling OpenSSL.
 
@@ -157,6 +169,10 @@ print("Generated key.pem and cert.pem")
 
 ## Generate Certificate Signing Request (CSR)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on generate certificate signing request csr](https://realpython.com/search?q=generate+certificate+signing+request+csr).
+:::
+
 A CSR is sent to a Certificate Authority to obtain a signed certificate. It contains your public key and identity information. The CA verifies your identity and returns a signed certificate. Keep your private key secret—never send it to the CA.
 
 ```python
@@ -211,6 +227,10 @@ print("Send request.csr to your CA, keep private.key secret!")
 
 ## Read Certificate Information
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on read certificate information](https://realpython.com/search?q=read+certificate+information).
+:::
+
 Parse and inspect X.509 certificates to view subject, issuer, validity period, extensions, and other attributes. Useful for debugging certificate issues.
 
 ```python
@@ -262,6 +282,10 @@ if is_self_signed:
 ```
 
 ## Create a Certificate Authority
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create a certificate authority](https://realpython.com/search?q=create+a+certificate+authority).
+:::
 
 For internal use, you can create your own CA to sign certificates. The CA certificate is distributed to clients, which then trust any certificate signed by the CA. This is useful for development environments or internal services.
 
@@ -364,6 +388,10 @@ print("Created ca-key.pem (keep secret!) and ca-cert.pem (distribute to clients)
 
 ## TLS Version and Cipher Information
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tls version and cipher information](https://realpython.com/search?q=tls+version+and+cipher+information).
+:::
+
 Inspect TLS connection details including protocol version, cipher suite, and peer certificate. Useful for debugging and security auditing.
 
 ```python
@@ -395,6 +423,10 @@ get_tls_info("www.google.com")
 ```
 
 ## Certificate Pinning
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on certificate pinning](https://realpython.com/search?q=certificate+pinning).
+:::
 
 Certificate pinning adds an extra layer of security by verifying the server's certificate matches an expected value. This prevents attacks using fraudulently issued certificates. Pin the public key (SPKI) rather than the certificate to survive certificate renewals.
 

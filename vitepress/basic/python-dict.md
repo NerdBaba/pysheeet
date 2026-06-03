@@ -17,6 +17,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## Get All Keys with `dict.keys()`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on get all keys with dict keys](https://realpython.com/search?q=get+all+keys+with+dict+keys).
+:::
+
+
 The `keys()` method returns a view object containing all dictionary keys. In Python 3, this is a dynamic view that reflects changes to the dictionary.
 
 ```python
@@ -28,6 +33,11 @@ The `keys()` method returns a view object containing all dictionary keys. In Pyt
 
 ## Get Key-Value Pairs with `dict.items()`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on get key-value pairs with dict items](https://realpython.com/search?q=get+key-value+pairs+with+dict+items).
+:::
+
+
 The `items()` method returns key-value pairs as tuples, which is useful for iterating over both keys and values simultaneously.
 
 ```python
@@ -36,6 +46,11 @@ The `items()` method returns key-value pairs as tuples, which is useful for iter
 ```
 
 ## Find Common Keys Between Dictionaries
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on find common keys between dictionaries](https://realpython.com/search?q=find+common+keys+between+dictionaries).
+:::
+
 
 Finding keys that exist in multiple dictionaries is a common operation. Using set intersection is the most efficient approach.
 
@@ -55,6 +70,11 @@ Finding keys that exist in multiple dictionaries is a common operation. Using se
 ```
 
 ## Set Default Values with `setdefault()` and `defaultdict`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on set default values with setdefault and defaultdict](https://realpython.com/search?q=set+default+values+with+setdefault+and+defaultdict).
+:::
+
 
 When working with dictionaries, you often need to set default values for missing keys. Python provides `setdefault()` and `collections.defaultdict` for this.
 
@@ -100,6 +120,11 @@ defaultdict(<class 'list'>, {'key': [], 'foo': ['bar']})
 
 ## Update Dictionary with `dict.update()`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on update dictionary with dict update](https://realpython.com/search?q=update+dictionary+with+dict+update).
+:::
+
+
 The `update()` method merges another dictionary into the current one. Keys from the second dictionary overwrite existing keys in the first.
 
 ```python
@@ -111,6 +136,11 @@ The `update()` method merges another dictionary into the current one. Keys from 
 ```
 
 ## Merge Two Dictionaries in Python
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on merge two dictionaries in python](https://realpython.com/search?q=merge+two+dictionaries+in+python).
+:::
+
 
 There are several ways to merge dictionaries depending on your Python version. Python 3.9+ also supports the `|` operator for dictionary merging.
 
@@ -136,6 +166,11 @@ Python 3.5 or above
 ```
 
 ## Emulate a Dictionary with Special Methods
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on emulate a dictionary with special methods](https://realpython.com/search?q=emulate+a+dictionary+with+special+methods).
+:::
+
 
 You can create dictionary-like objects by implementing special methods: `__getitem__`, `__setitem__`, `__delitem__`, `__contains__`, and `__iter__`.
 
@@ -179,6 +214,11 @@ True
 ```
 
 ## Implement LRU Cache with OrderedDict
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on implement lru cache with ordereddict](https://realpython.com/search?q=implement+lru+cache+with+ordereddict).
+:::
+
 
 An LRU (Least Recently Used) cache evicts the least recently accessed items when full. `OrderedDict.move_to_end()` makes implementation straightforward.
 

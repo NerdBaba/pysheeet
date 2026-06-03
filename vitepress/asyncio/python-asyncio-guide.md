@@ -7,6 +7,10 @@ title: A Hitchhiker's Guide to Asynchronous Programming
 [[toc]]
 ## Abstract
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on abstract](https://realpython.com/search?q=abstract).
+:::
+
 The [C10k problem](https://en.wikipedia.org/wiki/C10k_problem) remains a fundamental challenge for programmers seeking to handle massive concurrent connections efficiently. Traditionally, developers address extensive I/O operations using **threads**, **epoll**, or **kqueue** to prevent software from blocking on expensive operations. However, developing readable and bug-free concurrent code is challenging due to complexities around data sharing and task dependencies. Even powerful tools like [Valgrind](https://valgrind.org/) that help detect deadlocks and race conditions cannot eliminate the time-consuming debugging process as software scales.
 
 To address these challenges, many programming languages—including Python, JavaScript, and C++—have developed better libraries, frameworks, and syntaxes to help programmers manage concurrent tasks properly. Rather than focusing on how to use modern parallel APIs, this article concentrates on the **design philosophy** behind asynchronous programming patterns, tracing the evolution from blocking I/O to the elegant `async/await` syntax.
@@ -16,6 +20,10 @@ Using threads is the most natural approach for dispatching tasks without blockin
 ![image](https://raw.githubusercontent.com/crazyguitar/pysheeet/master/docs/_static/appendix/event-loop-vs-thread.png)
 
 ## Introduction
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
 
 Handling I/O operations such as network connections is among the most expensive tasks in any program. Consider a simple TCP blocking echo server (shown below). If a client connects without sending any data, it blocks all other connections. Even when clients send data promptly, the server cannot handle concurrent requests because it wastes significant time waiting for I/O responses from hardware like network interfaces. Thus, socket programming with concurrency becomes essential for managing high request volumes.
 
@@ -99,6 +107,10 @@ Although managing connections via threads may be inefficient, event-loop-based p
 
 ## Callback Functions
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on callback functions](https://realpython.com/search?q=callback+functions).
+:::
+
 Callback functions control data flow at runtime when events occur. However, preserving state across callbacks is challenging. For example, implementing a handshake protocol over TCP requires storing previous state somewhere accessible to subsequent callbacks.
 
 ```python
@@ -174,6 +186,10 @@ def handshake(conn):
 To achieve similar structure in non-blocking code, a function (or task) must snapshot its current state—including arguments, local variables, and execution position—when waiting for I/O operations. The scheduler must then be able to **re-enter** the function and execute remaining code after I/O completes. Unlike languages like C++, Python achieves this naturally because **generators** preserve all state and can be re-entered by calling `next()`. By utilizing generators, handling I/O operations in a non-blocking manner with readable, linear code—called *inline callbacks*—becomes possible within an event loop.
 
 ## Event Loop
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on event loop](https://realpython.com/search?q=event+loop).
+:::
 
 An event loop is a user-space scheduler that manages tasks within a program instead of relying on operating system thread scheduling. The following snippet demonstrates a simple event loop handling socket connections asynchronously. The implementation appends tasks to a FIFO job queue and registers with a *selector* when I/O operations are not ready. A *generator* preserves task state, allowing execution to resume without callback functions when I/O results become available. Understanding how this event loop works reveals that a Python generator is indeed a form of **coroutine**.
 
@@ -304,6 +320,10 @@ Using an event loop with `yield from` manages connections without blocking the m
 
 ## What is a Coroutine?
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on what is a coroutine](https://realpython.com/search?q=what+is+a+coroutine).
+:::
+
 Python documentation defines coroutines as "a generalized form of subroutines." This definition, while technically accurate, can be confusing. Based on our discussion, an event loop schedules generators to perform specific tasks—similar to how an OS dispatches jobs to threads. In this context, generators serve as "routine workers." A **coroutine** is simply a task scheduled by an event loop within a program, rather than by the operating system.
 
 The following snippet illustrates what `@coroutine` does. This decorator transforms a function into a generator function and wraps it with `types.coroutine` for backward compatibility:
@@ -341,6 +361,10 @@ loop.close()
 With Python 3.5+, the `async def` syntax creates native coroutines directly, and `await` replaces `yield from` for suspending execution. This makes the intent explicit: `async def` declares a coroutine, and `await` marks suspension points where the event loop can switch to other tasks.
 
 ## Conclusion
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on conclusion](https://realpython.com/search?q=conclusion).
+:::
 
 Asynchronous programming via event loops has become more straightforward and readable thanks to modern syntax and library support. Most programming languages, including Python, implement libraries that manage task scheduling through integration with new syntaxes. While `async/await` may seem enigmatic initially, it provides a way for programmers to develop logical, linear code structure—similar to using threads—while gaining the performance benefits of event-driven I/O.
 

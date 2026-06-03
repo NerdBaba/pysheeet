@@ -9,6 +9,10 @@ This section covers advanced query patterns and recipes for SQLAlchemy. While th
 
 ## Order By
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on order by](https://realpython.com/search?q=order+by).
+:::
+
 The `order_by()` method sorts query results by one or more columns. Pass column objects directly, or use `desc()` for descending order. You can chain multiple columns for secondary sorting. SQLAlchemy also supports `nullsfirst()` and `nullslast()` to control how NULL values are sorted, which is particularly useful when dealing with optional fields.
 
 ```python
@@ -46,6 +50,10 @@ The `order_by()` method sorts query results by one or more columns. Pass column 
 
 ## Limit and Offset
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on limit and offset](https://realpython.com/search?q=limit+and+offset).
+:::
+
 Use `limit()` to restrict the number of results and `offset()` to skip rows, enabling pagination. These methods translate directly to SQL LIMIT and OFFSET clauses. For large datasets, consider using keyset pagination (filtering by the last seen ID) instead of offset-based pagination, as OFFSET can become slow with large offsets since the database must scan and discard rows.
 
 ```python
@@ -78,6 +86,10 @@ Use `limit()` to restrict the number of results and `offset()` to skip rows, ena
 ```
 
 ## Group By and Aggregates
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on group by and aggregates](https://realpython.com/search?q=group+by+and+aggregates).
+:::
 
 Use `group_by()` with aggregate functions like `func.count()`, `func.sum()`, `func.avg()`, `func.min()`, and `func.max()` for grouped calculations. The `having()` method filters groups after aggregation, similar to SQL's HAVING clause. When selecting both regular columns and aggregates, all non-aggregate columns must be included in the GROUP BY clause.
 
@@ -120,6 +132,10 @@ B: 250
 ```
 
 ## Join Queries
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on join queries](https://realpython.com/search?q=join+queries).
+:::
 
 SQLAlchemy provides several ways to join tables. For ORM models with relationships, use `join()` which automatically uses the foreign key. For explicit join conditions, pass the condition as the second argument. Use `outerjoin()` for LEFT OUTER JOIN. The `select_from()` method specifies the FROM clause when needed for complex joins.
 
@@ -165,6 +181,10 @@ SQLAlchemy provides several ways to join tables. For ORM models with relationshi
 
 ## Subqueries
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on subqueries](https://realpython.com/search?q=subqueries).
+:::
+
 Subqueries are queries nested inside other queries. Use `subquery()` to create a subquery that can be used in the FROM clause, or `scalar_subquery()` for single-value subqueries in SELECT or WHERE clauses. Subqueries are useful for complex filtering, computing derived values, or when you need to reference aggregated data in the main query.
 
 ```python
@@ -197,6 +217,10 @@ Subqueries are queries nested inside other queries. Use `subquery()` to create a
 ```
 
 ## Common Table Expressions (CTE)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on common table expressions cte](https://realpython.com/search?q=common+table+expressions+cte).
+:::
 
 CTEs (WITH clauses) improve query readability by naming subqueries. They're especially useful for recursive queries and when the same subquery is referenced multiple times. Use `cte()` to create a CTE from a select statement. CTEs can reference themselves for recursive queries, which is powerful for hierarchical data like organizational charts or category trees.
 
@@ -235,6 +259,10 @@ CTEs (WITH clauses) improve query readability by naming subqueries. They're espe
 ```
 
 ## Exists and Correlated Subqueries
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on exists and correlated subqueries](https://realpython.com/search?q=exists+and+correlated+subqueries).
+:::
 
 The `exists()` construct creates an EXISTS subquery, which returns true if the subquery returns any rows. This is efficient for checking the existence of related records without loading them. Correlated subqueries reference columns from the outer query, allowing row-by-row comparisons. Use `correlate()` to explicitly specify which tables the subquery should correlate with.
 
@@ -278,6 +306,10 @@ The `exists()` construct creates an EXISTS subquery, which returns true if the s
 
 ## Union Queries
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on union queries](https://realpython.com/search?q=union+queries).
+:::
+
 Use `union()` to combine results from multiple SELECT statements, removing duplicates. Use `union_all()` to keep all rows including duplicates, which is faster when you know there are no duplicates or don't care about them. The queries must have the same number of columns with compatible types. Unions are useful for combining data from different tables or different filtered views of the same table.
 
 ```python
@@ -313,6 +345,10 @@ Use `union()` to combine results from multiple SELECT statements, removing dupli
 ```
 
 ## Case Expressions
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on case expressions](https://realpython.com/search?q=case+expressions).
+:::
 
 The `case()` construct creates SQL CASE expressions for conditional logic in queries. It's useful for computed columns, conditional aggregations, and data transformations. Pass a list of (condition, result) tuples, with an optional `else_` for the default value. Case expressions can be used in SELECT, WHERE, ORDER BY, and other clauses.
 
@@ -353,6 +389,10 @@ Carol: C
 
 ## Distinct and Count Distinct
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on distinct and count distinct](https://realpython.com/search?q=distinct+and+count+distinct).
+:::
+
 Use `distinct()` to remove duplicate rows from results. For counting unique values, combine `func.count()` with `distinct()`. The `distinct()` method can be applied to the entire query or to specific columns. This is essential for accurate counting when dealing with joined tables that may produce duplicate rows.
 
 ```python
@@ -390,6 +430,10 @@ Use `distinct()` to remove duplicate rows from results. For counting unique valu
 
 ## Aliased Tables
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on aliased tables](https://realpython.com/search?q=aliased+tables).
+:::
+
 Use `aliased()` to create aliases for tables, allowing you to reference the same table multiple times in a query with different names. This is essential for self-joins and queries that need to compare rows within the same table. Aliases create independent references that can have different join conditions and filters.
 
 ```python
@@ -425,6 +469,10 @@ Use `aliased()` to create aliases for tables, allowing you to reference the same
 
 ## Bulk Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on bulk operations](https://realpython.com/search?q=bulk+operations).
+:::
+
 For inserting or updating many rows, bulk operations are much faster than adding objects one by one. Use `session.bulk_insert_mappings()` for inserts and `session.bulk_update_mappings()` for updates. These methods bypass the ORM's unit of work pattern for better performance. For even faster inserts, use Core's `insert()` with `execute()` passing a list of dictionaries.
 
 ```python
@@ -455,6 +503,10 @@ For inserting or updating many rows, bulk operations are much faster than adding
 ```
 
 ## Raw SQL with Text
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on raw sql with text](https://realpython.com/search?q=raw+sql+with+text).
+:::
 
 When you need to execute raw SQL that's difficult to express with SQLAlchemy's constructs, use `text()` to wrap SQL strings. Always use bound parameters (:name syntax) instead of string formatting to prevent SQL injection. The `text()` construct can be used with both Core and ORM queries, and results can be mapped to ORM objects using `from_statement()`.
 

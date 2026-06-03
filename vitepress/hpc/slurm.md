@@ -13,6 +13,10 @@ This cheat sheet covers essential Slurm commands and workflows for submitting jo
 
 ## Slurm Info
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 `sinfo` is a command used to display general information about a Slurm-managed cluster, such as the number of available nodes and partitions. It also allows users to check the status of nodes, including identifying nodes that are down or in an error state.
 
 ```bash
@@ -39,6 +43,10 @@ sinfo -o "%n %G"
 
 ## Node Info
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 `scontrol show node` provides detailed information about specific nodes in the cluster, including CPU count, memory, GPU resources, and current state. This is useful for debugging node issues or verifying hardware configurations.
 
 ```bash
@@ -62,6 +70,10 @@ sinfo --state=idle
 ```
 
 ## Submit Jobs
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
 
 Launching a job across multiple nodes in the foreground is straightforward with `srun`. For example, running `srun hostname` will execute the `hostname` command on multiple allocated nodes and wait for all nodes to return results. With `srun`, users can easily specify:
 
@@ -102,6 +114,10 @@ srun -N 1 --pty /bin/bash
 
 ## Alloc Nodes
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 In some scenarios, users may need exclusive, interactive access to specific nodes for experiments or testing. For instance, a researcher running benchmarking tests might require all benchmarks to execute on the same fixed nodes to ensure consistent and reproducible results. The salloc command is used to request and allocate resources interactively. By using `salloc`, users can reserve a specific number of nodes, ensuring that no other jobs are scheduled on them during the experiment. This isolation helps avoid resource contention that could affect benchmarking or performance measurements. For example, the following command allocates 2 nodes for an interactive session:
 
 ```bash
@@ -128,6 +144,10 @@ salloc -N 2 -p ${PARTITION}
 > - Running exploratory workloads without writing a full job script
 
 ## Cancel Jobs
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
 
 Users may occasionally need to cancel their jobs for various reasons. For example, a cluster administrator may announce maintenance (such as upgrading system libraries), requiring users to terminate running jobs. In other cases, a job might hang or consume compute resources unnecessarily, making cancellation necessary. Slurm provides the `scancel` command to terminate jobs cleanly. Example usage:
 
@@ -159,6 +179,10 @@ for s in "RUNNING" "PENDING" "SUSPAND"; do scancel --state="$s"; done
 
 ## Submit Batch Jobs
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 `sbatch` is a Slurm command used to submit batch jobs for execution on a cluster. Unlike `srun`, which typically runs jobs interactively in the foreground, `sbatch` is designed for running long, non-interactive workloads in the background. This allows users to submit jobs without maintaining an active SSH session to the cluster's head node, making it ideal for large-scale or time-consuming tasks.
 
 A typical workflow involves writing a Slurm job script containing job specifications (such as the number of nodes, time limits, and partitions) and one or more srun commands to execute programs. Submitting this script with sbatch queues the job, and Slurm automatically schedules it based on available resources. Example sbatch script:
@@ -183,6 +207,10 @@ srun torchrun \
 ```
 
 ## Submit mpirun
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
 
 In some HPC environments, users may not be able to load the MPI module directly on the head (login) node due to security restrictions, minimal software installations, or site policies that restrict heavy workloads on login nodes. In such cases, the workflow is to use Slurm to allocate compute nodes and launch `mpirun` from within one of those nodes. From there, mpirun orchestrates the execution of the MPI program across all allocated nodes.
 
@@ -237,6 +265,10 @@ launch "$@"
 
 ## Submit Jobs with Enroot
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 Sometimes, users need to run jobs with custom dependencies that differ from the cluster’s system-wide environment. For example, if the cluster is configured with NCCL 2.23 but a user wants to benchmark NCCL 2.27, it’s often impractical to ask administrators to upgrade or modify system libraries for a single experiment. One workaround is to create a custom container (e.g., Docker image) with the required dependencies and launch jobs from that environment. However, running containers in HPC environments often requires extra setup and special flags due to namespace isolation and security restrictions.
 
 To simplify this process, [Enroot](https://github.com/NVIDIA/enroot) provides a lightweight alternative to traditional container runtimes. It allows users to run isolated filesystem in an HPC setting with minimal overhead, similar to `chroot`, while still granting direct access to system hardware (e.g., GPUs, interconnects). This makes it ideal for ML and HPC workflows that require fine-tuned performance.
@@ -263,6 +295,10 @@ srun --container-image "${output_sqsh}" \
 
 ## Job Status
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 To monitor the status of jobs in a Slurm-managed cluster, users can use the `squeue` command. This tool shows essential details about submitted jobs, such as job IDs, job names, partitions, allocated nodes, and job states. Common job states include:
 
 - RUNNING – The job is actively running on allocated resources.
@@ -280,6 +316,10 @@ squeue --user=${USER}
 ```
 
 ## Reservation
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
 
 From an administrator’s perspective, it may be necessary to reserve specific nodes to prevent Slurm from scheduling jobs on them. For example, nodes experiencing hardware or software issues—such as network failures or disk errors—should be reserved to avoid job failures. Reserving nodes allows administrators to troubleshoot, repair, or perform maintenance without interfering with active workloads. The following snippet demonstrates how to create reservations through `scontrol` for nodes and check their reservation status.
 
@@ -314,6 +354,10 @@ scontrol update NodeName=compute-[01-02],compute-08 State=Resume
 
 ## Accounting
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 Slurm includes a powerful accounting and resource management system that allows administrators to control how computing resources are allocated and ensure fair usage across all users. Through this system, administrators can configure fairshare scheduling, job priority policies, and resource limits to prevent individual users or groups from monopolizing cluster resources for extended periods.
 
 With `fairshare`, Slurm dynamically adjusts job priorities based on historical resource usage, ensuring that users who have consumed fewer resources get higher priority in the job queue, while heavy users may experience lower priority until usage balances out. This helps maintain equitable access in multi-user HPC environments. Administrators manage these policies through Slurm’s database-backed accounting system (`slurmdbd`) and commands like:
@@ -346,6 +390,10 @@ sacctmgr show account -s
 
 ## Job History
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 `sacct` displays accounting data for completed and running jobs. This is essential for analyzing job performance, debugging failed jobs, and tracking resource usage over time. Unlike `squeue` which only shows active jobs, `sacct` can retrieve historical job information from the Slurm accounting database.
 
 ```bash
@@ -373,6 +421,10 @@ sacct -j ${jobid} --format=JobID,JobName,State,ExitCode,DerivedExitCode,Comment
 
 ## Environment Variables
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 Slurm sets various environment variables when a job runs, providing information about the job's allocation and configuration. These variables are essential for writing portable job scripts that adapt to different resource allocations.
 
 ```bash
@@ -394,6 +446,10 @@ echo $SLURM_GPUS_PER_NODE   # GPUs per node
 ```
 
 ## GPU Jobs
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
 
 For machine learning and deep learning workloads, requesting GPU resources is essential. Slurm supports GPU scheduling through the Generic Resource (GRES) plugin. Users can request specific numbers of GPUs, GPU types, or GPUs per task.
 
@@ -421,6 +477,10 @@ srun python train.py
 ```
 
 ## PyTorch Distributed Training
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
 
 Launching distributed PyTorch training jobs on Slurm requires coordinating multiple processes across nodes. The `torchrun` launcher simplifies this by handling process spawning and environment setup. Here's a complete example for multi-node distributed training.
 
@@ -481,6 +541,10 @@ srun --container-image=/path/to/pytorch-24.01.sqsh \
 
 ## Array Jobs
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 Array jobs allow submitting multiple similar jobs with a single `sbatch` command. Each job in the array runs independently with a unique `SLURM_ARRAY_TASK_ID`, making it ideal for parameter sweeps, hyperparameter tuning, or processing multiple datasets.
 
 ```bash
@@ -511,6 +575,10 @@ scancel ${jobid}_[1-3]  # cancel tasks 1-3
 
 ## Job Dependencies
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
+
 Job dependencies allow you to control the execution order of jobs. A job can wait for another job to complete, succeed, or fail before starting. This is useful for creating pipelines where preprocessing must finish before training.
 
 ```bash
@@ -535,6 +603,10 @@ sbatch --dependency=afterok:$JOB1:$JOB2 final.sh
 ```
 
 ## Resource Limits
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
 
 Setting appropriate resource limits helps ensure fair cluster usage and prevents jobs from consuming excessive resources. Slurm allows specifying memory, CPU, and time limits per job.
 
@@ -563,6 +635,10 @@ srun --exclusive python train.py
 ```
 
 ## Debugging Failed Jobs
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://slurm.schedmd.com/quickstart.html).
+:::
 
 When jobs fail, Slurm provides several tools to diagnose the issue. Common problems include out-of-memory errors, time limits exceeded, and node failures.
 

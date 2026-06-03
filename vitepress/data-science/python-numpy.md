@@ -9,6 +9,10 @@ NumPy is the fundamental package for scientific computing in Python. It provides
 
 ## Array Creation
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on array creation](https://realpython.com/search?q=array+creation).
+:::
+
 Create arrays from Python lists or use specialized constructors for common patterns.
 
 ```python
@@ -47,6 +51,10 @@ array([0.  , 0.25, 0.5 , 0.75, 1.  ])
 ```
 
 ## Shape Manipulation
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on shape manipulation](https://realpython.com/search?q=shape+manipulation).
+:::
 
 Reshape, flatten, and rearrange array dimensions without copying data when possible.
 
@@ -88,6 +96,10 @@ array([[1, 4],
 
 ## Indexing and Slicing
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on indexing and slicing](https://realpython.com/search?q=indexing+and+slicing).
+:::
+
 NumPy supports powerful indexing including slicing, fancy indexing, and boolean masking.
 
 ```python
@@ -117,6 +129,10 @@ array([ 6,  7,  8,  9, 10, 11])
 
 ## Broadcasting
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on broadcasting](https://realpython.com/search?q=broadcasting).
+:::
+
 Broadcasting allows arithmetic between arrays of different shapes by automatically expanding dimensions.
 
 ```python
@@ -142,6 +158,10 @@ Broadcasting can create large intermediate arrays in memory. Be mindful when wor
 :::
 
 ## Universal Functions (ufunc)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on universal functions ufunc](https://realpython.com/search?q=universal+functions+ufunc).
+:::
 
 Element-wise operations optimized in C. Most math operations are ufuncs.
 
@@ -176,6 +196,10 @@ array([1, 2, 3, 3])
 
 ## Aggregation
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on aggregation](https://realpython.com/search?q=aggregation).
+:::
+
 Compute summary statistics across entire arrays or along specific axes.
 
 ```python
@@ -203,6 +227,10 @@ Compute summary statistics across entire arrays or along specific axes.
 ```
 
 ## Linear Algebra
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on linear algebra](https://realpython.com/search?q=linear+algebra).
+:::
 
 NumPy's `linalg` submodule provides common linear algebra operations.
 
@@ -255,6 +283,10 @@ array([[3, 4],
 
 ## Saving and Loading
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on saving and loading](https://realpython.com/search?q=saving+and+loading).
+:::
+
 Persist numpy arrays to disk in binary or text formats.
 
 ```python
@@ -282,6 +314,10 @@ Persist numpy arrays to disk in binary or text formats.
 ```
 
 ## Set Operations
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on set operations](https://realpython.com/search?q=set+operations).
+:::
 
 Treat 1D arrays as sets for common set operations.
 

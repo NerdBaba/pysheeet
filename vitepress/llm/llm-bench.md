@@ -15,6 +15,10 @@ The scripts handle Docker image loading and container management automatically. 
 
 ## Quick Start
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on quick start](https://realpython.com/search?q=quick+start).
+:::
+
 Launch a server in one terminal, then run benchmarks from another. The benchmark script auto-detects the model from the server.
 
 **vLLM:**
@@ -52,9 +56,17 @@ bash bench.sh -H localhost -m /path/to/Qwen2.5-7B-Instruct --type throughput,pre
 
 ## Multi-Node with Slurm
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on multi-node with slurm](https://realpython.com/search?q=multi-node+with+slurm).
+:::
+
 For benchmarking larger models (e.g., DeepSeek-V3, Llama-3.1-405B) that cannot fit on a single node, refer to [Distributed Serving on SLURM](/llm/llm-serving#distributed-serving-on-slurm) for how to deploy multi-node serving with different parallelism strategies. Once the server is running, benchmark using `bench.sh` as shown in the Quick Start above.
 
 ## Throughput
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on throughput](https://realpython.com/search?q=throughput).
+:::
 
 Measures peak output tokens/sec by saturating the server with requests. Uses `request-rate=inf` to send all prompts immediately, forcing the scheduler to batch aggressively. This reveals the server's maximum throughput under full load.
 
@@ -77,6 +89,10 @@ python -m tensorrt_llm.serve.scripts.benchmark_serving \
 
 ## Prefill (TTFT)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on prefill ttft](https://realpython.com/search?q=prefill+ttft).
+:::
+
 Measures Time to First Token — how fast the server processes the input prompt before generating the first output token. `output-len=1` isolates prefill from decode since nearly all compute goes to processing the input.
 
 Sweeping input length (128→16K) reveals how TTFT scales with context size. Prefill compute is O(n) per layer, so TTFT should grow roughly linearly. `rate=4` keeps the server lightly loaded so TTFT reflects compute time, not queueing delay.
@@ -97,6 +113,10 @@ python -m tensorrt_llm.serve.scripts.benchmark_serving \
 ```
 
 ## Decode (ITL)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on decode itl](https://realpython.com/search?q=decode+itl).
+:::
 
 Measures Inter-Token Latency — the time between consecutive output tokens during autoregressive generation. `input-len=128` keeps prefill minimal so the benchmark focuses on the decode phase.
 
@@ -119,6 +139,10 @@ python -m tensorrt_llm.serve.scripts.benchmark_serving \
 
 ## Latency (E2E)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on latency e2e](https://realpython.com/search?q=latency+e2e).
+:::
+
 Measures end-to-end request latency under minimal load — the "single user" experience. `rate=1` ensures requests are mostly processed alone with no batching, giving the baseline best-case latency (similar to ChatGPT-style usage where one user waits for a complete response).
 
 Three size classes (short/medium/long) show how total latency scales with request size. E2E latency = TTFT + (output_tokens × ITL).
@@ -140,6 +164,10 @@ python -m tensorrt_llm.serve.scripts.benchmark_serving \
 
 ## Concurrency
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on concurrency](https://realpython.com/search?q=concurrency).
+:::
+
 Finds the server's saturation point by sweeping the number of concurrent requests. `request-rate=inf` with `max-concurrency=N` caps how many requests run in parallel, decoupling arrival rate from concurrency.
 
 At low concurrency (1–4), latency is good but throughput is low (GPU underutilized). At high concurrency (64–256), throughput plateaus and latency degrades (queueing). The "knee" where throughput stops improving is the optimal operating point — it tells you how many concurrent users the server can handle before quality degrades.
@@ -160,6 +188,10 @@ python -m tensorrt_llm.serve.scripts.benchmark_serving \
 ```
 
 ## ShareGPT
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sharegpt](https://realpython.com/search?q=sharegpt).
+:::
 
 Realistic conversational workload from real user conversations with variable input/output lengths. Unlike random datasets with fixed lengths, ShareGPT captures the natural distribution of short and long prompts from actual ChatGPT conversations, making it the best proxy for production chat traffic.
 
@@ -186,6 +218,10 @@ python -m tensorrt_llm.serve.scripts.benchmark_serving \
 ```
 
 ## Sonnet (Prefix Caching)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sonnet prefix caching](https://realpython.com/search?q=sonnet+prefix+caching).
+:::
 
 The sonnet dataset uses Shakespeare's sonnets with a shared prefix across all prompts. This tests prefix caching — if enabled, the shared prefix KV cache is computed once and reused across requests, reducing TTFT.
 
@@ -233,6 +269,10 @@ python3 -m sglang.bench_serving --backend vllm --dataset-name sharegpt \
 
 ## Key Metrics
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on key metrics](https://realpython.com/search?q=key+metrics).
+:::
+
 - **TTFT** (Time to First Token): Time from request arrival to first generated token. Dominated by prefill compute. Lower is better for interactive use.
 - **ITL** (Inter-Token Latency): Time between consecutive tokens. Reflects decode speed and consistency.
 - **TPOT** (Time Per Output Token): Average time per generated token. Similar to ITL but averaged across all tokens.
@@ -240,6 +280,10 @@ python3 -m sglang.bench_serving --backend vllm --dataset-name sharegpt \
 - **Throughput**: Output tokens/sec across all requests. Higher is better for batch workloads.
 
 ## CLI Differences
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cli differences](https://realpython.com/search?q=cli+differences).
+:::
 
 | Parameter | vLLM | SGLang | TensorRT-LLM |
 |----|----|----|----|
@@ -251,6 +295,10 @@ python3 -m sglang.bench_serving --backend vllm --dataset-name sharegpt \
 | Results | `--result-dir ./results` | `--output-file ./results/out.json` | `--result-dir ./results` |
 
 ## Profiling
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on profiling](https://realpython.com/search?q=profiling).
+:::
 
 Benchmark runs can be combined with profiling to correlate performance metrics with GPU-level traces. Two profiling approaches are available for vLLM:
 
@@ -291,6 +339,10 @@ Open `.nsys-rep` files with [Nsight Systems](https://developer.nvidia.com/nsight
 See the [vLLM Serving Guide](https://github.com/crazyguitar/pysheeet/blob/master/src/llm/vllm/README.rst) for full `run.sbatch` flag reference and the [vLLM Profiling Guide](https://docs.vllm.ai/en/latest/contributing/profiling/) for more details.
 
 ## Offline Benchmarking
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on offline benchmarking](https://realpython.com/search?q=offline+benchmarking).
+:::
 
 vLLM also supports offline benchmarking to measure raw inference performance without API server overhead. This is useful for:
 

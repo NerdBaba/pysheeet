@@ -10,9 +10,17 @@ Source
 [[toc]]
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
+
 Asyncio excels at network programming because network I/O is inherently asynchronous - you send a request and wait for a response. Instead of blocking a thread while waiting, asyncio allows other tasks to run. This section covers building TCP/UDP servers and clients, HTTP requests, SSL/TLS encryption, and the Transport/Protocol API for low-level control.
 
 ## TCP Echo Server with Streams
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tcp echo server with streams](https://realpython.com/search?q=tcp+echo+server+with+streams).
+:::
 
 The streams API (`asyncio.start_server`, `open_connection`) provides a high-level interface for TCP networking. It handles buffering, encoding, and connection management automatically, making it the recommended approach for most applications.
 
@@ -51,6 +59,10 @@ asyncio.run(main())
 
 ## TCP Client with Streams
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tcp client with streams](https://realpython.com/search?q=tcp+client+with+streams).
+:::
+
 The client side uses `asyncio.open_connection()` to establish a connection. The returned reader and writer objects provide async methods for sending and receiving data.
 
 ```python
@@ -75,6 +87,10 @@ asyncio.run(tcp_client("Hello, Server!"))
 ```
 
 ## Low-Level TCP with Sockets
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on low-level tcp with sockets](https://realpython.com/search?q=low-level+tcp+with+sockets).
+:::
 
 For more control, you can use raw sockets with the event loop's socket methods. This approach is useful when you need fine-grained control over socket options or when integrating with existing socket-based code.
 
@@ -110,6 +126,10 @@ asyncio.run(server())
 
 ## UDP Echo Server
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on udp echo server](https://realpython.com/search?q=udp+echo+server).
+:::
+
 UDP is connectionless, so the API is different from TCP. Use `create_datagram_endpoint()` with a protocol class to handle UDP packets. Each packet is independent and may arrive out of order or not at all.
 
 ```python
@@ -141,6 +161,10 @@ asyncio.run(main())
 ```
 
 ## HTTP Client with SSL
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on http client with ssl](https://realpython.com/search?q=http+client+with+ssl).
+:::
 
 Making HTTPS requests requires SSL context configuration. This example shows how to fetch web pages using low-level streams with proper SSL verification.
 
@@ -185,6 +209,10 @@ asyncio.run(main())
 
 ## HTTPS Server with SSL
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on https server with ssl](https://realpython.com/search?q=https+server+with+ssl).
+:::
+
 Creating an HTTPS server requires SSL certificates. This example shows a simple HTTPS server that serves static content with TLS encryption.
 
 ```python
@@ -223,6 +251,10 @@ asyncio.run(main())
 
 ## Transport and Protocol API
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on transport and protocol api](https://realpython.com/search?q=transport+and+protocol+api).
+:::
+
 The Transport/Protocol API provides low-level control over network connections. Transports handle the actual I/O while Protocols handle the data processing. This separation allows for flexible and reusable network code.
 
 ```python
@@ -255,6 +287,10 @@ asyncio.run(main())
 
 ## DNS Resolution
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on dns resolution](https://realpython.com/search?q=dns+resolution).
+:::
+
 Asyncio provides async DNS resolution through `getaddrinfo()`. This is useful when you need to resolve hostnames without blocking the event loop.
 
 ```python
@@ -282,6 +318,10 @@ asyncio.run(main())
 ```
 
 ## Simple HTTP Server
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple http server](https://realpython.com/search?q=simple+http+server).
+:::
 
 A minimal HTTP server implementation showing how to parse requests and send responses. For production use, consider frameworks like aiohttp or FastAPI.
 
@@ -329,6 +369,10 @@ asyncio.run(main())
 
 ## Using sendfile for Efficient File Transfer
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using sendfile for efficient file transfer](https://realpython.com/search?q=using+sendfile+for+efficient+file+transfer).
+:::
+
 The `sendfile()` method (Python 3.7+) efficiently transfers file contents to a transport using the OS's sendfile syscall, avoiding copying data through Python.
 
 ```python
@@ -367,6 +411,10 @@ asyncio.run(main())
 ```
 
 ## Connection Pool
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on connection pool](https://realpython.com/search?q=connection+pool).
+:::
 
 Connection pools reuse connections to avoid the overhead of establishing new connections for each request. This is essential for high-performance clients that make many requests to the same server.
 

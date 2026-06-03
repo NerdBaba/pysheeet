@@ -10,9 +10,17 @@ Source
 [[toc]]
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
+
 Beyond basic coroutines and networking, asyncio provides synchronization primitives, queues, subprocess management, and debugging tools. This section covers advanced patterns for building robust async applications, including producer-consumer patterns, rate limiting, graceful shutdown, and integration with synchronous code.
 
 ## Locks
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on locks](https://realpython.com/search?q=locks).
+:::
 
 `asyncio.Lock` prevents multiple coroutines from accessing a shared resource simultaneously. Unlike threading locks, async locks must be used with `await` and only work within the same event loop.
 
@@ -49,6 +57,10 @@ asyncio.run(main())
 
 ## Semaphores for Rate Limiting
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on semaphores for rate limiting](https://realpython.com/search?q=semaphores+for+rate+limiting).
+:::
+
 `asyncio.Semaphore` limits the number of concurrent operations. This is essential for rate limiting API calls, limiting database connections, or controlling resource usage.
 
 ```python
@@ -75,6 +87,10 @@ asyncio.run(main())
 ```
 
 ## Events for Signaling
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on events for signaling](https://realpython.com/search?q=events+for+signaling).
+:::
 
 `asyncio.Event` allows coroutines to wait for a signal from another coroutine. This is useful for coordinating startup, shutdown, or state changes between multiple tasks.
 
@@ -106,6 +122,10 @@ asyncio.run(main())
 ```
 
 ## Conditions for Complex Synchronization
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on conditions for complex synchronization](https://realpython.com/search?q=conditions+for+complex+synchronization).
+:::
 
 `asyncio.Condition` combines a lock with the ability to wait for a condition. This is useful for producer-consumer patterns where consumers need to wait for specific conditions.
 
@@ -158,6 +178,10 @@ asyncio.run(main())
 
 ## Queues for Producer-Consumer
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on queues for producer-consumer](https://realpython.com/search?q=queues+for+producer-consumer).
+:::
+
 `asyncio.Queue` is the preferred way to implement producer-consumer patterns. It handles synchronization internally and provides blocking get/put operations with optional timeouts.
 
 ```python
@@ -204,6 +228,10 @@ asyncio.run(main())
 
 ## Priority Queue
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on priority queue](https://realpython.com/search?q=priority+queue).
+:::
+
 `asyncio.PriorityQueue` processes items by priority. Lower priority values are processed first. Items must be comparable or wrapped in tuples with priority as the first element.
 
 ```python
@@ -235,6 +263,10 @@ asyncio.run(main())
 ```
 
 ## Running Subprocesses
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on running subprocesses](https://realpython.com/search?q=running+subprocesses).
+:::
 
 Asyncio can run and communicate with subprocesses asynchronously. This is useful for running shell commands, external tools, or parallel processes without blocking the event loop.
 
@@ -276,6 +308,10 @@ asyncio.run(main())
 
 ## Subprocess with Streaming Output
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on subprocess with streaming output](https://realpython.com/search?q=subprocess+with+streaming+output).
+:::
+
 For long-running processes, you can stream output line by line instead of waiting for the process to complete. This is useful for monitoring logs or progress.
 
 ```python
@@ -308,6 +344,10 @@ asyncio.run(main())
 ```
 
 ## Graceful Shutdown
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on graceful shutdown](https://realpython.com/search?q=graceful+shutdown).
+:::
 
 Proper shutdown handling ensures all tasks complete cleanly and resources are released. Use signal handlers to catch SIGINT/SIGTERM and cancel tasks gracefully.
 
@@ -351,6 +391,10 @@ asyncio.run(main())
 
 ## Running Async Code in Threads
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on running async code in threads](https://realpython.com/search?q=running+async+code+in+threads).
+:::
+
 When you need to run async code from synchronous code (e.g., in a callback or from another thread), use `asyncio.run_coroutine_threadsafe()`.
 
 ```python
@@ -386,6 +430,10 @@ asyncio.run(main())
 
 ## Debugging Asyncio
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on debugging asyncio](https://realpython.com/search?q=debugging+asyncio).
+:::
+
 Enable debug mode to catch common mistakes like blocking calls, unawaited coroutines, and slow callbacks. Debug mode adds overhead so use it only during development.
 
 ```python
@@ -410,6 +458,10 @@ asyncio.run(main(), debug=True)
 ```
 
 ## Custom Event Loop
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on custom event loop](https://realpython.com/search?q=custom+event+loop).
+:::
 
 You can customize the event loop behavior by subclassing or patching. This is useful for debugging, profiling, or adding custom functionality.
 
@@ -444,6 +496,10 @@ finally:
 ```
 
 ## Timeout Patterns
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on timeout patterns](https://realpython.com/search?q=timeout+patterns).
+:::
 
 Different timeout patterns for various use cases: per-operation timeout, overall timeout, and timeout with fallback.
 
@@ -492,6 +548,10 @@ asyncio.run(main())
 
 ## Retry Pattern
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on retry pattern](https://realpython.com/search?q=retry+pattern).
+:::
+
 Implement retry logic for transient failures with exponential backoff. This is essential for robust network clients.
 
 ```python
@@ -536,6 +596,10 @@ asyncio.run(main())
 
 ## Async Context Variable
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async context variable](https://realpython.com/search?q=async+context+variable).
+:::
+
 Context variables (Python 3.7+) provide task-local storage, similar to thread-local storage but for async tasks. Useful for request IDs, user context, or database connections.
 
 ```python
@@ -571,6 +635,10 @@ asyncio.run(main())
 ```
 
 ## TaskGroup (Python 3.11+)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on taskgroup python 3 11](https://realpython.com/search?q=taskgroup+python+3+11).
+:::
 
 `TaskGroup` provides structured concurrency, ensuring all tasks complete or are cancelled together. Exceptions in any task cancel all other tasks in the group.
 

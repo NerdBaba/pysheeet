@@ -9,6 +9,10 @@ SQLAlchemy is the most popular database toolkit and Object-Relational Mapping (O
 
 ## Create an Engine
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create an engine](https://realpython.com/search?q=create+an+engine).
+:::
+
 The `Engine` is the starting point for any SQLAlchemy application. It represents the connection pool and dialect for a particular database, managing connectivity and translating Python code into database-specific SQL. The `create_engine()` function takes a database URL that specifies the database type, credentials, host, and database name. SQLAlchemy supports many databases including SQLite, PostgreSQL, MySQL, Oracle, and Microsoft SQL Server through different dialects.
 
 ```python
@@ -24,6 +28,10 @@ The `Engine` is the starting point for any SQLAlchemy application. It represents
 ```
 
 ## Database URL Format
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on database url format](https://realpython.com/search?q=database+url+format).
+:::
 
 SQLAlchemy uses RFC-1738 style URLs to specify database connections. The URL format provides a standardized way to specify all connection parameters including the database driver, authentication credentials, host address, port number, and database name. Understanding this format is essential for configuring connections to different database systems. The `make_url()` function can parse and construct these URLs programmatically.
 
@@ -43,6 +51,10 @@ SQLAlchemy uses RFC-1738 style URLs to specify database connections. The URL for
 
 ## Connect and Execute Raw SQL
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on connect and execute raw sql](https://realpython.com/search?q=connect+and+execute+raw+sql).
+:::
+
 While SQLAlchemy encourages using its SQL Expression Language, you can also execute raw SQL strings directly. This is useful for complex queries that are difficult to express in SQLAlchemy's API, or when migrating existing SQL code. The `text()` function wraps raw SQL strings and allows parameter binding for security. Always use parameter binding instead of string formatting to prevent SQL injection attacks.
 
 ```python
@@ -58,6 +70,10 @@ While SQLAlchemy encourages using its SQL Expression Language, you can also exec
 ```
 
 ## Transaction Management
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on transaction management](https://realpython.com/search?q=transaction+management).
+:::
 
 Transactions ensure that a series of database operations either all succeed or all fail together, maintaining data integrity. SQLAlchemy provides several ways to manage transactions: implicit transactions with `begin()`, context managers for automatic commit/rollback, and manual control with `commit()` and `rollback()`. The `begin()` method starts a transaction that will automatically rollback on exceptions and commit on successful completion when used as a context manager.
 
@@ -83,6 +99,10 @@ Transactions ensure that a series of database operations either all succeed or a
 
 ## Define Tables with Metadata
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on define tables with metadata](https://realpython.com/search?q=define+tables+with+metadata).
+:::
+
 `MetaData` is a container that holds information about database tables and other schema constructs. You can define tables programmatically using the `Table` class, specifying columns with their types and constraints. This approach is part of SQLAlchemy Core and gives you explicit control over the table structure. The metadata can then create all defined tables in the database with `create_all()`, which generates the appropriate DDL statements for your database dialect.
 
 ```python
@@ -102,6 +122,10 @@ Transactions ensure that a series of database operations either all succeed or a
 ```
 
 ## Reflect Existing Tables
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reflect existing tables](https://realpython.com/search?q=reflect+existing+tables).
+:::
 
 Table reflection allows SQLAlchemy to load table definitions from an existing database schema automatically. This is useful when working with legacy databases or when you want to avoid duplicating schema definitions. The `reflect()` method on `MetaData` reads the database schema and creates `Table` objects for all tables found. You can also reflect individual tables using `autoload_with` parameter.
 
@@ -124,6 +148,10 @@ Table reflection allows SQLAlchemy to load table definitions from an existing da
 
 ## Inspect Database Schema
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on inspect database schema](https://realpython.com/search?q=inspect+database+schema).
+:::
+
 The `inspect()` function provides a powerful way to examine database schema details at runtime. The inspector can retrieve information about tables, columns, indexes, foreign keys, and other database objects. This is particularly useful for database administration tasks, schema migrations, and debugging. The inspector works with any database supported by SQLAlchemy and provides a consistent API across different database systems.
 
 ```python
@@ -143,6 +171,10 @@ The `inspect()` function provides a powerful way to examine database schema deta
 ```
 
 ## Insert Data
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on insert data](https://realpython.com/search?q=insert+data).
+:::
 
 The `insert()` construct creates an INSERT statement for a table. You can specify values using the `values()` method or pass them as keyword arguments. For bulk inserts, pass a list of dictionaries to `execute()`. SQLAlchemy will generate efficient multi-row INSERT statements when possible. The `returning()` method can retrieve auto-generated values like primary keys after insertion.
 
@@ -168,6 +200,10 @@ The `insert()` construct creates an INSERT statement for a table. You can specif
 ```
 
 ## Select Data
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on select data](https://realpython.com/search?q=select+data).
+:::
 
 The `select()` construct creates SELECT statements with a Pythonic API. You can specify which columns to retrieve, add WHERE clauses with `where()`, order results with `order_by()`, and limit results with `limit()` and `offset()`. The SQL Expression Language uses Python operators like `==`, `!=`, `>`, `<` which are overloaded to generate SQL conditions. This provides type safety and prevents SQL injection.
 
@@ -200,6 +236,10 @@ The `select()` construct creates SELECT statements with a Pythonic API. You can 
 
 ## Update Data
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on update data](https://realpython.com/search?q=update+data).
+:::
+
 The `update()` construct creates UPDATE statements. Use `where()` to specify which rows to update and `values()` to set new column values. Without a WHERE clause, all rows in the table will be updated. The `returning()` method can retrieve the updated values. For bulk updates with different values per row, use `bindparam()` to create parameterized statements.
 
 ```python
@@ -224,6 +264,10 @@ The `update()` construct creates UPDATE statements. Use `where()` to specify whi
 
 ## Delete Data
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on delete data](https://realpython.com/search?q=delete+data).
+:::
+
 The `delete()` construct creates DELETE statements. Always use `where()` to specify which rows to delete, unless you intend to delete all rows. Like other DML statements, `delete()` supports `returning()` to retrieve deleted rows. Be careful with DELETE statements as they permanently remove data from the database.
 
 ```python
@@ -247,6 +291,10 @@ The `delete()` construct creates DELETE statements. Always use `where()` to spec
 ```
 
 ## SQL Expression Language
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sql expression language](https://realpython.com/search?q=sql+expression+language).
+:::
 
 SQLAlchemy's SQL Expression Language provides a Pythonic way to construct SQL statements. Column objects support comparison operators (`==`, `!=`, `>`, `<`), logical operators (`&` for AND, `|` for OR), and methods like `in_()`, `like()`, `between()`, and `is_()`. These expressions are composable and can be combined to build complex queries while maintaining readability and type safety.
 
@@ -284,6 +332,10 @@ SQLAlchemy's SQL Expression Language provides a Pythonic way to construct SQL st
 
 ## Join Tables
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on join tables](https://realpython.com/search?q=join+tables).
+:::
+
 The `join()` method creates JOIN clauses between tables. SQLAlchemy can automatically determine join conditions based on foreign key relationships, or you can specify them explicitly. Use `select_from()` to specify the joined tables in a SELECT statement. SQLAlchemy supports INNER JOIN (default), LEFT OUTER JOIN, RIGHT OUTER JOIN, and FULL OUTER JOIN through the `isouter` and `full` parameters.
 
 ```python
@@ -316,6 +368,10 @@ The `join()` method creates JOIN clauses between tables. SQLAlchemy can automati
 
 ## Aggregate Functions
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on aggregate functions](https://realpython.com/search?q=aggregate+functions).
+:::
+
 SQLAlchemy provides functions for SQL aggregates like `count()`, `sum()`, `avg()`, `min()`, and `max()` in the `sqlalchemy.func` namespace. These can be used in SELECT statements and combined with `group_by()` for grouped aggregations. The `func` object is a special namespace that generates SQL function calls for any function name you access on it.
 
 ```python
@@ -347,6 +403,10 @@ SQLAlchemy provides functions for SQL aggregates like `count()`, `sum()`, `avg()
 ```
 
 ## Drop Tables
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on drop tables](https://realpython.com/search?q=drop+tables).
+:::
 
 Tables can be dropped using the `drop()` method on a `Table` object or `drop_all()` on `MetaData` to drop all tables. The `checkfirst` parameter prevents errors if the table doesn't exist. Be careful with these operations in production as they permanently delete data and schema. Always backup your database before dropping tables.
 

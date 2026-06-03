@@ -9,9 +9,17 @@ Date
 
 ## Abstract
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://arxiv.org/).
+:::
+
 Disaggregated prefill/decode has gained traction as a promising architecture for LLM serving, separating the compute-intensive prefill phase from the memory-bound decode phase onto dedicated node groups. Proponents argue that this separation enables independent scaling and eliminates interference between the two phases. But is it truly a silver bullet? This article puts the claim to the test by evaluating disaggregated prefill/decode using vLLM with NIXL over the AWS Elastic Fabric Adapter (EFA) on a 4-node cluster. We compare data parallelism and simple load-balanced routing as baselines against disaggregated configurations. Our results show that while disaggregation dramatically reduces inter-token latency (ITL), it comes at a significant cost to throughput and time-to-first-token (TTFT), revealing that the architecture is far from a universal solution.
 
 ## Introduction
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://arxiv.org/).
+:::
 
 In standard LLM serving, each node handles both prefill and decode for incoming requests. The prefill phase is compute-bound and processes the entire input prompt in parallel, while the decode phase is memory-bandwidth-bound and generates tokens autoregressively. When both phases share the same GPU pool, long prefill requests can block decode iterations, increasing inter-token latency for concurrent requests.
 
@@ -22,6 +30,10 @@ The appeal is intuitive: by isolating decode nodes from prefill interference, to
 This experiment uses vLLM[^2] with the `NixlConnector` to orchestrate disaggregated serving, and `vllm-router`[^3] as a reverse proxy to load-balance requests across node groups. The experiment code is available under [src/nixl](https://github.com/crazyguitar/pysheeet/tree/master/src/nixl) in the companion repository.
 
 ## Container Image
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://arxiv.org/).
+:::
 
 The experiment uses a custom Docker image that bundles all required components. The `Dockerfile` builds on `nvidia/cuda:12.8.1-devel-ubuntu24.04` and installs the following stack:
 
@@ -43,6 +55,10 @@ make docker && make save
 This produces `nixl-latest.tar.gz`, which is distributed to all Slurm nodes at launch time via `pigz` decompression and `docker load`.
 
 ## Serving Script
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://arxiv.org/).
+:::
 
 The `vllm.sbatch` script orchestrates multi-node vLLM serving on Slurm. It accepts two key flags that control the serving topology:
 
@@ -89,6 +105,10 @@ Each container is launched with `--privileged`, `--net=host`, and explicit `/dev
 
 ## Benchmark Script
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://arxiv.org/).
+:::
+
 The `bench.sh` script wraps `vllm bench serve` and handles Docker image loading transparently. If the `vllm` CLI is not available on the host, the script re-executes itself inside the container. It points the benchmark client at the router endpoint (or the direct vLLM endpoint for single-group configurations):
 
 ```bash
@@ -100,6 +120,10 @@ bash bench.sh -H <ROUTER_IP> -p <ROUTER_PORT> -- \
 ```
 
 ## Experimental Setup
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://arxiv.org/).
+:::
 
 All experiments run on 4 nodes with 8 GPUs each (TP=8) using DeepSeek-V2-Lite as the model. The benchmark uses random input/output data with 1024 prompts via `vllm bench serve`.
 
@@ -139,6 +163,10 @@ salloc -N 4 bash vllm.sbatch --prefill 2 \
 ```
 
 ## Results
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://arxiv.org/).
+:::
 
 We evaluate each configuration along four metrics: output token throughput, request throughput, time to first token (TTFT), and inter-token latency (ITL). Each plot contains two panels — the left panel sweeps input length with a fixed output length of 256 tokens (prefill-dominated regime), while the right panel sweeps output length with a fixed input length of 512 tokens (decode-dominated regime). This allows us to observe how each configuration behaves when the workload shifts from prefill-heavy to decode-heavy.
 
@@ -211,6 +239,10 @@ In the prefill-dominated regime (left panel), PD 1P3D achieves the lowest ITL ac
 In the decode-dominated regime (right panel), Route 4 achieves the lowest ITL (~25–29 ms) since each node serves independently without cross-node coordination. Among the disaggregated configurations, PD 1P3D outperforms PD 2P2D due to its greater decode capacity (3 decode nodes vs. 2), maintaining ITL around 26–35 ms. PD 2P2D, with only 2 decode nodes, shows ITL comparable to the baseline (~45–50 ms). As output length increases, ITL gradually rises across all configurations, reflecting the growing decode load.
 
 ## Discussion
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://arxiv.org/).
+:::
 
 So, is disaggregated prefill/decode a silver bullet? The answer is clearly no — at least not under the conditions tested here. All benchmarks use randomly generated prompts, meaning every request produces a unique KV cache with zero prefix cache hit rate. This represents a worst-case scenario for disaggregated serving, where every prefill must be computed from scratch and the full KV cache must be transferred over the network. In production workloads with shared system prompts or repeated prefixes, prefix caching on prefill nodes could substantially reduce redundant computation and transfer volume, potentially shifting the balance in favor of disaggregation. Even so, the results reveal a set of sharp trade-offs that make disaggregation a specialized tool rather than a universal improvement:
 

@@ -11,6 +11,10 @@ Python's `ssl` module provides a comprehensive interface for TLS, allowing you t
 
 ## Simple TLS Echo Server
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple tls echo server](https://realpython.com/search?q=simple+tls+echo+server).
+:::
+
 A basic TLS server wraps accepted TCP connections with an SSL context to provide encryption. The server requires a certificate (public key) and private key, which can be self-signed for testing or obtained from a Certificate Authority (CA) for production use. The `SSLContext` object manages all TLS settings including protocol version, cipher suites, and certificate verification options.
 
 ```python
@@ -55,6 +59,10 @@ Hello SSL
 
 ## TLS Server with Cipher Configuration
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tls server with cipher configuration](https://realpython.com/search?q=tls+server+with+cipher+configuration).
+:::
+
 Configure specific cipher suites for security compliance or compatibility.
 
 ```python
@@ -91,6 +99,10 @@ finally:
 
 ## TLS Client
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tls client](https://realpython.com/search?q=tls+client).
+:::
+
 Connect to a TLS server with certificate verification.
 
 ```python
@@ -116,6 +128,10 @@ with socket.create_connection((hostname, port)) as sock:
 
 ## TLS Client with Custom CA
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tls client with custom ca](https://realpython.com/search?q=tls+client+with+custom+ca).
+:::
+
 Verify server certificate against a custom Certificate Authority.
 
 ```python
@@ -137,6 +153,10 @@ with socket.create_connection((hostname, port)) as sock:
 ```
 
 ## Mutual TLS (mTLS)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on mutual tls mtls](https://realpython.com/search?q=mutual+tls+mtls).
+:::
 
 Both client and server present certificates for mutual authentication.
 
@@ -188,6 +208,10 @@ with socket.create_connection(('localhost', 5566)) as sock:
 ```
 
 ## Non-blocking TLS with selectors
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on non-blocking tls with selectors](https://realpython.com/search?q=non-blocking+tls+with+selectors).
+:::
 
 Handle TLS handshake and I/O asynchronously using the selectors module.
 
@@ -260,6 +284,10 @@ finally:
 
 ## Get Certificate Information
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on get certificate information](https://realpython.com/search?q=get+certificate+information).
+:::
+
 Retrieve and inspect server certificate details.
 
 ```python
@@ -289,6 +317,10 @@ with socket.create_connection((hostname, port)) as sock:
 ```
 
 ## TLS Version and Security Settings
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on tls version and security settings](https://realpython.com/search?q=tls+version+and+security+settings).
+:::
 
 Configure minimum TLS version and security options.
 

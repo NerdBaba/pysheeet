@@ -13,6 +13,10 @@ Python's `logging` module provides a flexible framework for emitting log message
 
 ## Quick Start with basicConfig
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on quick start with basicconfig](https://realpython.com/search?q=quick+start+with+basicconfig).
+:::
+
 The simplest way to start logging is `basicConfig()`, which sets up a default handler that writes to stderr. Call it once at application startup.
 
 ```python
@@ -33,6 +37,10 @@ logging.critical("A critical error — application may crash")
 ```
 
 ## Log Levels Hierarchy
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on log levels hierarchy](https://realpython.com/search?q=log+levels+hierarchy).
+:::
 
 Each level has a numeric value. A logger set to level `WARNING` will emit messages at `WARNING`, `ERROR`, and `CRITICAL` but suppress `DEBUG` and `INFO`.
 
@@ -55,6 +63,10 @@ logging.error("This will also appear")      # Above threshold
 ```
 
 ## Logging to a File
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on logging to a file](https://realpython.com/search?q=logging+to+a+file).
+:::
 
 Redirect output to a file instead of the console for persistent logs.
 
@@ -89,6 +101,10 @@ logger.addHandler(console_handler)
 
 ## Logger Objects vs Root Logger
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on logger objects vs root logger](https://realpython.com/search?q=logger+objects+vs+root+logger).
+:::
+
 Always create named loggers instead of using the root logger directly. Named loggers make it clear which module produced a message and give fine-grained control over log levels per module.
 
 ```python
@@ -108,6 +124,10 @@ child.info("This inherits 'app' logger's handlers and level")
 ```
 
 ## Log Record Attributes
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on log record attributes](https://realpython.com/search?q=log+record+attributes).
+:::
 
 The `format` string supports a wide range of attributes. These are the most commonly used:
 
@@ -131,6 +151,10 @@ logging.basicConfig(
 ```
 
 ## RotatingFileHandler
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on rotatingfilehandler](https://realpython.com/search?q=rotatingfilehandler).
+:::
 
 Prevent log files from growing indefinitely by rotating them when they reach a size limit.
 
@@ -161,6 +185,10 @@ logger.addHandler(time_handler)
 ```
 
 ## Logging in Libraries
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on logging in libraries](https://realpython.com/search?q=logging+in+libraries).
+:::
 
 Libraries should create a named logger and **never** configure handlers themselves — that's the application's responsibility. Use `NullHandler` to suppress "No handler found" warnings when the library is used without logging configured.
 
@@ -196,6 +224,10 @@ my_lib.do_something()  # Logs appear with the library's logger name
 ```
 
 ## Structured / JSON Logging
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on structured json logging](https://realpython.com/search?q=structured+json+logging).
+:::
 
 Structured logging outputs logs as JSON for easy ingestion by log aggregation systems like Elasticsearch, Datadog, or Splunk. This pattern uses a custom formatter or a library like `python-json-logger`.
 
@@ -236,6 +268,10 @@ logger.info("User logged in", extra={"extra_data": {"user_id": 42, "ip": "10.0.0
 ```
 
 ## Logging Configuration with dictConfig
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on logging configuration with dictconfig](https://realpython.com/search?q=logging+configuration+with+dictconfig).
+:::
 
 For complex setups, `dictConfig` allows declarative configuration in a dictionary structure — ideal for configuration files (YAML, JSON) or centralized setup.
 
@@ -292,6 +328,10 @@ logger.info("Logging configured with dictConfig")
 
 ## Exception Logging
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on exception logging](https://realpython.com/search?q=exception+logging).
+:::
+
 Capture full tracebacks with `logger.exception()` inside exception handlers. It logs at `ERROR` level and includes the traceback automatically.
 
 ```python
@@ -308,6 +348,10 @@ except ZeroDivisionError:
 ```
 
 ## Filtering Logs
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on filtering logs](https://realpython.com/search?q=filtering+logs).
+:::
 
 Add filters to selectively include or exclude log records based on custom criteria.
 

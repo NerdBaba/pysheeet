@@ -13,6 +13,11 @@ If you're interested in future statements and want to acquire more explanation, 
 
 ## List All New Features
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on list all new features](https://realpython.com/search?q=list+all+new+features).
+:::
+
+
 [\_\_future\_\_](https://docs.python.org/3/library/__future__.html) is a Python module. We can use it to check what kind of future features can import to current Python interpreter. The fun is `import __future__` is **NOT** a future statement, it is a import statement.
 
 ```python
@@ -41,6 +46,11 @@ _Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 65536)
 
 ## Print Function
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on print function](https://realpython.com/search?q=print+function).
+:::
+
+
 Replacing **print statement** to **print function** is one of the most notorious decision in Python history. However, this change brings some flexibilities to extend the ability of `print`. Further information can be found on PEP [3105](https://www.python.org/dev/peps/pep-3105).
 
 ```python
@@ -58,6 +68,11 @@ Hello World
 
 ## Unicode
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on unicode](https://realpython.com/search?q=unicode).
+:::
+
+
 As **print function**, making text become Unicode is another infamous decision. Nevertheless, many modern programming languages’ text is Unicode. This change compels us to decode texts early in order to prevent runtime error after we run programs for a while. Further information can be found on PEP [3112](https://www.python.org/dev/peps/pep-3112).
 
 ```python
@@ -69,6 +84,11 @@ As **print function**, making text become Unicode is another infamous decision. 
 ```
 
 ## Division
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on division](https://realpython.com/search?q=division).
+:::
+
 
 Sometimes, it is counterintuitive when the division result is int or long. In this case, Python 3 enables the **true division** by default. However, in Python 2, we have to backport `division` to the current interpreter. Further information can be found on PEP [238](https://www.python.org/dev/peps/pep-0238).
 
@@ -83,6 +103,11 @@ Sometimes, it is counterintuitive when the division result is int or long. In th
 ```
 
 ## Annotations
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on annotations](https://realpython.com/search?q=annotations).
+:::
+
 
 Before Python 3.7, we cannot assign annotations in a class or a function if it is not available in the current scope. A common situation is the definition of a container class.
 
@@ -124,6 +149,11 @@ class Tree(object):
 
 ## BDFL Retirement
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on bdfl retirement](https://realpython.com/search?q=bdfl+retirement).
+:::
+
+
 **New in Python 3.1**
 
 PEP [401](https://www.python.org/dev/peps/pep-0401/) is just an Easter egg. This feature brings the current interpreter back to the past. It enables the diamond operator `<>` in Python 3.
@@ -142,6 +172,11 @@ True
 ```
 
 ## Braces
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on braces](https://realpython.com/search?q=braces).
+:::
+
 
 `braces` is an Easter egg. The source code can be found on [future.c](https://github.com/python/cpython/blob/master/Python/future.c).
 

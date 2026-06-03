@@ -9,6 +9,11 @@ Generators are a powerful feature in Python for creating iterators. They allow y
 
 ## Generator Function vs Generator Expression
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on generator function vs generator expression](https://realpython.com/search?q=generator+function+vs+generator+expression).
+:::
+
+
 A generator function is defined like a normal function but uses `yield` to produce a sequence of values. When called, it returns a generator object that can be iterated over. A generator expression is a compact syntax similar to list comprehensions but produces values lazily on demand.
 
 ```python
@@ -32,6 +37,11 @@ A generator function is defined like a normal function but uses `yield` to produ
 
 ## Yield Values from Generator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on yield values from generator](https://realpython.com/search?q=yield+values+from+generator).
+:::
+
+
 The `yield` statement produces a value and suspends the generator's execution. When `next()` is called again, execution resumes from where it left off. This example generates prime numbers by checking divisibility for each candidate.
 
 ```python
@@ -51,6 +61,11 @@ The `yield` statement produces a value and suspends the generator's execution. W
 ```
 
 ## Unpack Generators
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on unpack generators](https://realpython.com/search?q=unpack+generators).
+:::
+
 
 Python 3.5+ (PEP 448) allows unpacking generators directly into lists, sets, function arguments, and variables using the `*` operator. This provides a convenient way to consume generator values without explicit iteration.
 
@@ -87,6 +102,11 @@ Python 3.5+ (PEP 448) allows unpacking generators directly into lists, sets, fun
 
 ## Iterable Class via Generator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on iterable class via generator](https://realpython.com/search?q=iterable+class+via+generator).
+:::
+
+
 You can make a class iterable by implementing `__iter__` as a generator method. This approach is cleaner than implementing a separate iterator class. The `__reversed__` method can also be implemented as a generator to support the built-in `reversed()` function.
 
 ```python
@@ -112,6 +132,11 @@ You can make a class iterable by implementing `__iter__` as a generator method. 
 
 ## Send Values to Generator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on send values to generator](https://realpython.com/search?q=send+values+to+generator).
+:::
+
+
 Generators can receive values through the `send()` method. The sent value becomes the result of the `yield` expression inside the generator. Before sending values, you must start the generator by calling `next()` or `send(None)` to advance it to the first `yield`.
 
 ```python
@@ -129,6 +154,11 @@ Message: Hello World!
 ```
 
 ## yield from Expression
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on yield from expression](https://realpython.com/search?q=yield+from+expression).
+:::
+
 
 The `yield from` expression delegates iteration to another generator or iterable. It automatically handles forwarding `send()`, `throw()`, and `close()` calls to the subgenerator, making it ideal for creating generator pipelines and recursive generators.
 
@@ -177,6 +207,11 @@ You can chain multiple `yield from` expressions together. The `inspect.getgenera
 
 ## yield from with Return
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on yield from with return](https://realpython.com/search?q=yield+from+with+return).
+:::
+
+
 Generators can return a value using the `return` statement. The returned value is accessible through the `value` attribute of the `StopIteration` exception. When using `yield from`, the return value of the subgenerator becomes the value of the `yield from` expression.
 
 ```python
@@ -222,6 +257,11 @@ Generators can return a value using the `return` statement. The returned value i
 
 ## Generate Sequences
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on generate sequences](https://realpython.com/search?q=generate+sequences).
+:::
+
+
 The `yield from` expression provides a concise way to yield all values from an iterable. This is particularly useful for chaining multiple sequences together or flattening nested structures.
 
 ```python
@@ -234,6 +274,11 @@ The `yield from` expression provides a concise way to yield all values from an i
 ```
 
 ## What `RES = yield from EXP` Does
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on what res yield from exp does](https://realpython.com/search?q=what+res+yield+from+exp+does).
+:::
+
 
 This snippet shows the simplified equivalent of what `yield from` does internally, as described in PEP 380. It handles iteration, value passing via `send()`, and captures the return value from the subgenerator.
 
@@ -264,6 +309,11 @@ This snippet shows the simplified equivalent of what `yield from` does internall
 
 ## Check Generator Type
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on check generator type](https://realpython.com/search?q=check+generator+type).
+:::
+
+
 Use `types.GeneratorType` to check if an object is a generator. This is useful for writing functions that need to handle generators differently from other iterables.
 
 ```python
@@ -276,6 +326,11 @@ True
 ```
 
 ## Check Generator State
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on check generator state](https://realpython.com/search?q=check+generator+state).
+:::
+
 
 The `inspect.getgeneratorstate()` function returns the current state of a generator. This is helpful for debugging and understanding the generator lifecycle. The four possible states are: GEN_CREATED (not started), GEN_RUNNING (currently executing), GEN_SUSPENDED (paused at yield), and GEN_CLOSED (completed or closed).
 
@@ -298,6 +353,11 @@ The `inspect.getgeneratorstate()` function returns the current state of a genera
 
 ## Context Manager via Generator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on context manager via generator](https://realpython.com/search?q=context+manager+via+generator).
+:::
+
+
 The `@contextlib.contextmanager` decorator transforms a generator function into a context manager. Code before `yield` runs on entering the `with` block, and code after `yield` (typically in `finally`) runs on exit. The yielded value is bound to the variable after `as`.
 
 ```python
@@ -317,6 +377,11 @@ exit scope
 ```
 
 ## What `@contextmanager` Does
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on what contextmanager does](https://realpython.com/search?q=what+contextmanager+does).
+:::
+
 
 This snippet shows a simplified implementation of how `@contextmanager` works internally. It wraps a generator in a class that implements the context manager protocol (`__enter__` and `__exit__`), handling both normal exit and exception propagation.
 
@@ -346,6 +411,11 @@ def contextmanager(func):
 
 ## Profile Code Block
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on profile code block](https://realpython.com/search?q=profile+code+block).
+:::
+
+
 A practical example of using generator-based context managers to measure execution time of code blocks. The `yield` statement marks the boundary between setup (recording start time) and teardown (calculating elapsed time).
 
 ```python
@@ -365,6 +435,11 @@ block cost: 0.10s
 ```
 
 ## `yield from` and `__iter__`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on yield from and __iter__](https://realpython.com/search?q=yield+from+and+__iter__).
+:::
+
 
 When using `yield from` with a class instance, Python calls the object's `__iter__` method to get an iterator. This allows custom classes to work seamlessly with `yield from` delegation, enabling elegant composition of iterables.
 
@@ -392,6 +467,11 @@ When using `yield from` with a class instance, Python calls the object's `__iter
 
 ## Closure Using Generator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on closure using generator](https://realpython.com/search?q=closure+using+generator).
+:::
+
+
 Generators provide an elegant way to implement closures that maintain state between calls. Each call to `next()` resumes execution and can access and modify the enclosed variables. This is often cleaner than using `nonlocal` or class-based approaches.
 
 ```python
@@ -410,6 +490,11 @@ Generators provide an elegant way to implement closures that maintain state betw
 ```
 
 ## Simple Scheduler
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple scheduler](https://realpython.com/search?q=simple+scheduler).
+:::
+
 
 This example demonstrates how generators can be used to implement cooperative multitasking. Each generator represents a task that yields control back to the scheduler. The scheduler uses a deque to round-robin between tasks, advancing each one step at a time.
 
@@ -447,6 +532,11 @@ Task done
 ```
 
 ## Simple Round-Robin with Blocking
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple round-robin with blocking](https://realpython.com/search?q=simple+round-robin+with+blocking).
+:::
+
 
 A more advanced scheduler that handles I/O blocking using `select()`. Tasks yield tuples indicating what operation they're waiting for ('recv' or 'send') and which socket. The scheduler moves blocked tasks to wait queues and only runs them when their I/O is ready. This is the foundation of async I/O frameworks.
 
@@ -502,6 +592,11 @@ run()
 
 ## Async Generator (Python 3.6+)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async generator python 3 6](https://realpython.com/search?q=async+generator+python+3+6).
+:::
+
+
 Async generators combine `async def` with `yield` to create asynchronous iterators. They can use `await` to pause for async operations between yields. Use `async for` to iterate over async generators. This is essential for streaming data from async sources like network connections or databases.
 
 ```python
@@ -522,6 +617,11 @@ Async generators combine `async def` with `yield` to create asynchronous iterato
 ```
 
 ## Async Generator with try..finally
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async generator with try finally](https://realpython.com/search?q=async+generator+with+try+finally).
+:::
+
 
 Async generators support `try..finally` blocks for cleanup, just like regular generators. The `finally` block executes when the generator is closed or garbage collected, ensuring resources are properly released even if an exception occurs during iteration.
 
@@ -547,6 +647,11 @@ ZeroDivisionError('division by zero')
 ```
 
 ## Send and Throw to Async Generator
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on send and throw to async generator](https://realpython.com/search?q=send+and+throw+to+async+generator).
+:::
+
 
 Async generators support `asend()` to send values and `athrow()` to throw exceptions, similar to regular generators. These methods are coroutines that must be awaited. This enables two-way communication with async generators for building complex async data pipelines.
 
@@ -576,6 +681,11 @@ RuntimeError('error')
 
 ## Async Comprehension (Python 3.6+)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async comprehension python 3 6](https://realpython.com/search?q=async+comprehension+python+3+6).
+:::
+
+
 PEP 530 introduced async comprehensions, allowing `async for` in list, set, and dict comprehensions. This provides a concise way to collect values from async generators. You can also use `if` clauses to filter values and conditional expressions for transformations.
 
 ```python
@@ -600,6 +710,11 @@ PEP 530 introduced async comprehensions, allowing `async for` in list, set, and 
 ```
 
 ## Simple Async Round-Robin
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple async round-robin](https://realpython.com/search?q=simple+async+round-robin).
+:::
+
 
 This example shows cooperative multitasking with async generators. Multiple async generators are scheduled in a deque, and the scheduler awaits each one in turn using `__anext__()`. This pattern is useful for interleaving multiple async data streams fairly.
 
@@ -633,6 +748,11 @@ This example shows cooperative multitasking with async generators. Multiple asyn
 ```
 
 ## Async Generator vs Async Iterator Performance
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async generator vs async iterator performance](https://realpython.com/search?q=async+generator+vs+async+iterator+performance).
+:::
+
 
 Async generators have better performance than manually implemented async iterators because they are optimized at the C level in CPython. This benchmark shows that async generators can be significantly faster for iteration-heavy workloads.
 
@@ -675,6 +795,11 @@ aiter cost time: 4.168368101119995
 ```
 
 ## `yield from == await` Expression
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on yield from await expression](https://realpython.com/search?q=yield+from+await+expression).
+:::
+
 
 Before Python 3.5 introduced `async`/`await` syntax, coroutines were implemented using generators with `@asyncio.coroutine` decorator and `yield from`. The `await` keyword is essentially equivalent to `yield from` for coroutines. This example shows both the old and new syntax for an echo server.
 
@@ -726,6 +851,11 @@ loop.run_forever()
 ```
 
 ## Simple Compiler Using Generators
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple compiler using generators](https://realpython.com/search?q=simple+compiler+using+generators).
+:::
+
 
 This advanced example from David Beazley demonstrates using generators to implement a simple expression compiler. It includes a tokenizer, parser, and evaluator using the visitor pattern with generators for stack-based evaluation.
 

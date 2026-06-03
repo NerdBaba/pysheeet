@@ -10,9 +10,17 @@ Source
 [[toc]]
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
+
 Python's `datetime` module provides classes for manipulating dates and times. The module includes `date` for calendar dates, `time` for clock times, `datetime` for combined date and time, `timedelta` for durations, and `timezone` for UTC offsets. Python 3.9+ also includes `zoneinfo` for IANA timezone support. Understanding these classes is essential for logging, scheduling, data analysis, and any application that works with temporal data.
 
 ## Current Date and Time
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on current date and time](https://realpython.com/search?q=current+date+and+time).
+:::
 
 Getting the current date and time is one of the most common operations. Use `datetime.now()` for local time or `datetime.utcnow()` for UTC. In Python 3.11+, prefer `datetime.now(timezone.utc)` over `utcnow()` which is deprecated.
 
@@ -37,6 +45,10 @@ print(current_time)  # 10:30:45.123456
 ```
 
 ## Creating Datetime Objects
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on creating datetime objects](https://realpython.com/search?q=creating+datetime+objects).
+:::
 
 You can create datetime objects by specifying year, month, day, and optionally hour, minute, second, and microsecond. The `date` and `time` classes work similarly for date-only or time-only values.
 
@@ -66,6 +78,10 @@ print(dt.time())  # 10:30:45
 
 ## Timestamps
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on timestamps](https://realpython.com/search?q=timestamps).
+:::
+
 Unix timestamps represent seconds since January 1, 1970 (the Unix epoch). Converting between timestamps and datetime objects is common when working with APIs, databases, and log files.
 
 ```python
@@ -94,6 +110,10 @@ print(ts_ms)  # 1705312245123
 ```
 
 ## Formatting Dates (strftime)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on formatting dates strftime](https://realpython.com/search?q=formatting+dates+strftime).
+:::
 
 The `strftime()` method formats datetime objects as strings using format codes. This is essential for displaying dates to users, generating filenames, or formatting data for APIs.
 
@@ -134,6 +154,10 @@ Common format codes:
 
 ## Parsing Dates (strptime)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on parsing dates strptime](https://realpython.com/search?q=parsing+dates+strptime).
+:::
+
 The `strptime()` method parses strings into datetime objects. The format string must match the input exactly. This is commonly used when reading dates from files, user input, or APIs.
 
 ```python
@@ -158,6 +182,10 @@ print(dt6)  # 2024-01-15 14:30:45+00:00
 ```
 
 ## Date Arithmetic with timedelta
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on date arithmetic with timedelta](https://realpython.com/search?q=date+arithmetic+with+timedelta).
+:::
 
 The `timedelta` class represents a duration—the difference between two dates or times. Use it to add or subtract time from datetime objects, or to calculate the difference between two dates.
 
@@ -191,6 +219,10 @@ print(date2 > date1)      # True
 ```
 
 ## Timezones
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on timezones](https://realpython.com/search?q=timezones).
+:::
 
 Working with timezones correctly is crucial for applications serving users across different regions. Python 3.9+ includes `zoneinfo` for IANA timezone support. For earlier versions, use `pytz` or `dateutil`.
 
@@ -228,6 +260,10 @@ aware = naive.replace(tzinfo=utc)
 
 ## Comparing Dates
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on comparing dates](https://realpython.com/search?q=comparing+dates).
+:::
+
 Datetime objects support comparison operators. When comparing timezone-aware and naive datetimes, Python raises a TypeError to prevent subtle bugs.
 
 ```python
@@ -261,6 +297,10 @@ print(f"Days until: {days_until}")
 
 ## Working with Weeks
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on working with weeks](https://realpython.com/search?q=working+with+weeks).
+:::
+
 Getting week numbers, weekdays, and working with ISO week dates is common for reporting and scheduling applications.
 
 ```python
@@ -289,6 +329,10 @@ print(is_weekend)  # False
 ```
 
 ## Start and End of Day/Month/Year
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on start and end of day month year](https://realpython.com/search?q=start+and+end+of+day+month+year).
+:::
 
 Getting the start or end of a time period is useful for date range queries and reporting.
 
@@ -322,6 +366,10 @@ print(start_of_year)  # 2024-01-01 00:00:00
 
 ## Calendar Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on calendar operations](https://realpython.com/search?q=calendar+operations).
+:::
+
 The `calendar` module provides functions for working with calendars, including checking leap years, getting month ranges, and generating calendar displays.
 
 ```python
@@ -348,6 +396,10 @@ for day in cal.itermonthdays(2024, 1):
 ```
 
 ## Date Ranges
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on date ranges](https://realpython.com/search?q=date+ranges).
+:::
 
 Generating sequences of dates is useful for reports, charts, and scheduling.
 
@@ -382,6 +434,10 @@ def business_days(start, end):
 
 ## Age Calculation
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on age calculation](https://realpython.com/search?q=age+calculation).
+:::
+
 Calculating age from a birthdate requires handling the edge case where the birthday hasn't occurred yet this year.
 
 ```python
@@ -410,6 +466,10 @@ def days_until_birthday(birthdate):
 ```
 
 ## Human Readable Time Differences
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on human readable time differences](https://realpython.com/search?q=human+readable+time+differences).
+:::
 
 Converting timedelta to human-readable strings like "2 hours ago" or "in 3 days" improves user experience.
 
@@ -443,6 +503,10 @@ print(time_ago(datetime.now() - timedelta(days=3)))      # 3 days ago
 ```
 
 ## Using dateutil for Flexible Parsing
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using dateutil for flexible parsing](https://realpython.com/search?q=using+dateutil+for+flexible+parsing).
+:::
 
 The `python-dateutil` library provides powerful parsing that handles many date formats automatically, plus relative delta calculations.
 

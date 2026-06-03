@@ -13,6 +13,10 @@ pytest is the de facto standard testing framework for Python. It requires minima
 
 ## Basic Test Functions
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic test functions](https://realpython.com/search?q=basic+test+functions).
+:::
+
 Write test functions prefixed with `test_`. Use plain `assert` — pytest rewrites assertions to provide detailed failure context.
 
 ```python
@@ -37,6 +41,10 @@ Run with: `pytest test_basic.py` or `pytest -v` for verbose.
 
 ## Assertion Introspection
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on assertion introspection](https://realpython.com/search?q=assertion+introspection).
+:::
+
 When an assertion fails, pytest displays the actual values — no need for custom error messages.
 
 ```python
@@ -51,6 +59,10 @@ def test_failure():
 ```
 
 ## Fixtures
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on fixtures](https://realpython.com/search?q=fixtures).
+:::
 
 Fixtures provide reusable test setup and teardown. They use dependency injection — just declare the fixture name as a parameter.
 
@@ -90,6 +102,10 @@ Fixture scopes: `function` (default, per test), `class`, `module`, `session` (on
 
 ## conftest.py — Shared Fixtures
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on conftest py shared fixtures](https://realpython.com/search?q=conftest+py+shared+fixtures).
+:::
+
 Place shared fixtures in `conftest.py` to make them available across multiple test files without importing.
 
 ```python
@@ -124,6 +140,10 @@ def test_temp_file(temp_dir):
 
 ## Built-in Fixtures
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on built-in fixtures](https://realpython.com/search?q=built-in+fixtures).
+:::
+
 Pytest includes several built-in fixtures for common needs.
 
 ```python
@@ -154,6 +174,10 @@ def test_monkeypatch_attr(monkeypatch):
 ```
 
 ## Parametrize
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on parametrize](https://realpython.com/search?q=parametrize).
+:::
 
 Run a test function with multiple input values, generating separate test cases for each combination.
 
@@ -189,6 +213,10 @@ def test_uppercase(text, expected):
 ```
 
 ## Skip and Xfail
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on skip and xfail](https://realpython.com/search?q=skip+and+xfail).
+:::
 
 Skip tests conditionally or mark expected failures.
 
@@ -235,6 +263,10 @@ def test_strict_xfail():
 
 ## approx — Floating Point Comparison
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on approx floating point comparison](https://realpython.com/search?q=approx+floating+point+comparison).
+:::
+
 Compare floating-point numbers with tolerance. Avoids flaky tests from precision artifacts.
 
 ```python
@@ -264,6 +296,10 @@ def test_approx_numpy():
 ```
 
 ## raises — Exception Testing
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on raises exception testing](https://realpython.com/search?q=raises+exception+testing).
+:::
 
 Verify that code raises expected exceptions with specific messages.
 
@@ -296,6 +332,10 @@ def test_raises_no_exception():
 
 ## warns — Warning Testing
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on warns warning testing](https://realpython.com/search?q=warns+warning+testing).
+:::
+
 Verify that code emits expected warnings.
 
 ```python
@@ -320,6 +360,10 @@ def test_ignore_warning():
 ```
 
 ## Filtering Tests with -k and -m
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on filtering tests with -k and -m](https://realpython.com/search?q=filtering+tests+with+-k+and+-m).
+:::
 
 Select which tests to run using keyword expressions and marks.
 
@@ -357,6 +401,10 @@ def test_smoke():
 ```
 
 ## Debugging with --pdb and --trace
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on debugging with --pdb and --trace](https://realpython.com/search?q=debugging+with+--pdb+and+--trace).
+:::
 
 Drop into the debugger on test failure or at a specific point.
 

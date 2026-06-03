@@ -12,6 +12,10 @@ Python's `os` module provides a portable way to interact with the operating syst
 
 ## Get System Information
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on get system information](https://realpython.com/search?q=get+system+information).
+:::
+
 Retrieve basic information about the operating system, platform, and current process. These functions are useful for writing cross-platform code that adapts to the runtime environment.
 
 ```python
@@ -37,6 +41,10 @@ os.getlogin()             # Current username
 
 ## Get Number of CPUs
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on get number of cpus](https://realpython.com/search?q=get+number+of+cpus).
+:::
+
 Determine the number of CPU cores available for parallel processing. This is essential for configuring thread pools, multiprocessing workers, or understanding system capacity. Note that `cpu_count()` returns logical cores (including hyperthreading), not physical cores.
 
 ```python
@@ -51,6 +59,10 @@ print(f"CPUs: {cpu_count}")  # CPUs: 8
 ```
 
 ## Set CPU Affinity
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on set cpu affinity](https://realpython.com/search?q=set+cpu+affinity).
+:::
 
 CPU affinity binds a process to specific CPU cores, useful for performance optimization, reducing cache misses, or isolating workloads. This feature is Linux-specific and not available on macOS or Windows through the `os` module.
 
@@ -68,6 +80,10 @@ print(f"Running on CPUs: {current}")  # Running on CPUs: {0, 1}
 ```
 
 ## Environment Variables
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on environment variables](https://realpython.com/search?q=environment+variables).
+:::
 
 Environment variables store configuration that persists across process invocations. Use `os.environ` as a dictionary to read, set, or delete variables. Changes only affect the current process and its children, not the parent shell.
 
@@ -92,6 +108,10 @@ for key, value in os.environ.items():
 ```
 
 ## Path Operations
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on path operations](https://realpython.com/search?q=path+operations).
+:::
 
 Path manipulation is one of the most common OS tasks. The `os.path` module provides cross-platform functions that handle path separators (`/` vs `\`) automatically. For modern Python (3.4+), consider using `pathlib` for an object-oriented approach.
 
@@ -126,6 +146,10 @@ os.path.getmtime('/path/to/file')  # Modification time (timestamp)
 
 ## Directory Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on directory operations](https://realpython.com/search?q=directory+operations).
+:::
+
 Create, remove, and navigate directories. These operations are fundamental for file management, build systems, and data processing pipelines.
 
 ```python
@@ -158,6 +182,10 @@ for root, dirs, files in os.walk('.'):
 
 ## File Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on file operations](https://realpython.com/search?q=file+operations).
+:::
+
 Low-level file operations using file descriptors. For most use cases, Python's built-in `open()` function is preferred, but `os` functions are useful for special cases like non-blocking I/O or when you need precise control over file descriptors.
 
 ```python
@@ -185,6 +213,10 @@ os.close(fd)
 ```
 
 ## Execute Commands
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on execute commands](https://realpython.com/search?q=execute+commands).
+:::
 
 Run external commands and programs. For simple cases, `os.system()` works, but `subprocess` module is recommended for more control over input/output and error handling.
 
@@ -215,6 +247,10 @@ result = subprocess.run(
 
 ## Process Management
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on process management](https://realpython.com/search?q=process+management).
+:::
+
 Create and manage child processes. The `os.fork()` function is Unix-specific; for cross-platform process creation, use the `multiprocessing` module instead.
 
 ```python
@@ -239,6 +275,10 @@ os.kill(pid, signal.SIGTERM)
 ```
 
 ## Temporary Files
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on temporary files](https://realpython.com/search?q=temporary+files).
+:::
 
 Create temporary files and directories that are automatically cleaned up. The `tempfile` module provides secure, cross-platform temporary file handling.
 
@@ -265,6 +305,10 @@ print(tempfile.gettempdir())  # /tmp or C:\Users\...\Temp
 ```
 
 ## Using pathlib (Modern Alternative)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using pathlib modern alternative](https://realpython.com/search?q=using+pathlib+modern+alternative).
+:::
 
 The `pathlib` module (Python 3.4+) provides an object-oriented interface to paths, making code more readable and less error-prone than string-based `os.path` operations.
 
@@ -303,6 +347,10 @@ for py_file in Path('.').glob('**/*.py'):
 ```
 
 ## System Monitoring with psutil
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on system monitoring with psutil](https://realpython.com/search?q=system+monitoring+with+psutil).
+:::
 
 The `psutil` (process and system utilities) library provides cross-platform access to system monitoring data that isn't available through the standard `os` module. It covers CPU, memory, disk, network, and process information. Install with `pip install psutil`.
 

@@ -10,6 +10,10 @@ Source
 [[toc]]
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
+
 The `asyncio` module, introduced in Python 3.4 and significantly improved in Python 3.5+ with `async/await` syntax, provides a foundation for writing asynchronous code. Unlike threads which use preemptive multitasking (the OS decides when to switch), asyncio uses cooperative multitasking where coroutines explicitly yield control using `await`. This eliminates race conditions common in threaded code and makes reasoning about program flow much easier.
 
 Key concepts:
@@ -20,6 +24,10 @@ Key concepts:
 - **Future**: A placeholder for a result that will be available later
 
 ## Running Coroutines with asyncio.run
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on running coroutines with asyncio run](https://realpython.com/search?q=running+coroutines+with+asyncio+run).
+:::
 
 The simplest way to run async code is `asyncio.run()`, introduced in Python 3.7. It creates an event loop, runs the coroutine until completion, and cleans up automatically. This is the recommended entry point for asyncio programs.
 
@@ -52,6 +60,10 @@ content = asyncio.run(read_file('/etc/hosts'))
 
 ## Creating and Managing Tasks
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on creating and managing tasks](https://realpython.com/search?q=creating+and+managing+tasks).
+:::
+
 Tasks allow multiple coroutines to run concurrently. When you create a task, it's scheduled to run on the event loop immediately. Use `asyncio.create_task()` (Python 3.7+) or `loop.create_task()` to create tasks.
 
 ```python
@@ -76,6 +88,10 @@ asyncio.run(main())
 
 ## Gathering Multiple Coroutines
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on gathering multiple coroutines](https://realpython.com/search?q=gathering+multiple+coroutines).
+:::
+
 `asyncio.gather()` runs multiple coroutines concurrently and collects their results in order. This is the most common way to run multiple async operations in parallel and wait for all of them to complete.
 
 ```python
@@ -99,6 +115,10 @@ asyncio.run(main())
 
 ## Waiting with Timeout
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on waiting with timeout](https://realpython.com/search?q=waiting+with+timeout).
+:::
+
 Use `asyncio.wait_for()` to set a timeout on async operations. This is essential for network operations where you don't want to wait indefinitely for a response that may never come.
 
 ```python
@@ -118,6 +138,10 @@ asyncio.run(main())
 ```
 
 ## Waiting for First Completed
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on waiting for first completed](https://realpython.com/search?q=waiting+for+first+completed).
+:::
 
 `asyncio.wait()` provides more control than `gather()`. You can wait for the first task to complete, first exception, or all tasks. This is useful when you want to process results as they become available.
 
@@ -152,6 +176,10 @@ asyncio.run(main())
 
 ## Asynchronous Iteration
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on asynchronous iteration](https://realpython.com/search?q=asynchronous+iteration).
+:::
+
 Async iterators allow you to iterate over data that arrives asynchronously, such as streaming responses or database cursors. Implement `__aiter__` and `__anext__` methods to create custom async iterators.
 
 ```python
@@ -183,6 +211,10 @@ asyncio.run(main())
 ```
 
 ## Asynchronous Context Managers
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on asynchronous context managers](https://realpython.com/search?q=asynchronous+context+managers).
+:::
 
 Async context managers are essential for managing resources that require async setup or cleanup, such as database connections, file handles, or network sessions. Use `async with` to ensure proper resource management.
 
@@ -217,6 +249,10 @@ asyncio.run(main())
 
 ## Using @asynccontextmanager
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using asynccontextmanager](https://realpython.com/search?q=using+asynccontextmanager).
+:::
+
 The `@asynccontextmanager` decorator (Python 3.7+) provides a simpler way to create async context managers using generator syntax, similar to the synchronous `@contextmanager` decorator.
 
 ```python
@@ -241,6 +277,10 @@ asyncio.run(main())
 ```
 
 ## Running Blocking Code in Executor
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on running blocking code in executor](https://realpython.com/search?q=running+blocking+code+in+executor).
+:::
 
 When you need to call blocking code (file I/O, CPU-intensive operations, or libraries without async support), use `run_in_executor()` to run it in a thread pool without blocking the event loop.
 
@@ -275,6 +315,10 @@ asyncio.run(main())
 
 ## Async Generators
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async generators](https://realpython.com/search?q=async+generators).
+:::
+
 Async generators (Python 3.6+) combine generators with async/await, allowing you to yield values asynchronously. They're useful for streaming data or implementing async iterators more concisely.
 
 ```python
@@ -298,6 +342,10 @@ asyncio.run(main())
 ```
 
 ## Exception Handling in Tasks
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on exception handling in tasks](https://realpython.com/search?q=exception+handling+in+tasks).
+:::
 
 Exceptions in tasks are stored and re-raised when you await the task or call `result()`. Unhandled exceptions in tasks that are never awaited will be logged but may be silently ignored, so always await your tasks.
 
@@ -332,6 +380,10 @@ asyncio.run(main())
 ```
 
 ## Cancelling Tasks
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cancelling tasks](https://realpython.com/search?q=cancelling+tasks).
+:::
 
 Tasks can be cancelled using `task.cancel()`. The cancelled task will raise `asyncio.CancelledError` at the next await point. Handle this exception to perform cleanup when a task is cancelled.
 

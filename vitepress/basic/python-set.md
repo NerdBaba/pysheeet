@@ -16,6 +16,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## Create a Set
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create a set](https://realpython.com/search?q=create+a+set).
+:::
+
+
 Create sets using curly braces `{}` or the `set()` constructor. Note that empty curly braces `{}` create a dict, not a set.
 
 ```python
@@ -31,6 +36,11 @@ Create sets using curly braces `{}` or the `set()` constructor. Note that empty 
 ```
 
 ## Create Sets with Set Comprehension
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create sets with set comprehension](https://realpython.com/search?q=create+sets+with+set+comprehension).
+:::
+
 
 Like list comprehensions, set comprehensions provide a concise way to create sets. The syntax uses curly braces `{}` instead of square brackets.
 
@@ -48,6 +58,11 @@ Like list comprehensions, set comprehensions provide a concise way to create set
 ```
 
 ## Remove Duplicates from a List
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on remove duplicates from a list](https://realpython.com/search?q=remove+duplicates+from+a+list).
+:::
+
 
 Converting a list to a set automatically removes duplicate elements. This is one of the most common use cases for sets.
 
@@ -67,6 +82,11 @@ To preserve the original order, use `dict.fromkeys()` (Python 3.7+):
 
 ## Add Items to a Set
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on add items to a set](https://realpython.com/search?q=add+items+to+a+set).
+:::
+
+
 Use `add()` to add a single element, or `update()` to add multiple elements.
 
 ```python
@@ -83,6 +103,11 @@ Use `add()` to add a single element, or `update()` to add multiple elements.
 ```
 
 ## Remove Items from a Set
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on remove items from a set](https://realpython.com/search?q=remove+items+from+a+set).
+:::
+
 
 Use `remove()` to remove an element (raises KeyError if not found), or `discard()` to remove without error. Use `pop()` to remove an arbitrary element.
 
@@ -101,6 +126,11 @@ set()
 
 ## Union with `|` Operator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on union with operator](https://realpython.com/search?q=union+with+operator).
+:::
+
+
 The union of two sets contains all elements from both sets. Use the `|` operator or the `union()` method.
 
 ```python
@@ -116,6 +146,11 @@ The union of two sets contains all elements from both sets. Use the `|` operator
 
 ## Intersection with `&` Operator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on intersection with operator](https://realpython.com/search?q=intersection+with+operator).
+:::
+
+
 The intersection of two sets contains only elements that exist in both sets. Use the `&` operator or the `intersection()` method.
 
 ```python
@@ -129,6 +164,11 @@ The intersection of two sets contains only elements that exist in both sets. Use
 
 ## Find Common Elements Between Lists
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on find common elements between lists](https://realpython.com/search?q=find+common+elements+between+lists).
+:::
+
+
 Finding common items between two lists is a practical application of set intersection.
 
 ```python
@@ -139,6 +179,11 @@ Finding common items between two lists is a practical application of set interse
 ```
 
 ## Difference with `-` Operator
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on difference with - operator](https://realpython.com/search?q=difference+with+-+operator).
+:::
+
 
 The difference of two sets contains elements that are in the first set but not in the second. Use the `-` operator or the `difference()` method.
 
@@ -153,6 +198,11 @@ The difference of two sets contains elements that are in the first set but not i
 
 ## Symmetric Difference with `^` Operator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on symmetric difference with operator](https://realpython.com/search?q=symmetric+difference+with+operator).
+:::
+
+
 The symmetric difference contains elements that are in either set, but not in both. Use the `^` operator or the `symmetric_difference()` method.
 
 ```python
@@ -163,6 +213,11 @@ The symmetric difference contains elements that are in either set, but not in bo
 ```
 
 ## Check Subset with `<=` Operator
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on check subset with operator](https://realpython.com/search?q=check+subset+with+operator).
+:::
+
 
 Use `<=` or `issubset()` to check if all elements of one set are in another. Use `<` for proper subset (subset but not equal).
 
@@ -181,6 +236,11 @@ False
 
 ## Check Superset with `>=` Operator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on check superset with operator](https://realpython.com/search?q=check+superset+with+operator).
+:::
+
+
 Use `>=` or `issuperset()` to check if a set contains all elements of another.
 
 ```python
@@ -193,6 +253,11 @@ True
 ```
 
 ## Check Disjoint Sets
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on check disjoint sets](https://realpython.com/search?q=check+disjoint+sets).
+:::
+
 
 Two sets are disjoint if they have no elements in common. Use `isdisjoint()` to check.
 
@@ -208,6 +273,11 @@ False
 
 ## Membership Testing
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on membership testing](https://realpython.com/search?q=membership+testing).
+:::
+
+
 Sets provide O(1) average time complexity for membership testing, making them much faster than lists for this operation.
 
 ```python
@@ -221,6 +291,11 @@ True
 ```
 
 ## Frozenset - Immutable Set
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on frozenset - immutable set](https://realpython.com/search?q=frozenset+-+immutable+set).
+:::
+
 
 `frozenset` is an immutable version of set. It can be used as a dictionary key or as an element of another set.
 
@@ -249,6 +324,11 @@ True
 ```
 
 ## Set Operations Summary
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on set operations summary](https://realpython.com/search?q=set+operations+summary).
+:::
+
 
 ```python
 # Creation

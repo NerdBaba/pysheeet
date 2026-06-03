@@ -13,6 +13,10 @@ Python's `pathlib` module (Python 3.4+) provides an object-oriented interface to
 
 ## Creating Path Objects
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on creating path objects](https://realpython.com/search?q=creating+path+objects).
+:::
+
 `Path()` accepts a string path or multiple path components. The `/` operator joins paths, and class methods provide well-known directory shortcuts.
 
 ```python
@@ -38,6 +42,10 @@ The `/` operator only works when the left operand is a `Path` object. `Path.home
 :::
 
 ## Path Properties
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on path properties](https://realpython.com/search?q=path+properties).
+:::
 
 Access components of a path without string parsing. These properties never raise exceptions — they simply extract information from the path string.
 
@@ -67,6 +75,10 @@ p.parts     # ('/', 'home', 'user', 'documents', 'report.pdf')
 
 ## Checking Existence and Type
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on checking existence and type](https://realpython.com/search?q=checking+existence+and+type).
+:::
+
 Test whether a path exists and what kind of filesystem entry it is. These are non-raising checks — they return `True`/`False` instead of throwing exceptions.
 
 ```python
@@ -81,6 +93,10 @@ p.is_mount()    # True if mount point (Unix)
 ```
 
 ## Reading and Writing Files
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reading and writing files](https://realpython.com/search?q=reading+and+writing+files).
+:::
 
 `Path` objects provide one-liner methods for common file I/O, avoiding the `open()` context manager for simple cases.
 
@@ -106,6 +122,10 @@ with p.open("a", encoding="utf-8") as f:
 
 ## Directory Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on directory operations](https://realpython.com/search?q=directory+operations).
+:::
+
 Create, list, and remove directories. The `parents=True` option mirrors `mkdir -p` behavior.
 
 ```python
@@ -129,6 +149,10 @@ shutil.rmtree("non_empty_dir")
 
 ## Renaming, Moving, and Deleting
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on renaming moving and deleting](https://realpython.com/search?q=renaming+moving+and+deleting).
+:::
+
 Rename or replace files and delete individual files. `rename()` fails if the target exists on some platforms; `replace()` always overwrites the target atomically.
 
 ```python
@@ -146,6 +170,10 @@ p.unlink(missing_ok=True)  # No error if file doesn't exist (3.8+)
 ```
 
 ## Glob Patterns
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on glob patterns](https://realpython.com/search?q=glob+patterns).
+:::
 
 Search for files matching patterns. `glob()` matches in the current directory, `rglob()` matches recursively. `**` matches any number of subdirectories.
 
@@ -176,6 +204,10 @@ for d in p.glob("**/*"):
 
 ## File Metadata
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on file metadata](https://realpython.com/search?q=file+metadata).
+:::
+
 Retrieve file size, modification times, and other metadata via `stat()`, or use convenience properties.
 
 ```python
@@ -197,6 +229,10 @@ stat.st_gid
 
 ## Symlinks
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on symlinks](https://realpython.com/search?q=symlinks).
+:::
+
 Create, inspect, and resolve symbolic links.
 
 ```python
@@ -216,6 +252,10 @@ real = p.resolve()     # Follow all symlinks to canonical path
 
 ## Modifying Paths
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on modifying paths](https://realpython.com/search?q=modifying+paths).
+:::
+
 Create new `Path` objects with modified components. These methods return new paths without modifying the original — they are pure transformations of the path string.
 
 ```python
@@ -234,6 +274,10 @@ Path("data").with_suffix(".csv")  # Path('data.csv')
 
 ## Relative Paths
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on relative paths](https://realpython.com/search?q=relative+paths).
+:::
+
 Compute relative paths between two locations or make a path relative to a reference.
 
 ```python
@@ -251,6 +295,10 @@ Path("/home/user/project").relative_to(Path("/home"))  # Path('user/project')
 ```
 
 ## Comparing with os.path
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on comparing with os path](https://realpython.com/search?q=comparing+with+os+path).
+:::
 
 The `os.path` module is the older, string-based approach. `pathlib` is preferred for new code.
 

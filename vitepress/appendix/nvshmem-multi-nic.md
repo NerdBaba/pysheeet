@@ -9,9 +9,17 @@ Date
 
 ## Abstract
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/networking/display/nvshmemv100/).
+:::
+
 [NVSHMEM 3.6.5](https://github.com/NVIDIA/nvshmem/releases/tag/v3.6.5-0) introduces multi-NIC support for the libfabric transport with round-robin NIC selection—a collaborative effort between NVIDIA and Amazon Annapurna Labs. NVSHMEM has gained significant attention since [DeepEP](https://github.com/deepseek-ai/DeepEP) demonstrated that implementing MoE layer dispatch and combine operations with NVSHMEM can substantially improve performance for large language models (LLMs) employing Mixture-of-Experts (MoE) architectures. However, on AWS, DeepEP compatibility was limited because it relies on [InfiniBand GPUDirect Async](https://developer.nvidia.com/blog/improving-network-performance-of-hpc-systems-using-nvidia-magnum-io-nvshmem-and-gpudirect-async/) (IBGDA), whereas AWS GPU instances support only the proxy thread transport via libfabric. Furthermore, prior to version 3.6.5, NVSHMEM supported only a single NIC, meaning each GPU could utilize only one EFA NIC for data transmission. This article reviews the new multi-NIC feature and presents experiments exploring the potential performance improvements on AWS.
 
 ## Introduction
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/networking/display/nvshmemv100/).
+:::
 
 Mixture-of-Experts (MoE) architectures rely on all-to-all collective communication to dispatch and combine tokens across expert replicas. However, conventional all-to-all implementations often become a bottleneck during LLM training due to limited overlap with computation and suboptimal bandwidth utilization. NVSHMEM addresses this by exposing a device-side API that enables developers to implement custom all-to-all kernels—such as [pplx-kernels](https://github.com/perplexityai/pplx-kernels) and [DeepEP](https://github.com/deepseek-ai/DeepEP)—with GPU-initiated networking, eliminating costly GPU–CPU context switches.
 
@@ -20,6 +28,10 @@ Despite these advantages, prior NVSHMEM versions (before 3.6.5) supported only a
 To evaluate the impact of multi-NIC support, we use the NVSHMEM device all-to-all performance tool to compare single-NIC and multi-NIC configurations. We also benchmark [pplx-kernels](https://github.com/perplexityai/pplx-kernels) to assess whether MoE dispatch and combine operations benefit from multi-NIC EFA on the libfabric backend.
 
 ## NVSHMEM Device All-to-All
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/networking/display/nvshmemv100/).
+:::
 
 To verify that multi-NIC round-robin is functioning correctly, we use [rdmatop](https://github.com/crazyguitar/rdmatop) to monitor RDMA traffic across all EFA NICs during NVSHMEM benchmarks. The experiments follow the NVSHMEM examples in the [rdmatop](https://github.com/crazyguitar/rdmatop/tree/main/examples/nvshmem) repository.
 
@@ -49,6 +61,10 @@ salloc -N ${NODES} bash examples/nvshmem/nvshmem.sbatch \
 
 ## pplx-kernels All-to-All
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/networking/display/nvshmemv100/).
+:::
+
 To assess whether real-world MoE workloads benefit from multi-NIC support, we benchmark [pplx-kernels](https://github.com/ppl-ai/pplx-kernels)—an NVSHMEM-based implementation of MoE dispatch and combine operations used in production serving systems such as [vLLM](https://github.com/vllm-project/vllm). The experiment follows the pplx example in the [rdmatop](https://github.com/crazyguitar/rdmatop/tree/main/examples/pplx) repository.
 
 ```bash
@@ -57,6 +73,10 @@ salloc -N 2 bash examples/pplx/pplx.sbatch \
 ```
 
 ## Result
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/networking/display/nvshmemv100/).
+:::
 
 The following subsections present the results for point-to-point put bandwidth and device all-to-all latency, comparing NVSHMEM 3.5.21 (single NIC) against 3.6.5 (multi-NIC).
 
@@ -103,6 +123,10 @@ Comparing the two configurations, NVSHMEM bandwidth is relatively higher with th
 ![image](https://raw.githubusercontent.com/crazyguitar/pysheeet/master/docs/_static/appendix/nvshmem/pplx_bandwidth.png)
 
 ## Conclusion
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.nvidia.com/networking/display/nvshmemv100/).
+:::
 
 NVSHMEM 3.6.5 introduces multi-NIC support for the libfabric transport, enabling round-robin NIC selection on AWS instances equipped with multiple EFA NICs. Our experiments confirm that this feature allows both point-to-point and all-to-all NVSHMEM operations to distribute traffic across all available NICs, significantly increasing aggregate bandwidth compared to older NVSHMEM versions.
 

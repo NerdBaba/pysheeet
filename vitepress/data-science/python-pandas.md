@@ -9,6 +9,10 @@ Pandas is the premier library for data manipulation and analysis in Python. It p
 
 ## Series and DataFrame Creation
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on series and dataframe creation](https://realpython.com/search?q=series+and+dataframe+creation).
+:::
+
 Construct data structures from Python objects, NumPy arrays, or external files.
 
 ```python
@@ -51,6 +55,10 @@ dtype: float64
 
 ## Reading Data
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reading data](https://realpython.com/search?q=reading+data).
+:::
+
 Pandas supports many file formats. CSV and Excel are the most common.
 
 ```python
@@ -72,6 +80,10 @@ Pandas supports many file formats. CSV and Excel are the most common.
 ```
 
 ## Basic Inspection
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic inspection](https://realpython.com/search?q=basic+inspection).
+:::
 
 Get a quick understanding of your data's shape, types, and summary statistics.
 
@@ -97,6 +109,10 @@ Get a quick understanding of your data's shape, types, and summary statistics.
 
 ## Column Selection and Filtering
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on column selection and filtering](https://realpython.com/search?q=column+selection+and+filtering).
+:::
+
 Select columns and filter rows using various techniques.
 
 ```python
@@ -118,6 +134,10 @@ Select columns and filter rows using various techniques.
 ```
 
 ## loc and iloc Indexing
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on loc and iloc indexing](https://realpython.com/search?q=loc+and+iloc+indexing).
+:::
 
 Label-based (`loc`) and integer position-based (`iloc`) indexing for precise data access.
 
@@ -146,6 +166,10 @@ Label-based (`loc`) and integer position-based (`iloc`) indexing for precise dat
 ```
 
 ## Handling Missing Data
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on handling missing data](https://realpython.com/search?q=handling+missing+data).
+:::
 
 Detect, drop, or fill missing values (represented as `NaN`).
 
@@ -184,6 +208,10 @@ Detect, drop, or fill missing values (represented as `NaN`).
 :::
 
 ## GroupBy Operations
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on groupby operations](https://realpython.com/search?q=groupby+operations).
+:::
 
 Split-apply-combine for aggregating data by groups.
 
@@ -224,6 +252,10 @@ Split-apply-combine for aggregating data by groups.
 
 ## Merge, Join, and Concat
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on merge join and concat](https://realpython.com/search?q=merge+join+and+concat).
+:::
+
 Combine multiple DataFrames using SQL-like joins or stacking operations.
 
 ```python
@@ -252,6 +284,10 @@ Combine multiple DataFrames using SQL-like joins or stacking operations.
 ```
 
 ## Pivot Tables and Melt
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pivot tables and melt](https://realpython.com/search?q=pivot+tables+and+melt).
+:::
 
 Reshape data between wide and long formats.
 
@@ -289,6 +325,10 @@ date
 
 ## Datetime Handling
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on datetime handling](https://realpython.com/search?q=datetime+handling).
+:::
+
 Work with dates and times using `pd.to_datetime` and the `.dt` accessor.
 
 ```python
@@ -323,6 +363,10 @@ datetime64[ns]
 
 ## Apply, Map, and Applymap
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on apply map and applymap](https://realpython.com/search?q=apply+map+and+applymap).
+:::
+
 Apply functions element-wise, column-wise, or row-wise.
 
 ```python
@@ -349,6 +393,10 @@ Apply functions element-wise, column-wise, or row-wise.
 ```
 
 ## Plotting with Matplotlib
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on plotting with matplotlib](https://realpython.com/search?q=plotting+with+matplotlib).
+:::
 
 Pandas integrates with Matplotlib for quick visualizations directly from DataFrames.
 

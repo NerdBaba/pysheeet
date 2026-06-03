@@ -9,6 +9,11 @@ The main goal of this cheat sheet is to collect some common and basic semantics 
 
 ## Hello world!
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on hello world](https://realpython.com/search?q=hello+world).
+:::
+
+
 When we start to learn a new language, we usually learn from printing **Hello world!**. In Python, we can use another way to print the message by importing `__hello__` module. The source code can be found on [frozen.c](https://github.com/python/cpython/blob/master/Python/frozen.c).
 
 ```python
@@ -23,6 +28,11 @@ Hello world!
 ```
 
 ## Python Version
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on python version](https://realpython.com/search?q=python+version).
+:::
+
 
 It is important for a programmer to know current Python version because not every syntax will work in the current version. In this case, we can get the Python version by `python -V` or using the module, `sys`.
 
@@ -53,6 +63,11 @@ False
 
 ## Ellipsis
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on ellipsis](https://realpython.com/search?q=ellipsis).
+:::
+
+
 [Ellipsis](https://docs.python.org/3/library/constants.html#Ellipsis) is a built-in constant. After Python 3.0, we case use `...` as `Ellipsis`. It may be the most enigmatic constant in Python. Based on the official document, we can use it to extend slicing syntax. Nevertheless, there are some other conventions in type hinting, stub files, or function expressions.
 
 ```python
@@ -75,6 +90,11 @@ The following snippet shows that we can use the ellipsis to represent a function
 
 ## if ... elif ... else
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on if elif else](https://realpython.com/search?q=if+elif+else).
+:::
+
+
 The **if statements** are used to control the code flow. Instead of using `switch` or `case` statements control the logic of the code, Python uses `if ... elif ... else` sequence. Although someone proposes we can use `dict` to achieve `switch` statements, this solution may introduce unnecessary overhead such as creating disposable dictionaries and undermine a readable code. Thus, the solution is not recommended.
 
 ```python
@@ -91,6 +111,11 @@ less than 3
 ```
 
 ## for Loop
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on for loop](https://realpython.com/search?q=for+loop).
+:::
+
 
 In Python, we can access iterable object's items directly through the **for statement**. If we need to get indexes and items of an iterable object such as list or tuple at the same time, using `enumerate` is better than `range(len(iterable))`. Further information can be found on [Looping Techniques](https://docs.python.org/3/tutorial/datastructures.html#looping-techniques).
 
@@ -109,6 +134,11 @@ bar
 ```
 
 ## for ... else ...
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on for else](https://realpython.com/search?q=for+else).
+:::
+
 
 It may be a little weird when we see the `else` belongs to a `for` loop at the first time. The `else` clause can assist us to avoid using flag variables in loops. A loop’s `else` clause runs when no break occurs.
 
@@ -147,6 +177,11 @@ break
 
 ## Using `range`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using range](https://realpython.com/search?q=using+range).
+:::
+
+
 The problem of `range` in Python 2 is that `range` may take up a lot of memory if we need to iterate a loop many times. Consequently, using `xrange` is recommended in Python 2.
 
 ```python
@@ -173,6 +208,11 @@ In Python 3, the built-in function `range` returns an iterable **range object** 
 
 ## while ... else ...
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on while else](https://realpython.com/search?q=while+else).
+:::
+
+
 The `else` clause belongs to a while loop serves the same purpose as the `else` clause in a for loop. We can observe that the `else` does not run when the `break` occurs in the while loop.
 
 ```python
@@ -188,6 +228,11 @@ The `else` clause belongs to a while loop serves the same purpose as the `else` 
 
 ## The `do while` Statement
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on the do while statement](https://realpython.com/search?q=the+do+while+statement).
+:::
+
+
 There are many programming languages such as C/C++, Ruby, or Javascript, provide the `do while` statement. In Python, there is no `do while` statement. However, we can place the condition and the `break` at the end of a `while` loop to achieve the same thing.
 
 ```python
@@ -202,6 +247,11 @@ There are many programming languages such as C/C++, Ruby, or Javascript, provide
 ```
 
 ## try ... except ... else ...
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on try except else](https://realpython.com/search?q=try+except+else).
+:::
+
 
 Most of the time, we handle errors in `except` clause and clean up resources in `finally` clause. Interestingly, the `try` statement also provides an `else` clause for us to avoid catching an exception which was raised by the code that should not be protected by `try ... except`. The `else` clause runs when no exception occurs between `try` and `except`.
 
@@ -219,6 +269,11 @@ Success
 
 ## String
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on string](https://realpython.com/search?q=string).
+:::
+
+
 Unlike other programming languages, Python does not support string’s item assignment directly. Therefore, if it is necessary to manipulate string’s items, e.g., swap items, we have to convert a string to a list and do a join operation after a series item assignments finish.
 
 ```python
@@ -230,6 +285,11 @@ Unlike other programming languages, Python does not support string’s item assi
 ```
 
 ## List
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on list](https://realpython.com/search?q=list).
+:::
+
 
 Lists are versatile containers. Python provides a lot of ways such as **negative index**, **slicing statement**, or **list comprehension** to manipulate lists. The following snippet shows some common operations of lists.
 
@@ -263,6 +323,11 @@ Lists are versatile containers. Python provides a lot of ways such as **negative
 
 ## Dict
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on dict](https://realpython.com/search?q=dict).
+:::
+
+
 Dictionaries are key-value pairs containers. Like lists, Python supports many ways such as **dict comprehensions** to manipulate dictionaries. After Python 3.6, dictionaries preserve the insertion order of keys. The Following snippet shows some common operations of dictionaries.
 
 ```python
@@ -287,6 +352,11 @@ dict_values(['yellow', 'green'])
 
 ## Function
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on function](https://realpython.com/search?q=function).
+:::
+
+
 Defining a function in Python is flexible. We can define a function with **function documents**, **default values**, **arbitrary arguments**, **keyword arguments**, **keyword-only arguments**, and so on. The Following snippet shows some common expressions to define functions.
 
 ```python
@@ -303,6 +373,11 @@ def foo_with_annotations(a: int) -> int: ...   # python3
 
 ## Function Annotations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on function annotations](https://realpython.com/search?q=function+annotations).
+:::
+
+
 Instead of writing string documents in functions to hint the type of parameters and return values, we can denote types by **function annotations**. Function annotations which the details can be found on PEP [3017](https://www.python.org/dev/peps/pep-3107) and PEP [484](https://www.python.org/dev/peps/pep-0484/) were introduced in Python 3.0. They are an **optional** feature in **Python 3**. Using function annotations will lose compatibility in **Python 2**. We can solve this issue by stub files. In addition, we can do static type checking through [mypy](http://mypy-lang.org/).
 
 ```python
@@ -317,6 +392,11 @@ Instead of writing string documents in functions to hint the type of parameters 
 ```
 
 ## Generators
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on generators](https://realpython.com/search?q=generators).
+:::
+
 
 Python uses the `yield` statement to define a **generator function**. In other words, when we call a generator function, the generator function will return a **generator** instead of return values for creating an **iterator**.
 
@@ -342,6 +422,11 @@ Python uses the `yield` statement to define a **generator function**. In other w
 
 ## Generator Delegation
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on generator delegation](https://realpython.com/search?q=generator+delegation).
+:::
+
+
 Python 3.3 introduced `yield from` expression. It allows a generator to delegate parts of operations to another generator. In other words, we can **yield** a sequence **from** other **generators** in the current **generator function**. Further information can be found on PEP [380](https://www.python.org/dev/peps/pep-0380).
 
 ```python
@@ -359,6 +444,11 @@ Python 3.3 introduced `yield from` expression. It allows a generator to delegate
 ```
 
 ## Class
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on class](https://realpython.com/search?q=class).
+:::
+
 
 Python supports many common features such as **class documents**, **multiple inheritance**, **class variables**, **instance variables**, **static method**, **class method**, and so on. Furthermore, Python provides some special methods for programmers to implement **iterators**, **context manager**, etc. The following snippet displays common definition of a class.
 
@@ -393,6 +483,11 @@ class Foo(A, B):
 
 ## `async` / `await`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on async await](https://realpython.com/search?q=async+await).
+:::
+
+
 `async` and `await` syntax was introduced from Python 3.5. They were designed to be used with an event loop. Some other features such as the **asynchronous generator** were implemented in later versions.
 
 A **coroutine function** (`async def`) are used to create a **coroutine** for an event loop. Python provides a built-in module, **asyncio**, to write a concurrent code through `async`/`await` syntax. The following snippet shows a simple example of using **asyncio**. The code must be run on Python 3.7 or above.
@@ -426,6 +521,11 @@ asyncio.run(main())
 ```
 
 ## Avoid `exec` and `eval`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on avoid exec and eval](https://realpython.com/search?q=avoid+exec+and+eval).
+:::
+
 
 The following snippet shows how to use the built-in function `exec`. Yet, using `exec` and `eval` are not recommended because of some security issues and unreadable code for a human. Further reading can be found on [Be careful with exec and eval in Python](http://lucumr.pocoo.org/2011/2/1/exec-in-python/) and [Eval really is dangerous](https://nedbatchelder.com/blog/201206/eval_really_is_dangerous.html)
 

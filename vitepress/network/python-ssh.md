@@ -9,6 +9,10 @@ SSH (Secure Shell) is the standard protocol for secure remote access, providing 
 
 ## Basic SSH Connection
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic ssh connection](https://realpython.com/search?q=basic+ssh+connection).
+:::
+
 The foundation of SSH is establishing a secure, authenticated connection to a remote host. The `SSHClient` class in Paramiko manages the entire connection lifecycle including TCP connection, cryptographic handshake, host key verification, user authentication, and channel multiplexing. Once connected, you can execute commands, open interactive shells, or establish SFTP sessions. The context manager pattern (`with` statement) ensures connections are properly closed even if exceptions occur, preventing resource leaks in long-running applications.
 
 ```python
@@ -33,6 +37,10 @@ with SSHClient() as ssh:
 
 ## Host Key Verification
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on host key verification](https://realpython.com/search?q=host+key+verification).
+:::
+
 SSH's security model relies on verifying the server's identity before sending credentials. Each SSH server has a unique host key pair, and clients store known host public keys in `~/.ssh/known_hosts`. On first connection, SSH warns about unknown hosts—this is the "fingerprint" prompt you see. Blindly accepting unknown keys defeats this protection and enables man-in-the-middle attacks where an attacker intercepts your connection. For automation, `AutoAddPolicy` is convenient but should only be used in trusted networks or with additional verification. In production, pre-populate known_hosts or use certificate-based host authentication.
 
 ```python
@@ -55,6 +63,10 @@ with SSHClient() as ssh:
 ```
 
 ## Key-Based Authentication
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on key-based authentication](https://realpython.com/search?q=key-based+authentication).
+:::
 
 SSH key pairs provide significantly stronger security than passwords while enabling passwordless automation. A key pair consists of a private key (kept secret on your machine) and a public key (copied to servers you want to access). Authentication works by proving you possess the private key without transmitting it. Modern best practice recommends Ed25519 keys for their security and performance, though RSA (4096-bit) remains widely compatible. Protect private keys with a passphrase for defense-in-depth—if the key file is stolen, the passphrase provides an additional barrier. Use `ssh-agent` to cache decrypted keys in memory, avoiding repeated passphrase entry.
 
@@ -95,6 +107,10 @@ with SSHClient() as ssh:
 
 ## SFTP File Transfer
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sftp file transfer](https://realpython.com/search?q=sftp+file+transfer).
+:::
+
 SFTP (SSH File Transfer Protocol) runs over an SSH connection, providing secure, encrypted file operations without requiring a separate service or port. Unlike FTP which sends credentials in plaintext and requires complex firewall rules for passive mode, SFTP tunnels everything through the existing SSH connection on port 22. Paramiko's SFTP client supports the full range of file operations: uploading, downloading, directory listing, file metadata, permissions, and remote file manipulation. For large transfers, SFTP handles resume and provides progress callbacks. It's the standard choice for automated file transfers in deployment scripts, backup systems, and data pipelines where security is required.
 
 ```python
@@ -128,6 +144,10 @@ with SSHClient() as ssh:
 ```
 
 ## SSH Tunneling Overview
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on ssh tunneling overview](https://realpython.com/search?q=ssh+tunneling+overview).
+:::
 
 SSH tunneling (port forwarding) is one of SSH's most powerful features, allowing you to securely route network traffic through an encrypted SSH connection. This enables accessing services behind firewalls, encrypting otherwise insecure protocols, and bypassing network restrictions. There are three types: local forwarding brings a remote service to your machine, remote (reverse) forwarding exposes your local service to the remote network, and dynamic forwarding creates a SOCKS proxy for routing arbitrary traffic. Understanding these patterns is essential for secure access to databases, internal web applications, and services in private networks. The diagrams below illustrate the traffic flow for each type.
 
@@ -166,6 +186,10 @@ SSH tunneling (port forwarding) is one of SSH's most powerful features, allowing
     └─────────────────────────────────────────────────────────────────┘
 
 ## Local Port Forwarding
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on local port forwarding](https://realpython.com/search?q=local+port+forwarding).
+:::
 
 Local forwarding (`-L`) is the most common tunnel type, binding a port on your local machine that forwards traffic through the SSH server to a destination host. This is invaluable for accessing services in private networks—databases, internal web applications, admin interfaces—that aren't exposed to the internet. The SSH server acts as a relay: your local application connects to `localhost:port`, SSH encrypts and forwards the traffic to the server, which then connects to the final destination. The destination doesn't need to be the SSH server itself; it can be any host reachable from the server, making this perfect for bastion/jump host scenarios where you SSH to a gateway machine to reach internal resources.
 
@@ -247,6 +271,10 @@ with SSHClient() as ssh:
 
 ## Reverse Port Forwarding
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reverse port forwarding](https://realpython.com/search?q=reverse+port+forwarding).
+:::
+
 Reverse forwarding (`-R`) solves the opposite problem: exposing a service on your local machine to the remote server's network. This is essential when you're behind NAT, a corporate firewall, or any network that blocks incoming connections. You initiate an outbound SSH connection (which firewalls typically allow), and the SSH server opens a listening port that tunnels back to your machine. Common use cases include sharing a local development server with remote colleagues, providing temporary access to a local service for debugging, or creating a "callback" channel when direct inbound connections are impossible. Note that by default, the server only binds to `127.0.0.1`; to allow external access, the server's `sshd_config` needs `GatewayPorts yes`.
 
     Scenario: Expose local dev server to public server
@@ -312,6 +340,10 @@ with SSHClient() as ssh:
 
 ## Dynamic Port Forwarding (SOCKS Proxy)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on dynamic port forwarding socks proxy](https://realpython.com/search?q=dynamic+port+forwarding+socks+proxy).
+:::
+
 Dynamic forwarding (`-D`) creates a local SOCKS proxy server that routes traffic through the SSH connection. Unlike local forwarding where you specify a fixed destination, dynamic forwarding lets applications connect to any host reachable from the SSH server—the destination is determined per-connection by the SOCKS protocol. This is incredibly versatile: configure your browser to use the SOCKS proxy and all web traffic flows through the SSH server, effectively browsing from that server's network location. Use cases include accessing geo-restricted content, browsing internal websites from outside the office, or encrypting traffic on untrusted networks (coffee shop WiFi). SOCKS5 supports both TCP and UDP, plus authentication, making it more capable than HTTP proxies.
 
     ┌──────────┐      ┌──────────────┐      ┌─────────────┐
@@ -341,6 +373,10 @@ curl --socks5 localhost:1080 http://internal-site.local
 ```
 
 ## Jump Hosts (ProxyJump)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on jump hosts proxyjump](https://realpython.com/search?q=jump+hosts+proxyjump).
+:::
 
 Jump hosts (also called bastion hosts or gateway servers) are hardened machines that provide the only entry point into a private network. Instead of exposing internal servers directly to the internet, organizations route all SSH access through a jump host that can be heavily monitored and secured. SSH's `ProxyJump` (`-J`) option makes this seamless—you specify the jump host, and SSH automatically chains the connections, authenticating to each hop. The connection to the final destination is end-to-end encrypted; the jump host only sees encrypted traffic passing through. You can chain multiple jump hosts for deeply segmented networks. This pattern is fundamental to secure infrastructure access in cloud environments where production servers should never have public IP addresses.
 
@@ -393,6 +429,10 @@ bastion.close()
 
 ## SSH Config File
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on ssh config file](https://realpython.com/search?q=ssh+config+file).
+:::
+
 The SSH config file (`~/.ssh/config`) eliminates repetitive command-line options by defining per-host settings. Instead of typing `ssh -i ~/.ssh/mykey -p 2222 user@long.hostname.example.com`, you define a host alias and simply type `ssh myserver`. The config file supports wildcards, allowing you to set defaults for groups of hosts (all `*.internal` hosts use a specific jump server). You can also define automatic port forwarding, so connecting to a host automatically sets up your database tunnels. For teams, a shared config file ensures everyone uses consistent, secure settings. The config is processed top-to-bottom with first match winning, so put specific hosts before wildcards.
 
 ```text
@@ -438,6 +478,10 @@ Host db-tunnel
 
 ## SSH Agent Forwarding
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on ssh agent forwarding](https://realpython.com/search?q=ssh+agent+forwarding).
+:::
+
 SSH agent forwarding lets you use your local private keys on remote servers without copying the keys there. When you SSH to a server with agent forwarding enabled (`-A`), the remote server can request signatures from your local ssh-agent for subsequent SSH connections. This is essential for workflows like cloning private git repositories from a server or hopping through multiple machines. However, agent forwarding has security implications: anyone with root access on the remote server can use your forwarded agent to authenticate as you to other systems while you're connected. For sensitive environments, consider `ProxyJump` instead, which keeps your keys local, or use per-host deploy keys.
 
 ```bash
@@ -469,6 +513,10 @@ with SSHClient() as ssh:
 
 ## Keepalive and Connection Stability
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on keepalive and connection stability](https://realpython.com/search?q=keepalive+and+connection+stability).
+:::
+
 SSH connections can silently die due to network issues, NAT gateway timeouts, or stateful firewalls that drop idle connections. Without keepalives, you won't know the connection is dead until you try to use it—resulting in hung terminals or failed operations. SSH provides two keepalive mechanisms: `TCPKeepAlive` uses TCP-level keepalive packets (can be blocked by some firewalls), while `ServerAliveInterval` sends SSH-protocol messages through the encrypted channel (more reliable). `ServerAliveCountMax` determines how many missed responses trigger disconnect. For reliable long-running connections—tunnels, interactive sessions, or automation—configure both client and server keepalives. A 30-60 second interval works well for most NAT environments.
 
 ```python
@@ -494,6 +542,10 @@ Host *
 ```
 
 ## Common SSH Commands Reference
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on common ssh commands reference](https://realpython.com/search?q=common+ssh+commands+reference).
+:::
 
 A quick reference for essential SSH commands covering connections, tunneling, key management, and file transfer. These commands form the foundation of secure remote administration and are worth committing to memory. The verbose flags (`-v` to `-vvv`) are invaluable for debugging connection issues, showing the authentication methods tried, key exchanges, and where failures occur.
 

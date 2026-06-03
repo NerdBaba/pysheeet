@@ -9,6 +9,11 @@ Regular expressions (regex) are powerful tools for pattern matching and text man
 
 ## Basic Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic operations](https://realpython.com/search?q=basic+operations).
+:::
+
+
 The `re` module provides several functions for pattern matching. Use `search()` to find the first match anywhere in the string, `match()` to match at the beginning, and `fullmatch()` to match the entire string.
 
 ```python
@@ -32,6 +37,11 @@ True
 
 ## `re.findall()` - Find All Matches
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on re findall - find all matches](https://realpython.com/search?q=re+findall+-+find+all+matches).
+:::
+
+
 The `findall()` function returns all non-overlapping matches as a list of strings. If the pattern has groups, it returns a list of tuples.
 
 ```python
@@ -51,6 +61,11 @@ The `findall()` function returns all non-overlapping matches as a list of string
 
 ## `re.split()` - Split by Pattern
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on re split - split by pattern](https://realpython.com/search?q=re+split+-+split+by+pattern).
+:::
+
+
 The `split()` function splits a string by pattern occurrences. Use `maxsplit` to limit the number of splits.
 
 ```python
@@ -68,6 +83,11 @@ The `split()` function splits a string by pattern occurrences. Use `maxsplit` to
 ```
 
 ## Group Matching
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on group matching](https://realpython.com/search?q=group+matching).
+:::
+
 
 Parentheses `(...)` create capturing groups. Use `group()` to access matched groups. Group 0 is the entire match, group 1 is the first parenthesized group, etc.
 
@@ -90,6 +110,11 @@ Parentheses `(...)` create capturing groups. Use `group()` to access matched gro
 
 ## Non-Capturing Group `(?:...)`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on non-capturing group](https://realpython.com/search?q=non-capturing+group).
+:::
+
+
 Use `(?:...)` when you need grouping for alternation or quantifiers but don't need to capture the match. This improves performance and keeps group numbering clean.
 
 ```python
@@ -106,6 +131,11 @@ Use `(?:...)` when you need grouping for alternation or quantifiers but don't ne
 ```
 
 ## Named Groups `(?P<name>...)`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on named groups p name](https://realpython.com/search?q=named+groups+p+name).
+:::
+
 
 Named groups make patterns more readable and allow access by name instead of number. Use `(?P<name>...)` to define and `(?P=name)` for back reference.
 
@@ -128,6 +158,11 @@ True
 
 ## Back Reference `\1`, `\2`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on back reference 1 2](https://realpython.com/search?q=back+reference+1+2).
+:::
+
+
 Back references match the same text as a previous capturing group. Use `\1` for the first group, `\2` for the second, etc.
 
 ```python
@@ -146,6 +181,11 @@ False
 ```
 
 ## Substitute with `re.sub()`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on substitute with re sub](https://realpython.com/search?q=substitute+with+re+sub).
+:::
+
 
 The `sub()` function replaces pattern matches with a replacement string. Use `\1`, `\2` in the replacement to reference captured groups.
 
@@ -174,6 +214,11 @@ The `sub()` function replaces pattern matches with a replacement string. Use `\1
 ```
 
 ## Lookahead and Lookbehind
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on lookahead and lookbehind](https://realpython.com/search?q=lookahead+and+lookbehind).
+:::
+
 
 Lookaround assertions match a position without consuming characters. They are useful for matching patterns based on context.
 
@@ -208,6 +253,11 @@ Lookaround assertions match a position without consuming characters. They are us
 
 ## Compile Pattern for Reuse
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on compile pattern for reuse](https://realpython.com/search?q=compile+pattern+for+reuse).
+:::
+
+
 Use `re.compile()` to create a reusable pattern object. This improves performance when the same pattern is used multiple times.
 
 ```python
@@ -219,6 +269,11 @@ Use `re.compile()` to create a reusable pattern object. This improves performanc
 ```
 
 ## Regex Flags
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on regex flags](https://realpython.com/search?q=regex+flags).
+:::
+
 
 Flags modify pattern behavior. Common flags include `re.IGNORECASE` (`re.I`), `re.MULTILINE` (`re.M`), `re.DOTALL` (`re.S`), and `re.VERBOSE` (`re.X`).
 
@@ -249,6 +304,11 @@ Flags modify pattern behavior. Common flags include `re.IGNORECASE` (`re.I`), `r
 
 ## Compare HTML Tags
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on compare html tags](https://realpython.com/search?q=compare+html+tags).
+:::
+
+
 Common patterns for matching different types of HTML tags.
 
 | Tag Type   | Pattern               | Example          |
@@ -276,6 +336,11 @@ True
 
 ## Match Email Address
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on match email address](https://realpython.com/search?q=match+email+address).
+:::
+
+
 A pattern for validating email addresses. Note that fully RFC-compliant email validation is extremely complex; this covers common cases.
 
 ```python
@@ -289,6 +354,11 @@ False
 ```
 
 ## Match URL
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on match url](https://realpython.com/search?q=match+url).
+:::
+
 
 A pattern for matching URLs with optional protocol, domain, and path.
 
@@ -307,6 +377,11 @@ True
 
 ## Match IP Address
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on match ip address](https://realpython.com/search?q=match+ip+address).
+:::
+
+
 A pattern for validating IPv4 addresses (0.0.0.0 to 255.255.255.255).
 
 ```python
@@ -324,6 +399,11 @@ False
 
 ## Match MAC Address
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on match mac address](https://realpython.com/search?q=match+mac+address).
+:::
+
+
 A pattern for validating MAC addresses in colon-separated format.
 
 ```python
@@ -335,6 +415,11 @@ True
 ```
 
 ## Match Phone Number
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on match phone number](https://realpython.com/search?q=match+phone+number).
+:::
+
 
 Patterns for common phone number formats.
 
@@ -350,6 +435,11 @@ True
 ```
 
 ## Match Password Strength
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on match password strength](https://realpython.com/search?q=match+password+strength).
+:::
+
 
 Pattern to validate password with minimum requirements: at least 8 characters, one uppercase, one lowercase, one digit, and one special character.
 
@@ -368,6 +458,11 @@ False
 ```
 
 ## Simple Lexer
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple lexer](https://realpython.com/search?q=simple+lexer).
+:::
+
 
 Using regex to build a simple tokenizer for arithmetic expressions. This demonstrates using named groups and `scanner()` for lexical analysis.
 
@@ -393,6 +488,11 @@ Using regex to build a simple tokenizer for arithmetic expressions. This demonst
 ```
 
 ## Common Patterns Reference
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on common patterns reference](https://realpython.com/search?q=common+patterns+reference).
+:::
+
 
 ```python
 # Digits only

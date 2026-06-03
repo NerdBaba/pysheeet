@@ -9,13 +9,25 @@ Date
 
 ## Abstract
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
+
 The GNU Debugger (GDB) is the most powerful debugging tool for developers to troubleshoot errors in their code. However, it is hard for beginners to learn, and that is why many programmers prefer to insert `print` to examine runtime status. Fortunately, [GDB Text User Interface (TUI)](https://sourceware.org/gdb/onlinedocs/gdb/TUI.html) provides a way for developers to review their source code and debug simultaneously. More excitingly, In GDB 7, **Python Interpreter** was built into GDB. This feature offers more straightforward ways to customize GDB printers and commands through the Python library. By discussing examples, this article tries to explore advanced debugging techniques via Python to develop tool kits for GDB.
 
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
+
 Troubleshooting software bugs is a big challenge for developers. While GDB provides many “debug commands” to inspect programs’ runtime status, its non-intuitive usages impede programmers to use it to solve problems. Indeed, mastering GDB is a long-term process. However, a quick start is not complicated; you must unlearn what you have learned like Yoda. To better understand how to use Python in GDB, this article will focus on discussing Python interpreter in GDB.
 
 ## Define Commands
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
 
 GDB supports customizing commands by using `define`. It is useful to run a batch of commands to troubleshoot at the same time. For example, a developer can display the current frame information by defining a `sf` command.
 
@@ -31,6 +43,10 @@ end
 However, writing a user-defined command may be inconvenient due to limited APIs. Fortunately, by interacting with Python interpreter in GDB, developers can utilize Python libraries to establish their debugging tool kits readily. The following sections show how to use Python to simplify debugging processes.
 
 ## Dump Memory
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
 
 Inspecting a process’s memory information is an effective way to troubleshoot memory issues. Developers can acquire memory contents by `info proc mappings` and `dump memory`. To simplify these steps, defining a customized command is useful. However, the implementation is not straightforward by using pure GDB syntax. Even though GDB supports conditions, processing output is not intuitive. To solve this problem, using Python API in GDB would be helpful because Python contains many useful operations for handling strings.
 
@@ -90,6 +106,10 @@ Running the `dm` command will invoke `DumpMemory.invoke`. By sourcing or impleme
 ```
 
 ## Dump JSON
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
 
 Parsing JSON is helpful when a developer is inspecting a JSON string in a running program. GDB can parse a `std::string` via `gdb.parse_and_eval` and return it as a `gdb.Value`. By processing `gdb.Value`, developers can pass a JSON string into Python `json` API and print it in a pretty format.
 
@@ -153,6 +173,10 @@ $1 = "{\"foo\": \"FOO\",\"bar\": \"BAR\"}"
 
 ## Highlight Syntax
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
+
 Syntax highlighting is useful for developers to trace source code or to troubleshoot issues. By using [Pygments](https://pygments.org/), applying color to the source is easy without defining ANSI escape code manually. The following example shows how to apply color to the `list` command output.
 
 ```python
@@ -181,6 +205,10 @@ PrettyList()
 ```
 
 ## Tracepoints
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
 
 Although a developer can insert `printf`, `std::cout`, or `syslog` to inspect functions, printing messages is not an effective way to debug when a project is enormous. Developers may waste their time in building source code and may acquire little information. Even worse, the output may become too much to detect problems. In fact, inspecting functions or variables do not require to embed *print functions* in code. By writing a Python script with GDB API, developers can customize watchpoints to trace issues dynamically at runtime. For example, by implementing a `gdb.Breakpoint` and a `gdb.Command`, it is useful for developers to acquire essential information, such as parameters, call stacks, or memory usage.
 
@@ -286,6 +314,10 @@ Tracepoint 'fib' Count: 5
 
 ## Profiling
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
+
 Without inserting timestamps, profiling is still feasible through tracepoints. By using a `gdb.FinishBreakpoint` after a `gdb.Breakpoint`, GDB sets a temporary breakpoint at the return address of a frame for developers to get the current timestamp and to calculate the time difference. Note that profiling via GDB is not precise. Other tools, such as [Linux perf](https://github.com/torvalds/linux/tree/master/tools/perf) or [Valgrind](https://valgrind.org/), provide more useful and accurate information to trace performance issues.
 
 ```python
@@ -382,6 +414,10 @@ fib(int) @ a.cpp:3
 ```
 
 ## Pretty Print
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
 
 Although `set print pretty on` in GDB offers a better format to inspect variables, developers may require to parse variables' value for readability. Take the system call `stat` as an example. While it provides useful information to examine file attributes, the output values, such as the permission, may not be readable for debugging. By implementing a user-defined pretty print, developers can parse `struct stat` and output information in a readable format.
 
@@ -536,6 +572,10 @@ global pretty-printers:
 ```
 
 ## Conclusion
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://sourceware.org/gdb/current/onlinedocs/gdb/Python.html).
+:::
 
 Integrating Python interpreter into GDB offers many flexible ways to troubleshoot issues. While many integrated development environments (IDEs) may embed GDB to debug visually, GDB allows developers to implement their commands and parse variables’ output at runtime. By using debugging scripts, developers can monitor and record necessary information without modifying their code. Honestly, inserting or enabling debugging code blocks may change a program’s behaviors, and developers should get rid of this bad habit. Also, when a problem is reproduced, GDB can attach that process and examine its status without stopping it. Obviously, debugging via GDB is inevitable if a challenging issue emerges. Thanks to integrating Python into GDB, developing a script to troubleshoot becomes more accessible that leads to developers establishing their debugging methods diversely.
 

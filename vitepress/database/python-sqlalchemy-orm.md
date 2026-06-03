@@ -9,6 +9,10 @@ SQLAlchemy's Object-Relational Mapper (ORM) provides a high-level abstraction th
 
 ## Define Models with Declarative Base
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on define models with declarative base](https://realpython.com/search?q=define+models+with+declarative+base).
+:::
+
 The declarative system is the most common way to define ORM models in SQLAlchemy. You create a base class using `declarative_base()` and then define your models as subclasses. Each model class represents a database table, with class attributes defining columns. The `__tablename__` attribute specifies the table name. This approach keeps your model definitions clean and readable while providing full access to SQLAlchemy's features.
 
 ```python
@@ -29,6 +33,10 @@ The declarative system is the most common way to define ORM models in SQLAlchemy
 ```
 
 ## Session Basics
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on session basics](https://realpython.com/search?q=session+basics).
+:::
 
 The `Session` is the primary interface for persistence operations in the ORM. It manages a "holding zone" for objects you've loaded or associated with it, and handles the communication with the database. Sessions track changes to objects and synchronize them with the database when you call `commit()`. The recommended pattern is to use `sessionmaker` to create a session factory, then create sessions as needed. Always close sessions when done to release database connections.
 
@@ -58,6 +66,10 @@ Created user with id: 1
 ```
 
 ## Add and Commit Objects
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on add and commit objects](https://realpython.com/search?q=add+and+commit+objects).
+:::
 
 To persist new objects to the database, add them to the session with `add()` or `add_all()` for multiple objects. Objects remain in a "pending" state until you call `commit()`, which flushes all pending changes to the database in a transaction. If an error occurs, call `rollback()` to undo all changes since the last commit. After commit, auto-generated values like primary keys are available on the objects.
 
@@ -91,6 +103,10 @@ To persist new objects to the database, add them to the session with `add()` or 
 ```
 
 ## Query Objects
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on query objects](https://realpython.com/search?q=query+objects).
+:::
 
 SQLAlchemy 2.0 uses `select()` with `session.execute()` for queries, replacing the legacy `session.query()` API. The `select()` construct accepts model classes or specific columns. Use `scalars()` to get model instances directly, or `execute()` for row tuples. The result supports iteration, `all()` for a list, `first()` for the first result, and `one()` when exactly one result is expected.
 
@@ -128,6 +144,10 @@ Alice
 ```
 
 ## Filter Queries
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on filter queries](https://realpython.com/search?q=filter+queries).
+:::
 
 The `where()` method accepts filter conditions using column comparisons. SQLAlchemy overloads Python operators to generate SQL: `==` becomes `=`, `!=` becomes `<>`, and so on. For complex conditions, use `and_()`, `or_()`, and `not_()` from SQLAlchemy. Columns also provide methods like `in_()`, `like()`, `between()`, `is_()`, and `isnot()` for SQL-specific operations.
 
@@ -172,6 +192,10 @@ The `where()` method accepts filter conditions using column comparisons. SQLAlch
 
 ## Update Objects
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on update objects](https://realpython.com/search?q=update+objects).
+:::
+
 To update objects, simply modify their attributes and call `commit()`. The session tracks changes to loaded objects automatically through a mechanism called "dirty tracking". When you commit, SQLAlchemy generates UPDATE statements only for changed attributes. You can also use bulk updates with `update()` for efficiency when modifying many rows without loading them into memory.
 
 ```python
@@ -205,6 +229,10 @@ Alicia
 
 ## Delete Objects
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on delete objects](https://realpython.com/search?q=delete+objects).
+:::
+
 To delete objects, use `session.delete()` followed by `commit()`. The session will generate a DELETE statement for the object. For bulk deletes without loading objects, use the `delete()` construct with `session.execute()`. Be careful with cascading deletes when objects have relationships - SQLAlchemy can automatically delete related objects based on your cascade configuration.
 
 ```python
@@ -237,6 +265,10 @@ To delete objects, use `session.delete()` followed by `commit()`. The session wi
 ```
 
 ## One-to-Many Relationship
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on one-to-many relationship](https://realpython.com/search?q=one-to-many+relationship).
+:::
 
 Relationships define how tables are connected. A one-to-many relationship means one record in the parent table can have multiple related records in the child table. Use `relationship()` on the parent side and `ForeignKey` on the child side. The `back_populates` parameter creates a bidirectional relationship, allowing navigation from both sides. SQLAlchemy handles the foreign key management automatically.
 
@@ -277,6 +309,10 @@ Relationships define how tables are connected. A one-to-many relationship means 
 ```
 
 ## Many-to-Many Relationship
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on many-to-many relationship](https://realpython.com/search?q=many-to-many+relationship).
+:::
 
 Many-to-many relationships require an association table that contains foreign keys to both related tables. Define the association table using `Table`, then use `relationship()` with the `secondary` parameter pointing to it. Both sides can have a relationship, and SQLAlchemy manages the association table entries automatically when you add or remove items from the relationship collections.
 
@@ -324,6 +360,10 @@ Many-to-many relationships require an association table that contains foreign ke
 
 ## Self-Referential Relationship
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on self-referential relationship](https://realpython.com/search?q=self-referential+relationship).
+:::
+
 Self-referential relationships connect a table to itself, useful for hierarchical data like organizational charts, categories, or threaded comments. Use `ForeignKey` pointing to the same table and `relationship()` with `remote_side` to indicate which side is the "parent". This pattern allows you to model tree structures where each node can have a parent and multiple children.
 
 ```python
@@ -364,6 +404,10 @@ Subordinates: ['Worker1', 'Worker2']
 ```
 
 ## Cascade Deletes
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cascade deletes](https://realpython.com/search?q=cascade+deletes).
+:::
 
 Cascade options control what happens to related objects when a parent is deleted or modified. The `cascade` parameter on `relationship()` accepts a comma-separated string of cascade rules. Common options include `"all, delete-orphan"` which deletes children when the parent is deleted and when children are removed from the collection. This ensures referential integrity and prevents orphaned records.
 
@@ -407,6 +451,10 @@ Cascade options control what happens to related objects when a parent is deleted
 
 ## Eager Loading
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on eager loading](https://realpython.com/search?q=eager+loading).
+:::
+
 By default, SQLAlchemy uses lazy loading for relationships, executing a new query when you access related objects. This can cause the "N+1 query problem" when iterating over many objects. Eager loading fetches related objects in the same query using JOIN or subqueries. Use `joinedload()` for single objects or small collections, and `selectinload()` for larger collections to avoid cartesian products.
 
 ```python
@@ -446,6 +494,10 @@ By default, SQLAlchemy uses lazy loading for relationships, executing a new quer
 
 ## Hybrid Properties
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on hybrid properties](https://realpython.com/search?q=hybrid+properties).
+:::
+
 Hybrid properties allow you to define Python properties that work both at the instance level (in Python) and at the class level (in SQL queries). This is useful for computed attributes that you want to filter or sort by in database queries. Use the `@hybrid_property` decorator and optionally `@property.expression` to customize the SQL expression.
 
 ```python
@@ -478,6 +530,10 @@ Alice Smith
 ```
 
 ## Event Hooks
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on event hooks](https://realpython.com/search?q=event+hooks).
+:::
 
 SQLAlchemy provides an event system that lets you hook into various ORM operations like before/after insert, update, or delete. Use `@event.listens_for()` decorator to register event handlers. Events are useful for auditing, validation, automatic timestamps, or triggering side effects. Common events include `before_insert`, `after_insert`, `before_update`, `after_update`, `before_delete`, and `after_delete`.
 

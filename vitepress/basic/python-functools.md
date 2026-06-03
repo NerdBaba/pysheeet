@@ -17,6 +17,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## `partial` — Pre-fill Function Arguments
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on partial pre-fill function arguments](https://realpython.com/search?q=partial+pre-fill+function+arguments).
+:::
+
+
 `partial` creates a new callable with some arguments of the original function pre-filled. This is useful for specializing general functions or preparing callback arguments.
 
 ```python
@@ -43,6 +48,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## `partialmethod` — Partial Methods for Classes
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on partialmethod partial methods for classes](https://realpython.com/search?q=partialmethod+partial+methods+for+classes).
+:::
+
+
 `partialmethod` behaves like `partial` but is designed for method definitions inside classes. It binds the given arguments at class definition time.
 
 **New in Python 3.4**
@@ -65,6 +75,11 @@ True
 ```
 
 ## Caching: `lru_cache` and `cache`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on caching lru_cache and cache](https://realpython.com/search?q=caching+lru_cache+and+cache).
+:::
+
 
 Memoization decorators that automatically cache return values based on arguments.
 
@@ -105,6 +120,11 @@ Cache arguments must be hashable. The cache lives for the lifetime of the proces
 
 ## `singledispatch` — Type-Based Dispatch
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on singledispatch type-based dispatch](https://realpython.com/search?q=singledispatch+type-based+dispatch).
+:::
+
+
 `singledispatch` lets you define a generic function whose behavior depends on the type of the first argument.
 
 **New in Python 3.4**
@@ -142,6 +162,11 @@ Cache arguments must be hashable. The cache lives for the lifetime of the proces
 ```
 
 ## `wraps` and `WRAPPER_ASSIGNMENTS` — Decorator Hygiene
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on wraps and wrapper_assignments decorator hygiene](https://realpython.com/search?q=wraps+and+wrapper_assignments+decorator+hygiene).
+:::
+
 
 `wraps` copies the original function's `__name__`, `__doc__`, `__module__`, `__annotations__`, and `__qualname__` to the wrapper function.
 
@@ -183,6 +208,11 @@ Cache arguments must be hashable. The cache lives for the lifetime of the proces
 
 ## `reduce` — Cumulative Reduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reduce cumulative reduction](https://realpython.com/search?q=reduce+cumulative+reduction).
+:::
+
+
 `reduce` applies a binary function cumulatively, reducing an iterable to a single value.
 
 ```python
@@ -200,6 +230,11 @@ Cache arguments must be hashable. The cache lives for the lifetime of the proces
 ```
 
 ## `cmp_to_key` — Convert Comparison to Key Function
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cmp_to_key convert comparison to key function](https://realpython.com/search?q=cmp_to_key+convert+comparison+to+key+function).
+:::
+
 
 Converts an old-style comparison function (returning -1, 0, 1) into a key function for `sorted()`, `min()`, `max()`.
 
@@ -226,6 +261,11 @@ Converts an old-style comparison function (returning -1, 0, 1) into a key functi
 ```
 
 ## `total_ordering` — Auto-Generate Comparison Methods
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on total_ordering auto-generate comparison methods](https://realpython.com/search?q=total_ordering+auto-generate+comparison+methods).
+:::
+
 
 `total_ordering` fills in missing rich comparison methods (`__le__`, `__gt__`, `__ge__`) given at least `__eq__` and one of `__lt__`, `__le__`, `__gt__`, or `__ge__`.
 

@@ -17,6 +17,11 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 
 ## Infinite Iterators: `count`, `cycle`, `repeat`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on infinite iterators count cycle repeat](https://realpython.com/search?q=infinite+iterators+count+cycle+repeat).
+:::
+
+
 Infinite iterators generate an unbounded sequence of values. Use them with care — always pair with `islice` or a `break` condition to avoid infinite loops.
 
 ```python
@@ -37,6 +42,11 @@ Infinite iterators generate an unbounded sequence of values. Use them with care 
 
 ## Chaining Iterators: `chain`, `chain.from_iterable`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on chaining iterators chain chain from_iterable](https://realpython.com/search?q=chaining+iterators+chain+chain+from_iterable).
+:::
+
+
 `chain` concatenates multiple iterables into a single sequence without creating a new list. `chain.from_iterable` is useful when the sources are themselves in an iterable.
 
 ```python
@@ -56,6 +66,11 @@ Infinite iterators generate an unbounded sequence of values. Use them with care 
 ```
 
 ## Filtering Iterators: `compress`, `dropwhile`, `takewhile`, `filterfalse`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on filtering iterators compress dropwhile takewhile filterfalse](https://realpython.com/search?q=filtering+iterators+compress+dropwhile+takewhile+filterfalse).
+:::
+
 
 These functions filter elements from an iterable based on different criteria.
 
@@ -81,6 +96,11 @@ These functions filter elements from an iterable based on different criteria.
 
 ## Slicing and Windowing: `islice`, `pairwise`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on slicing and windowing islice pairwise](https://realpython.com/search?q=slicing+and+windowing+islice+pairwise).
+:::
+
+
 `islice` performs lazy slicing on any iterable. `pairwise` yields consecutive overlapping pairs.
 
 ```python
@@ -105,6 +125,11 @@ These functions filter elements from an iterable based on different criteria.
 
 ## Reducing Iterators: `accumulate`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reducing iterators accumulate](https://realpython.com/search?q=reducing+iterators+accumulate).
+:::
+
+
 `accumulate` yields running sums (or other binary operations) from left to right.
 
 ```python
@@ -122,6 +147,11 @@ These functions filter elements from an iterable based on different criteria.
 ```
 
 ## Grouping: `groupby`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on grouping groupby](https://realpython.com/search?q=grouping+groupby).
+:::
+
 
 `groupby` groups consecutive elements with the same key. The input should be sorted by the key for meaningful results.
 
@@ -147,6 +177,11 @@ b [('b', 3), ('b', 4)]
 
 ## Batching: `batched`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on batching batched](https://realpython.com/search?q=batching+batched).
+:::
+
+
 `batched` splits an iterable into fixed-size non-overlapping tuples.
 
 **New in Python 3.12**
@@ -159,6 +194,11 @@ b [('b', 3), ('b', 4)]
 ```
 
 ## Combinatorial Iterators: `product`, `permutations`, `combinations`, `combinations_with_replacement`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on combinatorial iterators product permutations combinations combinations_with_replacement](https://realpython.com/search?q=combinatorial+iterators+product+permutations+combinations+combinations_with_replacement).
+:::
+
 
 These generate Cartesian products and combinations without building the entire result in memory.
 
@@ -187,6 +227,11 @@ These generate Cartesian products and combinations without building the entire r
 
 ## Mapping: `starmap`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on mapping starmap](https://realpython.com/search?q=mapping+starmap).
+:::
+
+
 `starmap` is like `map` but unpacks arguments from each tuple.
 
 ```python
@@ -200,6 +245,11 @@ These generate Cartesian products and combinations without building the entire r
 ```
 
 ## Teeing: `tee`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on teeing tee](https://realpython.com/search?q=teeing+tee).
+:::
+
 
 `tee` splits a single iterator into multiple independent iterators. Each can be consumed separately, but they share memory for elements that haven't been consumed by all.
 
@@ -218,6 +268,11 @@ After creating `tee` iterators, do not use the original iterator. Doing so can c
 :::
 
 ## Zipping: `zip_longest`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on zipping zip_longest](https://realpython.com/search?q=zipping+zip_longest).
+:::
+
 
 `zip_longest` zips iterables, filling missing values with a `fillvalue` instead of stopping at the shortest.
 

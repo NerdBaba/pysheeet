@@ -14,6 +14,10 @@ The C extension interface is specific to CPython and may not work on alternative
 
 ## Simple setup.py
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple setup py](https://realpython.com/search?q=simple+setup+py).
+:::
+
 Building C extensions requires a `setup.py` file that tells Python how to compile your C code. The `distutils` module (or its modern replacement `setuptools`) handles cross-platform compilation, linking against the Python library, and generating the correct shared library format (.so on Linux, .dylib on macOS, .pyd on Windows). This minimal example compiles a single C file into a Python-importable module.
 
 ```python
@@ -31,6 +35,10 @@ $ python setup.py install
 ```
 
 ## Customize CFLAGS
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on customize cflags](https://realpython.com/search?q=customize+cflags).
+:::
 
 For production-quality extensions, you'll want to customize compiler flags to enable warnings, optimizations, or debugging symbols. The `extra_compile_args` parameter passes flags directly to the C compiler (gcc, clang, or MSVC). Common flags include `-Wall` and `-Wextra` for comprehensive warnings, `-Werror` to treat warnings as errors, `-O3` for aggressive optimization, and `-g` for debug symbols.
 
@@ -51,6 +59,10 @@ setup(name="foo", version="1.0", ext_modules=[ext])
 ```
 
 ## Simple C Extension
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple c extension](https://realpython.com/search?q=simple+c+extension).
+:::
 
 Source  
 [src/cext/capi/simple.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/simple.c)
@@ -101,6 +113,10 @@ $ python -c "import foo; foo.foo()"
 ```
 
 ## Parse Arguments
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on parse arguments](https://realpython.com/search?q=parse+arguments).
+:::
 
 Source  
 [src/cext/capi/args.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/args.c)
@@ -177,6 +193,10 @@ Output:
 
 ## Release the GIL
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on release the gil](https://realpython.com/search?q=release+the+gil).
+:::
+
 Source  
 [src/cext/capi/gil.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/gil.c)
 
@@ -224,6 +244,10 @@ Never call Python C API functions between `Py_BEGIN_ALLOW_THREADS` and `Py_END_A
 
 ## Acquire the GIL
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on acquire the gil](https://realpython.com/search?q=acquire+the+gil).
+:::
+
 Source  
 [src/cext/capi/gil.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/gil.c)
 
@@ -252,6 +276,10 @@ void *worker_thread(void *arg)
 
 ## Raise Exception
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on raise exception](https://realpython.com/search?q=raise+exception).
+:::
+
 Source  
 [src/cext/capi/errors.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/errors.c)
 
@@ -276,6 +304,10 @@ NotImplementedError: Not implemented
 ```
 
 ## Custom Exception
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on custom exception](https://realpython.com/search?q=custom+exception).
+:::
 
 Source  
 [src/cext/capi/errors.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/errors.c)
@@ -315,6 +347,10 @@ foo.FooError: Something went wrong
 
 ## Reference Counting
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on reference counting](https://realpython.com/search?q=reference+counting).
+:::
+
 Python uses reference counting as its primary memory management strategy. Every `PyObject*` maintains a count of how many references point to it. When the count reaches zero, the object is deallocated. Use `Py_INCREF()` when storing a new reference to an object and `Py_DECREF()` when you're done with it. The variant `Py_XDECREF()` safely handles `NULL` pointers. Understanding reference counting is crucial for avoiding memory leaks (forgetting to decref) and use-after-free bugs (decrefing too early). Functions that return "new references" transfer ownership to the caller, while "borrowed references" should not be decrefed.
 
 ```c
@@ -340,6 +376,10 @@ Output:
 ```
 
 ## Iterate a List
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on iterate a list](https://realpython.com/search?q=iterate+a+list).
+:::
 
 Source  
 [src/cext/capi/types_demo.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/types_demo.c)
@@ -377,6 +417,10 @@ Output:
 
 ## Iterate a Dictionary
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on iterate a dictionary](https://realpython.com/search?q=iterate+a+dictionary).
+:::
+
 Source  
 [src/cext/capi/types_demo.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/types_demo.c)
 
@@ -410,6 +454,10 @@ Output:
 
 ## Create a List
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create a list](https://realpython.com/search?q=create+a+list).
+:::
+
 Source  
 [src/cext/capi/types_demo.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/types_demo.c)
 
@@ -435,6 +483,10 @@ Output:
 
 ## Create a Dictionary
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create a dictionary](https://realpython.com/search?q=create+a+dictionary).
+:::
+
 Source  
 [src/cext/capi/types_demo.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/types_demo.c)
 
@@ -459,6 +511,10 @@ Output:
 
 ## Create a Tuple
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create a tuple](https://realpython.com/search?q=create+a+tuple).
+:::
+
 Source  
 [src/cext/capi/types_demo.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/types_demo.c)
 
@@ -479,6 +535,10 @@ Output:
 ```
 
 ## Create a Set
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on create a set](https://realpython.com/search?q=create+a+set).
+:::
 
 Source  
 [src/cext/capi/types_demo.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/types_demo.c)
@@ -505,6 +565,10 @@ Output:
 ```
 
 ## String Operations
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on string operations](https://realpython.com/search?q=string+operations).
+:::
 
 Source  
 [src/cext/capi/types_demo.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/types_demo.c)
@@ -543,6 +607,10 @@ Output:
 
 ## Bytes Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on bytes operations](https://realpython.com/search?q=bytes+operations).
+:::
+
 Source  
 [src/cext/capi/types_demo.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/types_demo.c)
 
@@ -573,6 +641,10 @@ b'hello bytes'
 ```
 
 ## Simple Class
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on simple class](https://realpython.com/search?q=simple+class).
+:::
 
 Defining custom Python types in C requires creating a `PyTypeObject` structure that describes the type's behavior, memory layout, and methods. The minimal type needs `tp_name` (fully qualified name like `"module.ClassName"`), `tp_basicsize` (size of the instance struct), and `tp_new` (allocation function, often `PyType_GenericNew`). Call `PyType_Ready()` to finalize the type before use, then add it to your module with `PyModule_AddObject()`. The `Py_TPFLAGS_DEFAULT` flag enables standard type features.
 
@@ -605,6 +677,10 @@ PyMODINIT_FUNC PyInit_foo(void)
 ```
 
 ## Class with Members and Methods
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on class with members and methods](https://realpython.com/search?q=class+with+members+and+methods).
+:::
 
 Full-featured Python classes in C require implementing several type slots. Use `PyMemberDef` to expose C struct fields as Python attributes (with automatic type conversion), and `PyMethodDef` for instance methods. Implement `tp_new` for memory allocation (called before `__init__`), `tp_init` for initialization (the `__init__` method), and `tp_dealloc` for cleanup (must decref all owned PyObject members and call `tp_free`). The `Py_TPFLAGS_BASETYPE` flag allows the type to be subclassed in Python.
 
@@ -671,6 +747,10 @@ Output:
 
 ## Properties (Getter/Setter)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on properties getter setter](https://realpython.com/search?q=properties+getter+setter).
+:::
+
 For computed attributes or attributes requiring validation, use `PyGetSetDef` to define properties with custom getter and setter functions. The getter receives the instance and an optional closure pointer, returning a new reference to the attribute value. The setter receives the instance, new value (or NULL for deletion), and closure, returning 0 on success or -1 on error. This provides the same functionality as Python's `@property` decorator but with C-level control over attribute access.
 
 ```c
@@ -701,6 +781,10 @@ static PyGetSetDef Foo_getsetters[] = {
 ```
 
 ## Calling Python from C
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on calling python from c](https://realpython.com/search?q=calling+python+from+c).
+:::
 
 C extensions often need to call back into Python code—invoking callbacks, calling methods on objects, or using Python library functions. Use `PyObject_CallFunction()` for calling with C-style format arguments, `PyObject_CallObject()` with a tuple of arguments, or `PyObject_CallMethod()` to call a method by name. Always check if the callable is valid with `PyCallable_Check()` before calling, and check the return value for NULL (indicating an exception was raised). The GIL must be held when calling Python functions.
 
@@ -734,6 +818,10 @@ Hello from C!
 ```
 
 ## Performance Comparison
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on performance comparison](https://realpython.com/search?q=performance+comparison).
+:::
 
 Source  
 [src/cext/capi/simple.c](https://github.com/crazyguitar/pysheeet/blob/master/src/cext/capi/simple.c)

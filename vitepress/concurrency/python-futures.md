@@ -10,9 +10,17 @@ Source
 [[toc]]
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
+
 The `concurrent.futures` module provides a high-level interface for asynchronously executing callables using threads or processes. It abstracts the differences between threading and multiprocessing behind a unified API, making it easy to switch between them. The module introduces two key concepts: **Executors** that manage pools of workers, and **Futures** that represent the eventual result of an asynchronous operation.
 
 ## ThreadPoolExecutor Basics
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on threadpoolexecutor basics](https://realpython.com/search?q=threadpoolexecutor+basics).
+:::
 
 `ThreadPoolExecutor` manages a pool of threads that execute tasks concurrently. Use it for I/O-bound tasks like network requests, file operations, or database queries where threads spend time waiting for external resources.
 
@@ -41,6 +49,10 @@ print(f"Concurrent: {time.time() - start:.2f}s")
 
 ## ProcessPoolExecutor Basics
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on processpoolexecutor basics](https://realpython.com/search?q=processpoolexecutor+basics).
+:::
+
 `ProcessPoolExecutor` manages a pool of processes for true parallel execution. Use it for CPU-bound tasks like data processing, calculations, or image manipulation where you need to utilize multiple CPU cores.
 
 ```python
@@ -68,6 +80,10 @@ if __name__ == "__main__":
 
 ## Using submit() and Future Objects
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using submit and future objects](https://realpython.com/search?q=using+submit+and+future+objects).
+:::
+
 The `submit()` method schedules a callable and returns a `Future` object immediately. The Future represents the pending result and provides methods to check status, get the result, or cancel the task. This gives more control than `map()` for handling individual tasks.
 
 ```python
@@ -94,6 +110,10 @@ with ThreadPoolExecutor(max_workers=3) as executor:
 ```
 
 ## Processing Results as They Complete
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on processing results as they complete](https://realpython.com/search?q=processing+results+as+they+complete).
+:::
 
 `as_completed()` yields futures as they complete, regardless of submission order. This is useful when you want to process results as soon as they're available rather than waiting for all tasks to finish.
 
@@ -128,6 +148,10 @@ with ThreadPoolExecutor(max_workers=5) as executor:
 
 ## Using wait() for Completion Control
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using wait for completion control](https://realpython.com/search?q=using+wait+for+completion+control).
+:::
+
 `wait()` blocks until specified futures complete. You can wait for all tasks, the first task, or the first exception. This provides fine-grained control over when to proceed.
 
 ```python
@@ -157,6 +181,10 @@ with ThreadPoolExecutor(max_workers=3) as executor:
 ```
 
 ## Adding Callbacks to Futures
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on adding callbacks to futures](https://realpython.com/search?q=adding+callbacks+to+futures).
+:::
 
 Callbacks are functions that execute automatically when a future completes. They're useful for processing results without blocking the main thread or for chaining operations. The callback receives the future as its argument.
 
@@ -189,6 +217,10 @@ with ThreadPoolExecutor(max_workers=3) as executor:
 
 ## Exception Handling
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on exception handling](https://realpython.com/search?q=exception+handling).
+:::
+
 Exceptions raised in tasks are captured and re-raised when you call `result()`. You can also check for exceptions using `exception()`. Always handle exceptions to prevent silent failures.
 
 ```python
@@ -218,6 +250,10 @@ with ThreadPoolExecutor(max_workers=3) as executor:
 ```
 
 ## Timeout Handling
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on timeout handling](https://realpython.com/search?q=timeout+handling).
+:::
 
 Both `result()` and `as_completed()` accept timeout parameters. If a task doesn't complete within the timeout, a `TimeoutError` is raised. This prevents indefinite blocking on slow or stuck tasks.
 
@@ -251,6 +287,10 @@ with ThreadPoolExecutor(max_workers=2) as executor:
 
 ## Cancelling Tasks
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on cancelling tasks](https://realpython.com/search?q=cancelling+tasks).
+:::
+
 Tasks can be cancelled before they start executing using `cancel()`. Once a task has started, it cannot be cancelled. Check `cancelled()` to see if cancellation succeeded.
 
 ```python
@@ -280,6 +320,10 @@ with ThreadPoolExecutor(max_workers=1) as executor:
 
 ## Executor Context Manager
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on executor context manager](https://realpython.com/search?q=executor+context+manager).
+:::
+
 Using executors as context managers (`with` statement) ensures proper cleanup. When exiting the context, `shutdown(wait=True)` is called automatically, which waits for all pending tasks to complete before returning.
 
 ```python
@@ -307,6 +351,10 @@ finally:
 
 ## Map with Chunking
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on map with chunking](https://realpython.com/search?q=map+with+chunking).
+:::
+
 For large iterables, `map()` can be more efficient with chunking. The `chunksize` parameter groups items together, reducing overhead from inter-process communication when using `ProcessPoolExecutor`.
 
 ```python
@@ -333,6 +381,10 @@ if __name__ == "__main__":
 ```
 
 ## Real-World Example: Parallel Downloads
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on real-world example parallel downloads](https://realpython.com/search?q=real-world+example+parallel+downloads).
+:::
 
 This example demonstrates a practical use case: downloading multiple files concurrently with progress tracking, error handling, and timeout management.
 

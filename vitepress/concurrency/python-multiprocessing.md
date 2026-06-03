@@ -10,9 +10,17 @@ Source
 [[toc]]
 ## Introduction
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on introduction](https://realpython.com/search?q=introduction).
+:::
+
 The `multiprocessing` module enables true parallel execution by spawning separate Python processes, each with its own Python interpreter and memory space. Unlike threads, processes bypass the Global Interpreter Lock (GIL), making multiprocessing ideal for CPU-bound tasks that need to utilize multiple CPU cores. The trade-off is higher overhead for process creation and inter-process communication compared to threads.
 
 ## Creating Processes
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on creating processes](https://realpython.com/search?q=creating+processes).
+:::
 
 Creating processes is similar to creating threads. Each process runs in its own memory space, so changes to variables in one process don't affect others. Use `start()` to begin execution and `join()` to wait for completion.
 
@@ -37,6 +45,10 @@ if __name__ == "__main__":
 ```
 
 ## Process Pool
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on process pool](https://realpython.com/search?q=process+pool).
+:::
 
 A `Pool` manages a collection of worker processes and distributes tasks among them. This is more efficient than creating a new process for each task, as processes are reused. The pool provides methods like `map()`, `apply()`, and their async variants for different use cases.
 
@@ -67,6 +79,10 @@ if __name__ == "__main__":
 ```
 
 ## Pool Methods
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on pool methods](https://realpython.com/search?q=pool+methods).
+:::
 
 The Pool class provides several methods for distributing work. `map()` applies a function to each item in an iterable and returns results in order. `apply()` calls a function with arguments and blocks until complete. The `_async` variants return immediately with an `AsyncResult` object.
 
@@ -101,6 +117,10 @@ if __name__ == "__main__":
 
 ## Sharing Data with Queue
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sharing data with queue](https://realpython.com/search?q=sharing+data+with+queue).
+:::
+
 Processes don't share memory by default. `multiprocessing.Queue` provides a thread and process-safe way to exchange data between processes. It's the recommended approach for most inter-process communication scenarios.
 
 ```python
@@ -133,6 +153,10 @@ if __name__ == "__main__":
 ```
 
 ## Sharing Data with Pipe
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on sharing data with pipe](https://realpython.com/search?q=sharing+data+with+pipe).
+:::
 
 A `Pipe` creates a two-way communication channel between two processes. It's simpler and faster than Queue for point-to-point communication but only supports two endpoints. Each end can send and receive data.
 
@@ -168,6 +192,10 @@ if __name__ == "__main__":
 
 ## Shared Memory with Value and Array
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on shared memory with value and array](https://realpython.com/search?q=shared+memory+with+value+and+array).
+:::
+
 For simple shared state, `Value` and `Array` provide shared memory that multiple processes can access. These are faster than Queue/Pipe for frequently accessed data but require careful synchronization to avoid race conditions.
 
 ```python
@@ -202,6 +230,10 @@ if __name__ == "__main__":
 
 ## Manager for Complex Shared Objects
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on manager for complex shared objects](https://realpython.com/search?q=manager+for+complex+shared+objects).
+:::
+
 A `Manager` provides a way to share more complex Python objects (lists, dicts) between processes. The manager runs a server process that holds the actual objects, and other processes access them through proxies. This is slower than Value/Array but supports arbitrary Python objects.
 
 ```python
@@ -230,6 +262,10 @@ if __name__ == "__main__":
 ```
 
 ## Process Synchronization
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on process synchronization](https://realpython.com/search?q=process+synchronization).
+:::
 
 Multiprocessing provides the same synchronization primitives as threading: `Lock`, `RLock`, `Semaphore`, `Event`, `Condition`, and `Barrier`. These work across processes instead of threads.
 
@@ -260,6 +296,10 @@ if __name__ == "__main__":
 
 ## Daemon Processes
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on daemon processes](https://realpython.com/search?q=daemon+processes).
+:::
+
 Like daemon threads, daemon processes are terminated when the main process exits. They're useful for background tasks that shouldn't prevent program termination. Set `daemon=True` before calling `start()`.
 
 ```python
@@ -280,6 +320,10 @@ if __name__ == "__main__":
 ```
 
 ## Handling Process Termination
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on handling process termination](https://realpython.com/search?q=handling+process+termination).
+:::
 
 Processes can be terminated gracefully using `terminate()` or forcefully using `kill()`. Always clean up resources properly and consider using signals for graceful shutdown in production code.
 
@@ -316,6 +360,10 @@ if __name__ == "__main__":
 
 ## ProcessPoolExecutor
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on processpoolexecutor](https://realpython.com/search?q=processpoolexecutor).
+:::
+
 `concurrent.futures.ProcessPoolExecutor` provides a higher-level interface for process pools that's consistent with `ThreadPoolExecutor`. It's often easier to use than `multiprocessing.Pool` and integrates well with the futures pattern.
 
 ```python
@@ -341,6 +389,10 @@ if __name__ == "__main__":
 ```
 
 ## Comparing Threads vs Processes
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on comparing threads vs processes](https://realpython.com/search?q=comparing+threads+vs+processes).
+:::
 
 Choose threads for I/O-bound tasks (network, file I/O) where the GIL is released during waiting. Choose processes for CPU-bound tasks that need true parallelism. This example demonstrates the performance difference.
 

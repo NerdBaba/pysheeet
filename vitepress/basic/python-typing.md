@@ -9,6 +9,11 @@ PEP [484](https://www.python.org/dev/peps/pep-0484/), which provides a specifica
 
 ## Without type check
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on without type check](https://realpython.com/search?q=without+type+check).
+:::
+
+
 ```python
 def fib(n):
     a, b = 0, 1
@@ -37,6 +42,11 @@ TypeError: 'float' object cannot be interpreted as an integer
 
 ## With type check
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on with type check](https://realpython.com/search?q=with+type+check).
+:::
+
+
 ```python
 # give a type hint
 from typing import Generator
@@ -61,6 +71,11 @@ fib.py:12: error: Argument 1 to "fib" has incompatible type "float"; expected "i
 ```
 
 ## Basic types
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on basic types](https://realpython.com/search?q=basic+types).
+:::
+
 
 ```python
 import io
@@ -138,6 +153,11 @@ var_mutable_dict: MutableMapping[str, str] = {"bar": "Bar"}
 
 ## Functions
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on functions](https://realpython.com/search?q=functions).
+:::
+
+
 ```python
 from typing import Generator, Callable
 
@@ -156,6 +176,11 @@ f: Callable[[int], int] = lambda x: x * 2
 ```
 
 ## Classes
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on classes](https://realpython.com/search?q=classes).
+:::
+
 
 ```python
 from typing import ClassVar, Dict, List
@@ -182,6 +207,11 @@ print(foo.foo(1, "abc"))
 
 ## Generator
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on generator](https://realpython.com/search?q=generator).
+:::
+
+
 ```python
 from typing import Generator
 
@@ -199,6 +229,11 @@ i: Iterator[int] = (x for x in range(3))
 ```
 
 ## Asynchronous Generator
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on asynchronous generator](https://realpython.com/search?q=asynchronous+generator).
+:::
+
 
 ```python
 import asyncio
@@ -227,6 +262,11 @@ loop.run_until_complete(main())
 
 ## Context Manager
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on context manager](https://realpython.com/search?q=context+manager).
+:::
+
+
 ```python
 from typing import ContextManager, Generator, IO
 from contextlib import contextmanager
@@ -243,6 +283,11 @@ with cm as f:
 ```
 
 ## Asynchronous Context Manager
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on asynchronous context manager](https://realpython.com/search?q=asynchronous+context+manager).
+:::
+
 
 ```python
 import asyncio
@@ -270,6 +315,11 @@ loop.run_until_complete(main())
 
 ## Avoid `None` access
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on avoid none access](https://realpython.com/search?q=avoid+none+access).
+:::
+
+
 ```python
 import re
 
@@ -296,6 +346,11 @@ foo.py:15: error: Item "None" of "Optional[Pattern[Any]]" has no attribute "matc
 ```
 
 ## Positional-only arguments
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on positional-only arguments](https://realpython.com/search?q=positional-only+arguments).
+:::
+
 
 ```python
 # define arguments with names beginning with __
@@ -328,6 +383,11 @@ foo.py:15: error: Too many positional arguments for "gcd"
 
 ## Multiple return values
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on multiple return values](https://realpython.com/search?q=multiple+return+values).
+:::
+
+
 ```python
 from typing import Tuple, Iterable, Union
 
@@ -348,6 +408,11 @@ c, d = bar(3, "bar")  # ok
 
 ## Optional Type
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on optional type](https://realpython.com/search?q=optional+type).
+:::
+
+
 ```python
 from typing import List, Union
 
@@ -367,6 +432,11 @@ first([None])
 ```
 
 ## Be careful of `Optional`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on be careful of optional](https://realpython.com/search?q=be+careful+of+optional).
+:::
+
 
 ```python
 from typing import cast, Optional
@@ -415,6 +485,11 @@ foo.py:11: error: Argument 1 to "fib" has incompatible type "Optional[int]"; exp
 
 ## Be careful of casting
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on be careful of casting](https://realpython.com/search?q=be+careful+of+casting).
+:::
+
+
 ```python
 from typing import cast, Optional
 
@@ -439,6 +514,11 @@ $ mypy --strict foo.py
 ```
 
 ## Forward references
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on forward references](https://realpython.com/search?q=forward+references).
+:::
+
 
 Based on PEP 484, if we want to reference a type before it has been declared, we have to use **string literal** to imply that there is a type of that name later on in the file.
 
@@ -485,6 +565,11 @@ NameError: name 'A' is not defined
 
 ## Postponed Evaluation of Annotations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on postponed evaluation of annotations](https://realpython.com/search?q=postponed+evaluation+of+annotations).
+:::
+
+
 **New in Python 3.7**
 
 - PEP [563](https://www.python.org/dev/peps/pep-0563/) - Postponed Evaluation of Annotations
@@ -518,6 +603,11 @@ Annotation can only be used within the scope which names have already existed. T
 
 
 ## Type Alias
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on type alias](https://realpython.com/search?q=type+alias).
+:::
+
 
 Like `typedef` or `using` in c/c++
 
@@ -566,6 +656,11 @@ v: Vector = [1., 2.]
 
 ## Using NewType
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using newtype](https://realpython.com/search?q=using+newtype).
+:::
+
+
 Unlike alias, `NewType` returns a separate type but is identical to the original type at runtime.
 
 ```python
@@ -609,6 +704,11 @@ Further reading:
 
 ## Using `TypeVar` as template
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using typevar as template](https://realpython.com/search?q=using+typevar+as+template).
+:::
+
+
 Like c++ `template <typename T>`
 
 ```cpp
@@ -642,6 +742,11 @@ add(1., 2.)
 ```
 
 ## Using `TypeVar` and `Generic` as class template
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on using typevar and generic as class template](https://realpython.com/search?q=using+typevar+and+generic+as+class+template).
+:::
+
 
 Like c++ `template <typename T> class`
 
@@ -695,6 +800,11 @@ foo.py:13: error: Incompatible types in assignment (expression has type "str", v
 ```
 
 ## Scoping rules for `TypeVar`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on scoping rules for typevar](https://realpython.com/search?q=scoping+rules+for+typevar).
+:::
+
 
 - `TypeVar` used in different generic function will be inferred to be different types.
 
@@ -797,6 +907,11 @@ foo.py:8: error: Invalid type "foo.S"
 
 ## Restricting to a fixed set of possible types
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on restricting to a fixed set of possible types](https://realpython.com/search?q=restricting+to+a+fixed+set+of+possible+types).
+:::
+
+
 `T = TypeVar('T', ClassA, ...)` means we create a **type variable with a value restriction**.
 
 ```python
@@ -824,6 +939,11 @@ foo.py:11: error: Value of type variable "T" of "add" cannot be "str"
 ```
 
 ## `TypeVar` with an upper bound
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on typevar with an upper bound](https://realpython.com/search?q=typevar+with+an+upper+bound).
+:::
+
 
 `T = TypeVar('T', bound=BaseClass)` means we create a **type variable with an upper bound**. The concept is similar to **polymorphism** in c++.
 
@@ -932,6 +1052,11 @@ foo.py:40: error: Value of type variable "S" of "area" cannot be "int"
 ```
 
 ## @overload
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on overload](https://realpython.com/search?q=overload).
+:::
+
 
 Sometimes, we use `Union` to infer that the return of a function has multiple different types. However, type checker cannot distinguish which type do we want. Therefore, following snippet shows that type checker cannot determine which type is correct.
 
@@ -1067,6 +1192,11 @@ NotImplementedError
 ```
 
 ## Stub Files
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on stub files](https://realpython.com/search?q=stub+files).
+:::
+
 
 Stub files just like header files which we usually use to define our interfaces in c/c++. In python, we can define our interfaces in the same module directory or `export MYPYPATH=${stubs}`
 

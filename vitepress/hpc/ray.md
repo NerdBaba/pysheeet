@@ -11,6 +11,10 @@ This cheat sheet covers the Ray Python API, launching Ray clusters on Slurm, clu
 
 ## Connect to a Ray Cluster
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
+
 Ray uses three default ports:
 
 - `6379` — GCS (Global Control Store), the main cluster coordination port
@@ -38,6 +42,10 @@ print(ray.cluster_resources())
 ```
 
 ## Remote Functions
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 `@ray.remote` turns a function into a distributed task. Use `.remote()` to submit and `ray.get()` to collect results.
 
@@ -67,6 +75,10 @@ def train_large_model(config):
 
 ## Object Store
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
+
 `ray.put()` places objects in the shared object store so multiple tasks can access them without re-serializing. This is useful for large models or datasets.
 
 ```python
@@ -88,6 +100,10 @@ print(ray.get(futures))
 ```
 
 ## `ray.wait()`
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 `ray.wait()` returns completed futures without blocking on all of them. Useful for processing results as they arrive.
 
@@ -114,6 +130,10 @@ while futures:
 
 ## Resource Management
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
+
 Ray exposes cluster resource information and supports fractional GPU allocation and custom resource types for fine-grained scheduling control.
 
 ```python
@@ -130,6 +150,10 @@ def light_inference(batch):
 ```
 
 ## Fault Tolerance
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 For long-running distributed training, Ray can automatically restart crashed actors and retry failed tasks without bringing down the entire job.
 
@@ -156,6 +180,10 @@ def train_step(data):
 
 ## Runtime Environments
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
+
 Runtime environments let you specify per-task or per-actor dependencies (pip packages, env vars, working directory) without baking them into the container.
 
 ```python
@@ -171,6 +199,10 @@ ray.init(runtime_env={"working_dir": "/workspace", "pip": ["vllm==0.15.1"]})
 ```
 
 ## Ray Actors
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 Actors are stateful workers. Each actor runs in its own process and holds state across method calls.
 
@@ -196,6 +228,10 @@ results = ray.get(futures)
 ```
 
 ## Placement Groups
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 Placement groups control how tasks and actors are co-located across nodes. This is essential for distributed training where you need to pin GPU workers to specific nodes (e.g., one placement group per node with `STRICT_PACK`).
 
@@ -255,6 +291,10 @@ Placement strategies:
 - `SPREAD` — best-effort spreading across nodes
 
 ## Deploy Megatron on Ray
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 Ray placement groups can replace `torchrun` for launching Megatron distributed training. Each Ray actor maps to one GPU rank, and placement groups ensure workers are pinned to the correct nodes. The following example launches DeepSeek-V2-Lite pretraining across 2 nodes with 8 GPUs each. Source: [raytop Megatron example](https://github.com/crazyguitar/raytop/tree/main/examples/megatron).
 
@@ -422,6 +462,10 @@ if __name__ == "__main__":
 
 ## Launch a Ray Cluster on Slurm
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
+
 The following sbatch script provisions a Ray cluster inside Docker containers across Slurm-managed nodes. It starts a Ray head on the first allocated node and Ray workers on all remaining nodes, then waits until every node has registered with the cluster.
 
 ```bash
@@ -438,6 +482,10 @@ sbatch -N 4 ray.sbatch --image /fsx/ray+latest.tar.gz
 The script handles image loading (tarball or registry pull), head/worker startup, and health checking via `ray status`. See `src/ray/ray.sbatch` for the full script.
 
 ## Ray Cluster Status
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 ```bash
 # check cluster status from head node
@@ -458,6 +506,10 @@ curl http://${HEAD_IP}:8265/api/jobs/
 
 ## Ray Dashboard
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
+
 Ray provides a built-in web dashboard on port `8265` of the head node. When running on HPC clusters behind a firewall, use SSH port forwarding to access it:
 
 ```bash
@@ -469,6 +521,10 @@ ssh -L 8265:${HEAD_IP}:8265 login-node
 ```
 
 ## Monitoring with raytop
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 [raytop](https://github.com/crazyguitar/raytop) is a real-time TUI monitor for Ray clusters — like `htop` for distributed GPU training. It provides a unified view of cluster-wide resource utilization including CPU, GPU, memory, per-node breakdowns, per-GPU utilization via Prometheus metrics, running job status, and live actor counts.
 
@@ -497,6 +553,10 @@ Use `j`/`k` or arrow keys to navigate nodes, `Enter` to open the detail panel, `
 For monitoring long-running distributed training jobs (e.g., verl RLHF, Megatron pretraining), `raytop` provides a quick way to verify that all nodes are active, GPUs are fully utilized, and no actors have crashed — without needing to open the Ray dashboard in a browser.
 
 ## Submit a Ray Job
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 The Ray head address is printed by the sbatch script at the end:
 
@@ -543,6 +603,10 @@ ray job stop --address ${RAY_HEAD} JOB_ID
 ```
 
 ## Environment Variables
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.ray.io/).
+:::
 
 Common environment variables for Ray on HPC clusters:
 

@@ -11,6 +11,11 @@ The main goal of this cheat sheet is to collect some common snippets which are r
 
 ## String
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on string](https://realpython.com/search?q=string).
+:::
+
+
 In Python 2, strings are represented in *bytes*, not *Unicode*. Python provides different types of string such as Unicode string, raw string, and so on. In this case, if we want to declare a Unicode string, we add `u` prefix for string literals.
 
 ```python
@@ -41,6 +46,11 @@ b'Caf\xc3\xa9'
 ```
 
 ## Characters
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on characters](https://realpython.com/search?q=characters).
+:::
+
 
 Python 2 takes all string characters as bytes. In this case, the length of strings may be not equivalent to the number of characters. For example, the length of `Café` is 5, not 4 because `é` is encoded as a 2 bytes character.
 
@@ -74,6 +84,11 @@ b'Caf\xc3\xa9'
 
 ## Porting unicode(s, 'utf-8')
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on porting unicode s utf-8](https://realpython.com/search?q=porting+unicode+s+utf-8).
+:::
+
+
 The [unicode()](https://docs.python.org/2.7/library/functions.html#unicode) built-in function was removed in Python 3 so what is the best way to convert the expression `unicode(s, 'utf-8')` so it works in both Python 2 and 3?
 
 In Python 2:
@@ -100,6 +115,11 @@ So, the real answer is...
 
 ## Unicode Code Point
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on unicode code point](https://realpython.com/search?q=unicode+code+point).
+:::
+
+
 [ord](https://docs.python.org/3/library/functions.html#ord) is a powerful built-in function to get a Unicode code point from a given character. Consequently, If we want to check a Unicode code point of a character, we can use `ord`.
 
 ```python
@@ -119,6 +139,11 @@ U+6587
 
 ## Encoding
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on encoding](https://realpython.com/search?q=encoding).
+:::
+
+
 A *Unicode code point* transfers to a *byte string* is called encoding.
 
 ```python
@@ -129,6 +154,11 @@ A *Unicode code point* transfers to a *byte string* is called encoding.
 
 ## Decoding
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on decoding](https://realpython.com/search?q=decoding).
+:::
+
+
 A *byte string* transfers to a *Unicode code point* is called decoding.
 
 ```python
@@ -138,6 +168,11 @@ A *byte string* transfers to a *Unicode code point* is called decoding.
 ```
 
 ## Unicode Normalization
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on unicode normalization](https://realpython.com/search?q=unicode+normalization).
+:::
+
 
 Some characters can be represented in two similar form. For example, the character, `é` can be written as `e ́` (Canonical Decomposition) or `é` (Canonical Composition). In this case, we may acquire unexpected results when we are comparing two strings even though they look alike. Therefore, we can normalize a Unicode form to solve the issue.
 
@@ -174,6 +209,11 @@ True
 
 ## Avoid `UnicodeDecodeError`
 
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on avoid unicodedecodeerror](https://realpython.com/search?q=avoid+unicodedecodeerror).
+:::
+
+
 Python raises UnicodeDecodeError when byte strings cannot decode to Unicode code points. If we want to avoid this exception, we can pass *replace*, *backslashreplace*, or *ignore* to errors argument in [decode](https://docs.python.org/3/library/stdtypes.html#bytes.decode).
 
 ```python
@@ -194,6 +234,11 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid 
 ```
 
 ## Long String
+
+::: tip Learn More
+For more examples and detailed explanations, see [the Real Python guide on long string](https://realpython.com/search?q=long+string).
+:::
+
 
 The following snippet shows common ways to declare a multi-line string in Python.
 

@@ -9,6 +9,10 @@ PyTorch is an open-source machine learning framework developed by Meta AI. It pr
 
 ## Check CUDA
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Before running GPU-accelerated computations, verify that CUDA is properly installed and accessible. These commands help check GPU availability and configure device settings.
 
 ```python
@@ -28,6 +32,10 @@ True
 
 ## Check Device
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Determine where a tensor is stored (CPU or GPU) to ensure computations run on the intended device.
 
 ```python
@@ -40,6 +48,10 @@ device(type='cuda', index=0)
 ```
 
 ## Create Tensors
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Tensors are the fundamental data structure in PyTorch, similar to NumPy arrays but with GPU acceleration support. You can create tensors from Python lists, with specific values, or using various initialization methods.
 
@@ -61,6 +73,10 @@ tensor([1, 2, 3, 4, 5], device='cuda:0')
 
 ## Tensor Properties
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Understanding tensor properties like shape, data type, and device location is crucial for debugging and ensuring compatibility between operations.
 
 ```python
@@ -79,6 +95,10 @@ device(type='cpu')
 
 ## Contiguous Tensors
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Tensors must be stored in contiguous memory blocks for certain operations. After operations like `transpose` or `permute`, tensors may not be contiguous. Use `contiguous()` to create a contiguous copy when needed.
 
 ```python
@@ -94,6 +114,10 @@ True
 ```
 
 ## View vs Reshape
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 `view()` requires tensors to be contiguous and returns a view sharing the same memory. `reshape()` works on both contiguous and non-contiguous tensors, creating a copy if needed. Use `view()` when you know the tensor is contiguous for better performance.
 
@@ -118,6 +142,10 @@ torch.Size([3, 8])
 
 ## Reshape Tensors
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Common reshaping operations for preparing data for neural network layers.
 
 ```python
@@ -129,6 +157,10 @@ x.unsqueeze(0)
 ```
 
 ## Move Tensors
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Transfer tensors between CPU and GPU, or between different GPU devices. This is necessary when working with models and data on different devices.
 
@@ -144,6 +176,10 @@ x = x.to(device)
 ```
 
 ## Arithmetic
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 PyTorch supports element-wise operations and matrix operations. Most operations have both functional and method forms, and support broadcasting for tensors of different shapes.
 
@@ -185,6 +221,10 @@ tensor([[0.3370, 0.0463],
 
 ## In-place Operations
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Operations ending with `_` modify tensors directly without creating new tensors, saving memory. Use these carefully as they can affect gradient computation.
 
 ```python
@@ -199,6 +239,10 @@ y.fill_(5)
 ```
 
 ## Transpose
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Swap dimensions of multi-dimensional tensors. This is commonly used when preparing data for different neural network layers that expect specific input shapes.
 
@@ -216,6 +260,10 @@ torch.Size([2, 2, 6])
 ```
 
 ## Matrix Multiplication
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Perform batch matrix operations on high-dimensional tensors. This is fundamental for neural network computations where you process multiple samples simultaneously.
 
@@ -235,6 +283,10 @@ tensor([[[[ 1.0950, -0.1160, -1.4840],
 ```
 
 ## Aggregation
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Reduce tensors along specified dimensions using aggregation functions. These operations are essential for computing statistics and reducing dimensionality.
 
@@ -269,6 +321,10 @@ indices=tensor([[1, 2, 0, 1],
 
 ## Slicing
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Extract parts of tensors using NumPy-style indexing. Slicing is essential for accessing specific elements, rows, columns, or sub-tensors without copying data.
 
 ```python
@@ -292,6 +348,10 @@ tensor([[1., 1., 1.],
 
 ## Advanced Indexing
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Use boolean masks and fancy indexing to select elements based on conditions or specific index arrays.
 
 ```python
@@ -308,6 +368,10 @@ x[[0, 1], [1, 2]]
 ```
 
 ## Concatenation
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Combine multiple tensors along existing or new dimensions. This is useful for building batches or combining features from different sources.
 
@@ -328,6 +392,10 @@ torch.Size([2, 6])
 
 ## Splitting
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Split tensors into multiple chunks or along specific dimensions. Useful for distributing data across multiple GPUs or processing in smaller batches.
 
 ```python
@@ -345,6 +413,10 @@ Split tensors into multiple chunks or along specific dimensions. Useful for dist
 
 ## Gradient
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Automatic differentiation is PyTorch's core feature for training neural networks. Enable gradient tracking on tensors to compute derivatives during backpropagation.
 
 ```python
@@ -361,6 +433,10 @@ tensor([-1.1442, -0.8709, -0.2581], device='cuda:0')
 ```
 
 ## Disable Gradient
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Temporarily disable gradient computation for inference or when you don't need gradients. This reduces memory usage and speeds up computations.
 
@@ -382,6 +458,10 @@ def predict(x):
 
 ## Backpropagation
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Compute gradients using automatic differentiation. PyTorch builds a computation graph during the forward pass and computes gradients during the backward pass using the chain rule.
 
 ```python
@@ -399,6 +479,10 @@ z.backward()
 
 ## Gradient Accumulation
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Accumulate gradients over multiple backward passes. This is useful for simulating larger batch sizes when GPU memory is limited.
 
 ```python
@@ -413,6 +497,10 @@ for i, (inputs, targets) in enumerate(dataloader):
 ```
 
 ## Neural Network Module
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Define neural networks by subclassing `nn.Module`. This provides a clean interface for building complex models with automatic parameter management.
 
@@ -436,6 +524,10 @@ model.to('cuda')
 
 ## Common Layers
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 PyTorch provides a wide variety of pre-built layers for constructing neural networks.
 
 ```python
@@ -457,6 +549,10 @@ embedding = nn.Embedding(1000, 128)
 
 ## Loss Functions
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Loss functions measure how well the model's predictions match the target values. Choose the appropriate loss function based on your task.
 
 ```python
@@ -475,6 +571,10 @@ loss = cross_entropy(outputs, targets)
 
 ## Optimizers
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Optimizers update model parameters based on computed gradients. Different optimizers use different strategies for parameter updates.
 
 ```python
@@ -492,6 +592,10 @@ optimizer.step()
 
 ## Learning Rate Scheduler
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Adjust the learning rate during training to improve convergence and model performance.
 
 ```python
@@ -507,6 +611,10 @@ for epoch in range(num_epochs):
 ```
 
 ## Training Loop
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 A typical training loop involves forward pass, loss computation, backward pass, and parameter updates.
 
@@ -527,6 +635,10 @@ for epoch in range(num_epochs):
 
 ## Evaluation Mode
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Switch between training and evaluation modes to control behavior of layers like dropout and batch normalization.
 
 ```python
@@ -539,6 +651,10 @@ with torch.no_grad():
 ```
 
 ## Save and Load Models
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Save trained models to disk and load them later for inference or continued training.
 
@@ -560,6 +676,10 @@ optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
 
 ## DataLoader
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Efficiently load and batch data for training. DataLoader handles shuffling, batching, and parallel data loading.
 
 ```python
@@ -574,6 +694,10 @@ for batch_x, batch_y in loader:
 ```
 
 ## Custom Dataset
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Create custom datasets by subclassing `Dataset` for loading data from various sources.
 
@@ -597,6 +721,10 @@ loader = DataLoader(dataset, batch_size=32)
 
 ## NumPy Conversion
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Convert between PyTorch tensors and NumPy arrays for interoperability with other libraries. Note that tensors on GPU must be moved to CPU first.
 
 ```python
@@ -613,6 +741,10 @@ tensor = torch.from_numpy(arr)
 
 ## Shared Memory
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 CPU tensors and NumPy arrays can share the same underlying memory, so modifications to one will affect the other.
 
 ```python
@@ -627,6 +759,10 @@ array([[[ 1.8194908 ,  3.0258512 ,  0.67326605],
 ```
 
 ## Random Seed
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Set random seeds for reproducibility across different runs. This ensures consistent results when debugging or comparing experiments.
 
@@ -645,6 +781,10 @@ random.seed(42)
 
 ## GPU Memory Management
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Monitor and manage GPU memory usage to avoid out-of-memory errors and optimize performance.
 
 ```python
@@ -661,6 +801,10 @@ print(torch.cuda.memory_summary())
 ```
 
 ## Distributed Training
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 NCCL (NVIDIA Collective Communication Library) enables efficient multi-GPU and multi-node training. Initialize the distributed process group and check its status.
 
@@ -687,6 +831,10 @@ True
 
 ## Launch with torchrun
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Use `torchrun` to launch distributed training across multiple GPUs or nodes. It automatically sets up environment variables for distributed training.
 
 ```bash
@@ -703,6 +851,10 @@ torchrun --nproc_per_node=4 \
 ```
 
 ## Launch with Slurm
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 Submit distributed training jobs to Slurm clusters. Slurm manages resource allocation and node assignment. See [Slurm](../hpc/slurm) for more Slurm examples.
 
@@ -727,6 +879,10 @@ srun torchrun --nproc_per_node=4 \
 
 ## DistributedDataParallel
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
+
 Wrap your model with DDP for multi-GPU training. DDP uses NCCL for efficient gradient synchronization across GPUs.
 
 ```python
@@ -744,6 +900,10 @@ for inputs, targets in train_loader:
 ```
 
 ## Collective Operations
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://pytorch.org/tutorials/).
+:::
 
 NCCL provides collective communication operations for distributed training.
 

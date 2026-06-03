@@ -21,6 +21,10 @@ Scripts and examples:
 
 ## Quick Start
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.vllm.ai/).
+:::
+
 Get started in minutes. Install the package, launch a server, and query it with standard HTTP requests. Both engines expose OpenAI-compatible `/v1/chat/completions` and `/v1/completions` endpoints.
 
 **vLLM** (port 8000):
@@ -58,6 +62,10 @@ curl -X POST http://localhost:8000/v1/chat/completions \
 
 ## Tensor Parallel (TP)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.vllm.ai/).
+:::
+
 Tensor parallelism splits individual model layers across multiple GPUs, with each GPU holding a portion of the weight matrices. All GPUs participate in every forward pass, communicating via all-reduce operations. Essential for models that don't fit in a single GPU's memory.
 
 **Use when:** Model doesn't fit on a single GPU, or you need to reduce per-GPU memory.
@@ -74,6 +82,10 @@ trtllm-serve Qwen/Qwen2.5-14B-Instruct --tp_size 8
 ```
 
 ## Pipeline Parallel (PP)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.vllm.ai/).
+:::
 
 Pipeline parallelism divides the model into sequential stages, with each stage assigned to different GPUs. Unlike tensor parallelism where all GPUs work on every layer, pipeline parallelism processes different parts of the model on different GPUs. This reduces communication overhead since GPUs only pass activations between stages.
 
@@ -92,6 +104,10 @@ trtllm-serve Qwen/Qwen2.5-14B-Instruct --tp_size 4 --pp_size 2
 
 ## Data Parallel (DP)
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.vllm.ai/).
+:::
+
 Data parallelism creates multiple independent replicas of the model, each processing different requests simultaneously. This is the most effective way to increase throughput when you have sufficient GPU memory for multiple model copies. Each replica can use tensor parallelism internally.
 
 **Use when:** You need higher request throughput and have enough GPUs to replicate the model.
@@ -108,6 +124,10 @@ trtllm-serve Qwen/Qwen2.5-14B-Instruct --tp_size 8
 ```
 
 ## Expert Parallel (EP)
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.vllm.ai/).
+:::
 
 Expert parallelism is specifically designed for Mixture-of-Experts (MoE) models, where the model contains multiple expert sub-networks and a gating mechanism routes tokens to different experts. EP shards the experts across GPUs, allowing each GPU to hold a subset of experts.
 
@@ -130,6 +150,10 @@ trtllm-serve Qwen/Qwen1.5-MoE-A2.7B --tp_size 8 --ep_size 2
 
 ## Parallelism Formulas
 
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.vllm.ai/).
+:::
+
 Both engines use the same formula for computing total GPU requirements:
 
 ```text
@@ -143,6 +167,10 @@ Expert parallelism (EP) is handled differently:
 - **TensorRT-LLM**: EP subdivides TP (same as SGLang). `--tp_size 8 --ep_size 2` splits experts across 2 groups. Constraint: `moe_tp × ep = tp_size`.
 
 ## Distributed Serving on SLURM
+
+::: tip Learn More
+For more examples and detailed explanations, see [the guide](https://docs.vllm.ai/).
+:::
 
 Some large models (e.g., DeepSeek-V3, Llama-3.1-405B) may not fit into a single node. All three engines support serving across multiple nodes with different parallelism strategies (TP, PP, EP, DP). Multi-node deployment can be tricky at the beginning — the `run.sbatch` examples below show how to use `salloc` with each engine to get started quickly on Slurm. The scripts handle Docker image distribution to all nodes, container launch with EFA/GPU passthrough, worker coordination, and health checking. The server runs until you stop it with `Ctrl+C` or `scancel`.
 
