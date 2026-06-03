@@ -7,8 +7,7 @@ title: concurrent.futures
 Source  
 [src/basic/concurrency\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/concurrency_.py)
 
-Table of Contents
-
+[[toc]]
 ## Introduction
 
 The `concurrent.futures` module provides a high-level interface for asynchronously executing callables using threads or processes. It abstracts the differences between threading and multiprocessing behind a unified API, making it easy to switch between them. The module introduces two key concepts: **Executors** that manage pools of workers, and **Futures** that represent the eventual result of an asynchronous operation.

@@ -7,8 +7,7 @@ title: Datetime
 Source  
 [src/basic/datetime\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/datetime_.py)
 
-Table of Contents
-
+[[toc]]
 ## Introduction
 
 Python's `datetime` module provides classes for manipulating dates and times. The module includes `date` for calendar dates, `time` for clock times, `datetime` for combined date and time, `timedelta` for durations, and `timezone` for UTC offsets. Python 3.9+ also includes `zoneinfo` for IANA timezone support. Understanding these classes is essential for logging, scheduling, data analysis, and any application that works with temporal data.

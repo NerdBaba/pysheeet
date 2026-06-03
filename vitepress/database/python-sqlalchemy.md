@@ -4,8 +4,7 @@ title: SQLAlchemy Basics
 
 # SQLAlchemy Basics
 
-Table of Contents
-
+[[toc]]
 SQLAlchemy is the most popular database toolkit and Object-Relational Mapping (ORM) library for Python. It provides a full suite of well-known enterprise-level persistence patterns, designed for efficient and high-performing database access. SQLAlchemy is divided into two main components: the Core (low-level SQL abstraction) and the ORM (high-level object mapping). This cheat sheet covers the Core API, which provides a SQL Expression Language that allows you to construct SQL statements in Python code while remaining database-agnostic. The Core is ideal when you need fine-grained control over SQL queries or when working with existing database schemas.
 
 ## Create an Engine

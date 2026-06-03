@@ -4,8 +4,7 @@ title: SSH and Secure Tunnels
 
 # SSH and Secure Tunnels
 
-Table of Contents
-
+[[toc]]
 SSH (Secure Shell) is the standard protocol for secure remote access, providing encrypted communication between machines for command execution, file transfer, and network tunneling. Originally developed as a secure replacement for telnet and rsh, SSH has become essential infrastructure for system administration, deployment automation, and secure network access. Python's `paramiko` library provides a complete implementation of SSHv2 protocol, enabling programmatic SSH connections, SFTP file transfers, and sophisticated port forwarding scenarios. This cheat sheet covers the full spectrum of SSH operations—from basic password and key authentication to advanced tunneling techniques like reverse tunnels for NAT traversal, jump hosts for accessing isolated networks, and dynamic SOCKS proxies for routing arbitrary traffic through secure channels.
 
 ## Basic SSH Connection

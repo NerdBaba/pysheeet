@@ -14,3 +14,9 @@ Python's flexibility comes at a performance cost. When you need speed for numeri
 
 For most new projects wrapping C++ code, pybind11 is the recommended choice. For calling existing C libraries without a build step, use ctypes or cffi.
 
+## Articles
+
+- [C++ from Python](/extension/cpp-from-python)
+- [Python C API](/extension/python-capi)
+- [Python C Extension (Modern)](/extension/python-cext-modern)
+- [Python ctypes](/extension/python-ctypes)

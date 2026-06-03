@@ -4,12 +4,13 @@ title: Modern C/C++ Extensions
 
 # Modern C/C++ Extensions
 
-Table of Contents
-
+[[toc]]
 Python's flexibility and ease of use come at a performance cost compared to compiled languages. When you need maximum speed for numerical computing, real-time processing, system interfaces, or wrapping existing C/C++ libraries, native extensions bridge the gap between Python's productivity and C/C++'s performance. This guide covers modern approaches to building Python extensions: **pybind11** (the recommended choice for C++ projects), **ctypes/cffi** (for calling C libraries without compilation), and **Cython** (for Python-like syntax that compiles to C). We compare each approach using the same Fibonacci benchmark to help you choose the right tool for your specific use case.
 
-> [!NOTE]
-> For most C++ projects, **pybind11** is the recommended choice. It's used by major machine learning frameworks like PyTorch, TensorFlow, and scientific computing libraries like SciPy. pybind11 provides clean C++11 syntax, automatic type conversions between Python and C++ types, excellent NumPy integration for numerical computing, and seamless exception handling across language boundaries.
+::: tip
+For most C++ projects, **pybind11** is the recommended choice. It's used by major machine learning frameworks like PyTorch, TensorFlow, and scientific computing libraries like SciPy. pybind11 provides clean C++11 syntax, automatic type conversions between Python and C++ types, excellent NumPy integration for numerical computing, and seamless exception handling across language boundaries.
+:::
+
 
 ## Comparison of Approaches
 

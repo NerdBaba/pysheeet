@@ -7,8 +7,7 @@ title: Asyncio Basics
 Source  
 [src/basic/asyncio\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/asyncio_.py)
 
-Table of Contents
-
+[[toc]]
 ## Introduction
 
 The `asyncio` module, introduced in Python 3.4 and significantly improved in Python 3.5+ with `async/await` syntax, provides a foundation for writing asynchronous code. Unlike threads which use preemptive multitasking (the OS decides when to switch), asyncio uses cooperative multitasking where coroutines explicitly yield control using `await`. This eliminates race conditions common in threaded code and makes reasoning about program flow much easier.

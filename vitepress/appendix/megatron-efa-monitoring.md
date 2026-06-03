@@ -28,7 +28,7 @@ This guide assumes the following environment:
 - aws-ofi-nccl plugin with GIN support
 - Megatron-LM with Megatron-Bridge
 
-We have demonstrated how to use vLLM with NCCL GIN and DeepEP in a previous article. If you are interested in building NCCL and aws-ofi-nccl from source, refer to the [NCCL GIN article](https://www.pythonsheets.com/notes/appendix/nccl-gin.html) in this repository.
+We have demonstrated how to use vLLM with NCCL GIN and DeepEP in a previous article. If you are interested in building NCCL and aws-ofi-nccl from source, refer to the [NCCL GIN article](/appendix/nccl-gin) in this repository.
 
 ## Building the Megatron Container
 

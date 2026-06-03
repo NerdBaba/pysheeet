@@ -4,12 +4,13 @@ title: Modern Cryptography
 
 # Modern Cryptography
 
-Table of Contents
-
+[[toc]]
 This guide covers modern cryptographic practices in Python using the `cryptography` library, which is the recommended choice for new projects. The library provides both high-level recipes (Fernet) for common use cases and low-level primitives for advanced needs. We focus on secure defaults: AES-GCM for symmetric encryption (provides both confidentiality and integrity), RSA-OAEP for asymmetric encryption, Ed25519 for signatures, and proper key derivation functions. Avoid deprecated libraries like PyCrypto—use `cryptography` or `PyCryptodome` instead.
 
-> [!WARNING]
-> Cryptography is difficult to implement correctly. Prefer high-level APIs like Fernet when possible. Never invent your own cryptographic schemes. Always use authenticated encryption (AES-GCM, ChaCha20-Poly1305) instead of unauthenticated modes (AES-CBC, AES-CTR alone).
+::: warning
+Cryptography is difficult to implement correctly. Prefer high-level APIs like Fernet when possible. Never invent your own cryptographic schemes. Always use authenticated encryption (AES-GCM, ChaCha20-Poly1305) instead of unauthenticated modes (AES-CBC, AES-CTR alone).
+:::
+
 
 ## Algorithm Recommendations
 

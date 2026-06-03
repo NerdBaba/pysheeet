@@ -4,8 +4,7 @@ title: Dictionary
 
 # Dictionary
 
-Table of Contents
-
+[[toc]]
 Dictionaries are one of Python's most powerful and frequently used data structures. They store key-value pairs and provide O(1) average time complexity for lookups, insertions, and deletions. Since Python 3.7, dictionaries maintain insertion order as a language feature. This cheat sheet covers essential dictionary operations, from basic manipulation to advanced patterns like emulating dictionary behavior with special methods and implementing an LRU (Least Recently Used) cache.
 
 The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/dict.py).

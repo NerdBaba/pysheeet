@@ -7,8 +7,7 @@ title: Operating System
 Source  
 [src/basic/os\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/os_.py)
 
-Table of Contents
-
+[[toc]]
 Python's `os` module provides a portable way to interact with the operating system, abstracting platform-specific details behind a consistent API. Whether you're managing files and directories, spawning processes, reading environment variables, or querying system information, the `os` module handles the differences between Windows, Linux, and macOS. For path manipulation, the `os.path` submodule (or the modern `pathlib`) provides cross-platform path handling. This cheat sheet covers common OS operations with practical examples.
 
 ## Get System Information

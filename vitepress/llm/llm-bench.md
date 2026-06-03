@@ -4,8 +4,7 @@ title: LLM Benchmark
 
 # LLM Benchmark
 
-Table of Contents
-
+[[toc]]
 Benchmark suites for measuring LLM serving performance with vLLM, SGLang, and TensorRT-LLM. All use similar methodology — same test categories, workloads, and metrics — for easy comparison between the three inference engines.
 
 - **vLLM:** `vllm bench serve` via [bench.sh](https://github.com/crazyguitar/pysheeet/blob/master/src/llm/vllm/bench.sh)
@@ -53,7 +52,7 @@ bash bench.sh -H localhost -m /path/to/Qwen2.5-7B-Instruct --type throughput,pre
 
 ## Multi-Node with Slurm
 
-For benchmarking larger models (e.g., DeepSeek-V3, Llama-3.1-405B) that cannot fit on a single node, refer to [Distributed Serving on SLURM](https://www.pythonsheets.com/notes/llm/llm-serving.html#distributed-serving-on-slurm) for how to deploy multi-node serving with different parallelism strategies. Once the server is running, benchmark using `bench.sh` as shown in the Quick Start above.
+For benchmarking larger models (e.g., DeepSeek-V3, Llama-3.1-405B) that cannot fit on a single node, refer to [Distributed Serving on SLURM](/llm/llm-serving#distributed-serving-on-slurm) for how to deploy multi-node serving with different parallelism strategies. Once the server is running, benchmark using `bench.sh` as shown in the Quick Start above.
 
 ## Throughput
 

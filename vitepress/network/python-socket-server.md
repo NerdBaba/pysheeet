@@ -4,8 +4,7 @@ title: Socket Servers
 
 # Socket Servers
 
-Table of Contents
-
+[[toc]]
 Building network servers is one of the most common applications of socket programming. A server listens for incoming connections on a specific port, accepts client connections, and processes requests. Python's socket module provides all the primitives needed to build robust TCP and UDP servers, from simple single-threaded echo servers to complex multi-client applications.
 
 This section covers building TCP and UDP servers in Python using the socket module, including simple echo servers for learning the basics, IPv6 and dual-stack servers for modern network compatibility, Unix domain sockets for high-performance local IPC, the SocketServer module for rapid development, threaded servers for handling multiple clients, and zero-copy file transfer with sendfile. These patterns form the foundation for building production-ready network services.

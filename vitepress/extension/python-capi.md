@@ -4,12 +4,13 @@ title: Python C API
 
 # Python C API
 
-Table of Contents
-
+[[toc]]
 The Python C API is the traditional and most powerful way to write native extensions for CPython. It provides direct access to Python's internals, giving developers complete control over memory management, object creation, and interpreter interaction. While more verbose than modern alternatives like pybind11 or cffi, the C API remains essential for maintaining legacy extensions, understanding how Python works internally, implementing performance-critical code paths, or accessing low-level features not exposed by higher-level tools. The C API is also the foundation upon which tools like Cython and pybind11 are built.
 
-> [!WARNING]
-> The C extension interface is specific to CPython and may not work on alternative Python implementations like PyPy, Jython, or GraalPython. Additionally, the API can change between Python versions (especially between Python 2 and Python 3), requiring careful version handling and conditional compilation for compatibility.
+::: warning
+The C extension interface is specific to CPython and may not work on alternative Python implementations like PyPy, Jython, or GraalPython. Additionally, the API can change between Python versions (especially between Python 2 and Python 3), requiring careful version handling and conditional compilation for compatibility.
+:::
+
 
 ## Simple setup.py
 
@@ -216,8 +217,10 @@ static PyObject* foo(PyObject* self)
 2018-11-04 20:16:50.063579: thread 2  # 3 seconds later
 ```
 
-> [!WARNING]
-> Never call Python C API functions between `Py_BEGIN_ALLOW_THREADS` and `Py_END_ALLOW_THREADS`. The GIL must be held to safely access Python objects.
+::: warning
+Never call Python C API functions between `Py_BEGIN_ALLOW_THREADS` and `Py_END_ALLOW_THREADS`. The GIL must be held to safely access Python objects.
+:::
+
 
 ## Acquire the GIL
 

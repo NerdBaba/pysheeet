@@ -7,8 +7,7 @@ title: Asyncio Networking
 Source  
 [src/basic/asyncio\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/asyncio_.py)
 
-Table of Contents
-
+[[toc]]
 ## Introduction
 
 Asyncio excels at network programming because network I/O is inherently asynchronous - you send a request and wait for a response. Instead of blocking a thread while waiting, asyncio allows other tasks to run. This section covers building TCP/UDP servers and clients, HTTP requests, SSL/TLS encryption, and the Transport/Protocol API for low-level control.

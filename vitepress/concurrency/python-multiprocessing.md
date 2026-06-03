@@ -7,8 +7,7 @@ title: Multiprocessing
 Source  
 [src/basic/concurrency\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/concurrency_.py)
 
-Table of Contents
-
+[[toc]]
 ## Introduction
 
 The `multiprocessing` module enables true parallel execution by spawning separate Python processes, each with its own Python interpreter and memory space. Unlike threads, processes bypass the Global Interpreter Lock (GIL), making multiprocessing ideal for CPU-bound tasks that need to utilize multiple CPU cores. The trade-off is higher overhead for process creation and inter-process communication compared to threads.

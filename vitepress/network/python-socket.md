@@ -4,8 +4,7 @@ title: Socket Basics
 
 # Socket Basics
 
-Table of Contents
-
+[[toc]]
 Socket programming is the foundation of network communication in Python and virtually all networked applications. A socket is an endpoint for sending and receiving data across a network, providing a bidirectional communication channel between processes on the same machine or across different machines over the Internet. While Python provides high-level networking interfaces like `urllib`, `requests`, and `asyncio`, understanding low-level socket operations is essential for building custom protocols, debugging network issues, implementing network tools, and interfacing with system-level networking APIs.
 
 This cheat sheet covers the fundamentals of socket programming in Python, including hostname and DNS resolution, IP address manipulation, network byte order conversion, timeout handling, multicast communication, and proxy support. Whether you're building a simple client-server application, implementing a custom protocol, or troubleshooting network connectivity issues, these examples provide the building blocks you need.

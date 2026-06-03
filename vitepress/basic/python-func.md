@@ -4,8 +4,7 @@ title: Function
 
 # Function
 
-Table of Contents
-
+[[toc]]
 A function can help programmers to wrap their logic into a task for avoiding duplicate code. In Python, the definition of a function is so versatile that we can use many features such as decorator, annotation, docstrings, default arguments and so on to define a function. In this cheat sheet, it collects many ways to define a function and demystifies some enigmatic syntax in functions.
 
 ## Document Functions
@@ -38,8 +37,10 @@ Defining a function where the arguments are optional and have a default value is
 3
 ```
 
-> [!WARNING]
-> Avoid using mutable objects (like lists or dictionaries) as default arguments. Default argument values are evaluated only once when the function is defined, not each time the function is called. This means mutable defaults are shared across all calls, which can lead to unexpected behavior where modifications persist between function calls.
+::: warning
+Avoid using mutable objects (like lists or dictionaries) as default arguments. Default argument values are evaluated only once when the function is defined, not each time the function is called. This means mutable defaults are shared across all calls, which can lead to unexpected behavior where modifications persist between function calls.
+:::
+
 >
 > ``` python
 > >>> def bad(items=[]):  # DON'T do this
@@ -304,8 +305,10 @@ Calling greet
 >>> # greet = log_calls(greet)
 ```
 
-> [!NOTE]
-> Always use `@wraps(func)` in decorators to preserve the original function's `__name__`, `__doc__`, and other attributes. Without it, the decorated function will have the wrapper's attributes, which makes debugging harder.
+::: tip
+Always use `@wraps(func)` in decorators to preserve the original function's `__name__`, `__doc__`, and other attributes. Without it, the decorated function will have the wrapper's attributes, which makes debugging harder.
+:::
+
 
 ## Decorator with Arguments
 

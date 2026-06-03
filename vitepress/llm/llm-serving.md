@@ -4,8 +4,7 @@ title: LLM Serving
 
 # LLM Serving
 
-Table of Contents
-
+[[toc]]
 This guide covers LLM inference serving with three high-performance engines:
 
 - **vLLM** — High-throughput inference engine with PagedAttention for efficient KV cache memory management, continuous batching for maximizing GPU utilization, and optimized CUDA kernels. Provides an OpenAI-compatible API as a drop-in replacement for OpenAI services.

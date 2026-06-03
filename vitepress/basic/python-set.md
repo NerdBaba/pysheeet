@@ -4,8 +4,7 @@ title: Set
 
 # Set
 
-Table of Contents
-
+[[toc]]
 Sets are unordered collections of unique elements in Python. They provide O(1) average time complexity for membership testing and support mathematical set operations like union, intersection, and difference. This cheat sheet covers set comprehensions, common set operations, uniquifying lists, and the immutable frozenset type.
 
 The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/set.py).

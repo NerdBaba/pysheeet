@@ -4,8 +4,7 @@ title: Class
 
 # Class
 
-Table of Contents
-
+[[toc]]
 Python is an object-oriented programming language. This cheat sheet covers class definitions, inheritance, magic methods, property decorators, context managers, and common design patterns. Understanding these concepts is essential for writing clean, maintainable Python code.
 
 ## List Attributes with dir()

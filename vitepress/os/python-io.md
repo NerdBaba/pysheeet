@@ -7,8 +7,7 @@ title: Files and I/O
 Source  
 [src/basic/fileio\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/fileio_.py)
 
-Table of Contents
-
+[[toc]]
 ## Introduction
 
 Python provides comprehensive support for file operations and filesystem manipulation through several built-in modules. The `open()` function is the foundation for reading and writing files, supporting text and binary modes with configurable encoding. The `pathlib` module (Python 3.4+) offers a modern, object-oriented interface for path manipulation that works consistently across operating systems. For high-level operations like copying directory trees or moving files across filesystems, the `shutil` module provides convenient functions. The `tempfile` module handles creation of temporary files and directories with automatic cleanup, essential for secure handling of intermediate data. Together, these modules cover virtually all file I/O needs from simple text processing to complex filesystem operations.

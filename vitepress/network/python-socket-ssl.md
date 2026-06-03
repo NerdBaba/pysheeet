@@ -4,8 +4,7 @@ title: SSL/TLS Sockets
 
 # SSL/TLS Sockets
 
-Table of Contents
-
+[[toc]]
 Transport Layer Security (TLS), formerly known as Secure Sockets Layer (SSL), is the standard protocol for encrypting network communication. TLS provides three essential security properties: confidentiality (data is encrypted and cannot be read by eavesdroppers), integrity (data cannot be modified in transit without detection), and authentication (parties can verify each other's identity using certificates). Every HTTPS connection, secure email, and VPN uses TLS under the hood.
 
 Python's `ssl` module provides a comprehensive interface for TLS, allowing you to wrap regular sockets with encryption. This section covers creating TLS-enabled servers and clients, configuring cipher suites for security compliance, handling X.509 certificates, implementing mutual TLS (mTLS) for client authentication, and building non-blocking TLS servers for high-performance applications. Whether you're building a secure API server, implementing certificate pinning, or debugging TLS handshake issues, these examples provide the foundation you need.

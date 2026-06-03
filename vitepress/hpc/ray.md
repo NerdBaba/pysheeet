@@ -4,8 +4,7 @@ title: Ray Cluster
 
 # Ray Cluster
 
-Table of Contents
-
+[[toc]]
 [Ray](https://docs.ray.io/) is an open-source framework for scaling Python applications across clusters. It provides a simple API for distributed computing and is widely used for distributed machine learning training, reinforcement learning, hyperparameter tuning, and serving. In HPC environments, Ray clusters are typically launched on top of Slurm-managed nodes using Docker containers, combining the resource management capabilities of Slurm with Ray's flexible distributed runtime.
 
 This cheat sheet covers the Ray Python API, launching Ray clusters on Slurm, cluster monitoring, and real-world deployment examples for distributed GPU workloads.

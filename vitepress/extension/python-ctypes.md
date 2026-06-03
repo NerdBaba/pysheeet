@@ -7,8 +7,7 @@ title: ctypes
 Source  
 [src/basic/cext\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/cext_.py)
 
-Table of Contents
-
+[[toc]]
 ctypes is Python's built-in foreign function interface (FFI) library that allows calling functions in shared libraries (.so on Linux, .dylib on macOS, .dll on Windows) without writing any C code or compiling extensions. It's ideal for quick prototyping, accessing system libraries, or wrapping existing C libraries when you don't want a compilation step. However, ctypes requires manual type declarations and careful memory management, making it more error-prone than alternatives like cffi or pybind11 for complex use cases.
 
 ## Loading Shared Libraries

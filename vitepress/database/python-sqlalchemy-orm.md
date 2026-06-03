@@ -4,8 +4,7 @@ title: SQLAlchemy ORM
 
 # SQLAlchemy ORM
 
-Table of Contents
-
+[[toc]]
 SQLAlchemy's Object-Relational Mapper (ORM) provides a high-level abstraction that allows you to work with database tables as Python classes and rows as objects. The ORM builds on top of SQLAlchemy Core and adds features like identity mapping, unit of work pattern, and relationship management. This approach lets you write database code in a more Pythonic way, focusing on objects and their relationships rather than SQL statements. The ORM is ideal for applications with complex domain models where you want to leverage object-oriented programming patterns.
 
 ## Define Models with Declarative Base

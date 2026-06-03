@@ -4,8 +4,7 @@ title: Slurm
 
 # Slurm
 
-Table of Contents
-
+[[toc]]
 Slurm (Simple Linux Utility for Resource Management) is an open-source job scheduling and workload management system widely used in high-performance computing (HPC) clusters. It is designed to efficiently allocate resources, manage queues, and dispatch jobs across large numbers of compute nodes. Slurm is the de facto standard for HPC job scheduling, powering many of the world's largest supercomputers and GPU clusters used for scientific computing, machine learning, and AI research.
 
 For machine learning engineers, Slurm provides a straightforward way to launch distributed training jobs for large language models (LLMs) and deep learning workloads sharded across multiple nodes. Unlike container orchestration systems like Kubernetes—which often require additional components such as Kubeflow for ML workload scheduling—Slurm provides a simpler, HPC-focused workflow. Users can submit and manage jobs directly with commands like `srun`, `sbatch`, and `squeue`, without needing to configure complex orchestration layers.
@@ -119,8 +118,10 @@ salloc -N 2 -p ${PARTITION}
 
 ![image](images/salloc.svg)
 
-> [!NOTE]
-> `salloc` is particularly useful for:
+::: tip
+`salloc` is particularly useful for:
+:::
+
 >
 > - Interactive debugging
 > - Benchmarking and performance testing

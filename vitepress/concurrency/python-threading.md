@@ -7,8 +7,7 @@ title: Threading
 Source  
 [src/basic/concurrency\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/concurrency_.py)
 
-Table of Contents
-
+[[toc]]
 ## Introduction
 
 The `threading` module provides a high-level interface for creating and managing threads in Python. Threads are lightweight units of execution that share the same memory space within a process, making them efficient for I/O-bound tasks where the program spends time waiting for external resources. However, due to Python's Global Interpreter Lock (GIL), threads cannot achieve true parallelism for CPU-bound tasks—only one thread can execute Python bytecode at a time. For CPU-intensive work, consider using `multiprocessing` instead.

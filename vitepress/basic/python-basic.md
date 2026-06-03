@@ -4,8 +4,7 @@ title: From Scratch
 
 # From Scratch
 
-Table of Contents
-
+[[toc]]
 The main goal of this cheat sheet is to collect some common and basic semantics or snippets. The cheat sheet includes some syntax, which we have already known but still ambiguous in our mind, or some snippets, which we google them again and again. In addition, because **the end Of life date for Python 2** is coming. Most of the snippets are mainly based on **Python 3**'s syntax.
 
 ## Hello world!

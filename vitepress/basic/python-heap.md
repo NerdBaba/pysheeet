@@ -4,8 +4,7 @@ title: Heap
 
 # Heap
 
-Table of Contents
-
+[[toc]]
 The heapq module provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Heaps are binary trees where every parent node has a value less than or equal to any of its children (min-heap). This cheat sheet covers heap operations including heap sort, priority queues, merging sorted iterables, and finding the n largest or smallest elements efficiently.
 
 The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/heap.py).

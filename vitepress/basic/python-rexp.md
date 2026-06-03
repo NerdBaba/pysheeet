@@ -4,8 +4,7 @@ title: Regular Expression
 
 # Regular Expression
 
-Table of Contents
-
+[[toc]]
 Regular expressions (regex) are powerful tools for pattern matching and text manipulation. Python's `re` module provides comprehensive support for regex operations. This cheat sheet covers basic matching, groups, lookaround assertions, substitution, and common patterns for validating emails, URLs, IP addresses, etc.
 
 ## Basic Operations

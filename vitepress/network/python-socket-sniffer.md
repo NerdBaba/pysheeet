@@ -4,14 +4,15 @@ title: Packet Sniffing
 
 # Packet Sniffing
 
-Table of Contents
-
+[[toc]]
 Raw sockets provide direct access to network packets at the IP layer and below, bypassing the normal TCP/UDP protocol stack. This low-level access is essential for building network analysis tools, intrusion detection systems, custom protocol implementations, and security research tools. While libraries like Wireshark and tcpdump are commonly used for packet capture, understanding how to parse packets in Python gives you the flexibility to build custom analysis tools tailored to your specific needs.
 
 This section covers capturing and parsing network packets using Python's raw socket interface, the `ctypes` module for defining C-compatible data structures, and the `struct` module for binary data parsing. You'll learn to decode IP headers to extract source and destination addresses, parse TCP headers to analyze connection states and flags, capture ARP packets to monitor address resolution, and use the Linux kernel's AF_ALG interface for hardware-accelerated cryptography. These techniques form the foundation for building tools like network monitors, protocol analyzers, and security scanners.
 
-> [!WARNING]
-> Raw socket operations typically require root/administrator privileges on most operating systems. Use these techniques responsibly and only on networks you own or have explicit permission to analyze. Unauthorized packet sniffing may violate laws and regulations in your jurisdiction.
+::: warning
+Raw socket operations typically require root/administrator privileges on most operating systems. Use these techniques responsibly and only on networks you own or have explicit permission to analyze. Unauthorized packet sniffing may violate laws and regulations in your jurisdiction.
+:::
+
 
 ## Sniffer IP Packets
 

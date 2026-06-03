@@ -4,8 +4,7 @@ title: Generator
 
 # Generator
 
-Table of Contents
-
+[[toc]]
 Generators are a powerful feature in Python for creating iterators. They allow you to iterate over data without storing the entire sequence in memory, making them ideal for processing large datasets or infinite sequences. This cheat sheet covers generator functions, generator expressions, `yield`, `yield from`, sending values to generators, and async generators.
 
 ## Generator Function vs Generator Expression

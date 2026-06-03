@@ -2,9 +2,8 @@
 """
 Generate .vitepress/config.mjs from the converted Markdown tree.
 
-Each top-level subfolder of vitepress/ becomes a sidebar group;
-the page order is alphabetical (VitePress will sort by file name).
-Top-level .md files (except index.md) become nav entries.
+Each top-level subfolder of vitepress/ becomes a collapsible sidebar group;
+all groups are shown globally so the sidebar acts as a site-wide table of contents.
 """
 from __future__ import annotations
 import sys
@@ -19,48 +18,68 @@ CATEGORIES = sorted(
     if p.is_dir() and not p.name.startswith('.') and p.name != 'node_modules'
 )
 
+TOP_LEVEL_PAGES = sorted(
+    f for f in ROOT.glob('*.md')
+    if f.name not in ('index.md',)
+)
+
 
 def page_link(p: Path, root: Path) -> str:
     rel = p.relative_to(root).with_suffix('')
     return '/' + str(rel).replace('\\', '/')
 
 
-def sidebar_for(category: str) -> list[dict]:
-    catdir = ROOT / category
-    files = sorted(catdir.glob('*.md'))
-    items: list[dict] = []
-    for f in files:
-        if f.name == 'index.md':
-            continue
-        title = f.stem.replace('-', ' ').replace('_', ' ').title()
-        items.append({'text': title, 'link': page_link(f, ROOT)})
-    return items
+def sidebar_global() -> list[dict]:
+    groups: list[dict] = []
+    # Top-level pages (README, python-new-py3)
+    if TOP_LEVEL_PAGES:
+        items = []
+        for f in TOP_LEVEL_PAGES:
+            title = f.stem.replace('-', ' ').replace('_', ' ').title()
+            items.append({'text': title, 'link': page_link(f, ROOT)})
+        groups.append({
+            'text': 'General',
+            'collapsible': True,
+            'collapsed': True,
+            'items': items,
+        })
+    # Category groups
+    for cat in CATEGORIES:
+        catdir = ROOT / cat
+        files = sorted(catdir.glob('*.md'))
+        items = []
+        for f in files:
+            if f.name == 'index.md':
+                items.insert(0, {'text': 'Overview', 'link': f'/{cat}/'})
+                continue
+            title = f.stem.replace('-', ' ').replace('_', ' ').title()
+            items.append({'text': title, 'link': page_link(f, ROOT)})
+        groups.append({
+            'text': cat.replace('-', ' ').title(),
+            'collapsible': True,
+            'collapsed': True,
+            'items': items,
+        })
+    return groups
 
 
 def nav_entries() -> list[dict]:
-    nav = [{'text': 'Home', 'link': '/'}]
-    top_level = sorted(ROOT.glob('*.md'))
-    for f in top_level:
-        if f.name in ('index.md',):
-            continue
-        title = f.stem.replace('-', ' ').replace('_', ' ').title()
-        nav.append({'text': title, 'link': page_link(f, ROOT)})
-    for cat in CATEGORIES:
-        title = cat.replace('-', ' ').title()
-        nav.append({'text': title, 'link': f'/{cat}/'})
-    return nav
+    return []
 
 
 def render_config() -> str:
-    sidebar = {f'/{cat}/': [{'text': 'Overview', 'link': f'/{cat}/'}, *sidebar_for(cat)] for cat in CATEGORIES}
     cfg = {
         'title': 'Pysheeet',
         'description': 'Python cheat sheets',
         'cleanUrls': True,
-        'nav': nav_entries(),
-        'sidebar': sidebar,
-        'search': {'provider': 'local'},
-        'outline': {'level': [2, 3]},
+        'themeConfig': {
+            'logo': '/logo.svg',
+            'nav': nav_entries(),
+            'sidebar': sidebar_global(),
+            'search': {'provider': 'local'},
+            'outline': {'level': [2, 3]},
+            'docFooter': {'prev': 'Previous', 'next': 'Next'},
+        },
     }
     body = json.dumps(cfg, indent=2)
     return (

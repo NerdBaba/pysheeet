@@ -4,8 +4,7 @@ title: Async Socket I/O
 
 # Async Socket I/O
 
-Table of Contents
-
+[[toc]]
 Asynchronous I/O is essential for building high-performance network servers that can handle thousands of concurrent connections efficiently. Traditional blocking I/O requires one thread per connection, which doesn't scale well due to memory overhead and context switching costs. Asynchronous I/O solves this by allowing a single thread to handle multiple connections using I/O multiplexing—the program monitors multiple sockets simultaneously and processes whichever ones are ready for reading or writing.
 
 This section covers the evolution of I/O multiplexing in Python, from the classic `select()` system call (portable but limited) to modern high-performance mechanisms like `epoll` (Linux) and `kqueue` (BSD/macOS) that can efficiently handle tens of thousands of connections. We also cover the `selectors` module, which provides a high-level, platform-independent interface that automatically uses the best available mechanism. Understanding these primitives is valuable even if you use higher-level frameworks like `asyncio`, as they build upon these same concepts.
@@ -357,5 +356,7 @@ with create_server(host, port) as (sock, sel):
 | kqueue    | BSD/macOS | O(1) - Excellent | Similar to epoll         |
 | selectors | All       | Best available   | Recommended for new code |
 
-> [!NOTE]
-> For new code, use the `selectors` module or `asyncio` for async I/O. The low-level APIs (select, poll, epoll, kqueue) are mainly useful for understanding how async I/O works or when you need fine-grained control.
+::: tip
+For new code, use the `selectors` module or `asyncio` for async I/O. The low-level APIs (select, poll, epoll, kqueue) are mainly useful for understanding how async I/O works or when you need fine-grained control.
+:::
+

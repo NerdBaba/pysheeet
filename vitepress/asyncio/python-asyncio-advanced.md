@@ -7,8 +7,7 @@ title: Asyncio Advanced
 Source  
 [src/basic/asyncio\_.py](https://github.com/crazyguitar/pysheeet/blob/master/src/basic/asyncio_.py)
 
-Table of Contents
-
+[[toc]]
 ## Introduction
 
 Beyond basic coroutines and networking, asyncio provides synchronization primitives, queues, subprocess management, and debugging tools. This section covers advanced patterns for building robust async applications, including producer-consumer patterns, rate limiting, graceful shutdown, and integration with synchronous code.

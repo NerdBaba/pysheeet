@@ -4,8 +4,7 @@ title: SQLAlchemy Query Recipes
 
 # SQLAlchemy Query Recipes
 
-Table of Contents
-
+[[toc]]
 This section covers advanced query patterns and recipes for SQLAlchemy. While the basics of querying are covered in the ORM section, real-world applications often require more sophisticated queries involving joins across multiple tables, subqueries, aggregations, and performance optimizations. These patterns help you write efficient database queries while maintaining readable Python code. Understanding these techniques is essential for building scalable applications that interact with relational databases.
 
 ## Order By

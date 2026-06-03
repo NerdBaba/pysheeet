@@ -4,8 +4,7 @@ title: Typing
 
 # Typing
 
-Table of Contents
-
+[[toc]]
 PEP [484](https://www.python.org/dev/peps/pep-0484/), which provides a specification about what a type system should look like in Python3, introduced the concept of type hints. Moreover, to better understand the type hints design philosophy, it is crucial to read PEP [483](https://www.python.org/dev/peps/pep-0483/) that would be helpful to aid a pythoneer to understand reasons why Python introduce a type system. The main goal of this cheat sheet is to show some common usage about type hints in Python3.
 
 ## Without type check
@@ -458,8 +457,10 @@ class Tree:
         self.right = right
 ```
 
-> [!NOTE]
-> There are some issues that mypy does not complain about Forward References. Get further information from [Issue#948]().
+::: tip
+There are some issues that mypy does not complain about Forward References. Get further information from [Issue#948]().
+:::
+
 
 ```python
 class A:
@@ -511,8 +512,10 @@ After Python 3.7 (include 3.7)
 ...
 ```
 
-> [!NOTE]
-> Annotation can only be used within the scope which names have already existed. Therefore, **forward reference** does not support the case which names are not available in the current scope. **Postponed evaluation of annotations** will become the default behavior in Python 4.0.
+::: tip
+Annotation can only be used within the scope which names have already existed. Therefore, **forward reference** does not support the case which names are not available in the current scope. **Postponed evaluation of annotations** will become the default behavior in Python 4.0.
+:::
+
 
 ## Type Alias
 
@@ -1028,8 +1031,10 @@ $ echo $?
 0
 ```
 
-> [!WARNING]
-> Based on PEP 484, the `@overload` decorator just **for type checker only**, it does not implement the real overloading like c++/java. Thus, we have to implement one exactly non-`@overload` function. At the runtime, calling the `@overload` function will raise `NotImplementedError`.
+::: warning
+Based on PEP 484, the `@overload` decorator just **for type checker only**, it does not implement the real overloading like c++/java. Thus, we have to implement one exactly non-`@overload` function. At the runtime, calling the `@overload` function will raise `NotImplementedError`.
+:::
+
 
 ```python
 from typing import List, Union, overload

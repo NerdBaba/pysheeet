@@ -4,8 +4,7 @@ title: Learn C++ from Python
 
 # Learn C++ from Python
 
-Table of Contents
-
+[[toc]]
 Modern C++ (C++11, C++14, C++17, C++20) has evolved to include features that make it syntactically similar to Python, making the transition easier for Python developers. This comprehensive guide provides side-by-side comparisons and 1-1 mappings between Python and modern C++ code snippets, covering essential programming concepts like variables, data structures, functions, lambdas, classes, and algorithms.
 
 Whether you're a Python developer looking to learn C++ for performance optimization, system programming, or expanding your programming skills, this tutorial demonstrates how familiar Python patterns translate to modern C++ syntax. Many popular frameworks like PyTorch, TensorFlow, and NumPy use C++ extensions for performance-critical operations, especially in deep learning, LLM training, and CUDA GPU programming. Understanding C++ enables you to write custom extensions, optimize bottlenecks, and contribute to these high-performance libraries.

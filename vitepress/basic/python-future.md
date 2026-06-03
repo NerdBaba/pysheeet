@@ -4,8 +4,7 @@ title: Future
 
 # Future
 
-Table of Contents
-
+[[toc]]
 [Future statements](https://docs.python.org/3/reference/simple_stmts.html#future) tell the interpreter to compile some semantics as the semantics which will be available in the future Python version. In other words, Python uses `from __future__ import feature` to backport features from other higher Python versions to the current interpreter. In Python 3, many features such as `print_function` are already enabled, but we still leave these future statements for backward compatibility.
 
 Future statements are **NOT** import statements. Future statements change how Python interprets the code. They **MUST** be at the top of the file. Otherwise, Python interpreter will raise `SyntaxError`.

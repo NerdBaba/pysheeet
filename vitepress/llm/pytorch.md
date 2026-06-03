@@ -4,8 +4,7 @@ title: PyTorch
 
 # PyTorch
 
-Table of Contents
-
+[[toc]]
 PyTorch is an open-source machine learning framework developed by Meta AI. It provides a flexible and intuitive interface for building and training neural networks with strong GPU acceleration support. PyTorch uses dynamic computation graphs, making it easier to debug and experiment with different model architectures compared to static graph frameworks.
 
 ## Check CUDA
@@ -705,7 +704,7 @@ torchrun --nproc_per_node=4 \
 
 ## Launch with Slurm
 
-Submit distributed training jobs to Slurm clusters. Slurm manages resource allocation and node assignment. See `../hpc/slurm` for more Slurm examples.
+Submit distributed training jobs to Slurm clusters. Slurm manages resource allocation and node assignment. See [Slurm](../hpc/slurm) for more Slurm examples.
 
 ```bash
 #!/bin/bash

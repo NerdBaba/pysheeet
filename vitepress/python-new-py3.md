@@ -4,8 +4,7 @@ title: New in Python3
 
 # New in Python3
 
-Table of Contents
-
+[[toc]]
 The source code can be found on [py3.py](https://github.com/crazyguitar/pysheeet/blob/master/src/new_py3/py3.py).
 
 ## Type Parameter Syntax

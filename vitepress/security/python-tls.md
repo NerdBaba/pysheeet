@@ -4,12 +4,13 @@ title: TLS/SSL and Certificates
 
 # TLS/SSL and Certificates
 
-Table of Contents
-
+[[toc]]
 Transport Layer Security (TLS) provides encrypted, authenticated communication over networks. This guide covers creating secure HTTPS servers, generating certificates, and proper TLS configuration in Python. We use the `ssl` module's `SSLContext` API (not the deprecated `wrap_socket`) and the `cryptography` library for certificate operations. Always use TLS 1.2 or 1.3—older versions have known vulnerabilities.
 
-> [!WARNING]
-> For production, always use certificates from a trusted Certificate Authority (CA) like Let's Encrypt. Self-signed certificates are only for development and testing. Never disable certificate verification in production code.
+::: warning
+For production, always use certificates from a trusted Certificate Authority (CA) like Let's Encrypt. Self-signed certificates are only for development and testing. Never disable certificate verification in production code.
+:::
+
 
 ## Secure HTTPS Server
 

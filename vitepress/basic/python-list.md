@@ -4,8 +4,7 @@ title: List
 
 # List
 
-Table of Contents
-
+[[toc]]
 The list is a common data structure which we use to store objects. Most of the time, programmers concern about getting, setting, searching, filtering, and sorting. Furthermore, sometimes, we waltz ourself into common pitfalls of the memory management. Thus, the main goal of this cheat sheet is to collect some common operations and pitfalls.
 
 ## Python List Basics and Common Operations

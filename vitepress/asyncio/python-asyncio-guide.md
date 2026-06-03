@@ -4,8 +4,7 @@ title: A Hitchhiker's Guide to Asynchronous Programming
 
 # A Hitchhiker's Guide to Asynchronous Programming
 
-Table of Contents
-
+[[toc]]
 ## Abstract
 
 The [C10k problem](https://en.wikipedia.org/wiki/C10k_problem) remains a fundamental challenge for programmers seeking to handle massive concurrent connections efficiently. Traditionally, developers address extensive I/O operations using **threads**, **epoll**, or **kqueue** to prevent software from blocking on expensive operations. However, developing readable and bug-free concurrent code is challenging due to complexities around data sharing and task dependencies. Even powerful tools like [Valgrind](https://valgrind.org/) that help detect deadlocks and race conditions cannot eliminate the time-consuming debugging process as software scales.
