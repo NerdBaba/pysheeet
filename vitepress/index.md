@@ -11,24 +11,34 @@ title: Pysheeet
 </div>
 
 A collection of useful Python code snippets, patterns, and idioms — organized
-into focused cheat sheets. Originally a Sphinx site, now served as a fast,
-modern VitePress build for personal use.
+into focused cheat sheets.
+
+## Getting Started
+
+Not sure where to begin? Follow the **[Learning Path](/learning-path)** — a
+recommended progression through all topics, organized by skill level and goal.
+Includes quick paths for interview prep, data science, and systems engineering.
 
 ## Sections
 
-- **[Quick Start](/basic/)** — Python syntax, data types, functions, classes, generators
-- **[Asyncio](/asyncio/)** — async/await, event loops, servers
+- **[Interview](/interview/)** — question-indexed map into all topics
+- **[Basic](/basic/)** — syntax, data types, functions, classes, data structures
+- **[OS](/os/)** — file I/O, dates, OS interfaces, pathlib, logging
+- **[CLI](/cli/)** — argparse, Click command-line tools
 - **[Concurrency](/concurrency/)** — threading, multiprocessing, futures
-- **[Database](/database/)** — SQLAlchemy ORM and query patterns
-- **[Extension](/extension/)** — C extensions, ctypes, C-API
-- **[HPC](/hpc/)** — Ray, Slurm
-- **[Interview](/interview/)** — interview-style questions
-- **[LLM](/llm/)** — large language model serving and benchmarks
+- **[Asyncio](/asyncio/)** — async/await, event loops, servers
 - **[Network](/network/)** — sockets, SSL, SSH, async networking
-- **[OS](/os/)** — file I/O, dates, OS interfaces
+- **[Database](/database/)** — SQLAlchemy ORM and query patterns
+- **[Web](/web/)** — FastAPI web framework
 - **[Security](/security/)** — TLS, crypto, common vulnerabilities
+- **[Testing](/testing/)** — pytest, unittest.mock
+- **[Extension](/extension/)** — C extensions, ctypes, C-API
+- **[LLM](/llm/)** — large language model training, serving, benchmarks
+- **[HPC](/hpc/)** — Ray, Slurm cluster computing
+- **[Data Science](/data-science/)** — NumPy, pandas
 - **[Appendix](/appendix/)** — specialized topics (GDB, NCCL, NVSHMEM, etc.)
 
 ## See Also
 
 - [Python 3 new features](/python-new-py3)
+- [RSS Feed](/rss.xml)

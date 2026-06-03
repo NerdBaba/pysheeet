@@ -55,6 +55,10 @@ export default {
         "collapsed": true,
         "items": [
           {
+            "text": "Learning Path",
+            "link": "/learning-path"
+          },
+          {
             "text": "Readme",
             "link": "/README"
           },

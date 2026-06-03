@@ -5,8 +5,14 @@
     <link>https://www.pythonsheets.com</link>
     <description>Comprehensive Python cheat sheets</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2026 17:30:41 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jun 2026 17:36:44 +0000</lastBuildDate>
     <atom:link href="https://www.pythonsheets.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Learning Path</title>
+      <link>https://www.pythonsheets.com/learning-path</link>
+      <guid>https://www.pythonsheets.com/learning-path</guid>
+      <description>Python cheat sheet: Learning Path</description>
+    </item>
     <item>
       <title>Readme</title>
       <link>https://www.pythonsheets.com/README</link>
