@@ -703,7 +703,7 @@ with open("data.txt", "w") as f:
 ## Watching File Changes (inotify)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on watching file changes inotify](https://realpython.com/search?q=watching+file+changes+inotify).
+For more examples and detailed explanations, see [the Real Python guide on watch file changes python inotify](https://realpython.com/search?q=watch+file+changes+python+inotify).
 :::
 
 The Linux inotify API provides efficient filesystem event monitoring without polling. Applications can watch directories for file creation, deletion, modification, and other events. This is useful for auto-reloading configuration files, triggering builds on source changes, or synchronizing directories. The example below demonstrates direct inotify access via `ctypes`; for production use, consider the `watchdog` library which provides a cross-platform abstraction.

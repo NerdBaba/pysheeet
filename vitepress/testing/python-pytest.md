@@ -42,7 +42,7 @@ Run with: `pytest test_basic.py` or `pytest -v` for verbose.
 ## Assertion Introspection
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on assertion introspection](https://realpython.com/search?q=assertion+introspection).
+For more examples and detailed explanations, see [the Real Python guide on pytest assertion introspection](https://realpython.com/search?q=pytest+assertion+introspection).
 :::
 
 When an assertion fails, pytest displays the actual values — no need for custom error messages.
@@ -264,7 +264,7 @@ def test_strict_xfail():
 ## approx — Floating Point Comparison
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on approx floating point comparison](https://realpython.com/search?q=approx+floating+point+comparison).
+For more examples and detailed explanations, see [the Real Python guide on pytest approx floating point](https://realpython.com/search?q=pytest+approx+floating+point).
 :::
 
 Compare floating-point numbers with tolerance. Avoids flaky tests from precision artifacts.
@@ -298,7 +298,7 @@ def test_approx_numpy():
 ## raises — Exception Testing
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on raises exception testing](https://realpython.com/search?q=raises+exception+testing).
+For more examples and detailed explanations, see [the Real Python guide on pytest raises exception](https://realpython.com/search?q=pytest+raises+exception).
 :::
 
 Verify that code raises expected exceptions with specific messages.
@@ -333,7 +333,7 @@ def test_raises_no_exception():
 ## warns — Warning Testing
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on warns warning testing](https://realpython.com/search?q=warns+warning+testing).
+For more examples and detailed explanations, see [the Real Python guide on pytest warns warning](https://realpython.com/search?q=pytest+warns+warning).
 :::
 
 Verify that code emits expected warnings.

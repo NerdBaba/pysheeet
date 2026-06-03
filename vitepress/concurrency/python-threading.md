@@ -128,7 +128,7 @@ print("Main thread done, daemon will be killed")
 ## Lock - Mutual Exclusion
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on lock - mutual exclusion](https://realpython.com/search?q=lock+-+mutual+exclusion).
+For more examples and detailed explanations, see [the Real Python guide on threading lock python](https://realpython.com/search?q=threading+lock+python).
 :::
 
 A `Lock` is the simplest synchronization primitive that prevents multiple threads from accessing a shared resource simultaneously. Always use locks when modifying shared state to prevent race conditions. The context manager syntax (`with lock:`) is preferred as it guarantees the lock is released even if an exception occurs.
@@ -157,7 +157,7 @@ print(f"Counter: {counter}")  # Always 500000 with lock
 ## RLock - Reentrant Lock
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on rlock - reentrant lock](https://realpython.com/search?q=rlock+-+reentrant+lock).
+For more examples and detailed explanations, see [the Real Python guide on rlock python threading](https://realpython.com/search?q=rlock+python+threading).
 :::
 
 An `RLock` (reentrant lock) can be acquired multiple times by the same thread without causing a deadlock. This is essential when a thread needs to call methods that also acquire the same lock, such as in recursive functions or when methods call other methods on the same object.
@@ -192,7 +192,7 @@ print(f"Value: {counter.value}")  # 200
 ## Semaphore - Resource Limiting
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on semaphore - resource limiting](https://realpython.com/search?q=semaphore+-+resource+limiting).
+For more examples and detailed explanations, see [the Real Python guide on semaphore python threading](https://realpython.com/search?q=semaphore+python+threading).
 :::
 
 A `Semaphore` limits the number of threads that can access a resource concurrently. Unlike a lock which allows only one thread, a semaphore with count N allows up to N threads to proceed. This is useful for connection pools, rate limiting, or controlling access to limited resources.
@@ -221,7 +221,7 @@ for t in threads:
 ## Event - Thread Signaling
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on event - thread signaling](https://realpython.com/search?q=event+-+thread+signaling).
+For more examples and detailed explanations, see [the Real Python guide on threading event python](https://realpython.com/search?q=threading+event+python).
 :::
 
 An `Event` is a simple signaling mechanism that allows one thread to signal other threads that something has happened. Threads can wait for the event to be set, and one thread can set or clear the event. This is useful for coordinating startup, shutdown, or state changes between threads.
@@ -255,7 +255,7 @@ for t in threads:
 ## Condition - Complex Synchronization
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on condition - complex synchronization](https://realpython.com/search?q=condition+-+complex+synchronization).
+For more examples and detailed explanations, see [the Real Python guide on condition variable python threading](https://realpython.com/search?q=condition+variable+python+threading).
 :::
 
 A `Condition` combines a lock with the ability to wait for and notify about state changes. It's essential for producer-consumer patterns where threads need to wait for specific conditions (like "buffer not empty" or "buffer not full") before proceeding.
@@ -296,7 +296,7 @@ t2.join()
 ## Barrier - Synchronization Point
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on barrier - synchronization point](https://realpython.com/search?q=barrier+-+synchronization+point).
+For more examples and detailed explanations, see [the Real Python guide on barrier python threading](https://realpython.com/search?q=barrier+python+threading).
 :::
 
 A `Barrier` blocks a specified number of threads until all of them have reached the barrier point, then releases them all simultaneously. This is useful when you need multiple threads to complete a phase before any can proceed to the next phase.
@@ -329,7 +329,7 @@ for t in threads:
 ## Timer - Delayed Execution
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on timer - delayed execution](https://realpython.com/search?q=timer+-+delayed+execution).
+For more examples and detailed explanations, see [the Real Python guide on timer thread python](https://realpython.com/search?q=timer+thread+python).
 :::
 
 A `Timer` is a thread that executes a function after a specified delay. It can be cancelled before it fires. This is useful for timeouts, delayed cleanup, or scheduling one-time tasks.
@@ -351,7 +351,7 @@ timer.start()
 ## Thread-Local Data
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on thread-local data](https://realpython.com/search?q=thread-local+data).
+For more examples and detailed explanations, see [the Real Python guide on thread local data python](https://realpython.com/search?q=thread+local+data+python).
 :::
 
 `threading.local()` provides thread-local storage where each thread has its own independent copy of the data. This is useful for storing per-thread state without passing it through function arguments, such as database connections or request context in web applications.
@@ -380,7 +380,7 @@ for t in threads:
 ## Producer-Consumer with Queue
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on producer-consumer with queue](https://realpython.com/search?q=producer-consumer+with+queue).
+For more examples and detailed explanations, see [the Real Python guide on queue producer consumer python](https://realpython.com/search?q=queue+producer+consumer+python).
 :::
 
 The `queue.Queue` class provides a thread-safe FIFO queue that handles all locking internally. This is the recommended way to communicate between threads in a producer-consumer pattern, as it eliminates the need for manual synchronization.
@@ -420,7 +420,7 @@ t2.join()
 ## Deadlock Example and Prevention
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on deadlock example and prevention](https://realpython.com/search?q=deadlock+example+and+prevention).
+For more examples and detailed explanations, see [the Real Python guide on deadlock python threading](https://realpython.com/search?q=deadlock+python+threading).
 :::
 
 Deadlock occurs when two or more threads are waiting for each other to release locks, creating a circular dependency. The classic example is when thread A holds lock 1 and waits for lock 2, while thread B holds lock 2 and waits for lock 1. Prevent deadlocks by always acquiring locks in a consistent order.
@@ -462,7 +462,7 @@ def task_b_good():
 ## Understanding the GIL
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on understanding the gil](https://realpython.com/search?q=understanding+the+gil).
+For more examples and detailed explanations, see [the Real Python guide on python gil global interpreter lock](https://realpython.com/search?q=python+gil+global+interpreter+lock).
 :::
 
 The Global Interpreter Lock (GIL) is a mutex that protects access to Python objects, preventing multiple threads from executing Python bytecode simultaneously. This means threads don't provide speedup for CPU-bound tasks. However, the GIL is released during I/O operations, making threads effective for I/O-bound tasks.

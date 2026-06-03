@@ -10,7 +10,7 @@ SSH (Secure Shell) is the standard protocol for secure remote access, providing 
 ## Basic SSH Connection
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on basic ssh connection](https://realpython.com/search?q=basic+ssh+connection).
+For more examples and detailed explanations, see [the Real Python guide on paramiko ssh python](https://realpython.com/search?q=paramiko+ssh+python).
 :::
 
 The foundation of SSH is establishing a secure, authenticated connection to a remote host. The `SSHClient` class in Paramiko manages the entire connection lifecycle including TCP connection, cryptographic handshake, host key verification, user authentication, and channel multiplexing. Once connected, you can execute commands, open interactive shells, or establish SFTP sessions. The context manager pattern (`with` statement) ensures connections are properly closed even if exceptions occur, preventing resource leaks in long-running applications.
@@ -108,7 +108,7 @@ with SSHClient() as ssh:
 ## SFTP File Transfer
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on sftp file transfer](https://realpython.com/search?q=sftp+file+transfer).
+For more examples and detailed explanations, see [the Real Python guide on sftp python paramiko](https://realpython.com/search?q=sftp+python+paramiko).
 :::
 
 SFTP (SSH File Transfer Protocol) runs over an SSH connection, providing secure, encrypted file operations without requiring a separate service or port. Unlike FTP which sends credentials in plaintext and requires complex firewall rules for passive mode, SFTP tunnels everything through the existing SSH connection on port 22. Paramiko's SFTP client supports the full range of file operations: uploading, downloading, directory listing, file metadata, permissions, and remote file manipulation. For large transfers, SFTP handles resume and provides progress callbacks. It's the standard choice for automated file transfers in deployment scripts, backup systems, and data pipelines where security is required.

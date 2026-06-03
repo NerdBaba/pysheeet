@@ -194,7 +194,7 @@ Output:
 ## Release the GIL
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on release the gil](https://realpython.com/search?q=release+the+gil).
+For more examples and detailed explanations, see [the Real Python guide on release gil python c extension](https://realpython.com/search?q=release+gil+python+c+extension).
 :::
 
 Source  
@@ -783,7 +783,7 @@ static PyGetSetDef Foo_getsetters[] = {
 ## Calling Python from C
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on calling python from c](https://realpython.com/search?q=calling+python+from+c).
+For more examples and detailed explanations, see [the Real Python guide on extending embedding python c](https://realpython.com/search?q=extending+embedding+python+c).
 :::
 
 C extensions often need to call back into Python code—invoking callbacks, calling methods on objects, or using Python library functions. Use `PyObject_CallFunction()` for calling with C-style format arguments, `PyObject_CallObject()` with a tuple of arguments, or `PyObject_CallMethod()` to call a method by name. Always check if the callable is valid with `PyCallable_Check()` before calling, and check the return value for NULL (indicating an exception was raised). The GIL must be held when calling Python functions.

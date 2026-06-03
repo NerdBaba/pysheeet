@@ -24,7 +24,7 @@ The `dir()` function returns a list of all attributes and methods of an object. 
 ## Check Type with isinstance()
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on check type with isinstance](https://realpython.com/search?q=check+type+with+isinstance).
+For more examples and detailed explanations, see [the Real Python guide on isinstance python](https://realpython.com/search?q=isinstance+python).
 :::
 
 
@@ -41,7 +41,7 @@ True
 ## Check Inheritance with issubclass()
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on check inheritance with issubclass](https://realpython.com/search?q=check+inheritance+with+issubclass).
+For more examples and detailed explanations, see [the Real Python guide on issubclass python](https://realpython.com/search?q=issubclass+python).
 :::
 
 
@@ -77,7 +77,7 @@ Access the class name through the `__class__.__name__` attribute.
 ## Has / Get / Set Attributes
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on has get set attributes](https://realpython.com/search?q=has+get+set+attributes).
+For more examples and detailed explanations, see [the Real Python guide on hasattr getattr setattr python](https://realpython.com/search?q=hasattr+getattr+setattr+python).
 :::
 
 
@@ -103,7 +103,7 @@ True
 ## Declare Class with type()
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on declare class with type](https://realpython.com/search?q=declare+class+with+type).
+For more examples and detailed explanations, see [the Real Python guide on type metaclass python](https://realpython.com/search?q=type+metaclass+python).
 :::
 
 
@@ -258,7 +258,7 @@ True
 ## @property Decorator
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on property decorator](https://realpython.com/search?q=property+decorator).
+For more examples and detailed explanations, see [the Real Python guide on property decorator python](https://realpython.com/search?q=property+decorator+python).
 :::
 
 
@@ -347,7 +347,7 @@ with ManagedFile('example.txt') as f:
 ## Using contextlib
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on using contextlib](https://realpython.com/search?q=using+contextlib).
+For more examples and detailed explanations, see [the Real Python guide on contextlib python](https://realpython.com/search?q=contextlib+python).
 :::
 
 
@@ -371,7 +371,7 @@ with managed_file('example.txt') as f:
 ## @staticmethod and @classmethod
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on staticmethod and classmethod](https://realpython.com/search?q=staticmethod+and+classmethod).
+For more examples and detailed explanations, see [the Real Python guide on staticmethod classmethod python](https://realpython.com/search?q=staticmethod+classmethod+python).
 :::
 
 
@@ -431,7 +431,7 @@ Use `abc` module to define abstract base classes that cannot be instantiated and
 ## The Diamond Problem (MRO)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on the diamond problem mro](https://realpython.com/search?q=the+diamond+problem+mro).
+For more examples and detailed explanations, see [the Real Python guide on method resolution order python](https://realpython.com/search?q=method+resolution+order+python).
 :::
 
 

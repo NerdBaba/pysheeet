@@ -85,7 +85,7 @@ b'Caf\xc3\xa9'
 ## Porting unicode(s, 'utf-8')
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on porting unicode s utf-8](https://realpython.com/search?q=porting+unicode+s+utf-8).
+For more examples and detailed explanations, see [the Real Python guide on python 2 unicode porting](https://realpython.com/search?q=python+2+unicode+porting).
 :::
 
 
@@ -236,7 +236,7 @@ UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid 
 ## Long String
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on long string](https://realpython.com/search?q=long+string).
+For more examples and detailed explanations, see [the Real Python guide on python long string literal](https://realpython.com/search?q=python+long+string+literal).
 :::
 
 

@@ -18,7 +18,7 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 ## `namedtuple` — Lightweight Immutable Data Containers
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on namedtuple lightweight immutable data containers](https://realpython.com/search?q=namedtuple+lightweight+immutable+data+containers).
+For more examples and detailed explanations, see [the Real Python guide on namedtuple python](https://realpython.com/search?q=namedtuple+python).
 :::
 
 
@@ -66,7 +66,7 @@ Point(x=5, y=4)
 ## `deque` — Double-Ended Queue
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on deque double-ended queue](https://realpython.com/search?q=deque+double-ended+queue).
+For more examples and detailed explanations, see [the Real Python guide on deque python](https://realpython.com/search?q=deque+python).
 :::
 
 
@@ -108,7 +108,7 @@ deque([5, 1, 2, 3, 4])
 ## `Counter` — Multiset / Bag
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on counter multiset bag](https://realpython.com/search?q=counter+multiset+bag).
+For more examples and detailed explanations, see [the Real Python guide on counter python collections](https://realpython.com/search?q=counter+python+collections).
 :::
 
 
@@ -151,7 +151,7 @@ Counter({'a': 2, 'c': 2, 'b': 1})
 ## `defaultdict` — Dictionary with Default Factory
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on defaultdict dictionary with default factory](https://realpython.com/search?q=defaultdict+dictionary+with+default+factory).
+For more examples and detailed explanations, see [the Real Python guide on defaultdict python](https://realpython.com/search?q=defaultdict+python).
 :::
 
 
@@ -203,7 +203,7 @@ Accessing a missing key with `defaultdict` creates the default value as a side e
 ## `OrderedDict` — Dictionary with Ordered Keys
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on ordereddict dictionary with ordered keys](https://realpython.com/search?q=ordereddict+dictionary+with+ordered+keys).
+For more examples and detailed explanations, see [the Real Python guide on ordereddict python](https://realpython.com/search?q=ordereddict+python).
 :::
 
 
@@ -243,7 +243,7 @@ True  # equal to regular dict ignores order
 ## `ChainMap` — Merging Multiple Dictionaries
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on chainmap merging multiple dictionaries](https://realpython.com/search?q=chainmap+merging+multiple+dictionaries).
+For more examples and detailed explanations, see [the Real Python guide on chainmap python](https://realpython.com/search?q=chainmap+python).
 :::
 
 
@@ -277,7 +277,7 @@ For more examples and detailed explanations, see [the Real Python guide on chain
 ## `UserDict`, `UserList`, `UserString` — Easy Subclassing
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on userdict userlist userstring easy subclassing](https://realpython.com/search?q=userdict+userlist+userstring+easy+subclassing).
+For more examples and detailed explanations, see [the Real Python guide on userdict userlist userstring python](https://realpython.com/search?q=userdict+userlist+userstring+python).
 :::
 
 

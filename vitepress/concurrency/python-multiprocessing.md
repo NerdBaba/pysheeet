@@ -118,7 +118,7 @@ if __name__ == "__main__":
 ## Sharing Data with Queue
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on sharing data with queue](https://realpython.com/search?q=sharing+data+with+queue).
+For more examples and detailed explanations, see [the Real Python guide on multiprocessing queue python](https://realpython.com/search?q=multiprocessing+queue+python).
 :::
 
 Processes don't share memory by default. `multiprocessing.Queue` provides a thread and process-safe way to exchange data between processes. It's the recommended approach for most inter-process communication scenarios.
@@ -155,7 +155,7 @@ if __name__ == "__main__":
 ## Sharing Data with Pipe
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on sharing data with pipe](https://realpython.com/search?q=sharing+data+with+pipe).
+For more examples and detailed explanations, see [the Real Python guide on multiprocessing pipe python](https://realpython.com/search?q=multiprocessing+pipe+python).
 :::
 
 A `Pipe` creates a two-way communication channel between two processes. It's simpler and faster than Queue for point-to-point communication but only supports two endpoints. Each end can send and receive data.
@@ -193,7 +193,7 @@ if __name__ == "__main__":
 ## Shared Memory with Value and Array
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on shared memory with value and array](https://realpython.com/search?q=shared+memory+with+value+and+array).
+For more examples and detailed explanations, see [the Real Python guide on shared memory multiprocessing python](https://realpython.com/search?q=shared+memory+multiprocessing+python).
 :::
 
 For simple shared state, `Value` and `Array` provide shared memory that multiple processes can access. These are faster than Queue/Pipe for frequently accessed data but require careful synchronization to avoid race conditions.

@@ -276,7 +276,7 @@ The `yield from` expression provides a concise way to yield all values from an i
 ## What `RES = yield from EXP` Does
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on what res yield from exp does](https://realpython.com/search?q=what+res+yield+from+exp+does).
+For more examples and detailed explanations, see [the Real Python guide on yield from expression python](https://realpython.com/search?q=yield+from+expression+python).
 :::
 
 
@@ -379,7 +379,7 @@ exit scope
 ## What `@contextmanager` Does
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on what contextmanager does](https://realpython.com/search?q=what+contextmanager+does).
+For more examples and detailed explanations, see [the Real Python guide on contextmanager decorator python](https://realpython.com/search?q=contextmanager+decorator+python).
 :::
 
 
@@ -593,7 +593,7 @@ run()
 ## Async Generator (Python 3.6+)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on async generator python 3 6](https://realpython.com/search?q=async+generator+python+3+6).
+For more examples and detailed explanations, see [the Real Python guide on async generator python](https://realpython.com/search?q=async+generator+python).
 :::
 
 
@@ -682,7 +682,7 @@ RuntimeError('error')
 ## Async Comprehension (Python 3.6+)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on async comprehension python 3 6](https://realpython.com/search?q=async+comprehension+python+3+6).
+For more examples and detailed explanations, see [the Real Python guide on async comprehension python](https://realpython.com/search?q=async+comprehension+python).
 :::
 
 
@@ -797,7 +797,7 @@ aiter cost time: 4.168368101119995
 ## `yield from == await` Expression
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on yield from await expression](https://realpython.com/search?q=yield+from+await+expression).
+For more examples and detailed explanations, see [the Real Python guide on yield from await comparison python](https://realpython.com/search?q=yield+from+await+comparison+python).
 :::
 
 

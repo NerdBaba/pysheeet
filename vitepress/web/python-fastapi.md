@@ -117,7 +117,7 @@ def list_items(
 ## Request Body with Pydantic Models
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on request body with pydantic models](https://realpython.com/search?q=request+body+with+pydantic+models).
+For more examples and detailed explanations, see [the Real Python guide on fastapi pydantic request body](https://realpython.com/search?q=fastapi+pydantic+request+body).
 :::
 
 Define request schemas using Pydantic models. FastAPI validates the request body, provides editor autocompletion, and generates JSON Schema for the docs.
@@ -181,7 +181,7 @@ def search(
 ## Dependency Injection
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on dependency injection](https://realpython.com/search?q=dependency+injection).
+For more examples and detailed explanations, see [the Real Python guide on fastapi dependency injection](https://realpython.com/search?q=fastapi+dependency+injection).
 :::
 
 FastAPI's `Depends` allows you to extract common logic into reusable dependencies.
@@ -281,7 +281,7 @@ def create_user(
 ## CORS Middleware
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on cors middleware](https://realpython.com/search?q=cors+middleware).
+For more examples and detailed explanations, see [the Real Python guide on fastapi cors](https://realpython.com/search?q=fastapi+cors).
 :::
 
 Enable CORS so your frontend can call the API from a different origin.
@@ -450,7 +450,7 @@ def insufficient_funds_handler(request, exc: InsufficientFunds):
 ## Automatic OpenAPI Docs
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on automatic openapi docs](https://realpython.com/search?q=automatic+openapi+docs).
+For more examples and detailed explanations, see [the Real Python guide on fastapi openapi docs](https://realpython.com/search?q=fastapi+openapi+docs).
 :::
 
 FastAPI generates OpenAPI (Swagger) documentation automatically at `/docs` and `/redoc`. Customize the metadata in the app constructor.

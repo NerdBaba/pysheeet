@@ -10,7 +10,7 @@ A function can help programmers to wrap their logic into a task for avoiding dup
 ## Document Functions
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on document functions](https://realpython.com/search?q=document+functions).
+For more examples and detailed explanations, see [the Real Python guide on python function docstrings](https://realpython.com/search?q=python+function+docstrings).
 :::
 
 
@@ -442,7 +442,7 @@ Decorators can also be implemented as classes instead of functions. A class-base
 ## Cache with `lru_cache`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on cache with lru_cache](https://realpython.com/search?q=cache+with+lru_cache).
+For more examples and detailed explanations, see [the Real Python guide on lru cache python](https://realpython.com/search?q=lru+cache+python).
 :::
 
 
@@ -508,7 +508,7 @@ The `functools.partial` function creates a new callable with some arguments of t
 ## `singledispatch` - Function Overloading
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on singledispatch - function overloading](https://realpython.com/search?q=singledispatch+-+function+overloading).
+For more examples and detailed explanations, see [the Real Python guide on singledispatch python](https://realpython.com/search?q=singledispatch+python).
 :::
 
 
@@ -541,7 +541,7 @@ The `singledispatch` decorator from `functools` enables function overloading bas
 ## `reduce` - Cumulative Operations
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on reduce - cumulative operations](https://realpython.com/search?q=reduce+-+cumulative+operations).
+For more examples and detailed explanations, see [the Real Python guide on reduce python functools](https://realpython.com/search?q=reduce+python+functools).
 :::
 
 

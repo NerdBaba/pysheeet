@@ -637,7 +637,7 @@ asyncio.run(main())
 ## TaskGroup (Python 3.11+)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on taskgroup python 3 11](https://realpython.com/search?q=taskgroup+python+3+11).
+For more examples and detailed explanations, see [the Real Python guide on taskgroup python 311](https://realpython.com/search?q=taskgroup+python+311).
 :::
 
 `TaskGroup` provides structured concurrency, ensuring all tasks complete or are cancelled together. Exceptions in any task cancel all other tasks in the group.

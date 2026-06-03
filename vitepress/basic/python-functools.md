@@ -18,7 +18,7 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 ## `partial` — Pre-fill Function Arguments
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on partial pre-fill function arguments](https://realpython.com/search?q=partial+pre-fill+function+arguments).
+For more examples and detailed explanations, see [the Real Python guide on partial functools python](https://realpython.com/search?q=partial+functools+python).
 :::
 
 
@@ -49,7 +49,7 @@ For more examples and detailed explanations, see [the Real Python guide on parti
 ## `partialmethod` — Partial Methods for Classes
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on partialmethod partial methods for classes](https://realpython.com/search?q=partialmethod+partial+methods+for+classes).
+For more examples and detailed explanations, see [the Real Python guide on partialmethod functools python](https://realpython.com/search?q=partialmethod+functools+python).
 :::
 
 
@@ -77,7 +77,7 @@ True
 ## Caching: `lru_cache` and `cache`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on caching lru_cache and cache](https://realpython.com/search?q=caching+lru_cache+and+cache).
+For more examples and detailed explanations, see [the Real Python guide on lru cache functools python](https://realpython.com/search?q=lru+cache+functools+python).
 :::
 
 
@@ -121,7 +121,7 @@ Cache arguments must be hashable. The cache lives for the lifetime of the proces
 ## `singledispatch` — Type-Based Dispatch
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on singledispatch type-based dispatch](https://realpython.com/search?q=singledispatch+type-based+dispatch).
+For more examples and detailed explanations, see [the Real Python guide on singledispatch functools python](https://realpython.com/search?q=singledispatch+functools+python).
 :::
 
 
@@ -164,7 +164,7 @@ For more examples and detailed explanations, see [the Real Python guide on singl
 ## `wraps` and `WRAPPER_ASSIGNMENTS` — Decorator Hygiene
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on wraps and wrapper_assignments decorator hygiene](https://realpython.com/search?q=wraps+and+wrapper_assignments+decorator+hygiene).
+For more examples and detailed explanations, see [the Real Python guide on wraps functools python decorator](https://realpython.com/search?q=wraps+functools+python+decorator).
 :::
 
 
@@ -209,7 +209,7 @@ For more examples and detailed explanations, see [the Real Python guide on wraps
 ## `reduce` — Cumulative Reduction
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on reduce cumulative reduction](https://realpython.com/search?q=reduce+cumulative+reduction).
+For more examples and detailed explanations, see [the Real Python guide on reduce functools python](https://realpython.com/search?q=reduce+functools+python).
 :::
 
 
@@ -232,7 +232,7 @@ For more examples and detailed explanations, see [the Real Python guide on reduc
 ## `cmp_to_key` — Convert Comparison to Key Function
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on cmp_to_key convert comparison to key function](https://realpython.com/search?q=cmp_to_key+convert+comparison+to+key+function).
+For more examples and detailed explanations, see [the Real Python guide on cmp to key functools python](https://realpython.com/search?q=cmp+to+key+functools+python).
 :::
 
 
@@ -263,7 +263,7 @@ Converts an old-style comparison function (returning -1, 0, 1) into a key functi
 ## `total_ordering` — Auto-Generate Comparison Methods
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on total_ordering auto-generate comparison methods](https://realpython.com/search?q=total_ordering+auto-generate+comparison+methods).
+For more examples and detailed explanations, see [the Real Python guide on total ordering functools python](https://realpython.com/search?q=total+ordering+functools+python).
 :::
 
 

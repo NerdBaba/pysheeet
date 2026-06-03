@@ -93,7 +93,7 @@ Never use mutable objects as direct default values — they are shared across al
 ## `frozen=True` — Immutable Dataclasses
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on frozen true immutable dataclasses](https://realpython.com/search?q=frozen+true+immutable+dataclasses).
+For more examples and detailed explanations, see [the Real Python guide on frozen dataclass python](https://realpython.com/search?q=frozen+dataclass+python).
 :::
 
 
@@ -115,7 +115,7 @@ dataclasses.FrozenInstanceError: cannot assign to field 'x'
 ## `order=True` — Comparison Methods
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on order true comparison methods](https://realpython.com/search?q=order+true+comparison+methods).
+For more examples and detailed explanations, see [the Real Python guide on ordered dataclass python](https://realpython.com/search?q=ordered+dataclass+python).
 :::
 
 
@@ -136,7 +136,7 @@ False
 ## `__post_init__` — Post-Initialization Hook
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on __post_init__ post-initialization hook](https://realpython.com/search?q=__post_init__+post-initialization+hook).
+For more examples and detailed explanations, see [the Real Python guide on post init dataclass python](https://realpython.com/search?q=post+init+dataclass+python).
 :::
 
 
@@ -164,7 +164,7 @@ For more examples and detailed explanations, see [the Real Python guide on __pos
 ## `InitVar` — Fields for Initialization Only
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on initvar fields for initialization only](https://realpython.com/search?q=initvar+fields+for+initialization+only).
+For more examples and detailed explanations, see [the Real Python guide on initvar dataclass python](https://realpython.com/search?q=initvar+dataclass+python).
 :::
 
 
@@ -220,7 +220,7 @@ When using inheritance, fields in a child class with defaults must come after pa
 ## Conversion Functions: `asdict`, `astuple`, `replace`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on conversion functions asdict astuple replace](https://realpython.com/search?q=conversion+functions+asdict+astuple+replace).
+For more examples and detailed explanations, see [the Real Python guide on asdict astuple replace dataclass python](https://realpython.com/search?q=asdict+astuple+replace+dataclass+python).
 :::
 
 
@@ -254,7 +254,7 @@ Employee(name='Bob', address=Address(street='123 Main', city='NYC'))
 ## `slots=True` — Memory Optimization (Python 3.10+)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on slots true memory optimization python 3 10](https://realpython.com/search?q=slots+true+memory+optimization+python+3+10).
+For more examples and detailed explanations, see [the Real Python guide on slots dataclass python 310](https://realpython.com/search?q=slots+dataclass+python+310).
 :::
 
 

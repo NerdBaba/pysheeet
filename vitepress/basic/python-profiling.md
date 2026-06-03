@@ -21,7 +21,7 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 ## Simple Timing with `time.perf_counter`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on simple timing with time perf_counter](https://realpython.com/search?q=simple+timing+with+time+perf_counter).
+For more examples and detailed explanations, see [the Real Python guide on time perf counter python](https://realpython.com/search?q=time+perf+counter+python).
 :::
 
 
@@ -46,7 +46,7 @@ Took 0.184 seconds
 ## Micro-Benchmarks with `timeit`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on micro-benchmarks with timeit](https://realpython.com/search?q=micro-benchmarks+with+timeit).
+For more examples and detailed explanations, see [the Real Python guide on timeit python benchmarking](https://realpython.com/search?q=timeit+python+benchmarking).
 :::
 
 

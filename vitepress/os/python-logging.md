@@ -14,7 +14,7 @@ Python's `logging` module provides a flexible framework for emitting log message
 ## Quick Start with basicConfig
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on quick start with basicconfig](https://realpython.com/search?q=quick+start+with+basicconfig).
+For more examples and detailed explanations, see [the Real Python guide on basicconfig python logging](https://realpython.com/search?q=basicconfig+python+logging).
 :::
 
 The simplest way to start logging is `basicConfig()`, which sets up a default handler that writes to stderr. Call it once at application startup.
@@ -226,7 +226,7 @@ my_lib.do_something()  # Logs appear with the library's logger name
 ## Structured / JSON Logging
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on structured json logging](https://realpython.com/search?q=structured+json+logging).
+For more examples and detailed explanations, see [the Real Python guide on json logging python](https://realpython.com/search?q=json+logging+python).
 :::
 
 Structured logging outputs logs as JSON for easy ingestion by log aggregation systems like Elasticsearch, Datadog, or Splunk. This pattern uses a custom formatter or a library like `python-json-logger`.
@@ -270,7 +270,7 @@ logger.info("User logged in", extra={"extra_data": {"user_id": 42, "ip": "10.0.0
 ## Logging Configuration with dictConfig
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on logging configuration with dictconfig](https://realpython.com/search?q=logging+configuration+with+dictconfig).
+For more examples and detailed explanations, see [the Real Python guide on dictconfig python logging](https://realpython.com/search?q=dictconfig+python+logging).
 :::
 
 For complex setups, `dictConfig` allows declarative configuration in a dictionary structure — ideal for configuration files (YAML, JSON) or centralized setup.

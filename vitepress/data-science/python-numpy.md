@@ -130,7 +130,7 @@ array([ 6,  7,  8,  9, 10, 11])
 ## Broadcasting
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on broadcasting](https://realpython.com/search?q=broadcasting).
+For more examples and detailed explanations, see [the Real Python guide on numpy broadcasting](https://realpython.com/search?q=numpy+broadcasting).
 :::
 
 Broadcasting allows arithmetic between arrays of different shapes by automatically expanding dimensions.
@@ -160,7 +160,7 @@ Broadcasting can create large intermediate arrays in memory. Be mindful when wor
 ## Universal Functions (ufunc)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on universal functions ufunc](https://realpython.com/search?q=universal+functions+ufunc).
+For more examples and detailed explanations, see [the Real Python guide on numpy ufunc](https://realpython.com/search?q=numpy+ufunc).
 :::
 
 Element-wise operations optimized in C. Most math operations are ufuncs.

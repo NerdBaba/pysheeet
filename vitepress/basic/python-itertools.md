@@ -18,7 +18,7 @@ The source code is available on [GitHub](https://github.com/crazyguitar/pysheeet
 ## Infinite Iterators: `count`, `cycle`, `repeat`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on infinite iterators count cycle repeat](https://realpython.com/search?q=infinite+iterators+count+cycle+repeat).
+For more examples and detailed explanations, see [the Real Python guide on itertools count cycle repeat python](https://realpython.com/search?q=itertools+count+cycle+repeat+python).
 :::
 
 
@@ -43,7 +43,7 @@ Infinite iterators generate an unbounded sequence of values. Use them with care 
 ## Chaining Iterators: `chain`, `chain.from_iterable`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on chaining iterators chain chain from_iterable](https://realpython.com/search?q=chaining+iterators+chain+chain+from_iterable).
+For more examples and detailed explanations, see [the Real Python guide on itertools chain python](https://realpython.com/search?q=itertools+chain+python).
 :::
 
 
@@ -68,7 +68,7 @@ For more examples and detailed explanations, see [the Real Python guide on chain
 ## Filtering Iterators: `compress`, `dropwhile`, `takewhile`, `filterfalse`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on filtering iterators compress dropwhile takewhile filterfalse](https://realpython.com/search?q=filtering+iterators+compress+dropwhile+takewhile+filterfalse).
+For more examples and detailed explanations, see [the Real Python guide on itertools filter compress dropwhile takewhile filterfalse python](https://realpython.com/search?q=itertools+filter+compress+dropwhile+takewhile+filterfalse+python).
 :::
 
 
@@ -97,7 +97,7 @@ These functions filter elements from an iterable based on different criteria.
 ## Slicing and Windowing: `islice`, `pairwise`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on slicing and windowing islice pairwise](https://realpython.com/search?q=slicing+and+windowing+islice+pairwise).
+For more examples and detailed explanations, see [the Real Python guide on itertools islice pairwise python](https://realpython.com/search?q=itertools+islice+pairwise+python).
 :::
 
 
@@ -126,7 +126,7 @@ For more examples and detailed explanations, see [the Real Python guide on slici
 ## Reducing Iterators: `accumulate`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on reducing iterators accumulate](https://realpython.com/search?q=reducing+iterators+accumulate).
+For more examples and detailed explanations, see [the Real Python guide on itertools accumulate python](https://realpython.com/search?q=itertools+accumulate+python).
 :::
 
 
@@ -149,7 +149,7 @@ For more examples and detailed explanations, see [the Real Python guide on reduc
 ## Grouping: `groupby`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on grouping groupby](https://realpython.com/search?q=grouping+groupby).
+For more examples and detailed explanations, see [the Real Python guide on itertools groupby python](https://realpython.com/search?q=itertools+groupby+python).
 :::
 
 
@@ -178,7 +178,7 @@ b [('b', 3), ('b', 4)]
 ## Batching: `batched`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on batching batched](https://realpython.com/search?q=batching+batched).
+For more examples and detailed explanations, see [the Real Python guide on itertools batched python](https://realpython.com/search?q=itertools+batched+python).
 :::
 
 
@@ -196,7 +196,7 @@ For more examples and detailed explanations, see [the Real Python guide on batch
 ## Combinatorial Iterators: `product`, `permutations`, `combinations`, `combinations_with_replacement`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on combinatorial iterators product permutations combinations combinations_with_replacement](https://realpython.com/search?q=combinatorial+iterators+product+permutations+combinations+combinations_with_replacement).
+For more examples and detailed explanations, see [the Real Python guide on itertools product permutations combinations python](https://realpython.com/search?q=itertools+product+permutations+combinations+python).
 :::
 
 
@@ -228,7 +228,7 @@ These generate Cartesian products and combinations without building the entire r
 ## Mapping: `starmap`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on mapping starmap](https://realpython.com/search?q=mapping+starmap).
+For more examples and detailed explanations, see [the Real Python guide on itertools starmap python](https://realpython.com/search?q=itertools+starmap+python).
 :::
 
 
@@ -247,7 +247,7 @@ For more examples and detailed explanations, see [the Real Python guide on mappi
 ## Teeing: `tee`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on teeing tee](https://realpython.com/search?q=teeing+tee).
+For more examples and detailed explanations, see [the Real Python guide on itertools tee python](https://realpython.com/search?q=itertools+tee+python).
 :::
 
 
@@ -270,7 +270,7 @@ After creating `tee` iterators, do not use the original iterator. Doing so can c
 ## Zipping: `zip_longest`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on zipping zip_longest](https://realpython.com/search?q=zipping+zip_longest).
+For more examples and detailed explanations, see [the Real Python guide on itertools zip longest python](https://realpython.com/search?q=itertools+zip+longest+python).
 :::
 
 

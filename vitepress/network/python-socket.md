@@ -206,7 +206,7 @@ b'0011323cc30b'
 ## Check Port Availability
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on check port availability](https://realpython.com/search?q=check+port+availability).
+For more examples and detailed explanations, see [the Real Python guide on port availability python socket](https://realpython.com/search?q=port+availability+python+socket).
 :::
 
 Before starting a server, you often need to verify that the desired port is available for binding. Similarly, network monitoring tools need to check if remote services are reachable. The `is_port_open` function attempts a TCP connection to test remote service availability, while `is_port_available` tries to bind locally to check if a port is free. These checks are essential for service health monitoring, port scanning, and avoiding "Address already in use" errors when starting servers.
@@ -317,7 +317,7 @@ print(sock.getsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF))
 ## Troubleshooting: Connection Refused
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on troubleshooting connection refused](https://realpython.com/search?q=troubleshooting+connection+refused).
+For more examples and detailed explanations, see [the Real Python guide on connection refused python socket](https://realpython.com/search?q=connection+refused+python+socket).
 :::
 
 "Connection refused" is one of the most common network errors, but its cause isn't always obvious. It can mean the target port has no listening service, a firewall is actively rejecting connections, or the service crashed. Other errors like "Connection timed out" suggest the host is unreachable or a firewall is silently dropping packets, while "Network unreachable" indicates routing problems. This diagnostic function categorizes different error types to help identify the root cause, which is essential for debugging network connectivity issues in development and production environments.

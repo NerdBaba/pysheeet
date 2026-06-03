@@ -351,7 +351,7 @@ if __name__ == "__main__":
 ## Click vs Argparse
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on click vs argparse](https://realpython.com/search?q=click+vs+argparse).
+For more examples and detailed explanations, see [the Real Python guide on click vs argparse python](https://realpython.com/search?q=click+vs+argparse+python).
 :::
 
 | Feature | Click | Argparse |

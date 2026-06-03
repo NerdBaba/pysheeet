@@ -505,7 +505,7 @@ print(time_ago(datetime.now() - timedelta(days=3)))      # 3 days ago
 ## Using dateutil for Flexible Parsing
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on using dateutil for flexible parsing](https://realpython.com/search?q=using+dateutil+for+flexible+parsing).
+For more examples and detailed explanations, see [the Real Python guide on python dateutil parser](https://realpython.com/search?q=python+dateutil+parser).
 :::
 
 The `python-dateutil` library provides powerful parsing that handles many date formats automatically, plus relative delta calculations.

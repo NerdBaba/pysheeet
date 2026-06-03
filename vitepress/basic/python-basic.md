@@ -64,7 +64,7 @@ False
 ## Ellipsis
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on ellipsis](https://realpython.com/search?q=ellipsis).
+For more examples and detailed explanations, see [the Real Python guide on python ellipsis](https://realpython.com/search?q=python+ellipsis).
 :::
 
 
@@ -91,7 +91,7 @@ The following snippet shows that we can use the ellipsis to represent a function
 ## if ... elif ... else
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on if elif else](https://realpython.com/search?q=if+elif+else).
+For more examples and detailed explanations, see [the Real Python guide on conditional statements python](https://realpython.com/search?q=conditional+statements+python).
 :::
 
 
@@ -136,7 +136,7 @@ bar
 ## for ... else ...
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on for else](https://realpython.com/search?q=for+else).
+For more examples and detailed explanations, see [the Real Python guide on for else clause python](https://realpython.com/search?q=for+else+clause+python).
 :::
 
 
@@ -209,7 +209,7 @@ In Python 3, the built-in function `range` returns an iterable **range object** 
 ## while ... else ...
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on while else](https://realpython.com/search?q=while+else).
+For more examples and detailed explanations, see [the Real Python guide on while else clause python](https://realpython.com/search?q=while+else+clause+python).
 :::
 
 
@@ -229,7 +229,7 @@ The `else` clause belongs to a while loop serves the same purpose as the `else` 
 ## The `do while` Statement
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on the do while statement](https://realpython.com/search?q=the+do+while+statement).
+For more examples and detailed explanations, see [the Real Python guide on emulating do while python](https://realpython.com/search?q=emulating+do+while+python).
 :::
 
 
@@ -249,7 +249,7 @@ There are many programming languages such as C/C++, Ruby, or Javascript, provide
 ## try ... except ... else ...
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on try except else](https://realpython.com/search?q=try+except+else).
+For more examples and detailed explanations, see [the Real Python guide on exceptions python](https://realpython.com/search?q=exceptions+python).
 :::
 
 
@@ -523,7 +523,7 @@ asyncio.run(main())
 ## Avoid `exec` and `eval`
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on avoid exec and eval](https://realpython.com/search?q=avoid+exec+and+eval).
+For more examples and detailed explanations, see [the Real Python guide on exec eval python dangerous](https://realpython.com/search?q=exec+eval+python+dangerous).
 :::
 
 

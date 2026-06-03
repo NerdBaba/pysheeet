@@ -13,7 +13,7 @@ Python's `os` module provides a portable way to interact with the operating syst
 ## Get System Information
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on get system information](https://realpython.com/search?q=get+system+information).
+For more examples and detailed explanations, see [the Real Python guide on platform module python](https://realpython.com/search?q=platform+module+python).
 :::
 
 Retrieve basic information about the operating system, platform, and current process. These functions are useful for writing cross-platform code that adapts to the runtime environment.
@@ -215,7 +215,7 @@ os.close(fd)
 ## Execute Commands
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on execute commands](https://realpython.com/search?q=execute+commands).
+For more examples and detailed explanations, see [the Real Python guide on subprocess module python](https://realpython.com/search?q=subprocess+module+python).
 :::
 
 Run external commands and programs. For simple cases, `os.system()` works, but `subprocess` module is recommended for more control over input/output and error handling.
@@ -248,7 +248,7 @@ result = subprocess.run(
 ## Process Management
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on process management](https://realpython.com/search?q=process+management).
+For more examples and detailed explanations, see [the Real Python guide on process management python](https://realpython.com/search?q=process+management+python).
 :::
 
 Create and manage child processes. The `os.fork()` function is Unix-specific; for cross-platform process creation, use the `multiprocessing` module instead.
@@ -307,7 +307,7 @@ print(tempfile.gettempdir())  # /tmp or C:\Users\...\Temp
 ## Using pathlib (Modern Alternative)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on using pathlib modern alternative](https://realpython.com/search?q=using+pathlib+modern+alternative).
+For more examples and detailed explanations, see [the Real Python guide on pathlib python](https://realpython.com/search?q=pathlib+python).
 :::
 
 The `pathlib` module (Python 3.4+) provides an object-oriented interface to paths, making code more readable and less error-prone than string-based `os.path` operations.
@@ -349,7 +349,7 @@ for py_file in Path('.').glob('**/*.py'):
 ## System Monitoring with psutil
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on system monitoring with psutil](https://realpython.com/search?q=system+monitoring+with+psutil).
+For more examples and detailed explanations, see [the Real Python guide on psutil python](https://realpython.com/search?q=psutil+python).
 :::
 
 The `psutil` (process and system utilities) library provides cross-platform access to system monitoring data that isn't available through the standard `os` module. It covers CPU, memory, disk, network, and process information. Install with `pip install psutil`.

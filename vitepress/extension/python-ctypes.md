@@ -337,7 +337,7 @@ assert d.count == 5
 ## Using cffi
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on using cffi](https://realpython.com/search?q=using+cffi).
+For more examples and detailed explanations, see [the Real Python guide on cffi python](https://realpython.com/search?q=cffi+python).
 :::
 
 cffi is a cleaner alternative to ctypes with better PyPy compatibility. It uses C-like declarations instead of Python type objects.

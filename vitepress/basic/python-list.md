@@ -588,7 +588,7 @@ Note that `sorted` or `list.sort` in Python3 does not support `cmp` parameter wh
 ## Maintain Sorted List with bisect
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on maintain sorted list with bisect](https://realpython.com/search?q=maintain+sorted+list+with+bisect).
+For more examples and detailed explanations, see [the Real Python guide on bisect module python](https://realpython.com/search?q=bisect+module+python).
 :::
 
 
@@ -668,7 +668,7 @@ Note that we should avoid creating a multi-dimension list via the following snip
 ## Implement Circular Buffer with deque
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on implement circular buffer with deque](https://realpython.com/search?q=implement+circular+buffer+with+deque).
+For more examples and detailed explanations, see [the Real Python guide on deque circular buffer python](https://realpython.com/search?q=deque+circular+buffer+python).
 :::
 
 
@@ -768,7 +768,7 @@ Binary search is an efficient algorithm for finding an item in a sorted list. Th
 ## Find Lower Bound with bisect_left
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on find lower bound with bisect_left](https://realpython.com/search?q=find+lower+bound+with+bisect_left).
+For more examples and detailed explanations, see [the Real Python guide on bisect left python](https://realpython.com/search?q=bisect+left+python).
 :::
 
 
@@ -786,7 +786,7 @@ For more examples and detailed explanations, see [the Real Python guide on find 
 ## Find Upper Bound with bisect_right
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on find upper bound with bisect_right](https://realpython.com/search?q=find+upper+bound+with+bisect_right).
+For more examples and detailed explanations, see [the Real Python guide on bisect right python](https://realpython.com/search?q=bisect+right+python).
 :::
 
 
@@ -822,7 +822,7 @@ Python compares tuples and lists lexicographically by default. This means it com
 ## Implement Trie (Prefix Tree)
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on implement trie prefix tree](https://realpython.com/search?q=implement+trie+prefix+tree).
+For more examples and detailed explanations, see [the Real Python guide on trie prefix tree python](https://realpython.com/search?q=trie+prefix+tree+python).
 :::
 
 

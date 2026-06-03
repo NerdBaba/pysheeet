@@ -14,7 +14,7 @@ Python's `unittest.mock` module provides powerful tools for replacing parts of y
 ## Mock and MagicMock
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on mock and magicmock](https://realpython.com/search?q=mock+and+magicmock).
+For more examples and detailed explanations, see [the Real Python guide on unittest mock python](https://realpython.com/search?q=unittest+mock+python).
 :::
 
 `Mock` is a flexible fake object that records how it's called. `MagicMock` extends Mock with pre-defined implementations of Python's magic methods (`__len__`, `__str__`, `__iter__`, etc.).
@@ -249,7 +249,7 @@ with patch.dict(config, {"debug": "true"}, clear=True):
 ## patch.dict with os.environ
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on patch dict with os environ](https://realpython.com/search?q=patch+dict+with+os+environ).
+For more examples and detailed explanations, see [the Real Python guide on patch dict environ python mock](https://realpython.com/search?q=patch+dict+environ+python+mock).
 :::
 
 Temporarily modify environment variables using `patch.dict("os.environ", ...)`.
@@ -274,7 +274,7 @@ with patch.dict("os.environ", {
 ## PropertyMock
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on propertymock](https://realpython.com/search?q=propertymock).
+For more examples and detailed explanations, see [the Real Python guide on propertymock python](https://realpython.com/search?q=propertymock+python).
 :::
 
 Mock a property on a class. Set the return value on the mock instance.
@@ -309,7 +309,7 @@ with patch.object(MyClass, "status", mock, create=True):
 ## AsyncMock
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on asyncmock](https://realpython.com/search?q=asyncmock).
+For more examples and detailed explanations, see [the Real Python guide on asyncmock python](https://realpython.com/search?q=asyncmock+python).
 :::
 
 Mock async functions and methods (Python 3.8+).
@@ -364,7 +364,7 @@ async def test_async_context_manager():
 ## mock_open — File Mocking
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on mock_open file mocking](https://realpython.com/search?q=mock_open+file+mocking).
+For more examples and detailed explanations, see [the Real Python guide on mock open python](https://realpython.com/search?q=mock+open+python).
 :::
 
 Replace the built-in `open()` function to test file reading and writing without real filesystem access.
@@ -402,7 +402,7 @@ def test_write_file(mock_file):
 ## ANY — Match Anything
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on any match anything](https://realpython.com/search?q=any+match+anything).
+For more examples and detailed explanations, see [the Real Python guide on unittest mock any python](https://realpython.com/search?q=unittest+mock+any+python).
 :::
 
 `ANY` matches any value for an argument. Useful when you don't care about specific parameters.
@@ -433,7 +433,7 @@ m.assert_has_calls([
 ## create_autospec — Signature Matching
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on create_autospec signature matching](https://realpython.com/search?q=create_autospec+signature+matching).
+For more examples and detailed explanations, see [the Real Python guide on create autospec python mock](https://realpython.com/search?q=create+autospec+python+mock).
 :::
 
 Create a mock that matches the original object's signature. Calling the mock with wrong arguments raises `TypeError`, preventing tests that pass with invalid calls.

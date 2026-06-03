@@ -10,7 +10,7 @@ PEP [484](https://www.python.org/dev/peps/pep-0484/), which provides a specifica
 ## Without type check
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on without type check](https://realpython.com/search?q=without+type+check).
+For more examples and detailed explanations, see [the Real Python guide on python type checking](https://realpython.com/search?q=python+type+checking).
 :::
 
 
@@ -43,7 +43,7 @@ TypeError: 'float' object cannot be interpreted as an integer
 ## With type check
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on with type check](https://realpython.com/search?q=with+type+check).
+For more examples and detailed explanations, see [the Real Python guide on python type hints](https://realpython.com/search?q=python+type+hints).
 :::
 
 
@@ -486,7 +486,7 @@ foo.py:11: error: Argument 1 to "fib" has incompatible type "Optional[int]"; exp
 ## Be careful of casting
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on be careful of casting](https://realpython.com/search?q=be+careful+of+casting).
+For more examples and detailed explanations, see [the Real Python guide on python type casting](https://realpython.com/search?q=python+type+casting).
 :::
 
 

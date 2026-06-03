@@ -502,7 +502,7 @@ $ python -c "from fib import fib_c; print(fib_c(35))"
 ## Performance Comparison
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on performance comparison](https://realpython.com/search?q=performance+comparison).
+For more examples and detailed explanations, see [the Real Python guide on pybind11 cffi ctypes cython comparison](https://realpython.com/search?q=pybind11+cffi+ctypes+cython+comparison).
 :::
 
 Understanding the performance characteristics of each approach helps you choose the right tool. This benchmark compares all approaches using recursive Fibonacci (n=35), a CPU-bound task that highlights the overhead of Python's interpreter. Native code achieves 50-100x speedups by eliminating Python object creation, method dispatch, and bytecode interpretation. The actual speedup varies by workload—numerical code with NumPy integration can see even larger gains, while I/O-bound code benefits less.

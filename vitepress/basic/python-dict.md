@@ -168,7 +168,7 @@ Python 3.5 or above
 ## Emulate a Dictionary with Special Methods
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on emulate a dictionary with special methods](https://realpython.com/search?q=emulate+a+dictionary+with+special+methods).
+For more examples and detailed explanations, see [the Real Python guide on python dict magic methods](https://realpython.com/search?q=python+dict+magic+methods).
 :::
 
 
@@ -216,7 +216,7 @@ True
 ## Implement LRU Cache with OrderedDict
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on implement lru cache with ordereddict](https://realpython.com/search?q=implement+lru+cache+with+ordereddict).
+For more examples and detailed explanations, see [the Real Python guide on ordereddict lru cache python](https://realpython.com/search?q=ordereddict+lru+cache+python).
 :::
 
 

@@ -47,7 +47,7 @@ _Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 65536)
 ## Print Function
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on print function](https://realpython.com/search?q=print+function).
+For more examples and detailed explanations, see [the Real Python guide on python print function](https://realpython.com/search?q=python+print+function).
 :::
 
 
@@ -86,7 +86,7 @@ As **print function**, making text become Unicode is another infamous decision. 
 ## Division
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on division](https://realpython.com/search?q=division).
+For more examples and detailed explanations, see [the Real Python guide on python division integer float](https://realpython.com/search?q=python+division+integer+float).
 :::
 
 
@@ -150,7 +150,7 @@ class Tree(object):
 ## BDFL Retirement
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on bdfl retirement](https://realpython.com/search?q=bdfl+retirement).
+For more examples and detailed explanations, see [the Real Python guide on guido van rossum retirement python](https://realpython.com/search?q=guido+van+rossum+retirement+python).
 :::
 
 
@@ -174,7 +174,7 @@ True
 ## Braces
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on braces](https://realpython.com/search?q=braces).
+For more examples and detailed explanations, see [the Real Python guide on python import braces easter egg](https://realpython.com/search?q=python+import+braces+easter+egg).
 :::
 
 

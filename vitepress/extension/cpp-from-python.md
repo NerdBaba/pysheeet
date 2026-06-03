@@ -67,7 +67,7 @@ auto is_valid = true;
 ## Lists and Vectors
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on lists and vectors](https://realpython.com/search?q=lists+and+vectors).
+For more examples and detailed explanations, see [the Real Python guide on cpp vector python list conversion](https://realpython.com/search?q=cpp+vector+python+list+conversion).
 :::
 
 Python lists and C++ vectors are dynamic arrays that can grow and shrink. Both support indexing, appending elements, and querying size. C++ vectors require specifying the element type, but modern C++ can infer it from initialization.
@@ -328,7 +328,7 @@ std::cout << multiply(5) << std::endl;
 ## Lambda Capture Modes
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on lambda capture modes](https://realpython.com/search?q=lambda+capture+modes).
+For more examples and detailed explanations, see [the Real Python guide on cpp lambda capture modes](https://realpython.com/search?q=cpp+lambda+capture+modes).
 :::
 
 C++ lambdas provide explicit control over how variables are captured from the enclosing scope. This is more explicit than Python's implicit closure behavior and allows optimization by choosing between copying values or using references.
@@ -367,7 +367,7 @@ auto add_all_ref = [&](int z) { return x + y + z; };
 ## List Comprehension
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on list comprehension](https://realpython.com/search?q=list+comprehension).
+For more examples and detailed explanations, see [the Real Python guide on cpp list comprehension](https://realpython.com/search?q=cpp+list+comprehension).
 :::
 
 Python's list comprehensions provide concise syntax for creating lists. C++ doesn't have direct syntax for this, but you can achieve similar results using loops or STL algorithms like std::transform and std::copy_if.
@@ -479,7 +479,7 @@ std::cout << p.greet() << std::endl;
 ## Optional Values
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on optional values](https://realpython.com/search?q=optional+values).
+For more examples and detailed explanations, see [the Real Python guide on cpp optional python](https://realpython.com/search?q=cpp+optional+python).
 :::
 
 Python uses None to represent missing values, while C++ (C++17+) provides std::optional for type-safe optional values. This prevents null pointer errors and makes the absence of a value explicit in the type system.
@@ -520,7 +520,7 @@ if (result.has_value()) {
 ## Smart Pointers
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on smart pointers](https://realpython.com/search?q=smart+pointers).
+For more examples and detailed explanations, see [the Real Python guide on cpp smart pointers python](https://realpython.com/search?q=cpp+smart+pointers+python).
 :::
 
 Python handles memory automatically with garbage collection. C++ smart pointers (C++11+) provide automatic memory management through RAII. unique_ptr ensures single ownership, while shared_ptr allows multiple owners with reference counting.
@@ -850,7 +850,7 @@ for (size_t i = 0; i < std::min(names.size(), ages.size()); i++) {
 ## Default Arguments
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on default arguments](https://realpython.com/search?q=default+arguments).
+For more examples and detailed explanations, see [the Real Python guide on cpp default arguments python](https://realpython.com/search?q=cpp+default+arguments+python).
 :::
 
 Functions can have default parameter values that are used when arguments aren't provided. Both languages support this feature with similar syntax.

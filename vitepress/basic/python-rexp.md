@@ -10,7 +10,7 @@ Regular expressions (regex) are powerful tools for pattern matching and text man
 ## Basic Operations
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on basic operations](https://realpython.com/search?q=basic+operations).
+For more examples and detailed explanations, see [the Real Python guide on python regex](https://realpython.com/search?q=python+regex).
 :::
 
 
@@ -305,7 +305,7 @@ Flags modify pattern behavior. Common flags include `re.IGNORECASE` (`re.I`), `r
 ## Compare HTML Tags
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on compare html tags](https://realpython.com/search?q=compare+html+tags).
+For more examples and detailed explanations, see [the Real Python guide on regex match html tags python](https://realpython.com/search?q=regex+match+html+tags+python).
 :::
 
 
@@ -337,7 +337,7 @@ True
 ## Match Email Address
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on match email address](https://realpython.com/search?q=match+email+address).
+For more examples and detailed explanations, see [the Real Python guide on regex email validation python](https://realpython.com/search?q=regex+email+validation+python).
 :::
 
 
@@ -356,7 +356,7 @@ False
 ## Match URL
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on match url](https://realpython.com/search?q=match+url).
+For more examples and detailed explanations, see [the Real Python guide on regex url matching python](https://realpython.com/search?q=regex+url+matching+python).
 :::
 
 
@@ -378,7 +378,7 @@ True
 ## Match IP Address
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on match ip address](https://realpython.com/search?q=match+ip+address).
+For more examples and detailed explanations, see [the Real Python guide on regex ip address python](https://realpython.com/search?q=regex+ip+address+python).
 :::
 
 
@@ -400,7 +400,7 @@ False
 ## Match MAC Address
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on match mac address](https://realpython.com/search?q=match+mac+address).
+For more examples and detailed explanations, see [the Real Python guide on regex mac address python](https://realpython.com/search?q=regex+mac+address+python).
 :::
 
 
@@ -417,7 +417,7 @@ True
 ## Match Phone Number
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on match phone number](https://realpython.com/search?q=match+phone+number).
+For more examples and detailed explanations, see [the Real Python guide on regex phone number python](https://realpython.com/search?q=regex+phone+number+python).
 :::
 
 
@@ -437,7 +437,7 @@ True
 ## Match Password Strength
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on match password strength](https://realpython.com/search?q=match+password+strength).
+For more examples and detailed explanations, see [the Real Python guide on regex password validation python](https://realpython.com/search?q=regex+password+validation+python).
 :::
 
 

@@ -10,7 +10,7 @@ Pandas is the premier library for data manipulation and analysis in Python. It p
 ## Series and DataFrame Creation
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on series and dataframe creation](https://realpython.com/search?q=series+and+dataframe+creation).
+For more examples and detailed explanations, see [the Real Python guide on pandas series dataframe](https://realpython.com/search?q=pandas+series+dataframe).
 :::
 
 Construct data structures from Python objects, NumPy arrays, or external files.
@@ -136,7 +136,7 @@ Select columns and filter rows using various techniques.
 ## loc and iloc Indexing
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on loc and iloc indexing](https://realpython.com/search?q=loc+and+iloc+indexing).
+For more examples and detailed explanations, see [the Real Python guide on pandas loc iloc](https://realpython.com/search?q=pandas+loc+iloc).
 :::
 
 Label-based (`loc`) and integer position-based (`iloc`) indexing for precise data access.
@@ -210,7 +210,7 @@ Detect, drop, or fill missing values (represented as `NaN`).
 ## GroupBy Operations
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on groupby operations](https://realpython.com/search?q=groupby+operations).
+For more examples and detailed explanations, see [the Real Python guide on pandas groupby](https://realpython.com/search?q=pandas+groupby).
 :::
 
 Split-apply-combine for aggregating data by groups.
@@ -286,7 +286,7 @@ Combine multiple DataFrames using SQL-like joins or stacking operations.
 ## Pivot Tables and Melt
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on pivot tables and melt](https://realpython.com/search?q=pivot+tables+and+melt).
+For more examples and detailed explanations, see [the Real Python guide on pandas pivot table melt](https://realpython.com/search?q=pandas+pivot+table+melt).
 :::
 
 Reshape data between wide and long formats.
@@ -364,7 +364,7 @@ datetime64[ns]
 ## Apply, Map, and Applymap
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on apply map and applymap](https://realpython.com/search?q=apply+map+and+applymap).
+For more examples and detailed explanations, see [the Real Python guide on pandas apply map applymap](https://realpython.com/search?q=pandas+apply+map+applymap).
 :::
 
 Apply functions element-wise, column-wise, or row-wise.
@@ -395,7 +395,7 @@ Apply functions element-wise, column-wise, or row-wise.
 ## Plotting with Matplotlib
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on plotting with matplotlib](https://realpython.com/search?q=plotting+with+matplotlib).
+For more examples and detailed explanations, see [the Real Python guide on pandas plot matplotlib](https://realpython.com/search?q=pandas+plot+matplotlib).
 :::
 
 Pandas integrates with Matplotlib for quick visualizations directly from DataFrames.

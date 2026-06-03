@@ -14,7 +14,7 @@ Python's `argparse` module parses command-line arguments and options with automa
 ## Basic ArgumentParser
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on basic argumentparser](https://realpython.com/search?q=basic+argumentparser).
+For more examples and detailed explanations, see [the Real Python guide on argparse python](https://realpython.com/search?q=argparse+python).
 :::
 
 Create a parser, add arguments, and parse. The `--help` flag is generated automatically.

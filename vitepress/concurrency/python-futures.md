@@ -19,7 +19,7 @@ The `concurrent.futures` module provides a high-level interface for asynchronous
 ## ThreadPoolExecutor Basics
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on threadpoolexecutor basics](https://realpython.com/search?q=threadpoolexecutor+basics).
+For more examples and detailed explanations, see [the Real Python guide on threadpoolexecutor python](https://realpython.com/search?q=threadpoolexecutor+python).
 :::
 
 `ThreadPoolExecutor` manages a pool of threads that execute tasks concurrently. Use it for I/O-bound tasks like network requests, file operations, or database queries where threads spend time waiting for external resources.
@@ -50,7 +50,7 @@ print(f"Concurrent: {time.time() - start:.2f}s")
 ## ProcessPoolExecutor Basics
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on processpoolexecutor basics](https://realpython.com/search?q=processpoolexecutor+basics).
+For more examples and detailed explanations, see [the Real Python guide on processpoolexecutor python](https://realpython.com/search?q=processpoolexecutor+python).
 :::
 
 `ProcessPoolExecutor` manages a pool of processes for true parallel execution. Use it for CPU-bound tasks like data processing, calculations, or image manipulation where you need to utilize multiple CPU cores.
@@ -321,7 +321,7 @@ with ThreadPoolExecutor(max_workers=1) as executor:
 ## Executor Context Manager
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on executor context manager](https://realpython.com/search?q=executor+context+manager).
+For more examples and detailed explanations, see [the Real Python guide on executor context manager python](https://realpython.com/search?q=executor+context+manager+python).
 :::
 
 Using executors as context managers (`with` statement) ensures proper cleanup. When exiting the context, `shutdown(wait=True)` is called automatically, which waits for all pending tasks to complete before returning.
@@ -383,7 +383,7 @@ if __name__ == "__main__":
 ## Real-World Example: Parallel Downloads
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on real-world example parallel downloads](https://realpython.com/search?q=real-world+example+parallel+downloads).
+For more examples and detailed explanations, see [the Real Python guide on parallel downloads python](https://realpython.com/search?q=parallel+downloads+python).
 :::
 
 This example demonstrates a practical use case: downloading multiple files concurrently with progress tracking, error handling, and timeout management.

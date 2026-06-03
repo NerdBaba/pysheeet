@@ -60,7 +60,7 @@ Like list comprehensions, set comprehensions provide a concise way to create set
 ## Remove Duplicates from a List
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on remove duplicates from a list](https://realpython.com/search?q=remove+duplicates+from+a+list).
+For more examples and detailed explanations, see [the Real Python guide on remove duplicates list python](https://realpython.com/search?q=remove+duplicates+list+python).
 :::
 
 
@@ -165,7 +165,7 @@ The intersection of two sets contains only elements that exist in both sets. Use
 ## Find Common Elements Between Lists
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on find common elements between lists](https://realpython.com/search?q=find+common+elements+between+lists).
+For more examples and detailed explanations, see [the Real Python guide on common elements between lists python](https://realpython.com/search?q=common+elements+between+lists+python).
 :::
 
 
@@ -326,7 +326,7 @@ True
 ## Set Operations Summary
 
 ::: tip Learn More
-For more examples and detailed explanations, see [the Real Python guide on set operations summary](https://realpython.com/search?q=set+operations+summary).
+For more examples and detailed explanations, see [the Real Python guide on python set operations](https://realpython.com/search?q=python+set+operations).
 :::
 
 
