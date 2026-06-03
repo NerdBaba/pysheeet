@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pysheeet</title>
+    <link>https://www.pythonsheets.com</link>
+    <description>Comprehensive Python cheat sheets</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Jun 2026 17:30:41 +0000</lastBuildDate>
+    <atom:link href="https://www.pythonsheets.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Readme</title>
+      <link>https://www.pythonsheets.com/README</link>
+      <guid>https://www.pythonsheets.com/README</guid>
+      <description>Python cheat sheet: Readme</description>
+    </item>
+    <item>
+      <title>Python New Py3</title>
+      <link>https://www.pythonsheets.com/python-new-py3</link>
+      <guid>https://www.pythonsheets.com/python-new-py3</guid>
+      <description>Python cheat sheet: Python New Py3</description>
+    </item>
+    <item>
+      <title>Interview Index</title>
+      <link>https://www.pythonsheets.com/interview/index</link>
+      <guid>https://www.pythonsheets.com/interview/index</guid>
+      <description>Python cheat sheet: Interview Index</description>
+    </item>
+    <item>
+      <title>Basic Python Basic</title>
+      <link>https://www.pythonsheets.com/basic/python-basic</link>
+      <guid>https://www.pythonsheets.com/basic/python-basic</guid>
+      <description>Python cheat sheet: Basic Python Basic</description>
+    </item>
+    <item>
+      <title>Basic Python Future</title>
+      <link>https://www.pythonsheets.com/basic/python-future</link>
+      <guid>https://www.pythonsheets.com/basic/python-future</guid>
+      <description>Python cheat sheet: Basic Python Future</description>
+    </item>
+    <item>
+      <title>Basic Python Func</title>
+      <link>https://www.pythonsheets.com/basic/python-func</link>
+      <guid>https://www.pythonsheets.com/basic/python-func</guid>
+      <description>Python cheat sheet: Basic Python Func</description>
+    </item>
+    <item>
+      <title>Basic Python Object</title>
+      <link>https://www.pythonsheets.com/basic/python-object</link>
+      <guid>https://www.pythonsheets.com/basic/python-object</guid>
+      <description>Python cheat sheet: Basic Python Object</description>
+    </item>
+    <item>
+      <title>Basic Python Typing</title>
+      <link>https://www.pythonsheets.com/basic/python-typing</link>
+      <guid>https://www.pythonsheets.com/basic/python-typing</guid>
+      <description>Python cheat sheet: Basic Python Typing</description>
+    </item>
+    <item>
+      <title>Basic Python List</title>
+      <link>https://www.pythonsheets.com/basic/python-list</link>
+      <guid>https://www.pythonsheets.com/basic/python-list</guid>
+      <description>Python cheat sheet: Basic Python List</description>
+    </item>
+    <item>
+      <title>Basic Python Set</title>
+      <link>https://www.pythonsheets.com/basic/python-set</link>
+      <guid>https://www.pythonsheets.com/basic/python-set</guid>
+      <description>Python cheat sheet: Basic Python Set</description>
+    </item>
+    <item>
+      <title>Basic Python Dict</title>
+      <link>https://www.pythonsheets.com/basic/python-dict</link>
+      <guid>https://www.pythonsheets.com/basic/python-dict</guid>
+      <description>Python cheat sheet: Basic Python Dict</description>
+    </item>
+    <item>
+      <title>Basic Python Heap</title>
+      <link>https://www.pythonsheets.com/basic/python-heap</link>
+      <guid>https://www.pythonsheets.com/basic/python-heap</guid>
+      <description>Python cheat sheet: Basic Python Heap</description>
+    </item>
+    <item>
+      <title>Basic Python Generator</title>
+      <link>https://www.pythonsheets.com/basic/python-generator</link>
+      <guid>https://www.pythonsheets.com/basic/python-generator</guid>
+      <description>Python cheat sheet: Basic Python Generator</description>
+    </item>
+    <item>
+      <title>Basic Python Unicode</title>
+      <link>https://www.pythonsheets.com/basic/python-unicode</link>
+      <guid>https://www.pythonsheets.com/basic/python-unicode</guid>
+      <description>Python cheat sheet: Basic Python Unicode</description>
+    </item>
+    <item>
+      <title>Basic Python Rexp</title>
+      <link>https://www.pythonsheets.com/basic/python-rexp</link>
+      <guid>https://www.pythonsheets.com/basic/python-rexp</guid>
+      <description>Python cheat sheet: Basic Python Rexp</description>
+    </item>
+    <item>
+      <title>Basic Python Itertools</title>
+      <link>https://www.pythonsheets.com/basic/python-itertools</link>
+      <guid>https://www.pythonsheets.com/basic/python-itertools</guid>
+      <description>Python cheat sheet: Basic Python Itertools</description>
+    </item>
+    <item>
+      <title>Basic Python Collections</title>
+      <link>https://www.pythonsheets.com/basic/python-collections</link>
+      <guid>https://www.pythonsheets.com/basic/python-collections</guid>
+      <description>Python cheat sheet: Basic Python Collections</description>
+    </item>
+    <item>
+      <title>Basic Python Functools</title>
+      <link>https://www.pythonsheets.com/basic/python-functools</link>
+      <guid>https://www.pythonsheets.com/basic/python-functools</guid>
+      <description>Python cheat sheet: Basic Python Functools</description>
+    </item>
+    <item>
+      <title>Basic Python Dataclasses</title>
+      <link>https://www.pythonsheets.com/basic/python-dataclasses</link>
+      <guid>https://www.pythonsheets.com/basic/python-dataclasses</guid>
+      <description>Python cheat sheet: Basic Python Dataclasses</description>
+    </item>
+    <item>
+      <title>Basic Python Profiling</title>
+      <link>https://www.pythonsheets.com/basic/python-profiling</link>
+      <guid>https://www.pythonsheets.com/basic/python-profiling</guid>
+      <description>Python cheat sheet: Basic Python Profiling</description>
+    </item>
+    <item>
+      <title>Basic Index</title>
+      <link>https://www.pythonsheets.com/basic/index</link>
+      <guid>https://www.pythonsheets.com/basic/index</guid>
+      <description>Python cheat sheet: Basic Index</description>
+    </item>
+    <item>
+      <title>Os Python Date</title>
+      <link>https://www.pythonsheets.com/os/python-date</link>
+      <guid>https://www.pythonsheets.com/os/python-date</guid>
+      <description>Python cheat sheet: Os Python Date</description>
+    </item>
+    <item>
+      <title>Os Python Os</title>
+      <link>https://www.pythonsheets.com/os/python-os</link>
+      <guid>https://www.pythonsheets.com/os/python-os</guid>
+      <description>Python cheat sheet: Os Python Os</description>
+    </item>
+    <item>
+      <title>Os Python Io</title>
+      <link>https://www.pythonsheets.com/os/python-io</link>
+      <guid>https://www.pythonsheets.com/os/python-io</guid>
+      <description>Python cheat sheet: Os Python Io</description>
+    </item>
+    <item>
+      <title>Os Python Pathlib</title>
+      <link>https://www.pythonsheets.com/os/python-pathlib</link>
+      <guid>https://www.pythonsheets.com/os/python-pathlib</guid>
+      <description>Python cheat sheet: Os Python Pathlib</description>
+    </item>
+    <item>
+      <title>Os Python Logging</title>
+      <link>https://www.pythonsheets.com/os/python-logging</link>
+      <guid>https://www.pythonsheets.com/os/python-logging</guid>
+      <description>Python cheat sheet: Os Python Logging</description>
+    </item>
+    <item>
+      <title>Os Index</title>
+      <link>https://www.pythonsheets.com/os/index</link>
+      <guid>https://www.pythonsheets.com/os/index</guid>
+      <description>Python cheat sheet: Os Index</description>
+    </item>
+    <item>
+      <title>Cli Python Argparse</title>
+      <link>https://www.pythonsheets.com/cli/python-argparse</link>
+      <guid>https://www.pythonsheets.com/cli/python-argparse</guid>
+      <description>Python cheat sheet: Cli Python Argparse</description>
+    </item>
+    <item>
+      <title>Cli Python Click</title>
+      <link>https://www.pythonsheets.com/cli/python-click</link>
+      <guid>https://www.pythonsheets.com/cli/python-click</guid>
+      <description>Python cheat sheet: Cli Python Click</description>
+    </item>
+    <item>
+      <title>Cli Index</title>
+      <link>https://www.pythonsheets.com/cli/index</link>
+      <guid>https://www.pythonsheets.com/cli/index</guid>
+      <description>Python cheat sheet: Cli Index</description>
+    </item>
+    <item>
+      <title>Concurrency Python Threading</title>
+      <link>https://www.pythonsheets.com/concurrency/python-threading</link>
+      <guid>https://www.pythonsheets.com/concurrency/python-threading</guid>
+      <description>Python cheat sheet: Concurrency Python Threading</description>
+    </item>
+    <item>
+      <title>Concurrency Python Multiprocessing</title>
+      <link>https://www.pythonsheets.com/concurrency/python-multiprocessing</link>
+      <guid>https://www.pythonsheets.com/concurrency/python-multiprocessing</guid>
+      <description>Python cheat sheet: Concurrency Python Multiprocessing</description>
+    </item>
+    <item>
+      <title>Concurrency Python Futures</title>
+      <link>https://www.pythonsheets.com/concurrency/python-futures</link>
+      <guid>https://www.pythonsheets.com/concurrency/python-futures</guid>
+      <description>Python cheat sheet: Concurrency Python Futures</description>
+    </item>
+    <item>
+      <title>Concurrency Index</title>
+      <link>https://www.pythonsheets.com/concurrency/index</link>
+      <guid>https://www.pythonsheets.com/concurrency/index</guid>
+      <description>Python cheat sheet: Concurrency Index</description>
+    </item>
+    <item>
+      <title>Asyncio Python Asyncio Guide</title>
+      <link>https://www.pythonsheets.com/asyncio/python-asyncio-guide</link>
+      <guid>https://www.pythonsheets.com/asyncio/python-asyncio-guide</guid>
+      <description>Python cheat sheet: Asyncio Python Asyncio Guide</description>
+    </item>
+    <item>
+      <title>Asyncio Python Asyncio Basic</title>
+      <link>https://www.pythonsheets.com/asyncio/python-asyncio-basic</link>
+      <guid>https://www.pythonsheets.com/asyncio/python-asyncio-basic</guid>
+      <description>Python cheat sheet: Asyncio Python Asyncio Basic</description>
+    </item>
+    <item>
+      <title>Asyncio Python Asyncio Server</title>
+      <link>https://www.pythonsheets.com/asyncio/python-asyncio-server</link>
+      <guid>https://www.pythonsheets.com/asyncio/python-asyncio-server</guid>
+      <description>Python cheat sheet: Asyncio Python Asyncio Server</description>
+    </item>
+    <item>
+      <title>Asyncio Python Asyncio Advanced</title>
+      <link>https://www.pythonsheets.com/asyncio/python-asyncio-advanced</link>
+      <guid>https://www.pythonsheets.com/asyncio/python-asyncio-advanced</guid>
+      <description>Python cheat sheet: Asyncio Python Asyncio Advanced</description>
+    </item>
+    <item>
+      <title>Asyncio Index</title>
+      <link>https://www.pythonsheets.com/asyncio/index</link>
+      <guid>https://www.pythonsheets.com/asyncio/index</guid>
+      <description>Python cheat sheet: Asyncio Index</description>
+    </item>
+    <item>
+      <title>Network Python Socket</title>
+      <link>https://www.pythonsheets.com/network/python-socket</link>
+      <guid>https://www.pythonsheets.com/network/python-socket</guid>
+      <description>Python cheat sheet: Network Python Socket</description>
+    </item>
+    <item>
+      <title>Network Python Socket Server</title>
+      <link>https://www.pythonsheets.com/network/python-socket-server</link>
+      <guid>https://www.pythonsheets.com/network/python-socket-server</guid>
+      <description>Python cheat sheet: Network Python Socket Server</description>
+    </item>
+    <item>
+      <title>Network Python Socket Async</title>
+      <link>https://www.pythonsheets.com/network/python-socket-async</link>
+      <guid>https://www.pythonsheets.com/network/python-socket-async</guid>
+      <description>Python cheat sheet: Network Python Socket Async</description>
+    </item>
+    <item>
+      <title>Network Python Socket Ssl</title>
+      <link>https://www.pythonsheets.com/network/python-socket-ssl</link>
+      <guid>https://www.pythonsheets.com/network/python-socket-ssl</guid>
+      <description>Python cheat sheet: Network Python Socket Ssl</description>
+    </item>
+    <item>
+      <title>Network Python Socket Sniffer</title>
+      <link>https://www.pythonsheets.com/network/python-socket-sniffer</link>
+      <guid>https://www.pythonsheets.com/network/python-socket-sniffer</guid>
+      <description>Python cheat sheet: Network Python Socket Sniffer</description>
+    </item>
+    <item>
+      <title>Network Python Ssh</title>
+      <link>https://www.pythonsheets.com/network/python-ssh</link>
+      <guid>https://www.pythonsheets.com/network/python-ssh</guid>
+      <description>Python cheat sheet: Network Python Ssh</description>
+    </item>
+    <item>
+      <title>Network Index</title>
+      <link>https://www.pythonsheets.com/network/index</link>
+      <guid>https://www.pythonsheets.com/network/index</guid>
+      <description>Python cheat sheet: Network Index</description>
+    </item>
+    <item>
+      <title>Database Python Sqlalchemy</title>
+      <link>https://www.pythonsheets.com/database/python-sqlalchemy</link>
+      <guid>https://www.pythonsheets.com/database/python-sqlalchemy</guid>
+      <description>Python cheat sheet: Database Python Sqlalchemy</description>
+    </item>
+    <item>
+      <title>Database Python Sqlalchemy Orm</title>
+      <link>https://www.pythonsheets.com/database/python-sqlalchemy-orm</link>
+      <guid>https://www.pythonsheets.com/database/python-sqlalchemy-orm</guid>
+      <description>Python cheat sheet: Database Python Sqlalchemy Orm</description>
+    </item>
+    <item>
+      <title>Database Python Sqlalchemy Query</title>
+      <link>https://www.pythonsheets.com/database/python-sqlalchemy-query</link>
+      <guid>https://www.pythonsheets.com/database/python-sqlalchemy-query</guid>
+      <description>Python cheat sheet: Database Python Sqlalchemy Query</description>
+    </item>
+    <item>
+      <title>Database Index</title>
+      <link>https://www.pythonsheets.com/database/index</link>
+      <guid>https://www.pythonsheets.com/database/index</guid>
+      <description>Python cheat sheet: Database Index</description>
+    </item>
+    <item>
+      <title>Web Python Fastapi</title>
+      <link>https://www.pythonsheets.com/web/python-fastapi</link>
+      <guid>https://www.pythonsheets.com/web/python-fastapi</guid>
+      <description>Python cheat sheet: Web Python Fastapi</description>
+    </item>
+    <item>
+      <title>Web Index</title>
+      <link>https://www.pythonsheets.com/web/index</link>
+      <guid>https://www.pythonsheets.com/web/index</guid>
+      <description>Python cheat sheet: Web Index</description>
+    </item>
+    <item>
+      <title>Security Python Crypto</title>
+      <link>https://www.pythonsheets.com/security/python-crypto</link>
+      <guid>https://www.pythonsheets.com/security/python-crypto</guid>
+      <description>Python cheat sheet: Security Python Crypto</description>
+    </item>
+    <item>
+      <title>Security Python Tls</title>
+      <link>https://www.pythonsheets.com/security/python-tls</link>
+      <guid>https://www.pythonsheets.com/security/python-tls</guid>
+      <description>Python cheat sheet: Security Python Tls</description>
+    </item>
+    <item>
+      <title>Security Python Vulnerability</title>
+      <link>https://www.pythonsheets.com/security/python-vulnerability</link>
+      <guid>https://www.pythonsheets.com/security/python-vulnerability</guid>
+      <description>Python cheat sheet: Security Python Vulnerability</description>
+    </item>
+    <item>
+      <title>Security Index</title>
+      <link>https://www.pythonsheets.com/security/index</link>
+      <guid>https://www.pythonsheets.com/security/index</guid>
+      <description>Python cheat sheet: Security Index</description>
+    </item>
+    <item>
+      <title>Testing Python Pytest</title>
+      <link>https://www.pythonsheets.com/testing/python-pytest</link>
+      <guid>https://www.pythonsheets.com/testing/python-pytest</guid>
+      <description>Python cheat sheet: Testing Python Pytest</description>
+    </item>
+    <item>
+      <title>Testing Python Unittest Mock</title>
+      <link>https://www.pythonsheets.com/testing/python-unittest-mock</link>
+      <guid>https://www.pythonsheets.com/testing/python-unittest-mock</guid>
+      <description>Python cheat sheet: Testing Python Unittest Mock</description>
+    </item>
+    <item>
+      <title>Testing Index</title>
+      <link>https://www.pythonsheets.com/testing/index</link>
+      <guid>https://www.pythonsheets.com/testing/index</guid>
+      <description>Python cheat sheet: Testing Index</description>
+    </item>
+    <item>
+      <title>Extension Python Ctypes</title>
+      <link>https://www.pythonsheets.com/extension/python-ctypes</link>
+      <guid>https://www.pythonsheets.com/extension/python-ctypes</guid>
+      <description>Python cheat sheet: Extension Python Ctypes</description>
+    </item>
+    <item>
+      <title>Extension Python Capi</title>
+      <link>https://www.pythonsheets.com/extension/python-capi</link>
+      <guid>https://www.pythonsheets.com/extension/python-capi</guid>
+      <description>Python cheat sheet: Extension Python Capi</description>
+    </item>
+    <item>
+      <title>Extension Python Cext Modern</title>
+      <link>https://www.pythonsheets.com/extension/python-cext-modern</link>
+      <guid>https://www.pythonsheets.com/extension/python-cext-modern</guid>
+      <description>Python cheat sheet: Extension Python Cext Modern</description>
+    </item>
+    <item>
+      <title>Extension Cpp From Python</title>
+      <link>https://www.pythonsheets.com/extension/cpp-from-python</link>
+      <guid>https://www.pythonsheets.com/extension/cpp-from-python</guid>
+      <description>Python cheat sheet: Extension Cpp From Python</description>
+    </item>
+    <item>
+      <title>Extension Index</title>
+      <link>https://www.pythonsheets.com/extension/index</link>
+      <guid>https://www.pythonsheets.com/extension/index</guid>
+      <description>Python cheat sheet: Extension Index</description>
+    </item>
+    <item>
+      <title>Llm Pytorch</title>
+      <link>https://www.pythonsheets.com/llm/pytorch</link>
+      <guid>https://www.pythonsheets.com/llm/pytorch</guid>
+      <description>Python cheat sheet: Llm Pytorch</description>
+    </item>
+    <item>
+      <title>Llm Megatron</title>
+      <link>https://www.pythonsheets.com/llm/megatron</link>
+      <guid>https://www.pythonsheets.com/llm/megatron</guid>
+      <description>Python cheat sheet: Llm Megatron</description>
+    </item>
+    <item>
+      <title>Llm Llm Serving</title>
+      <link>https://www.pythonsheets.com/llm/llm-serving</link>
+      <guid>https://www.pythonsheets.com/llm/llm-serving</guid>
+      <description>Python cheat sheet: Llm Llm Serving</description>
+    </item>
+    <item>
+      <title>Llm Llm Bench</title>
+      <link>https://www.pythonsheets.com/llm/llm-bench</link>
+      <guid>https://www.pythonsheets.com/llm/llm-bench</guid>
+      <description>Python cheat sheet: Llm Llm Bench</description>
+    </item>
+    <item>
+      <title>Llm Index</title>
+      <link>https://www.pythonsheets.com/llm/index</link>
+      <guid>https://www.pythonsheets.com/llm/index</guid>
+      <description>Python cheat sheet: Llm Index</description>
+    </item>
+    <item>
+      <title>Hpc Slurm</title>
+      <link>https://www.pythonsheets.com/hpc/slurm</link>
+      <guid>https://www.pythonsheets.com/hpc/slurm</guid>
+      <description>Python cheat sheet: Hpc Slurm</description>
+    </item>
+    <item>
+      <title>Hpc Ray</title>
+      <link>https://www.pythonsheets.com/hpc/ray</link>
+      <guid>https://www.pythonsheets.com/hpc/ray</guid>
+      <description>Python cheat sheet: Hpc Ray</description>
+    </item>
+    <item>
+      <title>Hpc Index</title>
+      <link>https://www.pythonsheets.com/hpc/index</link>
+      <guid>https://www.pythonsheets.com/hpc/index</guid>
+      <description>Python cheat sheet: Hpc Index</description>
+    </item>
+    <item>
+      <title>Data Science Python Numpy</title>
+      <link>https://www.pythonsheets.com/data-science/python-numpy</link>
+      <guid>https://www.pythonsheets.com/data-science/python-numpy</guid>
+      <description>Python cheat sheet: Data Science Python Numpy</description>
+    </item>
+    <item>
+      <title>Data Science Python Pandas</title>
+      <link>https://www.pythonsheets.com/data-science/python-pandas</link>
+      <guid>https://www.pythonsheets.com/data-science/python-pandas</guid>
+      <description>Python cheat sheet: Data Science Python Pandas</description>
+    </item>
+    <item>
+      <title>Data Science Index</title>
+      <link>https://www.pythonsheets.com/data-science/index</link>
+      <guid>https://www.pythonsheets.com/data-science/index</guid>
+      <description>Python cheat sheet: Data Science Index</description>
+    </item>
+    <item>
+      <title>Appendix Nvshmem Multi Nic</title>
+      <link>https://www.pythonsheets.com/appendix/nvshmem-multi-nic</link>
+      <guid>https://www.pythonsheets.com/appendix/nvshmem-multi-nic</guid>
+      <description>Python cheat sheet: Appendix Nvshmem Multi Nic</description>
+    </item>
+    <item>
+      <title>Appendix Disaggregated Prefill Decode</title>
+      <link>https://www.pythonsheets.com/appendix/disaggregated-prefill-decode</link>
+      <guid>https://www.pythonsheets.com/appendix/disaggregated-prefill-decode</guid>
+      <description>Python cheat sheet: Appendix Disaggregated Prefill Decode</description>
+    </item>
+    <item>
+      <title>Appendix Megatron Efa Monitoring</title>
+      <link>https://www.pythonsheets.com/appendix/megatron-efa-monitoring</link>
+      <guid>https://www.pythonsheets.com/appendix/megatron-efa-monitoring</guid>
+      <description>Python cheat sheet: Appendix Megatron Efa Monitoring</description>
+    </item>
+    <item>
+      <title>Appendix Nccl Gin</title>
+      <link>https://www.pythonsheets.com/appendix/nccl-gin</link>
+      <guid>https://www.pythonsheets.com/appendix/nccl-gin</guid>
+      <description>Python cheat sheet: Appendix Nccl Gin</description>
+    </item>
+    <item>
+      <title>Appendix Python Walrus</title>
+      <link>https://www.pythonsheets.com/appendix/python-walrus</link>
+      <guid>https://www.pythonsheets.com/appendix/python-walrus</guid>
+      <description>Python cheat sheet: Appendix Python Walrus</description>
+    </item>
+    <item>
+      <title>Appendix Python Gdb</title>
+      <link>https://www.pythonsheets.com/appendix/python-gdb</link>
+      <guid>https://www.pythonsheets.com/appendix/python-gdb</guid>
+      <description>Python cheat sheet: Appendix Python Gdb</description>
+    </item>
+    <item>
+      <title>Appendix Index</title>
+      <link>https://www.pythonsheets.com/appendix/index</link>
+      <guid>https://www.pythonsheets.com/appendix/index</guid>
+      <description>Python cheat sheet: Appendix Index</description>
+    </item>
+  </channel>
+</rss>

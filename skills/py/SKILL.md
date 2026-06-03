@@ -25,15 +25,19 @@ When a user asks a Python question or wants to write a Python script:
 ## Coverage Areas
 
 **Interview Prep:** Curated Python interview questions grouped by topic (GIL, asyncio, decorators, MRO, generators, concurrency), each deep-linked to the section that answers it
-**Core:** Syntax, typing, OOP, functions, data structures, sets, heap, regex, unicode
-**System:** File I/O, datetime, OS interfaces
+**Core:** Syntax, typing, OOP, functions, data structures, sets, heap, regex, unicode, itertools, collections, functools, dataclasses, profiling
+**System:** File I/O, datetime, OS interfaces, pathlib, logging
+**CLI:** Argparse, Click — building command-line tools
 **Concurrency:** Threading, multiprocessing, asyncio
 **Network:** Sockets, SSL/TLS, SSH, async I/O, packet sniffing
 **Database:** SQLAlchemy ORM, queries, transactions
+**Web:** FastAPI — routes, Pydantic models, dependency injection
+**Testing:** Pytest fixtures, unittest.mock, parametrize, coverage
 **Security:** Cryptography, TLS, vulnerabilities
 **Extensions:** C/C++ integration, pybind11, Cython
 **ML/LLM:** PyTorch, Megatron, distributed training, inference, serving, benchmarking
 **HPC:** Slurm, cluster computing, job scheduling, EFA monitoring, NCCL
+**Data Science:** NumPy arrays, pandas DataFrames, groupby, merge
 **Appendix:** Walrus operator, GDB debugging, disaggregated prefill/decode
 
 ## References

@@ -18,6 +18,11 @@ Complete reference guide organized by topic, with direct links to live documenta
 - **Regular Expressions** → https://www.pythonsheets.com/notes/basic/python-rexp.html
 - **Unicode** → https://www.pythonsheets.com/notes/basic/python-unicode.html
 - **__future__** → https://www.pythonsheets.com/notes/basic/python-future.html
+- **Itertools** → https://www.pythonsheets.com/basic/python-itertools — Infinite iterators, combinatorics, grouping, sliding windows
+- **Collections** → https://www.pythonsheets.com/basic/python-collections — namedtuple, deque, Counter, defaultdict, OrderedDict, ChainMap
+- **Functools** → https://www.pythonsheets.com/basic/python-functools — partial, lru_cache, singledispatch, wraps, reduce, total_ordering
+- **Dataclasses** → https://www.pythonsheets.com/basic/python-dataclasses — @dataclass, field, frozen, __post_init__, InitVar, slots
+- **Profiling** → https://www.pythonsheets.com/basic/python-profiling — cProfile, timeit, memory_profiler, line_profiler, py-spy
 
 ## What's New
 - **What's New in Python 3** → https://www.pythonsheets.com/notes/python-new-py3.html
@@ -26,6 +31,8 @@ Complete reference guide organized by topic, with direct links to live documenta
 - **Date/Time** → https://www.pythonsheets.com/notes/os/python-date.html
 - **File I/O** → https://www.pythonsheets.com/notes/os/python-io.html
 - **OS Interfaces** → https://www.pythonsheets.com/notes/os/python-os.html
+- **Pathlib** → https://www.pythonsheets.com/os/python-pathlib — Modern file system path manipulation
+- **Logging** → https://www.pythonsheets.com/os/python-logging — Logging configuration, handlers, structured logging
 
 ## Concurrency
 - **Threading** → https://www.pythonsheets.com/notes/concurrency/python-threading.html
@@ -51,6 +58,17 @@ Complete reference guide organized by topic, with direct links to live documenta
 - **SQLAlchemy ORM** → https://www.pythonsheets.com/notes/database/python-sqlalchemy-orm.html
 - **Query Patterns** → https://www.pythonsheets.com/notes/database/python-sqlalchemy-query.html
 
+## CLI & Command-Line Tools
+- **Argparse** → https://www.pythonsheets.com/cli/python-argparse — Positional/optional args, subparsers, argument groups
+- **Click** → https://www.pythonsheets.com/cli/python-click — Commands, options, prompts, groups, callbacks
+
+## Web Development
+- **FastAPI** → https://www.pythonsheets.com/web/python-fastapi — Routes, Pydantic models, dependency injection, async handlers, WebSocket
+
+## Testing
+- **Pytest** → https://www.pythonsheets.com/testing/python-pytest — Fixtures, parametrize, tmp_path, monkeypatch, raíses
+- **Unittest Mock** → https://www.pythonsheets.com/testing/python-unittest-mock — patch, Mock/MagicMock, AsyncMock, mock_open, autospec
+
 ## Security
 - **Cryptography** → https://www.pythonsheets.com/notes/security/python-crypto.html
 - **TLS/SSL** → https://www.pythonsheets.com/notes/security/python-tls.html
@@ -70,6 +88,10 @@ Complete reference guide organized by topic, with direct links to live documenta
 
 ## High-Performance Computing
 - **Slurm HPC** → https://www.pythonsheets.com/notes/hpc/slurm.html
+
+## Data Science
+- **NumPy** → https://www.pythonsheets.com/data-science/python-numpy — Array creation, broadcasting, linear algebra, ufuncs
+- **Pandas** → https://www.pythonsheets.com/data-science/python-pandas — DataFrame, groupby, merge, pivot, missing data
 
 ## Appendix
 - **Disaggregated Prefill/Decode** → https://www.pythonsheets.com/notes/appendix/disaggregated-prefill-decode.html

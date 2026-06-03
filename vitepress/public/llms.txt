@@ -1,0 +1,97 @@
+# Pysheeet — Python Cheat Sheets
+
+> Comprehensive Python cheat sheets covering core language, data structures, networking, databases, async, CLI, testing, data science, web development, and more.
+
+## Core Python
+- [Python Basics](/basic/python-basic) — Syntax, operators, control flow, comprehensions
+- [Type Hints](/basic/python-typing) — Type annotations, generic types, Protocols, TypedDict
+- [Classes & OOP](/basic/python-object) — Inheritance, magic methods, descriptors, MRO, properties
+- [Functions](/basic/python-func) — *args/**kwargs, decorators, closures, annotations, singledispatch
+- [Data Structures](/basic/python-dict) — dict, list, set, heap with practical patterns
+- [Generators](/basic/python-generator) — Generator functions, yield from, async generators, context managers
+- [Itertools](/basic/python-itertools) — Infinite iterators, combinatorics, grouping, sliding windows, chaining
+- [Collections](/basic/python-collections) — namedtuple, deque, Counter, defaultdict, OrderedDict, ChainMap
+- [Functools](/basic/python-functools) — partial, lru_cache, cache, singledispatch, wraps, reduce
+- [Dataclasses](/basic/python-dataclasses) — @dataclass, field, frozen, __post_init__, InitVar, inheritance
+- [Profiling](/basic/python-profiling) — cProfile, timeit, memory_profiler, line_profiler, py-spy, optimization
+- [Regular Expressions](/basic/python-rexp) — Pattern matching, groups, lookahead, substitution, flags
+- [Unicode](/basic/python-unicode) — Encoding, normalization, string vs bytes, codecs
+
+## System Programming
+- [Pathlib](/os/python-pathlib) — Modern path manipulation, globbing, file operations
+- [Logging](/os/python-logging) — Log levels, handlers, formatting, dictConfig, structured logging
+- [OS Interfaces](/os/python-os) — Process management, environment, filesystem, platform info
+- [Date/Time](/os/python-date) — datetime, timezone, formatting, parsing, timedelta
+- [File I/O](/os/python-io) — Reading/writing files, streams, binary data, text encoding
+
+## CLI & Command-Line Tools
+- [Argparse](/cli/python-argparse) — Positional/optional args, subparsers, mutually exclusive groups
+- [Click](/cli/python-click) — Commands, options, prompts, groups, callbacks, echo styling
+
+## Concurrency
+- [Threading](/concurrency/python-threading) — Threads, locks, queues, GIL, producer-consumer
+- [Multiprocessing](/concurrency/python-multiprocessing) — Processes, pools, shared memory, pipes, managers
+- [Futures](/concurrency/python-futures) — ThreadPoolExecutor, ProcessPoolExecutor, as_completed
+
+## Asyncio
+- [Async Guide](/asyncio/python-asyncio-guide) — Coroutines, event loop, tasks, understanding async/await
+- [Async Basics](/asyncio/python-asyncio-basic) — asyncio.run, create_task, gather, wait, timeouts
+- [Async Servers](/asyncio/python-asyncio-server) — TCP/UDP servers, streams, protocol classes
+- [Async Advanced](/asyncio/python-asyncio-advanced) — Semaphores, queues, graceful shutdown, subprocess
+
+## Network Programming
+- [Socket Basics](/network/python-socket) — Address resolution, byte order, TCP/UDP client/server
+- [Socket Servers](/network/python-socket-server) — select, poll, epoll, ThreadingTCPServer
+- [Async Sockets](/network/python-socket-async) — Non-blocking I/O, async socket operations
+- [SSL/TLS](/network/python-socket-ssl) — TLS servers/clients, mutual TLS, context creation
+- [SSH](/network/python-ssh) — paramiko, SSH clients, key management, tunneling
+- [Packet Sniffer](/network/python-socket-sniffer) — Raw sockets, packet capture, protocol parsing
+
+## Database
+- [SQLAlchemy Basics](/database/python-sqlalchemy) — Engine, connections, transactions, raw SQL
+- [SQLAlchemy ORM](/database/python-sqlalchemy-orm) — Models, relationships, sessions, eager loading
+- [SQLAlchemy Query](/database/python-sqlalchemy-query) — Joins, subqueries, aggregation, filtering patterns
+
+## Web Development
+- [FastAPI](/web/python-fastapi) — Routes, Pydantic models, dependency injection, async, background tasks, WebSocket
+
+## Testing
+- [Pytest](/testing/python-pytest) — Fixtures, parametrize, tmp_path, monkeypatch, raises, warns
+- [Unittest Mock](/testing/python-unittest-mock) — patch, Mock/MagicMock, AsyncMock, mock_open, autospec
+
+## Security
+- [Cryptography](/security/python-crypto) — AES-GCM, RSA, ECDSA, Argon2, key derivation
+- [TLS/SSL](/security/python-tls) — Certificate verification, context configuration, best practices
+- [Vulnerabilities](/security/python-vulnerability) — SQL injection, timing attacks, XSS, secure coding
+
+## C/C++ Extensions
+- [ctypes](/extension/python-ctypes) — Shared library loading, type mapping, callback functions
+- [C API](/extension/python-capi) — Module creation, reference counting, exception handling
+- [Modern Extensions](/extension/python-cext-modern) — pybind11, Cython, cffi comparisons
+- [C++ from Python](/extension/cpp-from-python) — pybind11 classes, STL binding, NumPy integration
+
+## LLM & Machine Learning
+- [PyTorch](/llm/pytorch) — Tensors, autograd, DataLoader, model training, distributed
+- [Megatron](/llm/megatron) — Model parallelism, tensor parallelism, pipeline parallelism
+- [LLM Serving](/llm/llm-serving) — vLLM, SGLang, continuous batching, PagedAttention
+- [LLM Benchmarking](/llm/llm-bench) — Throughput, latency, TPS metrics, A/B testing
+
+## High-Performance Computing
+- [Slurm](/hpc/slurm) — Job submission, resource allocation, array jobs, GPU scheduling
+- [Ray](/hpc/ray) — Distributed tasks, actors, object store, cluster management
+
+## Data Science
+- [NumPy](/data-science/python-numpy) — Array creation, broadcasting, linear algebra, random, indexing
+- [Pandas](/data-science/python-pandas) — DataFrame, groupby, merge/join, pivot, missing data, datetime
+
+## Appendix
+- [Walrus Operator](/appendix/python-walrus) — := assignment expressions, comprehensions, gotchas
+- [Python GDB](/appendix/python-gdb) — Debugging CPython with GDB, pretty-printers, core dumps
+- [Disaggregated Prefill/Decode](/appendix/disaggregated-prefill-decode) — LLM inference architecture
+- [Megatron EFA Monitoring](/appendix/megatron-efa-monitoring) — EFA metrics, NCCL diagnostics
+- [NCCL GIN](/appendix/nccl-gin) — NCCL configuration, GIN overrides for distributed training
+- [NVSHMEM Multi-NIC](/appendix/nvshmem-multi-nic) — Multi-NIC configuration for GPU communication
+
+## Core Resources
+- [What's New in Python 3](/python-new-py3) — New features by version (3.0-3.13)
+- [Interview Cheatsheet](/interview/) — Question-indexed map into all cheatsheet sections

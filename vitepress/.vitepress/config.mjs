@@ -3,8 +3,48 @@
 
 export default {
   "title": "Pysheeet",
-  "description": "Python cheat sheets",
+  "description": "Comprehensive Python cheat sheets covering core language, data structures, networking, databases, async, CLI, testing, data science, web development, and more.",
   "cleanUrls": true,
+  "lastUpdated": true,
+  "head": [
+    [
+      "meta",
+      {
+        "property": "og:site_name",
+        "content": "Pysheeet"
+      }
+    ],
+    [
+      "meta",
+      {
+        "property": "og:type",
+        "content": "website"
+      }
+    ],
+    [
+      "meta",
+      {
+        "property": "og:locale",
+        "content": "en_US"
+      }
+    ],
+    [
+      "meta",
+      {
+        "name": "twitter:card",
+        "content": "summary_large_image"
+      }
+    ],
+    [
+      "link",
+      {
+        "rel": "alternate",
+        "type": "application/rss+xml",
+        "title": "Pysheeet RSS Feed",
+        "href": "/rss.xml"
+      }
+    ]
+  ],
   "themeConfig": {
     "logo": "/logo.svg",
     "nav": [],
@@ -91,6 +131,26 @@ export default {
           {
             "text": "Python Rexp",
             "link": "/basic/python-rexp"
+          },
+          {
+            "text": "Python Itertools",
+            "link": "/basic/python-itertools"
+          },
+          {
+            "text": "Python Collections",
+            "link": "/basic/python-collections"
+          },
+          {
+            "text": "Python Functools",
+            "link": "/basic/python-functools"
+          },
+          {
+            "text": "Python Dataclasses",
+            "link": "/basic/python-dataclasses"
+          },
+          {
+            "text": "Python Profiling",
+            "link": "/basic/python-profiling"
           }
         ]
       },
@@ -114,6 +174,33 @@ export default {
           {
             "text": "Python Io",
             "link": "/os/python-io"
+          },
+          {
+            "text": "Python Pathlib",
+            "link": "/os/python-pathlib"
+          },
+          {
+            "text": "Python Logging",
+            "link": "/os/python-logging"
+          }
+        ]
+      },
+      {
+        "text": "Cli",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/cli/"
+          },
+          {
+            "text": "Python Argparse",
+            "link": "/cli/python-argparse"
+          },
+          {
+            "text": "Python Click",
+            "link": "/cli/python-click"
           }
         ]
       },
@@ -226,6 +313,21 @@ export default {
         ]
       },
       {
+        "text": "Web",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/web/"
+          },
+          {
+            "text": "Python Fastapi",
+            "link": "/web/python-fastapi"
+          }
+        ]
+      },
+      {
         "text": "Security",
         "collapsible": true,
         "collapsed": true,
@@ -245,6 +347,25 @@ export default {
           {
             "text": "Python Vulnerability",
             "link": "/security/python-vulnerability"
+          }
+        ]
+      },
+      {
+        "text": "Testing",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/testing/"
+          },
+          {
+            "text": "Python Pytest",
+            "link": "/testing/python-pytest"
+          },
+          {
+            "text": "Python Unittest Mock",
+            "link": "/testing/python-unittest-mock"
           }
         ]
       },
@@ -322,6 +443,25 @@ export default {
         ]
       },
       {
+        "text": "Data Science",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/data-science/"
+          },
+          {
+            "text": "Python Numpy",
+            "link": "/data-science/python-numpy"
+          },
+          {
+            "text": "Python Pandas",
+            "link": "/data-science/python-pandas"
+          }
+        ]
+      },
+      {
         "text": "Appendix",
         "collapsible": true,
         "collapsed": true,
@@ -369,6 +509,25 @@ export default {
     "docFooter": {
       "prev": "Previous",
       "next": "Next"
-    }
+    },
+    "socialLinks": [
+      {
+        "icon": "github",
+        "link": "https://github.com/crazyguitar/pysheeet"
+      }
+    ]
   }
+,
+
+  transformHead({ pageData }) {
+    const canonical = `https://www.pythonsheets.com/${pageData.relativePath.replace(/\\/g, "/").replace(/\.md$/, "")}`
+    return [
+      ["link", { rel: "canonical", href: canonical }],
+      ["meta", { property: "og:url", content: canonical }],
+      ["meta", { property: "og:title", content: pageData.title || "Pysheeet" }],
+      ["meta", { property: "og:description", content: pageData.description || "Comprehensive Python cheat sheets" }],
+      ["meta", { name: "twitter:title", content: pageData.title || "Pysheeet" }],
+      ["meta", { name: "twitter:description", content: pageData.description || "Comprehensive Python cheat sheets" }],
+    ]
+  },
 };
