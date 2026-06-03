@@ -13,20 +13,80 @@ import json
 ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("vitepress")
 CONFIG = ROOT / ".vitepress" / "config.mjs"
 
-CATEGORIES = sorted(
-    p.name for p in ROOT.iterdir()
-    if p.is_dir() and not p.name.startswith('.') and p.name != 'node_modules'
-)
+CATEGORY_ORDER = [
+    'interview', 'basic', 'os', 'concurrency', 'asyncio',
+    'network', 'database', 'security', 'extension', 'llm', 'hpc',
+    'appendix',
+]
 
-TOP_LEVEL_PAGES = sorted(
-    f for f in ROOT.glob('*.md')
-    if f.name not in ('index.md',)
-)
+FILE_ORDER: dict[str, list[str]] = {
+    'basic': [
+        'python-basic', 'python-future', 'python-func', 'python-object',
+        'python-typing', 'python-list', 'python-set', 'python-dict',
+        'python-heap', 'python-generator', 'python-unicode', 'python-rexp',
+    ],
+    'os': [
+        'python-date', 'python-os', 'python-io',
+    ],
+    'concurrency': [
+        'python-threading', 'python-multiprocessing', 'python-futures',
+    ],
+    'asyncio': [
+        'python-asyncio-guide', 'python-asyncio-basic',
+        'python-asyncio-server', 'python-asyncio-advanced',
+    ],
+    'network': [
+        'python-socket', 'python-socket-server', 'python-socket-async',
+        'python-socket-ssl', 'python-socket-sniffer', 'python-ssh',
+    ],
+    'database': [
+        'python-sqlalchemy', 'python-sqlalchemy-orm', 'python-sqlalchemy-query',
+    ],
+    'security': [
+        'python-crypto', 'python-tls', 'python-vulnerability',
+    ],
+    'extension': [
+        'python-ctypes', 'python-capi', 'python-cext-modern', 'cpp-from-python',
+    ],
+    'llm': [
+        'pytorch', 'megatron', 'llm-serving', 'llm-bench',
+    ],
+    'hpc': [
+        'slurm', 'ray',
+    ],
+    'appendix': [
+        'nvshmem-multi-nic', 'disaggregated-prefill-decode',
+        'megatron-efa-monitoring', 'nccl-gin',
+        'python-walrus', 'python-gdb',
+    ],
+}
+
+CATEGORIES = [p.name for p in ROOT.iterdir()
+              if p.is_dir() and not p.name.startswith('.') and p.name != 'node_modules'
+              and p.name in CATEGORY_ORDER]
+
+CATEGORIES.sort(key=lambda c: CATEGORY_ORDER.index(c))
+
+TOP_LEVEL_PAGES = [f for f in ROOT.glob('*.md')
+                   if f.name not in ('index.md',)]
 
 
 def page_link(p: Path, root: Path) -> str:
     rel = p.relative_to(root).with_suffix('')
     return '/' + str(rel).replace('\\', '/')
+
+
+def sort_files(files: list[Path], cat: str) -> list[Path]:
+    order = FILE_ORDER.get(cat, [])
+    if not order:
+        return sorted(files)
+    def sort_key(f: Path) -> int:
+        stem = f.stem
+        try:
+            return order.index(stem)
+        except ValueError:
+            return len(order)
+    return sorted(files, key=sort_key)
 
 
 def sidebar_global() -> list[dict]:
@@ -46,7 +106,7 @@ def sidebar_global() -> list[dict]:
     # Category groups
     for cat in CATEGORIES:
         catdir = ROOT / cat
-        files = sorted(catdir.glob('*.md'))
+        files = sort_files(list(catdir.glob('*.md')), cat)
         items = []
         for f in files:
             if f.name == 'index.md':

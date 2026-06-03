@@ -25,64 +25,13 @@ export default {
         ]
       },
       {
-        "text": "Appendix",
+        "text": "Interview",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "text": "Overview",
-            "link": "/appendix/"
-          },
-          {
-            "text": "Disaggregated Prefill Decode",
-            "link": "/appendix/disaggregated-prefill-decode"
-          },
-          {
-            "text": "Megatron Efa Monitoring",
-            "link": "/appendix/megatron-efa-monitoring"
-          },
-          {
-            "text": "Nccl Gin",
-            "link": "/appendix/nccl-gin"
-          },
-          {
-            "text": "Nvshmem Multi Nic",
-            "link": "/appendix/nvshmem-multi-nic"
-          },
-          {
-            "text": "Python Gdb",
-            "link": "/appendix/python-gdb"
-          },
-          {
-            "text": "Python Walrus",
-            "link": "/appendix/python-walrus"
-          }
-        ]
-      },
-      {
-        "text": "Asyncio",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "text": "Overview",
-            "link": "/asyncio/"
-          },
-          {
-            "text": "Python Asyncio Advanced",
-            "link": "/asyncio/python-asyncio-advanced"
-          },
-          {
-            "text": "Python Asyncio Basic",
-            "link": "/asyncio/python-asyncio-basic"
-          },
-          {
-            "text": "Python Asyncio Guide",
-            "link": "/asyncio/python-asyncio-guide"
-          },
-          {
-            "text": "Python Asyncio Server",
-            "link": "/asyncio/python-asyncio-server"
+            "link": "/interview/"
           }
         ]
       },
@@ -100,213 +49,48 @@ export default {
             "link": "/basic/python-basic"
           },
           {
-            "text": "Python Dict",
-            "link": "/basic/python-dict"
+            "text": "Python Future",
+            "link": "/basic/python-future"
           },
           {
             "text": "Python Func",
             "link": "/basic/python-func"
           },
           {
-            "text": "Python Future",
-            "link": "/basic/python-future"
-          },
-          {
-            "text": "Python Generator",
-            "link": "/basic/python-generator"
-          },
-          {
-            "text": "Python Heap",
-            "link": "/basic/python-heap"
-          },
-          {
-            "text": "Python List",
-            "link": "/basic/python-list"
-          },
-          {
             "text": "Python Object",
             "link": "/basic/python-object"
-          },
-          {
-            "text": "Python Rexp",
-            "link": "/basic/python-rexp"
-          },
-          {
-            "text": "Python Set",
-            "link": "/basic/python-set"
           },
           {
             "text": "Python Typing",
             "link": "/basic/python-typing"
           },
           {
+            "text": "Python List",
+            "link": "/basic/python-list"
+          },
+          {
+            "text": "Python Set",
+            "link": "/basic/python-set"
+          },
+          {
+            "text": "Python Dict",
+            "link": "/basic/python-dict"
+          },
+          {
+            "text": "Python Heap",
+            "link": "/basic/python-heap"
+          },
+          {
+            "text": "Python Generator",
+            "link": "/basic/python-generator"
+          },
+          {
             "text": "Python Unicode",
             "link": "/basic/python-unicode"
-          }
-        ]
-      },
-      {
-        "text": "Concurrency",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "text": "Overview",
-            "link": "/concurrency/"
           },
           {
-            "text": "Python Futures",
-            "link": "/concurrency/python-futures"
-          },
-          {
-            "text": "Python Multiprocessing",
-            "link": "/concurrency/python-multiprocessing"
-          },
-          {
-            "text": "Python Threading",
-            "link": "/concurrency/python-threading"
-          }
-        ]
-      },
-      {
-        "text": "Database",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "text": "Overview",
-            "link": "/database/"
-          },
-          {
-            "text": "Python Sqlalchemy Orm",
-            "link": "/database/python-sqlalchemy-orm"
-          },
-          {
-            "text": "Python Sqlalchemy Query",
-            "link": "/database/python-sqlalchemy-query"
-          },
-          {
-            "text": "Python Sqlalchemy",
-            "link": "/database/python-sqlalchemy"
-          }
-        ]
-      },
-      {
-        "text": "Extension",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "text": "Overview",
-            "link": "/extension/"
-          },
-          {
-            "text": "Cpp From Python",
-            "link": "/extension/cpp-from-python"
-          },
-          {
-            "text": "Python Capi",
-            "link": "/extension/python-capi"
-          },
-          {
-            "text": "Python Cext Modern",
-            "link": "/extension/python-cext-modern"
-          },
-          {
-            "text": "Python Ctypes",
-            "link": "/extension/python-ctypes"
-          }
-        ]
-      },
-      {
-        "text": "Hpc",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "text": "Overview",
-            "link": "/hpc/"
-          },
-          {
-            "text": "Ray",
-            "link": "/hpc/ray"
-          },
-          {
-            "text": "Slurm",
-            "link": "/hpc/slurm"
-          }
-        ]
-      },
-      {
-        "text": "Interview",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "text": "Overview",
-            "link": "/interview/"
-          }
-        ]
-      },
-      {
-        "text": "Llm",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "text": "Overview",
-            "link": "/llm/"
-          },
-          {
-            "text": "Llm Bench",
-            "link": "/llm/llm-bench"
-          },
-          {
-            "text": "Llm Serving",
-            "link": "/llm/llm-serving"
-          },
-          {
-            "text": "Megatron",
-            "link": "/llm/megatron"
-          },
-          {
-            "text": "Pytorch",
-            "link": "/llm/pytorch"
-          }
-        ]
-      },
-      {
-        "text": "Network",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "text": "Overview",
-            "link": "/network/"
-          },
-          {
-            "text": "Python Socket Async",
-            "link": "/network/python-socket-async"
-          },
-          {
-            "text": "Python Socket Server",
-            "link": "/network/python-socket-server"
-          },
-          {
-            "text": "Python Socket Sniffer",
-            "link": "/network/python-socket-sniffer"
-          },
-          {
-            "text": "Python Socket Ssl",
-            "link": "/network/python-socket-ssl"
-          },
-          {
-            "text": "Python Socket",
-            "link": "/network/python-socket"
-          },
-          {
-            "text": "Python Ssh",
-            "link": "/network/python-ssh"
+            "text": "Python Rexp",
+            "link": "/basic/python-rexp"
           }
         ]
       },
@@ -324,12 +108,120 @@ export default {
             "link": "/os/python-date"
           },
           {
-            "text": "Python Io",
-            "link": "/os/python-io"
-          },
-          {
             "text": "Python Os",
             "link": "/os/python-os"
+          },
+          {
+            "text": "Python Io",
+            "link": "/os/python-io"
+          }
+        ]
+      },
+      {
+        "text": "Concurrency",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/concurrency/"
+          },
+          {
+            "text": "Python Threading",
+            "link": "/concurrency/python-threading"
+          },
+          {
+            "text": "Python Multiprocessing",
+            "link": "/concurrency/python-multiprocessing"
+          },
+          {
+            "text": "Python Futures",
+            "link": "/concurrency/python-futures"
+          }
+        ]
+      },
+      {
+        "text": "Asyncio",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/asyncio/"
+          },
+          {
+            "text": "Python Asyncio Guide",
+            "link": "/asyncio/python-asyncio-guide"
+          },
+          {
+            "text": "Python Asyncio Basic",
+            "link": "/asyncio/python-asyncio-basic"
+          },
+          {
+            "text": "Python Asyncio Server",
+            "link": "/asyncio/python-asyncio-server"
+          },
+          {
+            "text": "Python Asyncio Advanced",
+            "link": "/asyncio/python-asyncio-advanced"
+          }
+        ]
+      },
+      {
+        "text": "Network",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/network/"
+          },
+          {
+            "text": "Python Socket",
+            "link": "/network/python-socket"
+          },
+          {
+            "text": "Python Socket Server",
+            "link": "/network/python-socket-server"
+          },
+          {
+            "text": "Python Socket Async",
+            "link": "/network/python-socket-async"
+          },
+          {
+            "text": "Python Socket Ssl",
+            "link": "/network/python-socket-ssl"
+          },
+          {
+            "text": "Python Socket Sniffer",
+            "link": "/network/python-socket-sniffer"
+          },
+          {
+            "text": "Python Ssh",
+            "link": "/network/python-ssh"
+          }
+        ]
+      },
+      {
+        "text": "Database",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/database/"
+          },
+          {
+            "text": "Python Sqlalchemy",
+            "link": "/database/python-sqlalchemy"
+          },
+          {
+            "text": "Python Sqlalchemy Orm",
+            "link": "/database/python-sqlalchemy-orm"
+          },
+          {
+            "text": "Python Sqlalchemy Query",
+            "link": "/database/python-sqlalchemy-query"
           }
         ]
       },
@@ -353,6 +245,114 @@ export default {
           {
             "text": "Python Vulnerability",
             "link": "/security/python-vulnerability"
+          }
+        ]
+      },
+      {
+        "text": "Extension",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/extension/"
+          },
+          {
+            "text": "Python Ctypes",
+            "link": "/extension/python-ctypes"
+          },
+          {
+            "text": "Python Capi",
+            "link": "/extension/python-capi"
+          },
+          {
+            "text": "Python Cext Modern",
+            "link": "/extension/python-cext-modern"
+          },
+          {
+            "text": "Cpp From Python",
+            "link": "/extension/cpp-from-python"
+          }
+        ]
+      },
+      {
+        "text": "Llm",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/llm/"
+          },
+          {
+            "text": "Pytorch",
+            "link": "/llm/pytorch"
+          },
+          {
+            "text": "Megatron",
+            "link": "/llm/megatron"
+          },
+          {
+            "text": "Llm Serving",
+            "link": "/llm/llm-serving"
+          },
+          {
+            "text": "Llm Bench",
+            "link": "/llm/llm-bench"
+          }
+        ]
+      },
+      {
+        "text": "Hpc",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/hpc/"
+          },
+          {
+            "text": "Slurm",
+            "link": "/hpc/slurm"
+          },
+          {
+            "text": "Ray",
+            "link": "/hpc/ray"
+          }
+        ]
+      },
+      {
+        "text": "Appendix",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "text": "Overview",
+            "link": "/appendix/"
+          },
+          {
+            "text": "Nvshmem Multi Nic",
+            "link": "/appendix/nvshmem-multi-nic"
+          },
+          {
+            "text": "Disaggregated Prefill Decode",
+            "link": "/appendix/disaggregated-prefill-decode"
+          },
+          {
+            "text": "Megatron Efa Monitoring",
+            "link": "/appendix/megatron-efa-monitoring"
+          },
+          {
+            "text": "Nccl Gin",
+            "link": "/appendix/nccl-gin"
+          },
+          {
+            "text": "Python Walrus",
+            "link": "/appendix/python-walrus"
+          },
+          {
+            "text": "Python Gdb",
+            "link": "/appendix/python-gdb"
           }
         ]
       }
