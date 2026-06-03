@@ -10,6 +10,11 @@ Testing is a critical practice in professional Python development. Python's stan
 
 This section covers testing patterns that help you write reliable, maintainable tests for your Python code.
 
+## Topics
+
+- **[Pytest](/testing/python-pytest)** — Fixtures, parametrize, built-in fixtures (`tmp_path`, `monkeypatch`), assertion introspection, `raises`/`warns`
+- **[Unittest Mock](/testing/python-unittest-mock)** — `Mock`/`MagicMock`, `patch` (decorator & context manager), `AsyncMock`, `mock_open`, `create_autospec`
+
 ## References
 
 - [pytest documentation](https://docs.pytest.org/)

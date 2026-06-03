@@ -10,6 +10,10 @@ Python is widely used for building web applications and APIs. FastAPI has emerge
 
 This section covers practical patterns for building web APIs with FastAPI, from basic endpoints to dependency injection, authentication, and async database operations.
 
+## Topics
+
+- **[FastAPI](/web/python-fastapi)** — Route decorators, path/query parameters, Pydantic request bodies, dependency injection, CORS, async handlers, file uploads, WebSocket support
+
 ## References
 
 - [FastAPI documentation](https://fastapi.tiangolo.com/)

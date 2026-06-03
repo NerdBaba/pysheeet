@@ -10,6 +10,11 @@ Python is an excellent language for building command-line tools, from simple scr
 
 This section covers both approaches, helping you build command-line applications that handle arguments, options, subcommands, and user input gracefully.
 
+## Topics
+
+- **[Argparse](/cli/python-argparse)** — Positional and optional arguments, type conversion, subparsers, mutually exclusive groups
+- **[Click](/cli/python-click)** — Commands, options, prompts, subcommand groups, callbacks, `pass_context`
+
 ## References
 
 - [argparse — Parser for command-line options](https://docs.python.org/3/library/argparse.html)
